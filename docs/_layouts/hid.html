@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include hid/header.html %}
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3">
+          {% include hid/nav.html %}
+        </div>
+
+        <div class="col-md-9">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

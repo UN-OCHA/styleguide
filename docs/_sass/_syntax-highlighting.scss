@@ -2,8 +2,13 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
-    @extend %vertical-rhythm;
+    background: #eee;
+    overflow: auto;
+    margin: 8px 0;
+
+    pre {
+        white-space: pre-line;
+    }
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
