@@ -1,0 +1,30 @@
+.ng-hide {
+  display: none;
+}
+$base-unit: 8px;
+
+.styleguide-heading {
+  font-size: 40px;
+}
+
+.sg-section, .sg-section__item {
+  padding-top: $base-unit;
+  padding-bottom: $base-unit;
+}
+
+.sg-section__header {
+  color: #007faa;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: $base-unit;
+  margin-bottom: $base-unit*2;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: $base-unit/2;
+  }
+}
+
+
+footer {
+  height: 40px;
+}
