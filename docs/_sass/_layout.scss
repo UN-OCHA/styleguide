@@ -24,6 +24,22 @@ $base-unit: 8px;
   }
 }
 
+.sg-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    width: $base-unit*5;
+    height: $base-unit*5;
+    margin-right: $base-unit;
+  }
+}
+
+.sg-dark-bg {
+  background: #666;
+}
+
 
 footer {
   height: 40px;
