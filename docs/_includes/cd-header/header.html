@@ -1,0 +1,131 @@
+<header class="cd-header" role="banner">
+
+  <div class="cd-global-header">
+    <div class="cd-container cd-global-header__inner">
+      <div class="cd-global-header__sites cd-dropdown">
+        <button type="button" class="cd-global-header__sites-btn" data-cd-toggle="#cd-related-platforms" id="cd-related-platforms-toggle">
+          Related platforms
+          <i class="cd-icon-down-arrow" aria-hidden="true"></i>
+        </button>
+        <ul class="cd-dropdown-menu" role="menu" id="cd-related-platforms" aria-hidden="true" aria-labelledby="cd-related-platforms-toggle">
+          <li><a href="#">ReliefWeb</a></li>
+          <li><a href="#">Humanitarian Data eXchange</a></li>
+          <li><a href="#">Humanitarian ID</a></li>
+          <li><a href="#">Financial Tracking Services</a></li>
+          <li><a href="#">IASC</a></li>
+        </ul>
+      </div>
+
+      <div class="cd-global-header__nav">
+        <ul class="cd-nav cd-nav--secondary">
+          <li class="cd-nav__item">
+            <a href="#" class="cd-nav__link">
+              <span class="cd-icon" aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M12 5.344v-1.344h-8v1.344h8zM12 7.344v-1.344h-8v1.344h8zM12 9.344v-1.344h-8v1.344h8zM14.656 2.656v12l-2.656-2.656h-9.344c-0.719 0-1.313-0.625-1.313-1.344v-8c0-0.719 0.594-1.313 1.313-1.313h10.688c0.719 0 1.313 0.594 1.313 1.313z"></path>
+                </svg>
+              </span>
+              <span class="cd-nav__label">Navigation</span>
+            </a>
+          </li>
+          <li class="cd-nav__item">
+            <a href="#" class="cd-nav__link">
+              <span class="cd-icon" aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M10.031 6.844c0.375-0.375 0.625-0.906 0.625-1.5 0-1.469-1.188-2.688-2.656-2.688s-2.656 1.219-2.656 2.688h1.313c0-0.719 0.625-1.344 1.344-1.344s1.344 0.625 1.344 1.344c0 0.375-0.156 0.688-0.406 0.938l-0.813 0.844c-0.469 0.5-0.781 1.156-0.781 1.875v0.344h1.313c0-1 0.313-1.406 0.781-1.906zM8.656 12v-1.344h-1.313v1.344h1.313zM12.656 1.344c0.719 0 1.344 0.594 1.344 1.313v9.344c0 0.719-0.625 1.344-1.344 1.344h-2.656l-2 2-2-2h-2.656c-0.75 0-1.344-0.625-1.344-1.344v-9.344c0-0.719 0.594-1.313 1.344-1.313h9.313z"></path>
+                </svg>
+              </span>
+              <span class="cd-nav__label">Navigation</span>
+            </a>
+          </li>
+
+          <li class="cd-nav__item">
+            <button type="button" class="cd-nav__link cd-nav__link-button" data-cd-toggle="#cd-lang-dropdown" id="cd-lang-toggle">
+              <span class="cd-nav__label cd-nav__label--mobile">Eng</span>
+              <i class="cd-icon-down-arrow"></i>
+            </button>
+
+            <ul class="cd-dropdown-menu" id="cd-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-lang-toggle">
+              <li><a href="/dashboard">xxxx</a></li>
+              <li><a href="/users/{{currentUser.id}}">Profile</a></li>
+              <li><a href="/settings">Preferences</a></li>
+              <li><a href="/logout">Log out</a></li>
+            </ul>
+          </li>
+
+          <li class="cd-nav__item cd-dropdown">
+            <button type="button" class="cd-nav__link cd-nav__link-button" data-cd-toggle="#cd-global-nav-dropdown" id="cd-global-nav-toggle">
+              <span class="cd-icon" aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M8 9.344c1.781 0 5.344 0.875 5.344 2.656v1.344h-10.688v-1.344c0-1.781 3.563-2.656 5.344-2.656zM8 8c-1.469 0-2.656-1.188-2.656-2.656s1.188-2.688 2.656-2.688 2.656 1.219 2.656 2.688-1.188 2.656-2.656 2.656z"></path>
+                </svg>
+              </span>
+              <span class="cd-nav__label">Dropdown cd-nav</span>
+              <i class="cd-icon-down-arrow"></i>
+            </button>
+
+            <ul class="cd-dropdown-menu" id="cd-global-nav-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-global-nav-toggle">
+              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/users/{{currentUser.id}}">Profile</a></li>
+              <li><a href="/settings">Preferences</a></li>
+              <li><a href="/logout">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cd-site-header">
+    <div class="cd-container cd-site-header__inner">
+
+      <a href="#" class="cd-site-header__logo">
+        <span class="cd-sr-only">My Site Name</span>
+      </a>
+
+      <div class="cd-site-header__search">
+        <form role="search" class="cd-header-search">
+          <label for="cd-search" class="cd-sr-only">Search for things</label>
+          <input type="search" placeholder="Search for things" name="cd-search" id="cd-search" class="cd-header-search__input">
+          <button type="submit" class="cd-header-search__button">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M6.344 9.344q1.25 0 2.125-0.875t0.875-2.125-0.875-2.125-2.125-0.875-2.125 0.875-0.875 2.125 0.875 2.125 2.125 0.875zM10.344 9.344l3.313 3.313-1 1-3.313-3.313v-0.531l-0.188-0.188q-1.188 1.031-2.813 1.031-1.813 0-3.078-1.25t-1.266-3.063 1.266-3.078 3.078-1.266 3.063 1.266 1.25 3.078q0 1.625-1.031 2.813l0.188 0.188h0.531z"></path>
+            </svg>
+            <span class="cd-sr-only">Search</span>
+          </button>
+          <span class="cd-header-search__active"></span>
+        </form>
+      </div>
+
+      <div class="cd-dropdown">
+
+        <nav role="navigation" id="cd-nav" class="cd-site-header__nav cd-dropdown-menu" aria-labelledby="cd-nav-toggle" >
+          <ul class="cd-nav cd-nav--primary">
+            <li class="cd-nav__item cd-active"><a href="#" class="cd-nav__link">Navigation 1</a></li>
+            <li class="cd-nav__item"><a href="#" class="cd-nav__link">Navigation 2</a></li>
+            <li class="cd-nav__item"><a href="#" class="cd-nav__link">Navigation 3</a></li>
+            <li class="cd-nav__item"><a href="#" class="cd-nav__link">Navigation 4</a></li>
+          </ul>
+        </nav>
+
+        <button type="button" id="cd-nav-toggle" class="cd-site-header__nav-toggle" data-cd-toggle="#cd-nav" >
+          <span class="cd-site-header__nav-toggle-inner" aria-hidden="true">
+          </span>
+          <span class="cd-sr-only">Main menu</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+$(document).ready(function () {
+  $('[data-cd-toggle]').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this).data('cd-toggle');
+    var targetHidden = $(target).attr('aria-hidden') === 'true' ? true : false;
+    $(target).attr('aria-hidden', !targetHidden);
+  });
+});
+</script>

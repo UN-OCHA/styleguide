@@ -1,7 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .ng-hide {
   display: none;
 }
 $base-unit: 8px;
+
+.styleguide {
+  font-family: sans-serif;
+  color: #666;
+  padding: 0 $base-unit*2;
+}
 
 .styleguide-heading {
   font-size: 40px;

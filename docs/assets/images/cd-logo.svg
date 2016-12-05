@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="40px" viewBox="0 0 240 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>CD logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CD-logo">
+            <circle id="Oval" stroke="#979797" fill="#D8D8D8" cx="18" cy="20" r="17"></circle>
+            <text id="Common-Design" font-family="Helvetica" font-size="24" font-weight="normal" fill="#777777">
+                <tspan x="42" y="29">Common Design</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
