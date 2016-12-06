@@ -238,6 +238,41 @@ layout: hid
 <div class="sg-section">
   <div class="row">
     <div class="col-xs-12 sg-section__header">
+      <h3>Button toggles</h3>
+    </div>
+  </div>
+
+  <div class="row sg-section__item">
+    <div class="col-sm-6">
+      <div class="btn-toggle page-actions__toggle-lists">
+        <button type="button" class="btn-primary active" disabled="disabled">
+          Show contacts
+        </button>
+        <button type="button" class="btn-primary">
+          Show lists
+        </button>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+        <div class="btn-toggle page-actions__toggle-lists">
+          <button type="button" class="btn-primary active" disabled="disabled">
+            Show contacts
+          </button>
+          <button type="button" class="btn-primary">
+            Show lists
+          </button>
+        </div>
+      {% endhighlight %}
+    </div>
+  </div>
+
+</div>
+
+<div class="sg-section">
+  <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>Disabled buttons</h3>
       <p>Disabled buttons cannot be clicked. If you disable a link with javascript adding the 'disabled' class will make it look like a disabled button.</p>
     </div>
