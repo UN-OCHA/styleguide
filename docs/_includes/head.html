@@ -8,6 +8,9 @@
 
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
+
+      <link rel="stylesheet" href="{{ "/css/{{ stylesheet }}.css" | prepend: site.baseurl }}" media="screen" type="text/css">
+
       <link rel="stylesheet" href="/css/{{ stylesheet }}.css" media="screen" type="text/css">
       {% endfor %}
     {% endif %}
