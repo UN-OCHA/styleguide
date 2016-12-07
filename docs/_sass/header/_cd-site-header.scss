@@ -27,6 +27,7 @@
   display: block;
   height: $cd-base-unit*5;
   position: relative;
+  background-size: 100% auto;
 
   @if $modernizr == false {
     background: url('../assets/images/cd-logo.png') left center no-repeat;
