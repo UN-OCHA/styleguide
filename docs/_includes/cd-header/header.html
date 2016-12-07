@@ -108,11 +108,13 @@
           </ul>
         </nav>
 
-        <button type="button" id="{{ include.namespace }}-nav-toggle" class="{{ include.namespace }}-site-header__nav-toggle" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-nav" >
-          <span class="{{ include.namespace }}-site-header__nav-toggle-inner" aria-hidden="true">
-          </span>
-          <span class="{{ include.namespace }}-sr-only">Main menu</span>
-        </button>
+        {% if include.namespace != 'cd-fixed' %}
+          <button type="button" id="{{ include.namespace }}-nav-toggle" class="{{ include.namespace }}-site-header__nav-toggle" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-nav" >
+            <span class="{{ include.namespace }}-site-header__nav-toggle-inner" aria-hidden="true">
+            </span>
+            <span class="{{ include.namespace }}-sr-only">Main menu</span>
+          </button>
+        {% endif %}
 
       </div>
     </div>
@@ -121,11 +123,13 @@
 
 <script>
 $(document).ready(function () {
+
   $('[data-{{ include.namespace }}-toggle]').on('click', function (e) {
     e.preventDefault();
     var target = $(this).data('{{ include.namespace }}-toggle');
     var targetHidden = $(target).attr('aria-hidden') === 'true' ? true : false;
     $(target).attr('aria-hidden', !targetHidden);
   });
+
 });
 </script>

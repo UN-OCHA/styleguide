@@ -1,21 +1,26 @@
 $namespace: 'cd' !default;
+$modernizr: true !default;
 
+$cd-base-unit: 8px !default;
+$cd-global-header-height: $cd-base-unit*5 !default;
+$cd-site-header-height-xs: $cd-base-unit*6 !default;
+$cd-site-header-height-md: $cd-base-unit*7.5 !default;
+$cd-max-width: 1400px !default;
+$cd-logo-width: $cd-base-unit*30 !default;
 
-$cd-base-unit: 8px;
-$cd-global-header-height: $cd-base-unit*5;
-$cd-site-header-height-xs: $cd-base-unit*6;
-$cd-site-header-height-md: $cd-base-unit*7.5;
+$cd-primary-color: #5C6FA6 !default;
+$cd-highlight-color: #53B1C8 !default;
+$cd-light-color: #f8fcfd !default;
+$cd-text-dark: #767676 !default;
+$cd-text-light: white !default;
+$cd-border-color: #CFD1D2 !default;
+$cd-nav-focus-bg: #F6F6F6 !default;
 
-$cd-max-width: 1400px;
-$cd-primary-color: #5C6FA6;
-$cd-highlight-color: #53B1C8;
-$cd-light-color: #f8fcfd;
-$cd-text-dark: #767676;
-$cd-text-light: white;
-$cd-border-color: #CFD1D2;
-$cd-nav-focus-bg: #F6F6F6;
-$cd-font: helvetica, arial, sans-serif;
+$cd-font: helvetica, arial, sans-serif !default;
 
+$cd-tiny-font-size: 10px !default;
+$cd-small-font-size: 14px !default;
+$cd-base-font-size: 16px !default;
 
 $grid-breakpoints: (
   xs: 0,
@@ -30,7 +35,7 @@ $grid-breakpoints: (
   font-family: $cd-font;
 
   @if $cd-fixed-width == true {
-    background: red;
+    min-width: $cd-max-width;
   }
 
   * {
@@ -41,7 +46,7 @@ $grid-breakpoints: (
 
   button {
     -webkit-appearance: none;
-    background: none;
+    background-color: transparent;
     border: none;
     border-radius: none;
     box-shadow: none;
@@ -73,11 +78,12 @@ $grid-breakpoints: (
 .#{$namespace}-container {
   padding-left: $cd-base-unit;
   padding-right: $cd-base-unit;
+  width: 100%;
   max-width: $cd-max-width;
   margin: 0 auto;
 
-  .no-flexbox & {
-    width: 100%;
+  @if $cd-fixed-width == true {
+    width: $cd-max-width;
   }
 }
 
@@ -137,18 +143,22 @@ $grid-breakpoints: (
   border: 0;
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {
-  .#{$namespace}-container {
-    padding-left: $cd-base-unit*2;
-    padding-right: $cd-base-unit*2;
-  }
-}
+@if $cd-fixed-width == false {
 
-@media (min-width: map-get($grid-breakpoints, xl)) {
-  .#{$namespace}-container {
-    padding-left: $cd-base-unit*5;
-    padding-right: $cd-base-unit*5;
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    .#{$namespace}-container {
+      padding-left: $cd-base-unit*2;
+      padding-right: $cd-base-unit*2;
+    }
   }
+
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    .#{$namespace}-container {
+      padding-left: $cd-base-unit*5;
+      padding-right: $cd-base-unit*5;
+    }
+  }
+
 }
 
 @import "header/cd-global-header",

@@ -3,43 +3,45 @@
 }
 
 .#{$namespace}-site-header__inner {
-  display: block;
-  display: flex;
   align-items: center;
   position: relative;
-  height: $cd-site-header-height-xs;
 
-  .no-flexbox & {
-    content: "";
-    display: table;
-    clear: both;
+  @if $cd-fixed-width == false {
+    height: $cd-site-header-height-xs;
+  } @else {
     height: $cd-site-header-height-md;
-    padding: $cd-base-unit 0;
+  }
+
+  @if $modernizr == false {
+    height: $cd-site-header-height-md;
+  } @else {
+    display: flex;
+    .no-flexbox & {
+      height: $cd-site-header-height-md;
+      padding: $cd-base-unit 0;
+    }
   }
 }
 
 .#{$namespace}-site-header__logo {
   display: block;
   height: $cd-base-unit*5;
-  width: $cd-base-unit*5;
-  background: url('../assets/images/cd-logo.svg') left center no-repeat;
   position: relative;
 
-  .no-svg & {
-    background-image: url('../assets/images/cd-logo.png');
+  @if $modernizr == false {
+    background: url('../assets/images/cd-logo.png') left center no-repeat;
+    margin-top: 10px;
+  } @else {
+    background: url('../assets/images/cd-logo.svg') left center no-repeat;
 
-    span {
-      position: absolute;
-      left: -99999px;
+    .no-svg & {
+      background-image: url('../assets/images/cd-logo.png');
+
+      span {
+        position: absolute;
+        left: -99999px;
+      }
     }
-  }
-
-  &.#{$namespace}-site-header__logo--loggedout {
-    width: $cd-base-unit*32;
-  }
-
-  .no-flexbox & {
-    float: left;
   }
 
   &:after {
@@ -50,6 +52,31 @@
     width: 100%;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
+  }
+
+  @if $cd-fixed-width == true {
+    width: $cd-logo-width;
+    background-size: 100% auto;
+    margin-right: $cd-base-unit*2;
+
+    &:after {
+      bottom: -12px;
+    }
+
+  } @else {
+    width: $cd-base-unit*5;
+  }
+
+  &.#{$namespace}-site-header__logo--loggedout {
+    width: $cd-logo-width;
+  }
+
+  @if $modernizr == false {
+    float: left;
+  } @else {
+    .no-flexbox & {
+      float: left;
+    }
   }
 
   &:hover, &:focus, &.#{$namespace}-active {
@@ -71,18 +98,25 @@
 .#{$namespace}-site-header__search {
   flex-grow: 1;
 
-  .no-flexbox & {
+  @if $modernizr == false {
     float: left;
+    padding-top: 10px;
+  } @else {
+    .no-flexbox & {
+      float: left;
+    }
   }
 }
 
 .#{$namespace}-header-search {
   position: relative;
 
-  .no-svg & {
-    label {
-      position: absolute;
-      left: -999999px;
+  @if $modernizr == true {
+    .no-svg & {
+      label {
+        position: absolute;
+        left: -999999px;
+      }
     }
   }
 }
@@ -93,7 +127,7 @@
   box-shadow: none;
   -webkit-appearance: none;
   font-family: $cd-font;
-  font-size: 16px;
+  font-size: $cd-base-font-size;
   padding: $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*3.5;
   width: 96%;
 
@@ -102,8 +136,12 @@
     background: $cd-light-color;
   }
 
-  .no-svg & {
-    border: 1px solid $cd-border-color;
+  @if $modernizr == false {
+
+  } @else {
+    .no-svg & {
+      border: 1px solid $cd-border-color;
+    }
   }
 }
 
@@ -115,32 +153,44 @@
   width: $cd-base-unit*2.5;
   height: $cd-base-unit*2.5;
 
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: $cd-highlight-color;
-  }
-
   &:focus {
     outline: none;
     background: $cd-primary-color;
   }
 
-  .no-svg & {
-    left: auto;
-    top: 10px;
-    right: 2%;
-    height: 100%;
-    width: auto;
-    background: $cd-primary-color;
-    color: $cd-text-light;
-    padding: $cd-base-unit;
+  @if $modernizr == false {
 
-    .#{$namespace}-sr-only {
-      position: static;
-    }
     svg {
       display: none;
+    }
+
+    background: url('../assets/images/search.png') center no-repeat;
+    background-image: url('../assets/images/search.svg'), none;
+
+  } @else {
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $cd-highlight-color;
+    }
+
+    .no-svg & {
+      left: auto;
+      top: 10px;
+      right: 2%;
+      height: 100%;
+      width: auto;
+      background: $cd-primary-color;
+      color: $cd-text-light;
+      padding: $cd-base-unit;
+
+      .#{$namespace}-sr-only {
+        position: static;
+      }
+      svg {
+        display: none;
+      }
     }
   }
 }
@@ -148,11 +198,16 @@
 .#{$namespace}-header-search__active {
   display: block;
   position: absolute;
-  bottom: -11px;
   left: 0;
   width: 100%;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
+
+  @if $cd-fixed-width == false {
+    bottom: -11px;
+  } @else {
+    bottom: -12px;
+  }
 }
 
 .#{$namespace}-header-search__input:focus + .#{$namespace}-header-search__button svg {
@@ -164,23 +219,27 @@
 }
 
 .#{$namespace}-site-header__nav-toggle {
-  width: $cd-base-unit*5;
-  height: $cd-base-unit*4;
-  padding: $cd-base-unit/2;
-  position: relative;
-  margin-right: -$cd-base-unit;
+  @if $cd-fixed-width == false {
+    width: $cd-base-unit*5;
+    height: $cd-base-unit*4;
+    padding: $cd-base-unit/2;
+    position: relative;
+    margin-right: -$cd-base-unit;
 
-  &:focus {
-    outline: none;
-    background: $cd-primary-color;
+    &:focus {
+      outline: none;
+      background: $cd-primary-color;
 
-    .#{$namespace}-site-header__nav-toggle-inner {
-      border-color: $cd-text-light;
+      .#{$namespace}-site-header__nav-toggle-inner {
+        border-color: $cd-text-light;
 
-      &:before {
-        background: $cd-text-light;
+        &:before {
+          background: $cd-text-light;
+        }
       }
     }
+  } @else {
+    display: none;
   }
 
   .no-mediaqueries & {
@@ -209,72 +268,86 @@
 }
 
 .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
-  top: 42px;
-  // top: $cd-base-unit*6;
-  width: $cd-base-unit*30;
-  right: -$cd-base-unit*2;
 
-  .no-mediaqueries & {
+  @if $cd-fixed-width == false {
+    top: 42px;
+    // top: $cd-base-unit*6;
+    width: $cd-base-unit*30;
+    right: -$cd-base-unit*2;
+  } @else {
     display: block;
     width: auto;
     max-width: none;
     position: static;
-    float: right;
-  }
-}
-
-@media (min-width: map-get($grid-breakpoints, sm)) {
-
-  .#{$namespace}-site-header__logo {
-    width: $cd-base-unit*30;
-    margin-right: $cd-base-unit*3;
-    background-size: 100%;
-
-    &:after {
-      bottom: -12px;
-    }
-  }
-
-}
-
-@media (min-width: map-get($grid-breakpoints, md)) {
-
-  .#{$namespace}-site-header__inner {
-    height: $cd-site-header-height-md;
-  }
-
-  .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
-    top: $cd-base-unit*6;
-  }
-}
-
-@media (min-width: map-get($grid-breakpoints, lg)) {
-
-  .#{$namespace}-site-header__inner {
-    .no-flexbox & {
-      padding-top: $cd-base-unit*1.5;
-      padding-bottom: $cd-base-unit*1.5;
-    }
-  }
-
-  .#{$namespace}-site-header__nav-toggle {
-    display: none;
-  }
-
-  .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
-    display: block;
-    position: relative;
+    // float: right;
     box-shadow: none;
-    top: auto;
-    right: auto;
-    width: auto;
-    max-width: none;
-    background: none;
-    z-index: auto;
+  }
 
-    .no-flexbox & {
+  @if $modernizr == false {
+    float: right;
+  } @else {
+    .no-flexbox {
       float: right;
     }
   }
+}
 
+@if $cd-fixed-width == false {
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+
+    .#{$namespace}-site-header__logo {
+      width: $cd-logo-width;
+      margin-right: $cd-base-unit*3;
+      background-size: 100%;
+
+      &:after {
+        bottom: -12px;
+      }
+
+    }
+
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+
+    .#{$namespace}-site-header__inner {
+      height: $cd-site-header-height-md;
+    }
+
+    .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
+      top: $cd-base-unit*6;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+
+    .#{$namespace}-site-header__inner {
+      .no-flexbox & {
+        padding-top: $cd-base-unit*1.5;
+        padding-bottom: $cd-base-unit*1.5;
+      }
+    }
+
+    .#{$namespace}-site-header__nav-toggle {
+      display: none;
+    }
+
+    .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
+      display: block;
+      position: relative;
+      box-shadow: none;
+      top: auto;
+      right: auto;
+      width: auto;
+      max-width: none;
+      background: none;
+      z-index: auto;
+
+      .no-flexbox & {
+        float: right;
+      }
+    }
+
+  }
 }

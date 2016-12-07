@@ -12,8 +12,13 @@
       {% endfor %}
     {% endif %}
 
-
-    <!-- <link rel="stylesheet" href="{{ "/css/cd-header.css" | prepend: site.baseurl }}"> -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+
     <script src="{{ "/assets/js/modernizr.js" | prepend: site.baseurl }}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>

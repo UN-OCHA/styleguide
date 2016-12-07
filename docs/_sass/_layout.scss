@@ -12,6 +12,7 @@ $base-unit: 8px;
   font-family: sans-serif;
   color: #666;
   padding: 0 $base-unit*2;
+  display: flex;
 }
 
 .styleguide-heading {
@@ -49,6 +50,10 @@ $base-unit: 8px;
 
 .sg-dark-bg {
   background: #666;
+}
+
+.styleguide-col {
+  width: 50%;
 }
 
 

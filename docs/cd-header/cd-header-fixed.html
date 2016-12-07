@@ -3,5 +3,76 @@ layout: default
 custom_css: cd-header-fixed
 namespace: cd-fixed
 ---
-
 {% include cd-header/header.html namespace=page.namespace %}
+
+<div class="styleguide">
+  <h2>Common Design header - standalone, fixed width, no modernizr</h2>
+</div>
+
+<div class="styleguide">
+  <div class="styleguide-col">
+
+    <h3>Files:</h3>
+
+    <h4>HTML:</h4>
+    <ul>
+      <li><a href="#code">Copy &amp; pastable generated HTML</a></li>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_includes/cd-header/header.html">header.html</a></li>
+    </ul>
+
+    <h4>Sass:</h4>
+    <ul>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-settings-fixed.scss">_cd-settings-fixed.scss</a></li>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-header.scss">_cd-header.scss</a></li>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-global-header.scss">_cd-global-header.scss</a></li>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-site-header.scss">_cd-site-header.scss</a></li>
+      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-nav.scss">_cd-nav.scss</a></li>
+    </ul>
+
+    <h4>CSS:</h4>
+    <ul>
+      <li><a href="https://un-ocha.github.io/styleguide/css/cd-header-fixed.css">cd-header-fixed.css</a></li>
+    </ul>
+  </div>
+  <div class="styleguide-col">
+
+    <h3>Information:</h3>
+
+    <h4>Modernizr detects required:</h4>
+    <p>None</p>
+
+    <h4>Browser support:</h4>
+    <p>IE8+</p>
+
+    <h4>Javascript:</h4>
+    <p>Uses a few lines of jQuery to handle the dropdown menus, suggest switching this for dropdown JS already included
+    in your project (e.g. bootstrap dropdown)</p>
+  </div>
+
+</div>
+
+<div id="code" class="html-block">
+  <pre>
+  <code id="code">
+  </code>
+  </pre>
+</div>
+<script>
+$(document).ready(function () {
+
+  var container = $('header');
+  var target =$('#code');
+  if (target.length > 0) {
+    var sample_html = container[0].outerHTML;
+    var white_space = "☺";
+    try {
+      white_space = sample_html.match(/\n+\s+\S/)[0].slice(0,(sample_html.match(/\n+\s+\S/)[0].length-3));
+    } catch(err) {}
+    var re = new RegExp(white_space,"g");
+    sample_html = sample_html.replace(re,"\n").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    sample_html = $.trim(sample_html);
+    target.html(sample_html);
+  }
+
+});
+</script>
