@@ -1,4 +1,4 @@
-.cd-global-header {
+.#{$namespace}-global-header {
   background: $cd-primary-color;
   color: $cd-text-light;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.cd-global-header__inner {
+.#{$namespace}-global-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,11 +24,11 @@
   }
 }
 
-.cd-global-header__sites {
+.#{$namespace}-global-header__sites {
   flex-grow: 1;
   position: relative;
 
-  .cd-dropdown-menu {
+  .#{$namespace}-dropdown-menu {
       width: 200px;
   //   left: 0;
   //   right: auto;
@@ -41,7 +41,7 @@
   }
 }
 
-.cd-global-header__sites-btn {
+.#{$namespace}-global-header__sites-btn {
   color: $cd-text-light;
   text-transform: uppercase;
   text-align: left;
@@ -56,7 +56,7 @@
   }
 }
 
-.cd-global-header__nav {
+.#{$namespace}-global-header__nav {
   .no-flexbox & {
     float: right;
   }
@@ -64,14 +64,14 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
 
-  .cd-global-header__sites-btn {
+  .#{$namespace}-global-header__sites-btn {
     font-size: 14px
   }
 
 }
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
-  .cd-global-header__sites-btn {
+  .#{$namespace}-global-header__sites-btn {
     padding-left: $cd-base-unit*1.5;
     padding-right: $cd-base-unit*1.5;
   }

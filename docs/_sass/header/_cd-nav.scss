@@ -1,14 +1,14 @@
-.cd-nav__item {
+.#{$namespace}-nav__item {
   position: relative;
 
-  .cd-dropdown-menu {
+  .#{$namespace}-dropdown-menu {
     left: auto;
     right: 0;
     top: $cd-base-unit*3.5;
     width: 120px;
   }
 
-  .cd-nav--primary & {
+  .#{$namespace}-nav--primary & {
     text-transform: uppercase;
 
     .no-mediaqueries & {
@@ -16,12 +16,12 @@
     }
   }
 
-  .cd-nav--secondary & {
+  .#{$namespace}-nav--secondary & {
     display: inline-block;
   }
 
   &:last-child {
-    .cd-nav__link {
+    .#{$namespace}-nav__link {
       &:before {
         content: none;
       }
@@ -29,7 +29,7 @@
   }
 }
 
-.cd-nav__link {
+.#{$namespace}-nav__link {
   display: block;
   line-height: 1;
   padding: 0 $cd-base-unit;
@@ -46,14 +46,14 @@
     height: $cd-base-unit*1.5;
   }
 
-  .cd-icon {
+  .#{$namespace}-icon {
     svg {
       fill: $cd-text-light;
       vertical-align: text-bottom;
     }
   }
 
-  .cd-nav--primary & {
+  .#{$namespace}-nav--primary & {
     color: $cd-primary-color;
     height: $cd-base-unit*6;
     display: flex;
@@ -91,7 +91,7 @@
     }
   }
 
-  .cd-active & {
+  .#{$namespace}-active & {
     font-weight: bold;
 
     &:after {
@@ -99,7 +99,7 @@
     }
   }
 
-  .cd-nav--secondary & {
+  .#{$namespace}-nav--secondary & {
     color: $cd-text-light;
     font-size: 14px;
     height: $cd-base-unit*2;
@@ -111,7 +111,7 @@
 
     &:hover, &:focus {
       outline: none;
-      .cd-nav__label {
+      .#{$namespace}-nav__label {
         text-decoration: underline;
       }
     }
@@ -119,23 +119,23 @@
 
 }
 
-.cd-nav__label:not(.cd-nav__label--mobile) {
-  @extend .cd-sr-only;
+.#{$namespace}-nav__label:not(.#{$namespace}-nav__label--mobile) {
+  @extend .#{$namespace}-sr-only;
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
 
-  .cd-nav--secondary {
+  .#{$namespace}-nav--secondary {
     .no-flexbox & {
       float: right;
     }
   }
 
-  .cd-nav__label {
+  .#{$namespace}-nav__label {
     font-size: 16px;
   }
 
-  .cd-nav__label:not(.cd-nav__label--mobile)  {
+  .#{$namespace}-nav__label:not(.#{$namespace}-nav__label--mobile)  {
     position: relative;
     height: auto;
     width: auto;
@@ -143,7 +143,7 @@
     margin: 0 0 0 $cd-base-unit;
   }
 
-  .cd-nav__link {
+  .#{$namespace}-nav__link {
     .fa:not(.fa-caret-down) {
       font-size: 16px;
     }
@@ -153,23 +153,23 @@
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
 
-  .cd-nav {
+  .#{$namespace}-nav {
     display: flex;
   }
 
-  .cd-nav__item {
+  .#{$namespace}-nav__item {
     display: inline-block;
     border: none;
 
-    .cd-nav--primary & {
+    .#{$namespace}-nav--primary & {
       border-bottom: none;
     }
   }
 
-  .cd-nav__link {
+  .#{$namespace}-nav__link {
     font-size: 14px;
 
-    .cd-nav--primary & {
+    .#{$namespace}-nav--primary & {
       height: $cd-site-header-height-md;
 
       &:hover, &:focus {
@@ -196,11 +196,11 @@
 
 @media (min-width: map-get($grid-breakpoints, xl)) {
 
-  .cd-nav__link {
+  .#{$namespace}-nav__link {
     padding: 0 $cd-base-unit*2;
     font-size: 16px;
 
-    .cd-nav--primary & {
+    .#{$namespace}-nav--primary & {
       padding: 0 $cd-base-unit*2;
     }
   }

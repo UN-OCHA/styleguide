@@ -1,3 +1,6 @@
+$namespace: 'cd' !default;
+
+
 $cd-base-unit: 8px;
 $cd-global-header-height: $cd-base-unit*5;
 $cd-site-header-height-xs: $cd-base-unit*6;
@@ -23,8 +26,12 @@ $grid-breakpoints: (
   xxl: 1400px
 ) !default;
 
-.cd-header {
+.#{$namespace}-header {
   font-family: $cd-font;
+
+  @if $cd-fixed-width == true {
+    background: red;
+  }
 
   * {
     margin: 0;
@@ -63,7 +70,7 @@ $grid-breakpoints: (
   }
 }
 
-.cd-container {
+.#{$namespace}-container {
   padding-left: $cd-base-unit;
   padding-right: $cd-base-unit;
   max-width: $cd-max-width;
@@ -74,11 +81,11 @@ $grid-breakpoints: (
   }
 }
 
-.cd-dropdown {
+.#{$namespace}-dropdown {
   position: relative;
 }
 
-.cd-dropdown-menu {
+.#{$namespace}-dropdown-menu {
   position: absolute;
   z-index: 99;
   background: white;
@@ -108,7 +115,7 @@ $grid-breakpoints: (
   }
 }
 
-.cd-icon-down-arrow {
+.#{$namespace}-icon-down-arrow {
   width: 0;
   height: 0;
   border-style: solid;
@@ -119,7 +126,7 @@ $grid-breakpoints: (
   margin-left: 2px;
 }
 
-.cd-sr-only {
+.#{$namespace}-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -131,14 +138,14 @@ $grid-breakpoints: (
 }
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
-  .cd-container {
+  .#{$namespace}-container {
     padding-left: $cd-base-unit*2;
     padding-right: $cd-base-unit*2;
   }
 }
 
 @media (min-width: map-get($grid-breakpoints, xl)) {
-  .cd-container {
+  .#{$namespace}-container {
     padding-left: $cd-base-unit*5;
     padding-right: $cd-base-unit*5;
   }

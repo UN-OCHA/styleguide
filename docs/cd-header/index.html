@@ -1,12 +1,13 @@
 ---
 layout: default
+custom_css: [cd-header, cd-header-fixed]
 ---
 
 <div class="styleguide">
   <h1 class="styleguide-heading">Common design header</h1>
   <h2>Standalone, responsive</h2>
 </div>
-{% include cd-header/header.html %}
+{% include cd-header/header.html namespace="cd" %}
 <div class="styleguide">
   <h3>Files:</h3>
   <h4>HTML</h4>
@@ -43,3 +44,9 @@ layout: default
   <p>Without modernizr</p>
   <p>Using front end foundation</p>
 </div>
+
+<div class="styleguide">
+  <h1 class="styleguide-heading">Common design header</h1>
+  <h2>Standalone, fixed width</h2>
+</div>
+{% include cd-header/header.html namespace="cd-fixed" %}
