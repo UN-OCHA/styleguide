@@ -9,7 +9,7 @@ $cd-max-width: 1400px !default;
 $cd-logo-width: $cd-base-unit*30 !default;
 
 $cd-primary-color: #5C6FA6 !default;
-$cd-highlight-color: #53B1C8 !default;
+$cd-highlight-color: lighten($cd-primary-color,15%) !default;
 $cd-light-color: #f8fcfd !default;
 $cd-text-dark: #767676 !default;
 $cd-text-light: white !default;
@@ -96,7 +96,6 @@ $grid-breakpoints: (
   z-index: 99;
   background: white;
   width: 100%;
-  max-width: 200px;
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.25);
   display: none;
 
@@ -110,6 +109,7 @@ $grid-breakpoints: (
     border-bottom: 1px solid $cd-border-color;
     text-decoration: none;
     color: $cd-text-dark;
+    word-break: break-word;
 
     &:hover, &:focus {
       background: $cd-nav-focus-bg;

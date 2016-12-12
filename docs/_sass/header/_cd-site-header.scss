@@ -272,7 +272,6 @@
 
   @if $cd-fixed-width == false {
     top: 42px;
-    // top: $cd-base-unit*6;
     width: $cd-base-unit*30;
     right: -$cd-base-unit*2;
   } @else {
@@ -280,7 +279,6 @@
     width: auto;
     max-width: none;
     position: static;
-    // float: right;
     box-shadow: none;
   }
 

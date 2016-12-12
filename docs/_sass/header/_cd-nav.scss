@@ -10,8 +10,14 @@
   .#{$namespace}-dropdown-menu {
     left: auto;
     right: 0;
-    top: $cd-base-unit*3.5;
-    width: 120px;
+
+    @if $cd-fixed-width == false {
+      min-width: 120px;
+    }
+  }
+
+  .#{$namespace}-dropdown-menu--small {
+    min-width: 100%;
   }
 
   .#{$namespace}-nav--primary & {
@@ -55,6 +61,7 @@
     right: -1px;
     top: 2px;
     height: $cd-base-unit*1.5;
+    z-index: 1;
   }
 
   .#{$namespace}-icon {
@@ -67,7 +74,6 @@
   .#{$namespace}-nav--primary & {
     color: $cd-primary-color;
     height: $cd-base-unit*6;
-    // display: flex;
     align-items: center;
     border-bottom: none;
 
@@ -106,9 +112,7 @@
 
     @if $cd-fixed-width == true {
       display: block;
-      // height: auto;
       height: $cd-site-header-height-md;
-      // display: block;
       padding-top: $cd-base-unit*3;
       padding-bottom: $cd-base-unit*2;
     }
@@ -132,18 +136,18 @@
   .#{$namespace}-nav--secondary & {
     color: $cd-text-light;
     font-size: $cd-small-font-size;
-    height: $cd-base-unit*2;
+    height: $cd-global-header-height;
+    padding: $cd-base-unit*1.5 $cd-base-unit;
 
     &:before {
       width: 1px;
       background: $cd-text-light;
+      top: 14px;
     }
 
     &:hover, &:focus {
       outline: none;
-      .#{$namespace}-nav__label {
-        text-decoration: underline;
-      }
+      background: darken($cd-primary-color, 10%);
     }
   }
 
@@ -160,6 +164,12 @@
     .#{$namespace}-nav--secondary {
       .no-flexbox & {
         float: right;
+      }
+    }
+
+    .#{$namespace}-nav__item {
+      .#{$namespace}-dropdown-menu {
+        min-width: 0;
       }
     }
 
@@ -232,6 +242,10 @@
         } @else {
           padding: 0 $cd-base-unit*2;
         }
+      }
+
+      .#{$namespace}-nav--secondary & {
+        padding: $cd-base-unit*1.5 $cd-base-unit*2;
       }
     }
 

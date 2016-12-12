@@ -14,6 +14,7 @@
   height: $cd-global-header-height;
 
   @if $modernizr == false {
+    display: block;
     &:after {
       content: "";
       display: table;
@@ -32,11 +33,9 @@
 }
 
 .#{$namespace}-global-header__sites {
-  flex-grow: 1;
   position: relative;
 
   .#{$namespace}-dropdown-menu {
-      width: 200px;
   }
 
   @if $modernizr == false {
@@ -62,8 +61,7 @@
     padding-right: $cd-base-unit*1.5;
   }
 
-  &:focus {
-    box-shadow: none;
+  &:hover, &:focus {
     background: darken($cd-primary-color, 10%);
     outline: none;
   }
@@ -71,11 +69,9 @@
 
 .#{$namespace}-global-header__nav {
   @if $modernizr == false {
-    padding: $cd-base-unit 0;
     float: right;
   } @else {
     .no-flexbox & {
-      padding: $cd-base-unit 0;
       float: right;
     }
   }
