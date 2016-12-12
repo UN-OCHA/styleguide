@@ -89,6 +89,7 @@
   &:focus {
     outline-style: dotted;
     outline-width: 1px;
+    outline-color: $cd-border-grey;
   }
 
   .no-mediaqueries & {
