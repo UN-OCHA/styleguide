@@ -1,0 +1,90 @@
+---
+layout: hid
+---
+
+<h2 class="styleguide-heading">Tabs</h2>
+<p>Responsive tabs - changes to accordion on small screens.</p>
+<p>Sass: common/_tabs.scss</p>
+
+<div class="sg-section">
+
+    <div class="sg-section__item">
+
+    <div class="sg-section__header">
+      <p>Options:</p>
+      <ul>
+        <li><strong>Tab width</strong> - by default the tabs have width: auto. Add classes 'tab-<em>x</em>' to set the number of tabs and have them take up the full width (eg, if set to 2 each tab will be 50% width), available numbers of tabs are 2, 3 and 4.
+        <li><strong>tabsActive</strong> - false by default. This closes the first tab initially on small screens. Set to true to have it be open on page load.</li>
+      </p>
+    </div>
+
+      <ul class="tabs tabs-3">
+        <li class="tabs__control-item">
+        <button type="button" class="tabs__control-button active tabs__control-button--mobile-closed">
+          <span translate=""><span class="ng-scope">Tab 1</span></span>
+        </button>
+
+        <div class="tabs__content tabs__content--mobile-closed">
+          <p>I am the tab content 1</p>
+        </div>
+      </li>
+
+      <li class="tabs__control-item">
+        <button type="button" class="tabs__control-button">
+          <span translate=""><span class="ng-scope">Tab 2</span></span>
+        </button>
+      </li>
+
+      <li class="tabs__control-item">
+        <button type="button" class="tabs__control-button">
+          <span translate=""><span class="ng-scope">Tab 3</span></span>
+        </button>
+      </li>
+
+    </ul>
+
+    <h3>HTML</h3>
+    {% highlight html %}
+      <ul class="tabs tabs-3">
+        <li class="tabs__control-item">
+          <button type="button" class="tabs__control-button" ng-class="{'active' : activeTab === 1, 'tabs__control-button--mobile-closed': !tabsActive}" ng-click="toggleTabs(1)">
+            <span translate>Tab 1</span>
+          </button>
+          <div class="tabs__content" ng-if="activeTab === 1" ng-class="{'tabs__content--mobile-closed' : !tabsActive}">
+            <p>I am the tab content 1</p>
+          </div>
+        </li>
+
+        <li class="tabs__control-item">
+          <button type="button" class="tabs__control-button" ng-class="{'active' : activeTab === 2, 'tabs__control-button--mobile-closed': !tabsActive}" ng-click="toggleTabs(2)">
+            <span translate>Tab 2</span>
+          </button>
+          <div class="tabs__content" ng-if="activeTab === 2" ng-class="{'tabs__content--mobile-closed' : !tabsActive}">
+            <p>I am the tab content 2</p>
+          </div>
+        </li>
+
+        <li class="tabs__control-item">
+          <button type="button" class="tabs__control-button" ng-class="{'active' : activeTab === 3, 'tabs__control-button--mobile-closed': !tabsActive}" ng-click="toggleTabs(3)">
+            <span translate>Tab 3</span>
+          </button>
+          <div class="tabs__content" ng-if="activeTab === 3" ng-class="{'tabs__content--mobile-closed' : !tabsActive}">
+            <p>I am the tab content 3</p>
+          </div>
+        </li>
+      </ul>
+    {% endhighlight %}
+
+    <h3>Javascript (in controller)</h3>
+    {% highlight html %}
+      $scope.tabsActive = false;
+      $scope.activeTab = 1;
+
+      $scope.toggleTabs = function (tabName) {
+        $scope.activeTab = tabName;
+        $scope.tabsActive = true;
+      };
+    {% endhighlight %}
+    </div>
+
+</div>

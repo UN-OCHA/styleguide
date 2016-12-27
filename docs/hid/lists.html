@@ -1,0 +1,176 @@
+---
+layout: hid
+---
+
+<h2 class="styleguide-heading">Lists</h2>
+
+
+<div class="sg-section">
+  <div class="row">
+    <div class="col-xs-12 sg-section__header">
+    <h3>Standard list</h3>
+    </div>
+  </div>
+
+  <div class="row sg-section__item">
+    <div class="col-sm-6">
+
+      <ul class="list">
+        <li class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+        <li class="list__item">
+            This is the list item content This is the list item content This is the list item content This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+        <li class="list__item list__item--highlight">
+            A highlighted list item<br>
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+      <ul class="list">
+        <li class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+        <li class="list__item">
+            This is the list item content This is the list item content This is the list item content This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+        <li class="list__item list__item--highlight">
+            A highlighted list item<br>
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+        </li>
+      </ul>
+      {% endhighlight %}
+    </div>
+  </div>
+
+</div>
+
+<div class="sg-section">
+  <div class="row">
+    <div class="col-xs-12 sg-section__header">
+    <h3>Link list</h3>
+    <p>If the entire list item should be a link, apply the 'list-item' class to the link instead of the li.</p>
+    </div>
+  </div>
+
+  <div class="row sg-section__item">
+    <div class="col-sm-6">
+
+      <ul class="list">
+        <li>
+          <a href="#" class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="list__item list__item--highlight">
+            A highlighted list item
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+      <ul class="list">
+        <li>
+          <a href="#" class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="list__item list__item--highlight">
+            A highlighted list item
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="list__item">
+            This is the list item content
+            <span class="list__item-meta">
+              List item meta for secondary information such as dates
+            </span>
+          </a>
+        </li>
+      </ul>
+      {% endhighlight %}
+    </div>
+  </div>
+
+</div>
+
+<div class="sg-section">
+  <div class="row">
+    <div class="col-xs-12 sg-section__header">
+    <h3>List group</h3>
+    </div>
+  </div>
+
+  <div class="row sg-section__item">
+    <div class="col-sm-6">
+
+      <ul class="list-group" ng-if="currentUser.favoriteLists.length">
+        <li class="list-group__item">
+          <a href="/lists/{{list._id}}">This the list item  content</a>
+          <div class="list-group__item-actions" uib-dropdown>
+            <button type="button" class="btn btn-transparent" uib-dropdown-toggle>
+              <span class="icon"><i class="icon icon-edit" aria-hidden="true"></i><span class="sr-only"><span>Edit</span></span></span>
+            </button>
+
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+
+      {% endhighlight %}
+    </div>
+  </div>
+
+</div>
+
+
