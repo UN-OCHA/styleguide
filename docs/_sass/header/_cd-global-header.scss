@@ -34,9 +34,8 @@
 
 .#{$namespace}-global-header__sites {
   position: relative;
+  margin-left: -$cd-base-unit;
 
-  .#{$namespace}-dropdown-menu {
-  }
 
   @if $modernizr == false {
     float: left;
@@ -51,7 +50,7 @@
   color: $cd-text-light;
   text-transform: uppercase;
   text-align: left;
-  padding: 0;
+  padding: 0 $cd-base-unit;
   height: $cd-global-header-height;
 
   @if $cd-fixed-width == false {
@@ -68,6 +67,8 @@
 }
 
 .#{$namespace}-global-header__nav {
+  margin-right: -$cd-base-unit;
+
   @if $modernizr == false {
     float: right;
   } @else {
@@ -81,8 +82,16 @@
 
   @media (min-width: map-get($grid-breakpoints, sm)) {
 
+    .#{$namespace}-global-header__sites {
+      margin-left: 0;
+    }
+
     .#{$namespace}-global-header__sites-btn {
       font-size: $cd-small-font-size;
+    }
+
+    .#{$namespace}-global-header__nav {
+      margin-right: 0;
     }
 
   }

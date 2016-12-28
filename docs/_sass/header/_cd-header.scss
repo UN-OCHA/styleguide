@@ -121,17 +121,6 @@ $grid-breakpoints: (
   }
 }
 
-.#{$namespace}-icon-down-arrow {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 4px 0 4px;
-  border-color: #ffffff transparent transparent transparent;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 2px;
-}
-
 .#{$namespace}-sr-only {
   position: absolute;
   width: 1px;

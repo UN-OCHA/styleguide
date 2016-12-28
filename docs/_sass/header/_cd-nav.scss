@@ -4,6 +4,10 @@
   }
 }
 
+.#{$namespace}-nav--secondary {
+  display: flex;
+}
+
 .#{$namespace}-nav__item {
   position: relative;
 
@@ -64,11 +68,9 @@
     z-index: 1;
   }
 
-  .#{$namespace}-icon {
-    svg {
-      fill: $cd-text-light;
-      vertical-align: text-bottom;
-    }
+  .icon-arrow-down {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .#{$namespace}-nav--primary & {
@@ -135,7 +137,7 @@
 
   .#{$namespace}-nav--secondary & {
     color: $cd-text-light;
-    font-size: $cd-small-font-size;
+    // font-size: $cd-small-font-size;
     height: $cd-global-header-height;
     padding: $cd-base-unit*1.5 $cd-base-unit;
 

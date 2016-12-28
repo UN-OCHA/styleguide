@@ -18,7 +18,8 @@
     display: flex;
     .no-flexbox & {
       height: $cd-site-header-height-md;
-      padding: $cd-base-unit 0;
+      padding-top: $cd-base-unit;
+      padding-bottom: $cd-base-unit;
     }
   }
 }
@@ -160,6 +161,11 @@
   &:focus {
     outline: none;
     background: $cd-primary-color;
+  }
+
+  .icon-arrow-down {
+    display: inline-block;
+    padding-top: 2px;
   }
 
   @if $modernizr == false {

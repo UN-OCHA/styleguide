@@ -5,7 +5,7 @@
       <div class="{{ include.namespace }}-global-header__sites {{ include.namespace }}-dropdown">
         <button type="button" class="{{ include.namespace }}-global-header__sites-btn" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-related-platforms" id="{{ include.namespace }}-related-platforms-toggle">
           Related platforms
-          <i class="{{ include.namespace }}-icon-down-arrow" aria-hidden="true"></i>
+          <i class="icon-arrow-down" aria-hidden="true"></i>
         </button>
         <ul class="{{ include.namespace }}-dropdown-menu" role="menu" id="{{ include.namespace }}-related-platforms" aria-hidden="true" aria-labelledby="{{ include.namespace }}-related-platforms-toggle">
           <li><a href="#">ReliefWeb</a></li>
@@ -20,21 +20,13 @@
         <ul class="{{ include.namespace }}-nav {{ include.namespace }}-nav--secondary">
           <li class="{{ include.namespace }}-nav__item">
             <a href="#" class="{{ include.namespace }}-nav__link">
-              <span class="{{ include.namespace }}-icon" aria-hidden="true">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M12 5.344v-1.344h-8v1.344h8zM12 7.344v-1.344h-8v1.344h8zM12 9.344v-1.344h-8v1.344h8zM14.656 2.656v12l-2.656-2.656h-9.344c-0.719 0-1.313-0.625-1.313-1.344v-8c0-0.719 0.594-1.313 1.313-1.313h10.688c0.719 0 1.313 0.594 1.313 1.313z"></path>
-                </svg>
-              </span>
+              <i class="icon-chat" aria-hidden="true"></i>
               <span class="{{ include.namespace }}-nav__label">Navigation</span>
             </a>
           </li>
           <li class="{{ include.namespace }}-nav__item">
             <a href="#" class="{{ include.namespace }}-nav__link">
-              <span class="{{ include.namespace }}-icon" aria-hidden="true">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M10.031 6.844c0.375-0.375 0.625-0.906 0.625-1.5 0-1.469-1.188-2.688-2.656-2.688s-2.656 1.219-2.656 2.688h1.313c0-0.719 0.625-1.344 1.344-1.344s1.344 0.625 1.344 1.344c0 0.375-0.156 0.688-0.406 0.938l-0.813 0.844c-0.469 0.5-0.781 1.156-0.781 1.875v0.344h1.313c0-1 0.313-1.406 0.781-1.906zM8.656 12v-1.344h-1.313v1.344h1.313zM12.656 1.344c0.719 0 1.344 0.594 1.344 1.313v9.344c0 0.719-0.625 1.344-1.344 1.344h-2.656l-2 2-2-2h-2.656c-0.75 0-1.344-0.625-1.344-1.344v-9.344c0-0.719 0.594-1.313 1.344-1.313h9.313z"></path>
-                </svg>
-              </span>
+              <i class="icon-chat" aria-hidden="true"></i>
               <span class="{{ include.namespace }}-nav__label">Navigation</span>
             </a>
           </li>
@@ -42,7 +34,7 @@
           <li class="{{ include.namespace }}-nav__item">
             <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-lang-dropdown" id="{{ include.namespace }}-lang-toggle">
               <span class="{{ include.namespace }}-nav__label {{ include.namespace }}-nav__label--mobile">Eng</span>
-              <i class="{{ include.namespace }}-icon-down-arrow"></i>
+              <i class="icon-arrow-down"></i>
             </button>
 
             <ul class="{{ include.namespace }}-dropdown-menu {{ include.namespace }}-dropdown-menu--small" id="{{ include.namespace }}-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-lang-toggle">
@@ -53,13 +45,9 @@
 
           <li class="{{ include.namespace }}-nav__item {{ include.namespace }}-dropdown">
             <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-global-nav-dropdown" id="{{ include.namespace }}-global-nav-toggle">
-              <span class="{{ include.namespace }}-icon" aria-hidden="true">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M8 9.344c1.781 0 5.344 0.875 5.344 2.656v1.344h-10.688v-1.344c0-1.781 3.563-2.656 5.344-2.656zM8 8c-1.469 0-2.656-1.188-2.656-2.656s1.188-2.688 2.656-2.688 2.656 1.219 2.656 2.688-1.188 2.656-2.656 2.656z"></path>
-                </svg>
-              </span>
+              <i class="icon-user" aria-hidden="true"></i>
               <span class="{{ include.namespace }}-nav__label">Dropdown {{ include.namespace }}-nav</span>
-              <i class="{{ include.namespace }}-icon-down-arrow"></i>
+              <i class="icon-arrow-down"></i>
             </button>
 
             <ul class="{{ include.namespace }}-dropdown-menu" id="{{ include.namespace }}-global-nav-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-global-nav-toggle">
