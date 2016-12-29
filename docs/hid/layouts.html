@@ -9,10 +9,12 @@ layout: hid
 
 <div class="sg-section">
 
-  <div class="sg-section__item">
+<div class="sg-section__item">
 
-    <div class="sg-section__header">
+    <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>2 columns - primary and secondary</h3>
+    </div>
     </div>
     <div class="col-sm-6">
       <img src="{{ "/assets/images/layout-2-cols.jpg" | prepend: site.baseurl }}" />
@@ -41,14 +43,31 @@ layout: hid
 
   <div class="sg-section__item">
 
-    <div class="sg-section__header">
+    <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>2 columns - equal width</h3>
     </div>
+    </div>
     <div class="col-sm-6">
-      <!-- <img src="{{ "/assets/images/layout-2-cols.jpg" | prepend: site.baseurl }}" /> -->
+      <img src="{{ "/assets/images/layout-2-cols-equal.jpg" | prepend: site.baseurl }}" />
     </div>
     <div class="col-sm-6">
       {% highlight html %}
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 class="page-header__heading">Page heading</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          // Page content
+        </div>
+        <div class="col-md-6">
+          // Page content
+        </div>
+      </div>
       {% endhighlight %}
     </div>
 
@@ -56,14 +75,34 @@ layout: hid
 
   <div class="sg-section__item">
 
-    <div class="sg-section__header">
+    <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>3 columns - equal width</h3>
     </div>
+    </div>
     <div class="col-sm-6">
-      <!-- <img src="{{ "/assets/images/layout-2-cols.jpg" | prepend: site.baseurl }}" /> -->
+      <img src="{{ "/assets/images/layout-3-cols.jpg" | prepend: site.baseurl }}" />
     </div>
     <div class="col-sm-6">
       {% highlight html %}
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 class="page-header__heading">Page heading</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          // Page content
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          // Page content
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          // Page content
+        </div>
+      </div>
       {% endhighlight %}
     </div>
 
@@ -71,14 +110,27 @@ layout: hid
 
   <div class="sg-section__item">
 
-    <div class="sg-section__header">
+    <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>1 column - full width</h3>
     </div>
+    </div>
     <div class="col-sm-6">
-      <!-- <img src="{{ "/assets/images/layout-2-cols.jpg" | prepend: site.baseurl }}" /> -->
+      <img src="{{ "/assets/images/layout-1-col.jpg" | prepend: site.baseurl }}" />
     </div>
     <div class="col-sm-6">
       {% highlight html %}
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 class="page-header__heading">Page heading</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+        </div>
+      </div>
       {% endhighlight %}
     </div>
 
@@ -86,14 +138,28 @@ layout: hid
 
   <div class="sg-section__item">
 
-    <div class="sg-section__header">
+    <div class="row">
+    <div class="col-xs-12 sg-section__header">
       <h3>1 column - in centre</h3>
     </div>
+    </div>
     <div class="col-sm-6">
-      <!-- <img src="{{ "/assets/images/layout-2-cols.jpg" | prepend: site.baseurl }}" /> -->
+      <img src="{{ "/assets/images/layout-1-col-center.jpg" | prepend: site.baseurl }}" />
     </div>
     <div class="col-sm-6">
       {% highlight html %}
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 class="page-header__heading">Page heading</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-4">
+          // Page content
+        </div>
+      </div>
       {% endhighlight %}
     </div>
 

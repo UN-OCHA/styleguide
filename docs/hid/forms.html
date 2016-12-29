@@ -3,18 +3,20 @@ layout: hid
 ---
 
 <h2 class="styleguide-heading">Forms</h2>
+<p>Sass: common/_forms.scss</p>
+
 <div class="row sg-section">
   <div class="col-xs-12 sg-section__header">
     <h3>Text inputs</h3>
   </div>
   <div class="col-sm-6">
 
-    <div class="form-group">
+    <div class="form-field">
       <label for="input1">I am label</label>
       <input type="text" name="input1" id="input1" placeholder="I am placeholder">
     </div>
 
-    <div class="form-group has-error">
+    <div class="form-field has-error">
       <label for="input2">I am label</label>
       <input type="text" name="input2" id="input2" placeholder="I am placeholder">
       <div class="ng-active">
@@ -26,7 +28,7 @@ layout: hid
 
   <div class="col-sm-6">
     {% highlight html %}
-      <div class="form-group">
+      <div class="form-field">
         <label for="input1">I am label</label>
         <input type="text" name="input1" id="input1" placeholder="I am placeholder">
       </div>
@@ -44,7 +46,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
 
-    <div class="form-group">
+    <div class="form-field">
       <label for="input1">I am label</label>
       <input type="text" name="input1" id="input1" placeholder="I am placeholder" aria-describedby="input1-hint">
       <p class="form-hint" id="input1-hint">I am some longer text explaining something about this field</p>
@@ -54,7 +56,7 @@ layout: hid
 
   <div class="col-sm-6">
     {% highlight html %}
-      <div class="form-group">
+      <div class="form-field">
         <label for="input1">I am label</label>
         <input type="text" name="input1" id="input1" placeholder="I am placeholder" aria-describedby="input1-hint">
         <p class="form-hint" id="input1-hint">I am some longer text explaining something about this field</p>
@@ -69,12 +71,12 @@ layout: hid
   </div>
   <div class="col-sm-6">
 
-    <div class="form-group">
+    <div class="form-field">
       <label for="textarea1">I am label</label>
       <textarea name="textarea1" id="textarea1" placeholder="I am placeholder"></textarea>
     </div>
 
-    <div class="form-group has-error">
+    <div class="form-field has-error">
       <label for="textarea2">I am label</label>
       <textarea name="textarea2" id="textarea2" placeholder="I am placeholder"></textarea>
       <div class="ng-active">
@@ -85,7 +87,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
     {% highlight html %}
-      <div class="form-group">
+      <div class="form-field">
         <label for="textarea1">I am label</label>
         <textarea name="textarea1" id="textarea1" placeholder="I am placeholder"></textarea>
       </div>
@@ -103,7 +105,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
 
-    <div class="form-group">
+    <div class="form-field">
       <label for="select1">I am label</label>
       <div class="styled-select">
         <select name="select1" id="select1">
@@ -113,7 +115,7 @@ layout: hid
       </div>
     </div>
 
-    <div class="form-group has-error">
+    <div class="form-field has-error">
       <label for="select1">I am label</label>
       <div class="styled-select">
         <select name="select1" id="select1">
@@ -130,7 +132,7 @@ layout: hid
 
   <div class="col-sm-6">
     {% highlight html %}
-      <div class="form-group">
+      <div class="form-field">
         <label for="select2">I am label</label>
         <div class="styled-select">
           <select name="select2" id="select2">
@@ -152,7 +154,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
 
-    <fieldset class="form-group">
+    <fieldset class="form-field">
       <legend>Some checkboxes</legend>
       <p>
         <input type="checkbox" id="clickie-example" />
@@ -168,7 +170,7 @@ layout: hid
 
   <div class="col-sm-6">
     {% highlight html %}
-      <fieldset class="form-group">
+      <fieldset class="form-field">
         <legend>Some checkboxes</legend>
         <p>
           <input type="checkbox" id="clickie-example" />
@@ -189,7 +191,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
 
-    <fieldset class="form-group">
+    <fieldset class="form-field">
       <legend>Some radio buttons</legend>
       <p>
         <input type="radio" id="clickie-example3" name="my-radios" checked="checked" />
@@ -204,7 +206,7 @@ layout: hid
   </div>
   <div class="col-sm-6">
     {% highlight html %}
-      <fieldset class="form-group">
+      <fieldset class="form-field">
         <legend>Some radio buttons</legend>
         <p>
           <input type="radio" id="clickie-example3" name="my-radios" checked="checked" />
@@ -217,93 +219,6 @@ layout: hid
       </fieldset>
     {% endhighlight %}
   </div>
-</div>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
-    <h3>Form lists</h3>
-  </div>
-
-  <div class="col-sm-6">
-
-    <fieldset class="form-group">
-      <legend>Job titles</legend>
-      <ul class="form-list">
-        <li class="form-list__item">
-          <span class="form-list__text">Front end developer</span>
-          <button type="button" class="btn-transparent">
-            <span class="icon"><i class="fa fa-times" aria-hidden="true"></i>
-              <span class="sr-only"><span>Remove Front end developer</span></span>
-            </span>
-          </button>
-        </li>
-        <li class="form-list__item">
-          <span class="form-list__text">Cat wrangler</span>
-          <button type="button" class="btn-transparent">
-            <span class="icon"><i class="fa fa-times" aria-hidden="true"></i>
-              <span class="sr-only"><span>Remove Cat wrangler</span></span>
-            </span>
-          </button>
-        </li>
-        <li class="form-list__item">
-          <span class="form-list__text">A reallllllly long job title something something something something</span>
-          <button type="button" class="btn-transparent">
-            <span class="icon"><i class="fa fa-times" aria-hidden="true"></i>
-              <span class="sr-only"><span>Remove A reallllllly long job title omething something something something</span></span>
-            </span>
-          </button>
-        </li>
-      </ul>
-
-      <label for="add_title" class="sr-only">Add a job title</label>
-      <div class="form-list__item">
-        <input type="text" name="add_title" id="add_title" placeholder="Add a job title">
-        <button type="button" class="btn-transparent">
-          <span class="icon"><i class="fa fa-plus" aria-hidden="true"></i>
-            <span class="sr-only"><span>Add</span></span>
-          </span>
-        </button>
-      </div>
-    </fieldset>
-
-  </div>
-
-  <div class="col-sm-6">
-    {% highlight html %}
-      <fieldset class="form-group">
-        <legend>Job titles</legend>
-        <ul class="form-list">
-          <li class="form-list__item">
-            <span class="form-list__text">Front end developer</span>
-            <button type="button" class="btn-transparent">
-              <icon name="times" text="Remove Front end developer"></icon>
-            </button>
-          </li>
-          <li class="form-list__item">
-            <span class="form-list__text">Cat wrangler</span>
-            <button type="button" class="btn-transparent">
-              <icon name="times" text="Remove Cat wrangler"></icon>
-            </button>
-          </li>
-          <li class="form-list__item">
-            <span class="form-list__text">A reallllllly long job title something something something something</span>
-            <button type="button" class="btn-transparent">
-              <icon name="times" text="Remove A reallllllly long job title something something something something"></icon>
-            </button>
-          </li>
-        </ul>
-
-        <label for="add_title" class="sr-only">Add a job title</label>
-        <div class="form-list__item">
-          <input type="text" name="add_title" id="add_title" placeholder="Add a job title">
-          <button type="button" class="btn-transparent">
-            <icon name="plus" text="Add"></icon>
-          </button>
-        </div>
-      </fieldset>
-    {% endhighlight %}
-  </div>
-
 </div>
 
 <div class="row sg-section">

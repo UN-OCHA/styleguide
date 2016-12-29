@@ -1,0 +1,166 @@
+---
+layout: hid
+---
+
+<h2 class="styleguide-heading">Tables</h2>
+<p>Sass: common/_tables.scss</p>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Standard table</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Created by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% highlight html %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Created by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endhighlight %}
+
+</div>
+
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Responsive table</h3>
+    <p>Table cells are stacked in a column on small screens.</p>
+  </div>
+
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Created by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% highlight html %}
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Created by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td>Something else</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endhighlight %}
+
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Responsive table with actions</h3>
+    <p>Actions colum remains on the right when table cells are stacked in a column on small screens.</p>
+  </div>
+
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td class="table-actions">
+          <button type="button" class="btn-transparent">
+            <span class="icon"><i class="icon icon-edit" aria-hidden="true"></i><span class="sr-only"><span>Edit</span></span></span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td class="table-actions">
+          <button type="button" class="btn-transparent">
+            <span class="icon"><i class="icon icon-edit" aria-hidden="true"></i><span class="sr-only"><span>Edit</span></span></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% highlight html %}
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th translate>Name</th>
+        <th translate>Type</th>
+        <th translate>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">This is my name</a></td>
+        <td>Type</td>
+        <td class="table-actions">
+          <button type="button" class="btn-transparent">
+            <span class="icon"><i class="icon icon-edit" aria-hidden="true"></i><span class="sr-only"><span>Edit</span></span></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  {% endhighlight %}
+
+
+</div>
