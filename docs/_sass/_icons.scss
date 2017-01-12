@@ -23,6 +23,12 @@
 }
 
 
+.icon-notifications:before {
+  content: "\e959";
+}
+.icon-chat:before {
+  content: "\e049";
+}
 .icon-calendar:before {
   content: "\e946";
 }
@@ -118,9 +124,6 @@
 }
 .icon-map-pin:before {
   content: "\e047";
-}
-.icon-chat:before {
-  content: "\e049";
 }
 .icon-piechart:before {
   content: "\e050";
