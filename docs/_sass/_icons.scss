@@ -22,7 +22,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-notifications:before {
   content: "\e959";
 }
@@ -71,11 +70,17 @@
 .icon-check-circle:before {
   content: "\e943";
 }
-.icon-check-big-01:before {
+.icon-check-big:before {
   content: "\e944";
 }
-.icon-wheel-01:before {
+.icon-wheel:before {
   content: "\e945";
+}
+.icon-direction-up:before {
+  content: "\e95a";
+}
+.icon-direction-down:before {
+  content: "\e95b";
 }
 .icon-direction-right:before {
   content: "\e948";
