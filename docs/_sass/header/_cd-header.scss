@@ -112,11 +112,8 @@ $grid-breakpoints: (
     word-break: break-word;
 
     &:hover, &:focus {
-      background: $cd-nav-focus-bg;
-    }
-
-    &:focus {
-      text-decoration: underline;
+      background: $cd-primary-color;
+      color: $cd-text-light;
     }
   }
 }
