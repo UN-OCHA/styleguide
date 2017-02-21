@@ -1,0 +1,145 @@
+---
+layout: hid
+---
+
+<h2 class="styleguide-heading">Alerts</h2>
+<p>Sass: common/_alerts.scss</p>
+
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Standard alerts</h3>
+    <p>Alerts should in general be placed immediately after the header, they will take up the full width of the page</p>
+    <p>Three styles of alert are available: success, warning, danger</p>
+  </div>
+
+  <div class="sg-section__item">
+    <div class="alert alert--success">
+      <div class="container alert__inner">
+        <p>Success - Some alerting words</p>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--success">
+      <div class="container alert__inner">
+        <p>Success - Some alerting words</p>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+
+  <div class="sg-section__item">
+    <div class="alert alert--warning">
+      <div class="container alert__inner">
+        <p>Warning - Some alerting words</p>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--warning">
+      <div class="container alert__inner">
+        <p>Warning - Some alerting words</p>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+
+  <div class="sg-section__item">
+    <div class="alert alert--danger">
+      <div class="container alert__inner">
+        <p>Danger - Some alerting words</p>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--danger">
+      <div class="container alert__inner">
+        <p>Danger - Some alerting words</p>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Alerts with icons</h3>
+  </div>
+
+  <div class="sg-section__item">
+    <div class="alert alert--success">
+      <div class="container alert__inner">
+        <span class="iconholder alert__icon"><i class="icon icon-caution" aria-hidden="true"></i></span>
+        <p>Success - Some alerting words</p>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--success">
+      <div class="container alert__inner">
+        <icon class="alert__icon" name="caution"></icon>
+        <p>Success - Some alerting words</p>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Dismissable alerts</h3>
+  </div>
+
+  <div class="sg-section__item">
+    <div class="alert alert--success alert--dismissable">
+      <div class="container alert__inner">
+        <p>Success - Some alerting words</p>
+        <button type="button" class="btn-transparent alert__close">
+          <span class="iconholder"><i class="icon icon-cancel" aria-hidden="true"></i><span class="sr-only">Close</span>
+        </button>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--success alert--dismissable">
+      <div class="container alert__inner">
+        <p>Success - Some alerting words</p>
+        <button type="button" class="btn-transparent alert__close">
+          <icon class="alert__icon" name="cancel"></icon>
+        </button>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Inline alerts</h3>
+    <p>Inline alerts can be placed else where on the page, they will fit their container.</p>
+  </div>
+
+  <div class="sg-section__item">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="alert alert--success alert--inline">
+          <div class="alert__inner">
+            <p>Success - Some alerting words</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% highlight html %}
+    <div class="alert alert--success alert--inline">
+      <div class="alert__inner">
+        <p>Success - Some alerting words</p>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
+
+</div>
