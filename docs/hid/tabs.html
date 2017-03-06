@@ -7,39 +7,30 @@ layout: hid
 
 <div class="sg-section">
   <div class="sg-section__header">
-    <h3>Tab buttons</h3>
-    <p>Tab style controls, not responsive</p>
+    <h3>Standard Tabs</h3>
     <p>Note: This demo isn't clickable</p>
   </div>
 
   <div class="tabs-nav">
-   <button type="button" class="tabs-nav__button" disabled="disabled" translate>
-      Showing Tab 1
+   <button type="button" class="tabs-nav__button desktop-active" translate>
+      Tab 1
     </button>
     <button type="button" class="tabs-nav__button" translate>
-      Showing Tab 2
+      Tab 2
     </button>
   </div>
-  <div style="display: block">Tab 1 content</div>
-  <div style="display: none">Tab 2 content</div>
+  <div class="tabs__content desktop-active">Tab 1 content</div>
+  <div class="tabs__content">Tab 2 content</div>
 
-  <h4>HTML</h4>
   {% highlight html %}
-    <div class="tabs-nav">
-      <button type="button" class="tabs-nav__button" ng-click="activeTab = 'tab1'" ng-disabled="activeTab === 'tab1'" translate>
-        Showing contacts
-      </button>
-      <button type="button" class="tabs-nav__button" ng-click="activeTab = 'tab2'" ng-disabled="activeTab === 'tab2'" translate>
-        Showing lists
-      </button>
-    </div>
-    <div ng-show="activeTab === 'tab1'">Tab 1 content</div>
-    <div ng-show="activeTab === 'tab2'">Tab 2 content</div>
-  {% endhighlight %}
-
-  <h4>Javascript (in controller)</h4>
-  {% highlight html %}
-    $scope.activeTab = 'tab1';
+    <tabset responsive="true" vertical="true">
+      <tab heading="Tab 1">
+        Tab 1 content
+      </tab>
+      <tab heading="Tab 2">
+        Tab 2 content
+      </tab>
+    </tabset>
   {% endhighlight %}
 </div>
 
@@ -58,9 +49,6 @@ layout: hid
       </button>
       <button type="button" class="tabs-nav__button">
         <span>Tab 2</span>
-      </button>
-      <button type="button" class="tabs-nav__button">
-        <span>Tab 3</span>
       </button>
     </nav>
 
@@ -83,109 +71,68 @@ layout: hid
         <p>Tab 2 content</p>
       </div>
     </div>
+  </div>
 
-    <div class="tabs__section">
+  {% highlight html %}
+    <tabset responsive="true" vertical="true">
+      <tab heading="Tab 1">
+        Tab 2 content
+      </tab>
+      <tab heading="Tab 2">
+        Tab 2 content
+      </tab>
+    </tabset>
+  {% endhighlight %}
+
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Responsive vertical tabs</h3>
+    <p>Changes to accordion on small screens</p>
+    <p>Note: this demo isn't clickable</p>
+  </div>
+
+  <div class="tabs tabs--responsive tabs--vertical">
+    <nav class="tabs-nav col-md-3">
+      <button type="button" class="tabs-nav__button mobile-active desktop-active">
+        <span>Tab 1</span>
+      </button>
       <button type="button" class="tabs-nav__button">
-        <span>Tab 3</span>
+        <span>Tab 2</span>
+      </button>
+    </nav>
+
+    <div class="tabs__section  col-md-9">
+      <button type="button" class="tabs-nav__button mobile-active desktop-active">
+        <span>Tab1</span>
+        <icon name="arrow-down"></icon>
+      </button>
+      <div class="tabs__content mobile-active desktop-active">
+        <p>Tab 1 content</p>
+      </div>
+    </div>
+
+    <div class="tabs__section  col-md-9">
+      <button type="button" class="tabs-nav__button">
+        <span>Tab 2</span>
         <icon name="arrow-down"></icon>
       </button>
       <div class="tabs__content">
-        <p>Tab 3 content</p>
+        <p>Tab 2 content</p>
       </div>
     </div>
   </div>
 
-  <h4>HTML</h4>
   {% highlight html %}
-    <div class="tabs tabs--responsive">
-      <nav class="tabs-nav">
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-class="tabClass('tab1')"
-          ng-click="toggleTabs('tab1')">
-          <span translate>Tab 1</span>
-        </button>
-
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-click="toggleTabs('tab2')"
-          ng-class="tabClass('tab2')">
-          <span translate>Tab 2</span>
-        </button>
-
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-click="toggleTabs('tab3')"
-          ng-class="tabClass('tab3')">
-          <span translate>Tab 3</span>
-        </button>
-      </nav>
-
-      <div class="tabs__section">
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-class="tabClass('tab1')"
-          ng-click="toggleTabs('tab1')">
-          <span translate>Tab1</span>
-          <icon name="arrow-down"></icon>
-        </button>
-
-        <div class="tabs__content" ng-class="tabClass('tab1')">
-          <p>Tab 1 content</p>
-        </div>
-      </div>
-
-      <div class="tabs__section">
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-class="tabClass('tab2')"
-          ng-click="toggleTabs('tab2')">
-          <span translate>Tab 2</span>
-          <icon name="arrow-down"></icon>
-        </button>
-
-        <div class="tabs__content" ng-class="tabClass('tab2')">
-          <p>Tab 2 content</p>
-        </div>
-      </div>
-
-      <div class="tabs__section">
-        <button type="button" 
-          class="tabs-nav__button" 
-          ng-class="tabClass('tab3')"
-          ng-click="toggleTabs('tab3')">
-          <span translate>Tab 3</span>
-          <icon name="arrow-down"></icon>
-        </button>
-
-        <div class="tabs__content" ng-class="tabClass('tab3')">
-          <p>Tab 3 content</p>
-        </div>
-      </div>
-
-    </div>
+    <tabset responsive="true" vertical="true">
+      <tab heading="Tab 1">
+        Tab 2 content
+      </tab>
+      <tab heading="Tab 2">
+        Tab 2 content
+      </tab>
+    </tabset>
   {% endhighlight %}
 
-  <h4>Javascript (in controller)</h4>
-  {% highlight html %}
-    $scope.tabs = {}
-    $scope.activeTab = 'favorites';
-
-    $scope.toggleTabs = function(tabName) {
-      $scope.tabs[tabName] = !$scope.tabs[tabName];
-      $scope.activeTab = tabName;
-    }
-
-    $scope.tabClass = function (tabName) {
-      var classes = [];
-      if ($scope.tabs[tabName]) {
-        classes.push('mobile-active');
-      }
-      if ($scope.activeTab === tabName) {
-        classes.push('desktop-active');
-      }
-      return classes;
-    }
-  {% endhighlight %}
 </div>
-
