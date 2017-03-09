@@ -1,33 +1,35 @@
 ---
 layout: hid
 ---
+<div class="styleguide-header">
+  <h2 class="styleguide-heading">Forms</h2>
+  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_forms.scss">common/_forms.scss</a></p>
+</div>
 
-<h2 class="styleguide-heading">Forms</h2>
-<p>Sass: common/_forms.scss</p>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+  <div class="sg-section__header">
     <h3>Text inputs</h3>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <div class="form-field">
-      <label for="input1">I am label</label>
-      <input type="text" name="input1" id="input1" placeholder="I am placeholder">
-    </div>
-
-    <div class="form-field has-error">
-      <label for="input2">I am label</label>
-      <input type="text" name="input2" id="input2" placeholder="I am placeholder">
-      <div class="ng-active">
-        <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
+      <div class="form-field">
+        <label for="input1">I am label</label>
+        <input type="text" name="input1" id="input1" placeholder="I am placeholder">
       </div>
+
+      <div class="form-field has-error">
+        <label for="input2">I am label</label>
+        <input type="text" name="input2" id="input2" placeholder="I am placeholder">
+        <div class="ng-active">
+          <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="col-sm-6">
-    {% highlight html %}
+    <div class="col-sm-6">
+      {% highlight html %}
       <div class="form-field">
         <label for="input1">I am label</label>
         <input type="text" name="input1" id="input1" placeholder="I am placeholder">
@@ -35,58 +37,61 @@ layout: hid
       <div ng-messages="input.$error" ng-show="input.$touched">
         <div ng-messages-include="app/common/messages.html"></div>
       </div>
-    {% endhighlight %}
+      {% endhighlight %}
+    </div>
   </div>
 </div>
 
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+<div class="sg-section__header">
     <h3>Text inputs with hint</h3>
     <p>Use the 'aria-describedby' attribute to associate the hint with the form field.</p>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <div class="form-field">
-      <label for="input1">I am label</label>
-      <input type="text" name="input1" id="input1" placeholder="I am placeholder" aria-describedby="input1-hint">
-      <p class="form-hint" id="input1-hint">I am some longer text explaining something about this field</p>
-    </div>
-
-  </div>
-
-  <div class="col-sm-6">
-    {% highlight html %}
       <div class="form-field">
         <label for="input1">I am label</label>
         <input type="text" name="input1" id="input1" placeholder="I am placeholder" aria-describedby="input1-hint">
         <p class="form-hint" id="input1-hint">I am some longer text explaining something about this field</p>
       </div>
-    {% endhighlight %}
+
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+      <div class="form-field">
+        <label for="input1">I am label</label>
+        <input type="text" name="input1" id="input1" placeholder="I am placeholder" aria-describedby="input1-hint">
+        <p class="form-hint" id="input1-hint">I am some longer text explaining something about this field</p>
+      </div>
+      {% endhighlight %}
+    </div>
   </div>
 </div>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+<div class="sg-section__header">
     <h3>Textareas</h3>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <div class="form-field">
-      <label for="textarea1">I am label</label>
-      <textarea name="textarea1" id="textarea1" placeholder="I am placeholder"></textarea>
-    </div>
-
-    <div class="form-field has-error">
-      <label for="textarea2">I am label</label>
-      <textarea name="textarea2" id="textarea2" placeholder="I am placeholder"></textarea>
-      <div class="ng-active">
-        <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
+      <div class="form-field">
+        <label for="textarea1">I am label</label>
+        <textarea name="textarea1" id="textarea1" placeholder="I am placeholder"></textarea>
       </div>
-    </div>
 
-  </div>
-  <div class="col-sm-6">
-    {% highlight html %}
+      <div class="form-field has-error">
+        <label for="textarea2">I am label</label>
+        <textarea name="textarea2" id="textarea2" placeholder="I am placeholder"></textarea>
+        <div class="ng-active">
+          <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+      {% highlight html %}
       <div class="form-field">
         <label for="textarea1">I am label</label>
         <textarea name="textarea1" id="textarea1" placeholder="I am placeholder"></textarea>
@@ -94,44 +99,45 @@ layout: hid
       <div ng-messages="input.$error" ng-show="input.$touched">
         <div ng-messages-include="app/common/messages.html"></div>
       </div>
-    {% endhighlight %}
+      {% endhighlight %}
+    </div>
   </div>
 </div>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+<div class="sg-section__header">
     <h3>Selects</h3>
     <p>Wrap the select element in a div with class 'styled-select'.</p>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <div class="form-field">
-      <label for="select1">I am label</label>
-      <div class="styled-select">
-        <select name="select1" id="select1">
-          <option>Option 1</option>
-          <option>Option 2</option>
-        </select>
+      <div class="form-field">
+        <label for="select1">I am label</label>
+        <div class="styled-select">
+          <select name="select1" id="select1">
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </select>
+        </div>
       </div>
+
+      <div class="form-field has-error">
+        <label for="select1">I am label</label>
+        <div class="styled-select">
+          <select name="select1" id="select1">
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </select>
+        </div>
+        <div class="ng-active">
+          <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="form-field has-error">
-      <label for="select1">I am label</label>
-      <div class="styled-select">
-        <select name="select1" id="select1">
-          <option>Option 1</option>
-          <option>Option 2</option>
-        </select>
-      </div>
-      <div class="ng-active">
-        <p ng-message="email" class="text-danger ng-scope"><span class="ng-scope">This is the error message</span></p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="col-sm-6">
-    {% highlight html %}
+    <div class="col-sm-6">
+      {% highlight html %}
       <div class="form-field">
         <label for="select2">I am label</label>
         <div class="styled-select">
@@ -144,32 +150,17 @@ layout: hid
       <div ng-messages="input.$error" ng-show="input.$touched">
         <div ng-messages-include="app/common/messages.html"></div>
       </div>
-    {% endhighlight %}
+      {% endhighlight %}
+    </div>
   </div>
 </div>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+<div class="sg-section__header">
     <h3>Checkboxes</h3>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <fieldset class="form-field">
-      <legend>Some checkboxes</legend>
-      <p>
-        <input type="checkbox" id="clickie-example" />
-        <label class="clickie-label" for="clickie-example">I am the label</label>
-      </p>
-      <p>
-        <input type="checkbox" id="clickie-example2" checked="checked" />
-        <label class="clickie-label" for="clickie-example2">I am the label 2</label>
-      </p>
-    </fieldset>
-
-  </div>
-
-  <div class="col-sm-6">
-    {% highlight html %}
       <fieldset class="form-field">
         <legend>Some checkboxes</legend>
         <p>
@@ -181,31 +172,33 @@ layout: hid
           <label class="clickie-label" for="clickie-example2">I am the label 2</label>
         </p>
       </fieldset>
-    {% endhighlight %}
+
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+      <fieldset class="form-field">
+        <legend>Some checkboxes</legend>
+        <p>
+          <input type="checkbox" id="clickie-example" />
+          <label class="clickie-label" for="clickie-example">I am the label</label>
+        </p>
+        <p>
+          <input type="checkbox" id="clickie-example2" checked="checked" />
+          <label class="clickie-label" for="clickie-example2">I am the label 2</label>
+        </p>
+      </fieldset>
+      {% endhighlight %}
+    </div>
   </div>
 </div>
-
-<div class="row sg-section">
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section">
+<div class="sg-section__header">
     <h3>Radio buttons</h3>
   </div>
-  <div class="col-sm-6">
+  <div class="row">
+    <div class="col-sm-6">
 
-    <fieldset class="form-field">
-      <legend>Some radio buttons</legend>
-      <p>
-        <input type="radio" id="clickie-example3" name="my-radios" checked="checked" />
-        <label class="clickie-label" for="clickie-example3">Yes</label>
-      </p>
-      <p>
-        <input type="radio" id="clickie-example4" name="my-radios" />
-        <label class="clickie-label" for="clickie-example4">No</label>
-      </p>
-    </fieldset>
-
-  </div>
-  <div class="col-sm-6">
-    {% highlight html %}
       <fieldset class="form-field">
         <legend>Some radio buttons</legend>
         <p>
@@ -217,36 +210,51 @@ layout: hid
           <label class="clickie-label" for="clickie-example4">No</label>
         </p>
       </fieldset>
-    {% endhighlight %}
+
+    </div>
+    <div class="col-sm-6">
+      {% highlight html %}
+      <fieldset class="form-field">
+        <legend>Some radio buttons</legend>
+        <p>
+          <input type="radio" id="clickie-example3" name="my-radios" checked="checked" />
+          <label class="clickie-label" for="clickie-example3">Yes</label>
+        </p>
+        <p>
+          <input type="radio" id="clickie-example4" name="my-radios" />
+          <label class="clickie-label" for="clickie-example4">No</label>
+        </p>
+      </fieldset>
+      {% endhighlight %}
+    </div>
   </div>
 </div>
+<div class="sg-section">
 
-<div class="row sg-section">
-
-  <div class="col-xs-12 sg-section__header">
+<div class="sg-section__header">
     <h3>Phone numbers</h3>
     <p>Uses <a href="https://github.com/blockchain/bc-phone-number">https://github.com/blockchain/bc-phone-number</a>.</p>
   </div>
+  <div class="row">
+    <div class="col-sm-6">
 
-  <div class="col-sm-6">
+      <bc-phone-number name="phone_number" label="Phone number" ng-model="newPhoneNumber.number" is-valid="isValidPhoneNumber" ng-class="{'has-error': newPhoneNumber.number &amp;&amp; !isValidPhoneNumber, 'has-success': newPhoneNumber.number &amp;&amp; isValidPhoneNumber}" class="ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-phone-number"><section class="input-group">
+        <div class="input-group-btn dropdown" uib-dropdown="" uib-keyboard-nav="">
+          <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon iti-flag bc-phone-number-flag us" ng-class="selectedCountry.iso2Code"></span><span class="caret"></span>
+          </button>
 
-    <bc-phone-number name="phone_number" label="Phone number" ng-model="newPhoneNumber.number" is-valid="isValidPhoneNumber" ng-class="{'has-error': newPhoneNumber.number &amp;&amp; !isValidPhoneNumber, 'has-success': newPhoneNumber.number &amp;&amp; isValidPhoneNumber}" class="ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-phone-number"><section class="input-group">
-      <div class="input-group-btn dropdown" uib-dropdown="" uib-keyboard-nav="">
-        <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
-          <span class="glyphicon iti-flag bc-phone-number-flag us" ng-class="selectedCountry.iso2Code"></span><span class="caret"></span>
-        </button>
-
-      </div>
-      <input type="tel" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="number" ng-disabled="ngDisabled" ng-change="changed()">
-    </section>
+        </div>
+        <input type="tel" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="number" ng-disabled="ngDisabled" ng-change="changed()">
+      </section>
     </bc-phone-number>
 
   </div>
 
   <div class="col-sm-6">
     {% highlight html %}
-      <bc-phone-number name="phone_number" label="Phone number" ng-model="newPhoneNumber.number" is-valid="isValidPhoneNumber" ng-class="{'has-error': newPhoneNumber.number && !isValidPhoneNumber, 'has-success': newPhoneNumber.number && isValidPhoneNumber}"></bc-phone-number>
+    <bc-phone-number name="phone_number" label="Phone number" ng-model="newPhoneNumber.number" is-valid="isValidPhoneNumber" ng-class="{'has-error': newPhoneNumber.number && !isValidPhoneNumber, 'has-success': newPhoneNumber.number && isValidPhoneNumber}"></bc-phone-number>
     {% endhighlight %}
   </div>
-
+</div>
 </div>

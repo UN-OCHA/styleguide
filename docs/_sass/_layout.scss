@@ -19,13 +19,62 @@ $base-unit: 8px;
   }
 }
 
+.styleguide-header {
+  border-bottom: 2px solid #666;
+  padding-bottom: $base-unit;
+  margin-bottom: $base-unit;
+
+  a {
+    border-bottom: 1px dotted #666;
+    padding-bottom: 1px;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: none;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: $base-unit;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
 .styleguide-heading {
   font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: $base-unit;
+}
+
+.sg-site-header {
+  background: #666;
+  color: white;
+  margin-bottom: $base-unit*2;
+  padding: $base-unit;
+
+  h1 {
+    margin: 0;
+    font-family: helvetica, arial, sans-serif;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .sg-section, .sg-section__item {
-  padding-top: $base-unit;
-  padding-bottom: $base-unit;
+  padding-top: $base-unit*1.5;
+  padding-bottom: $base-unit*1.5;
 }
 
 .sg-section__header {
@@ -37,6 +86,10 @@ $base-unit: 8px;
   h3 {
     font-size: 24px;
     margin-bottom: $base-unit/2;
+  }
+
+  p {
+    font-size: 14px;
   }
 }
 
@@ -58,6 +111,26 @@ $base-unit: 8px;
 
 .styleguide-col {
   width: 50%;
+}
+
+.sg-nav {
+  display: none;
+
+  @media(min-width: 768px) {
+    display: block;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: $base-unit/2;
+
+    &:hover, &:focus {
+      background: #666;
+      color: white;
+    }
+  }
+
 }
 
 
@@ -193,4 +266,8 @@ input[type="text"] {
   width: 56px;
   border: none;
 }
+}
+
+.sg-hidden {
+  display: none;
 }
