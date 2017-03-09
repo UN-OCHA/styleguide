@@ -178,7 +178,7 @@ layout: hid
           <div class="sidebar-section__form-field">
             <label for="member" class="sidebar-section__form-label" >Add new Member</label>
             <ui-select ng-model=" multiple name="">
-              <ui-select-match placeholder="Select some people">{{$item.name}}</ui-select-match>
+              <ui-select-match placeholder="Select some people">{{item.name}}</ui-select-match>
               <ui-select-choices refresh="" repeat="">
                 {{person.name}}
               </ui-select-choices>
