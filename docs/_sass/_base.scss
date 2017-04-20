@@ -1,3 +1,32 @@
+.styleguide {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    &:before, &:after {
+      box-sizing: border-box;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+    color: #666;
+  }
+
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #007faa;
+  }
+}
+
+/* Needed for HID */
+
 @font-face {
   font-family: 'exo_2regular';
   src: url('../assets/fonts/exo/Exo2-Regular-webfont.eot');
@@ -20,4 +49,3 @@
   font-weight: normal;
   font-style: normal;
 }
-

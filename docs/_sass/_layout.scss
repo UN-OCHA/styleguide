@@ -1,22 +1,18 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .ng-hide {
   display: none;
 }
+
 $base-unit: 8px;
 
 .styleguide {
-  font-family: sans-serif;
-  color: #666;
-  padding: 0 $base-unit*2;
-  display: flex;
+  // font-family: sans-serif;
+  // color: #666;
+  // padding: 0 $base-unit*2;
+  // display: flex;
 
-  &.styleguide--full-width {
-    display: block;
-  }
+  // &.styleguide--full-width {
+  //   display: block;
+  // }
 }
 
 .styleguide-header {
@@ -139,6 +135,7 @@ footer {
 }
 
 .icomoon-demo  {
+  display: flex;
   flex-wrap: wrap;
   [class^="icon-"] {
     font-size: 48px;

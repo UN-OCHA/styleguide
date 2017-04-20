@@ -6,52 +6,57 @@ namespace: cd
 
 {% include cd-header/header.html namespace=page.namespace %}
 
-<div class="styleguide">
-  <h2>Common Design header - standalone, responsive</h2>
-</div>
-<div class="styleguide">
-  <div class="styleguide-col">
-
-    <h3>Files:</h3>
-
-    <h4>HTML:</h4>
-    <ul>
-      <li><a href="#code">Copy &amp; pastable generated HTML</a></li>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_includes/cd-header/header.html">header.html</a> (Jekyll template)</li>
-    </ul>
-
-    <h4>Sass:</h4>
-    <ul>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-settings-responsive.scss">_cd-settings-responsive.scss</a></li>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-header.scss">_cd-header.scss</a></li>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-global-header.scss">_cd-global-header.scss</a></li>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-site-header.scss">_cd-site-header.scss</a></li>
-      <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-nav.scss">_cd-nav.scss</a></li>
-    </ul>
-
-    <h4>CSS:</h4>
-    <ul>
-      <li><a href="https://un-ocha.github.io/styleguide/css/cd-header.css">cd-header.css</a></li>
-    </ul>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Common Design header - standalone, responsive</h2>
+    </div>
   </div>
 
-  <div class="styleguide-col">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Files:</h3>
 
-    <h3>Information:</h3>
+      <h4>HTML:</h4>
+      <ul>
+        <li><a href="#code">Copy &amp; pastable generated HTML</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_includes/cd-header/header.html">header.html</a> (Jekyll template)</li>
+      </ul>
 
-    <h4>Modernizr detects required:</h4>
-    <p>flexbox, mediaqueries, svg</p>
+      <h4>Sass:</h4>
+      <ul>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-settings-responsive.scss">_cd-settings-responsive.scss</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-header.scss">_cd-header.scss</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-global-header.scss">_cd-global-header.scss</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-site-header.scss">_cd-site-header.scss</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/header/_cd-nav.scss">_cd-nav.scss</a></li>
+      </ul>
 
-    <h4>Browser support:</h4>
-    <p>TBC</p>
+      <h4>CSS:</h4>
+      <ul>
+        <li><a href="https://un-ocha.github.io/styleguide/css/cd-header.css">cd-header.css</a></li>
+      </ul>
 
-    <h4>Javascript:</h4>
-    <p>Uses a few lines of jQuery to handle the dropdown menus, suggest switching this for dropdown JS already included
-    in your project (e.g. bootstrap dropdown)</p>
+    </div>
+
+    </div>
+
+    <div class="col-sm-6">
+      <h3>Information:</h3>
+
+      <h4>Modernizr detects required:</h4>
+      <p>flexbox, mediaqueries, svg</p>
+
+      <h4>Browser support:</h4>
+      <p>TBC</p>
+
+      <h4>Javascript:</h4>
+      <p>Uses a few lines of jQuery to handle the dropdown menus, suggest switching this for dropdown JS already included
+      in your project (e.g. bootstrap dropdown)</p>
+    </div>
   </div>
-
 </div>
+
 
 <div id="code" class="html-block">
   <pre>
@@ -63,7 +68,7 @@ namespace: cd
 <script>
 $(document).ready(function () {
 
-  var container = $('header');
+  var container = $('.cd-header');
   var target =$('#code');
   if (target.length > 0) {
     var sample_html = container[0].outerHTML;
