@@ -1,0 +1,124 @@
+---
+layout: ocha
+title: Generic OCHA theme
+page-title: Form layouts
+---
+<div class="styleguide-header">
+	<h2 class="styleguide-heading">Form layouts</h2>
+	<p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/components/_forms.scss">components/_forms.scss</a></p>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Simple form layout</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<form>
+				<p>
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</p>
+				<p>
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</p>
+				<p>
+					<button type="button" class="btn-secondary">Cancel</button>
+					<button type="submit" class="btn-primary">Do stuff!</button>
+				</p>
+			</form>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<form>
+				<p>
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</p>
+				<p>
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</p>
+				<p>
+					<button type="button" class="btn-secondary">Cancel</button>
+					<button type="submit" class="btn-primary">Do stuff!</button>
+				</p>
+			</form>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Complex form layout</h3>
+		<p>For more complex forms you may want to visually split it into sections to make it clearer to users.</p>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<form>
+				<div class="form-item">
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</div>
+				<div class="form-item">
+					<fieldset>
+						<legend>Checkboxes</legend>
+						<p>
+							<input type="checkbox" id="checkbox1">
+							<label for="checkbox1">Checkbox 1</label>
+						</p>
+						<p>
+							<input type="checkbox" id="checkbox2">
+							<label for="checkbox2">Checkbox 2</label>
+						</p>
+						<p>
+							<input type="checkbox" id="checkbox3">
+							<label for="checkbox3">Checkbox 3</label>
+						</p>
+					</fieldset>
+				</div>
+				<div class="form-item">
+					<button type="button" class="btn-secondary">Cancel</button>
+					<button type="submit" class="btn-primary">Do stuff!</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<form>
+				<div class="form-item">
+					<label for="input1">Text input</label>
+					<input type="text" id="input1" placeholder="Placeholder text">
+				</div>
+				<div class="form-item">
+					<fieldset>
+						<legend>Checkboxes</legend>
+						<p>
+							<input type="checkbox" id="checkbox1">
+							<label for="checkbox1">Checkbox 1</label>
+						</p>
+						<p>
+							<input type="checkbox" id="checkbox2">
+							<label for="checkbox2">Checkbox 2</label>
+						</p>
+						<p>
+							<input type="checkbox" id="checkbox3">
+							<label for="checkbox3">Checkbox 3</label>
+						</p>
+					</fieldset>
+				</div>
+				<div class="form-item">
+					<button type="button" class="btn-secondary">Cancel</button>
+					<button type="submit" class="btn-primary">Do stuff!</button>
+				</div>
+			</form>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>

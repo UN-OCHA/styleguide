@@ -1,0 +1,20 @@
+.footer {
+	background: $primary-bg-color;
+	padding: $base-unit 0;
+	margin-top: $base-unit*2;
+	color: $light-text-color;
+	@include font-size($small-font-size);
+
+	a {
+		color: $light-text-color;
+	}
+}
+
+
+@include media-query (sm) {
+
+	.footer {
+		padding: $base-unit*3 0;
+	}
+
+}

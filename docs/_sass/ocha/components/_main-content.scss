@@ -1,0 +1,31 @@
+.main-content {
+	img {
+		display: block;
+		width: 80%;
+		max-width: 280px;
+		margin: 0 auto;
+	}
+}
+
+
+@include media-query(sm) {
+
+	.main-content {
+		img {
+			float: right;
+			max-width: 40%;
+			margin: 0;
+		}
+	}
+
+}
+
+@include media-query(md) {
+
+	.main-content {
+		img {
+			max-width: 30%;
+		}
+	}
+
+}

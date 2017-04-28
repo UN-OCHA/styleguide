@@ -4,17 +4,6 @@
 
 $base-unit: 8px;
 
-.styleguide {
-  // font-family: sans-serif;
-  // color: #666;
-  // padding: 0 $base-unit*2;
-  // display: flex;
-
-  // &.styleguide--full-width {
-  //   display: block;
-  // }
-}
-
 .styleguide-header {
   border-bottom: 2px solid #666;
   padding-bottom: $base-unit;
@@ -98,6 +87,23 @@ $base-unit: 8px;
     width: $base-unit*5;
     height: $base-unit*5;
     margin-right: $base-unit;
+  }
+}
+
+.sg-text-color {
+  font-size: 16px;
+}
+
+.sg-border-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    width: $base-unit*10;
+    height: 1px;
+    margin-right: $base-unit;
+    border-top: 1px solid black;
   }
 }
 

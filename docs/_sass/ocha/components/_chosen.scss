@@ -1,0 +1,69 @@
+/**
+ * Overrides for Chosen plugin styles, see https://harvesthq.github.io/chosen/
+ */
+
+
+.chosen-container {
+	width: 100%!important; //over ride chosen's inline style
+	max-width: 300px;
+	@include font-size($base-font-size);
+	background: white;
+
+	.chosen-drop {
+		box-shadow: none;
+		border-radius: 0;
+		border-color: #ddd;
+		@include font-size($small-font-size);
+	}
+
+	.chosen-results {
+
+		li.active-result {
+			&.highlighted {
+				background: $primary-bg-color;
+			}
+		}
+
+	}
+}
+
+.chosen-container-single.chosen-container-active {
+
+	.chosen-single {
+		border-color: $highlight-border-color;
+	}
+
+}
+
+.chosen-container-active.chosen-with-drop {
+	border-color: #ddd;
+
+	.chosen-single {
+		border-color: #ddd;
+		background: none;
+
+		div b {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.chosen-container-single {
+	.chosen-single {
+		background: none;
+		box-shadow: none;
+		border: 1px solid #ddd;
+		border-radius: 0;
+		height: auto;
+		padding: $base-unit/2 $base-unit;
+
+		div {
+			width: $base-unit*3;
+
+			b {
+	    	background: url(../assets/images/arrow-down.svg) center no-repeat !important; // to over ride chosen sprite media queries
+	    	background-size: 10px 10px!important;
+	    }
+	  }
+	}
+}

@@ -1,0 +1,108 @@
+/**
+ * Accessible styled checkboxes and radio buttons ('clickies')
+ *
+ * Usage:
+ * Requires the label to come immediately after the input, e.g.
+ * <input type="checkbox" id="clickie-example" />
+ * <label class="clickie-label" for="clickie-example">I am the label</label>
+ *
+ *
+ * Browser support: IE9+
+ *
+ * Notes:
+ * IE8 doesn't support the :checked pseudo-element, if need to support this either use Modernizr to detect this
+ * (https://modernizr.com/download?setclasses&q=checked) and use default browser styles instead, or use javascript
+ * to check if the input is checked and add a class to its label.
+ */
+
+input[type="radio"], input[type="checkbox"] {
+  width: $base-unit*2.5;
+  height: $base-unit*2.5;
+  margin: 5px 0 0 0;
+  float: left;
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: -1000em;
+
+  // focus style
+  &:focus {
+    + label {
+      &:before {
+        border-color: $highlight-border-color;
+      }
+    }
+  }
+
+  &+ label {
+    display: block;
+    position: relative;
+    padding: $base-unit $base-unit $base-unit $base-unit*3.5;
+    font-weight: normal;
+    color: $body-text-color;
+    line-height: 1;
+
+    &:before {
+      content: '';
+      background: white;
+      width: $base-unit*2.5;
+      height: $base-unit*2.5;
+      display: block;
+      border: 1px solid $border-color;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -$base-unit*1.25;
+      text-align: center;
+    }
+
+  }
+}
+
+
+
+// different style for radio buttons (these should always be visually different from checkboxes as have different behaviour)
+input[type="radio"] + label {
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+// checked style
+input:checked + label {
+  &:after {
+    content: "";
+    width: $base-unit*1.5;
+    height: $base-unit*1.5;
+    background: $primary-bg-color;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -($base-unit*1.5) /2;
+    left: $base-unit/2;
+  }
+}
+
+input[type="checkbox"]:checked + label {
+  &:after {
+    border-radius: 0;
+  }
+}
+
+//disabled style
+input:disabled + label {
+  opacity: 0.8;
+  &:before {
+    background: $border-color;
+  }
+}
+
+// Don't break clickies wrapped in labels, use default styles
+label > input[type="radio"], label > input[type="checkbox"] {
+  position: static;
+  left: auto;
+  float: none;
+  margin: 0;
+  width: auto;
+  height: auto;
+}

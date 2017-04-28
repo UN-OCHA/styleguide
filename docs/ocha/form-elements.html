@@ -1,0 +1,228 @@
+---
+layout: ocha
+title: Generic OCHA theme
+page-title: Form elements
+---
+<div class="styleguide-header">
+	<h2 class="styleguide-heading">Form elements</h2>
+	<p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/components/_forms.scss">components/_forms.scss</a></p>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Text inputs</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<p>
+				<label for="input1">Text input</label>
+				<input type="text" id="input1" placeholder="Placeholder text">
+			</p>
+			<p>
+				<label for="input2">Password input</label>
+				<input type="password" id="input2">
+			</p>
+			<p>
+				<label for="input3">Email input</label>
+				<input type="email" id="input3">
+			</p>
+			<p>
+				<label for="input4">Search input</label>
+				<input type="search" id="input4">
+			</p>
+			<p>
+				<label for="input5">Number input</label>
+				<input type="search" id="input5">
+			</p>
+			<p>
+				<label for="input6">Url input</label>
+				<input type="url" id="input6">
+			</p>
+			<p>
+				<label for="input7">Date input</label>
+				<input type="date" id="input7">
+			</p>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<p>
+				<label for="input1">Text input</label>
+				<input type="text" id="input1" placeholder="Placeholder text">
+			</p>
+			<p>
+				<label for="input2">Password input</label>
+				<input type="password" id="input2">
+			</p>
+			<p>
+				<label for="input3">Email input</label>
+				<input type="email" id="input3">
+			</p>
+			<p>
+				<label for="input4">Search input</label>
+				<input type="search" id="input4">
+			</p>
+			<p>
+				<label for="input5">Number input</label>
+				<input type="search" id="input5">
+			</p>
+			<p>
+				<label for="input6">Url input</label>
+				<input type="url" id="input6">
+			</p>
+			<p>
+				<label for="input7">Date input</label>
+				<input type="date" id="input7">
+			</p>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Text areas</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<p>
+				<label for="textarea">Textarea</label>
+				<textarea id="textarea"></textarea>
+			</p>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<p>
+				<label for="textarea">Textarea</label>
+				<textarea id="textarea"></textarea>
+			</p>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Selects</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<p>
+				<label for="select">Select</label>
+				<select id="select">
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+				</select>
+			</p>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<p>
+				<label for="select">Select</label>
+				<select id="select">
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+				</select>
+			</p>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Checkboxes</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<fieldset>
+				<legend>Checkboxes</legend>
+				<p>
+					<input type="checkbox" id="checkbox1">
+					<label for="checkbox1">Checkbox 1</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox2">
+					<label for="checkbox2">Checkbox 2</label>
+				</p>
+				<p>
+						<input type="checkbox" id="checkbox3">
+					<label for="checkbox3">Checkbox 3</label>
+				</p>
+			</fieldset>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<fieldset>
+				<legend>Checkboxes</legend>
+				<p>
+					<input type="checkbox" id="checkbox1">
+					<label for="checkbox1">Checkbox 1</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox2">
+					<label for="checkbox2">Checkbox 2</label>
+				</p>
+				<p>
+						<input type="checkbox" id="checkbox3">
+					<label for="checkbox3">Checkbox 3</label>
+				</p>
+			</fieldset>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+<div class="sg-section">
+	<div class="sg-section__header">
+		<h3>Radio buttons</h3>
+	</div>
+
+	<div class="row sg-section__item">
+		<div class="col-sm-6">
+			<fieldset>
+				<legend>Radio buttons</legend>
+				<p>
+					<input type="radio" name="radios" id="radio1" value="1">
+					<label for="radio1">Radio 1</label>
+				</p>
+				<p>
+					<input type="radio" name="radios" id="radio2" value="2">
+					<label for="radio2">Radio 2</label>
+				</p>
+				<p>
+					<input type="radio" name="radios" id="radio3" value="3">
+					<label for="radio3">Radio 3</label>
+				</p>
+			</fieldset>
+		</div>
+
+		<div class="col-sm-6">
+			{% highlight html %}
+			<fieldset>
+				<legend>Radio buttons</legend>
+				<p>
+					<input type="radio" name="radios" id="radio1" value="1">
+					<label for="radio1">Radio 1</label>
+				</p>
+				<p>
+					<input type="radio" name="radios" id="radio2" value="2">
+					<label for="radio2">Radio 2</label>
+				</p>
+				<p>
+					<input type="radio" name="radios" id="radio3" value="3">
+					<label for="radio3">Radio 3</label>
+				</p>
+			</fieldset>
+			{% endhighlight %}
+		</div>
+	</div>
+</div>
