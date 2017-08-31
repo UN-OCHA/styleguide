@@ -1,11 +1,11 @@
 ---
 layout: ocha
-title: Generic OCHA theme
+title: OCHA Basic theme
 page-title: Buttons
 ---
 <div class="styleguide-header">
   <h2 class="styleguide-heading">Buttons</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/components/_buttons.scss">components/_buttons.scss</a></p>
+  <p>Sass: <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/components/_buttons.scss">components/_buttons.scss</a></p>
 </div>
 <div class="sg-section">
   <div class="sg-section__header">
@@ -19,27 +19,24 @@ page-title: Buttons
 
     <div class="col-sm-6">
       {% highlight html %}
-          <button type="button" class="btn-primary">Click me!</button>
-        {% endhighlight %}
+        <button type="button" class="btn-primary">Click me!</button>
+      {% endhighlight %}
     </div>
-  </div>
-
-</div>
-
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Secondary buttons</h3>
   </div>
 
   <div class="row sg-section__item">
     <div class="col-sm-6">
-      <button type="button" class="btn-secondary">Click me!</button>
+      <div class="form-actions">
+        <input type="submit" value="Click me!" />
+      </div>
     </div>
 
     <div class="col-sm-6">
       {% highlight html %}
-          <button type="button" class="btn-secondary">Click me!</button>
-        {% endhighlight %}
+        <div class="form-actions">
+          <input type="submit" value="Click me!" />
+        </div>
+      {% endhighlight %}
     </div>
   </div>
 

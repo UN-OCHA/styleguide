@@ -26,18 +26,19 @@
 
 .#{$namespace}-site-header__logo {
   display: block;
-  height: $cd-base-unit*5;
+  width:  $cd-base-unit*6;
+  height: $cd-base-unit*6;
   position: relative;
 
 
   @if $modernizr == false {
-    background: url('../assets/images/cd-logo.png') left center no-repeat;
+    background: url('../assets/images/ocha-logo.png') left center no-repeat;
     margin-top: 10px;
   } @else {
-    background: url('../assets/images/cd-logo.svg') left center no-repeat;
+    background: url('../assets/images/ocha-logo-mobile.svg') left center no-repeat;
 
     .no-svg & {
-      background-image: url('../assets/images/cd-logo.png');
+      background-image: url('../assets/images/ocha-logo-mobile.png');
 
       span {
         position: absolute;
@@ -51,7 +52,7 @@
   &:after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -2px;
     left: 0;
     width: 100%;
     border-bottom: 2px solid transparent;
@@ -59,16 +60,10 @@
   }
 
   @if $cd-fixed-width == true {
-    width: $cd-logo-width;
-    background-size: 100% auto;
+    width: 167px;
+    height: $cd-site-header-height-md;
     margin-right: $cd-base-unit*2;
-
-    &:after {
-      bottom: -12px;
-    }
-
-  } @else {
-    width: $cd-base-unit*5;
+    margin-top: 0;
   }
 
   &.#{$namespace}-site-header__logo--loggedout {
@@ -131,14 +126,19 @@
   border-radius: none;
   box-shadow: none;
   -webkit-appearance: none;
+  background: transparent;
   font-family: $cd-font;
   font-size: $cd-base-font-size;
   padding: $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*3.5;
   width: 96%;
+  height: $cd-site-header-height-xs + 2;
+  border-bottom: 2px solid transparent;
+  margin-top: 2px;
 
   &:focus {
     outline: none;
-    background: $cd-light-color;
+    background: $cd-nav-focus-bg;
+    border-color: $cd-highlight-color;
   }
 
   @if $modernizr == false {
@@ -205,27 +205,8 @@
   }
 }
 
-.#{$namespace}-header-search__active {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
-
-  @if $cd-fixed-width == false {
-    bottom: -11px;
-  } @else {
-    bottom: -12px;
-  }
-}
-
 .#{$namespace}-header-search__input:focus + .#{$namespace}-header-search__button svg {
   fill: $cd-primary-color;
-}
-
-.#{$namespace}-header-search__input:focus + * + .#{$namespace}-header-search__active {
-  border-color: $cd-highlight-color;
 }
 
 .#{$namespace}-site-header__nav-toggle {
@@ -234,20 +215,28 @@
     height: $cd-base-unit*4;
     padding: $cd-base-unit/2;
     position: relative;
-    margin-right: -$cd-base-unit;
 
     &:focus {
       outline: none;
       background: $cd-primary-color;
 
-      .#{$namespace}-site-header__nav-toggle-inner {
-        border-color: $cd-text-light;
-
-        &:before {
-          background: $cd-text-light;
-        }
+      .icon-bar {
+        background: white;
       }
     }
+
+    .icon-bar {
+      display: block;
+      width: $cd-base-unit*3;
+      height: 2px;
+      background: $cd-primary-color;
+      margin: 0 auto;
+
+      &+.icon-bar {
+        margin-top: $cd-base-unit/2;
+      }
+    }
+
   } @else {
     display: none;
   }
@@ -257,32 +246,14 @@
   }
 }
 
-.#{$namespace}-site-header__nav-toggle-inner {
-  display: block;
-  height: 100%;
-  position: relative;
-  border-top: 4px solid $cd-primary-color;
-  border-bottom: 4px solid $cd-primary-color;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    left: 0;
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: $cd-primary-color;
-  }
-}
-
 .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
 
   @if $cd-fixed-width == false {
-    top: 42px;
-    width: $cd-base-unit*30;
-    right: -$cd-base-unit*2;
+    top: 48px;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.15);
+    padding: $cd-base-unit;
   } @else {
     display: block;
     width: auto;
@@ -307,10 +278,12 @@
     .#{$namespace}-site-header__logo {
       width: $cd-logo-width;
       margin-right: $cd-base-unit*3;
-      background-size: 100%;
+      background: url('../assets/images/ocha-logo.svg') left center no-repeat;
+      background-size: auto 100%;
 
-      &:after {
-        bottom: -12px;
+      .no-svg & {
+        background: url('../assets/images/ocha-logo.png') left center no-repeat;
+         background-size: auto 100%;
       }
 
     }
@@ -325,6 +298,15 @@
 
     .#{$namespace}-dropdown-menu.#{$namespace}-site-header__nav {
       top: $cd-base-unit*6;
+    }
+
+    .#{$namespace}-header-search__input {
+      height: $cd-site-header-height-md + 2;
+    }
+
+    .#{$namespace}-site-header__logo {
+      height: $cd-site-header-height-md;
+      width: 167px;
     }
   }
 

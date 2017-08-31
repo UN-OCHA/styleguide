@@ -26,6 +26,11 @@
 
   .#{$namespace}-nav--primary & {
     text-transform: uppercase;
+    border-bottom: 1px solid $cd-border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     @if $cd-fixed-width == true {
       display: inline-block;
@@ -106,6 +111,7 @@
     &:hover, &:focus {
       background: $cd-nav-focus-bg;
       outline: none;
+      color: $cd-primary-color;
 
       &:after {
         border-color: $cd-highlight-color;

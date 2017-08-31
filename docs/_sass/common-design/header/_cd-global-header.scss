@@ -3,7 +3,15 @@
   color: $cd-text-light;
 
   .dropdown-menu {
-    top: 30px;
+    background: $cd-primary-color;
+
+    a {
+      color: $cd-text-light;
+
+      &:hover, &:focus {
+        background: darken($cd-primary-color, 10%);
+      }
+    }
   }
 }
 
@@ -43,6 +51,10 @@
     .no-flexbox & {
       float: left;
     }
+  }
+
+  .dropdown-menu {
+    min-width: 236px;
   }
 }
 

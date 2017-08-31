@@ -1,0 +1,158 @@
+/**
+ * Footer styles
+ *
+ * Note:
+ * The footer is a fixed height to ensure it stays at the bottom of the screen on short pages.
+ * Adjust the heights in variables/_measurements.scss to fit your footer content.
+ */
+
+/** remove and use variables etc from your theme */
+$primary-bg-color: #026CB6;
+$light-text-color: white;
+$base-unit: 8px;
+$heading-font: 'Open Sans', sans-serif;
+$base-font-size: 16px;
+$small-font-size: 14px;
+$tiny-font-size: 12px;
+$footer-height-xs: 280px;
+$footer-height-md: 280px;
+img {
+  max-width: 100%;
+}
+/* */
+
+.footer {
+  background: $primary-bg-color;
+  padding: $base-unit*2 0;
+  margin-top: $base-unit*2;
+  color: $light-text-color;
+  font-family: $heading-font;
+  height: $footer-height-xs;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a, a.active {
+    color: $light-text-color;
+  }
+}
+
+ul.footer__menu {
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0 0 $base-unit*2 0;
+  font-weight: 400;
+  font-size: $small-font-size;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 $base-unit*1.5 0 0;
+    padding: 0;
+
+    &:after {
+      content: "|";
+      position: absolute;
+      right: -10px;
+      font-size: 10px;
+      top: 1px;
+      opacity: .8;
+      color: white;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border-bottom: 1px solid rgba(255,255,255, 0.6);
+    }
+  }
+}
+
+.footer__logos {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 $base-unit*2 0;
+  }
+
+  li {
+    max-width: 100px;
+    margin: 0 $base-unit*2 $base-unit 0;
+    list-style: none;
+
+    a {
+      transition: opacity 0.3s ease;
+
+      &:hover, &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.footer__small-print, .footer__small-print p {
+  font-size: $tiny-font-size;
+}
+
+.footer__small-print {
+  .col-md-6 + .col-md-6 {
+    margin-top: $base-unit;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .footer {
+    padding: $base-unit*5 0;
+    height: $footer-height-md;
+  }
+
+  ul.footer__menu {
+    font-size: $base-font-size;
+    margin-bottom: $base-unit*4;
+
+    li {
+      margin-right: $base-unit*7;
+
+      &:after {
+        right: -33px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .footer__logos {
+    ul {
+      margin-bottom: $base-unit*4;
+    }
+
+    li {
+      max-width: 140px;
+      margin: 0 $base-unit*4 0 0;
+    }
+  }
+
+  .footer__small-print {
+    .col-md-6 + .col-md-6 {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+
+}
+
+@media print {
+  .footer {
+    display: none!important;
+  }
+}

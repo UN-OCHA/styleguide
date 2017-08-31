@@ -1,6 +1,6 @@
 ---
 layout: ocha
-title: Generic OCHA theme
+title: OCHA Basic theme
 page-title: Fonts
 ---
 
@@ -10,23 +10,35 @@ page-title: Fonts
   <p>
   Font-size: @include font-size($small-font-size)<br>
   Font family: font-family: $body-font</p>
-  <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/variables/_fonts.scss">common/variables/_fonts.scss</a>
+  <p>Sass: <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/variables/_fonts.scss">common/variables/_fonts.scss</a>
   <br>
-  <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/variables/_font-sizes.scss">common/variables/_font-sizes.scss</a>
+  <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/variables/_font-sizes.scss">common/variables/_font-sizes.scss</a>
   </p>
 </div>
 
 <div class="sg-section">
-  <div class="sg-section__item">
-    <div class="sg-section__header">
-      <h3>$body-font: helvetica, arial, sans-serif;</h3>
-    </div>
-
-    <ul class="sg-body-font">
-      <li class="sg-small-font-size">$small-font-size: 12px</li>
-      <li class="sg-base-font-size">$base-font-size: 14px</li>
-      <li class="sg-medium-font-size">$medium-font-size: 20px</li>
-      <li class="sg-large-font-size">$large-font-size: 36px</li>
-    </ul>
+  <div class="sg-section__header">
+    <h3>Fonts</h3>
+    <p>Open Sans is a <a href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans">Google Font</a>. Add the link to the head of your site to enable it:</p>
+    {% highlight html %}
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    {% endhighlight %}
   </div>
+  <ul>
+    <li>$body-font: helvetica, arial, sans-serif;</li>
+    <li style="font-family: 'Open sans'">$heading-font: 'Open Sans', helvetica, arial, sans-serif;</li>
+  </ul>
+</div>
+
+<div class="sg-section">
+  <div class="sg-section__header">
+    <h3>Font sizes</h3>
+  </div>
+  <ul class="sg-body-font">
+      <li style="font-size: 12px">$tiny-font-size: 12px</li>
+      <li style="font-size: 14px">$small-font-size: 14px</li>
+      <li style="font-size: 16px">$base-font-size: 16px</li>
+      <li style="font-size: 20px">$medium-font-size: 20px</li>
+      <li style="font-size: 30px">$x-large-font-size: 30px</li>
+    </ul>
 </div>

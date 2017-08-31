@@ -49,11 +49,16 @@ $base-unit: 8px;
   h1 {
     margin: 0;
     font-family: helvetica, arial, sans-serif;
+    font-weight: normal;
   }
 
   a {
     color: white;
     text-decoration: none;
+
+    &:hover, &:focus {
+      color: white;
+    }
   }
 }
 
@@ -118,8 +123,14 @@ $base-unit: 8px;
 .sg-nav {
   display: none;
 
+
   @media(min-width: 768px) {
     display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
   }
 
   a {

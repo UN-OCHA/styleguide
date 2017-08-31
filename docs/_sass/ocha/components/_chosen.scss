@@ -2,18 +2,27 @@
  * Overrides for Chosen plugin styles, see https://harvesthq.github.io/chosen/
  */
 
+/** remove and use variables from your theme */
+$base-unit: 8px;
+$border-color: #CCCCCC;
+$base-font-size: 16px;
+$small-font-size: 14px;
+$primary-bg-color: #026CB6;
+$highlight-border-color: #002D80;
+/** */
+
 
 .chosen-container {
 	width: 100%!important; //over ride chosen's inline style
 	max-width: 300px;
-	@include font-size($base-font-size);
+	font-size: $base-font-size;
 	background: white;
 
 	.chosen-drop {
 		box-shadow: none;
 		border-radius: 0;
 		border-color: #ddd;
-		@include font-size($small-font-size);
+		font-size: $small-font-size;
 	}
 
 	.chosen-results {
@@ -36,10 +45,10 @@
 }
 
 .chosen-container-active.chosen-with-drop {
-	border-color: #ddd;
+	border-color: $border-color;
 
 	.chosen-single {
-		border-color: #ddd;
+		border-color: $border-color;
 		background: none;
 
 		div b {
@@ -52,7 +61,7 @@
 	.chosen-single {
 		background: none;
 		box-shadow: none;
-		border: 1px solid #ddd;
+		border: 1px solid $border-color;
 		border-radius: 0;
 		height: auto;
 		padding: $base-unit/2 $base-unit;

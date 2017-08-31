@@ -1,15 +1,16 @@
 ---
 layout: ocha
-title: Generic OCHA theme
+title: OCHA Basic theme
 page-title: Colours
 ---
 
 <div class="styleguide-header">
   <h2 class="styleguide-heading">Colours</h2>
+  <p>Color scheme based on the OCHA palette, see <a href="https://www.unocha.org/sites/unocha/files/dms/Documents/GraphicsStyleBook_for_public.pdf">OCHA Graphics Style Book (pdf)</a></p>
   <p>Use the contextual colours (text, background, border) rather than the palette colours directly.</p>
   <p>Use a colour contrast checker to confirm that your colour combinations are accessible - <a href="http://webaim.org/resources/contrastchecker/">http://webaim.org/resources/contrastchecker/</a>.</p>
 
-  <p>Sass file: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/variables/_colours.scss">variables/_colours.scss</a></p>
+  <p>Sass file: <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/variables/_colours.scss">variables/_colours.scss</a></p>
 </div>
 
 <div class="sg-section">
@@ -18,22 +19,22 @@ page-title: Colours
   </div>
   <ul>
     <li class="sg-color">
-      <span class="sg-primary-color-bg"></span> $primary-color: #007faa;
+      <span style="background: #026CB6"></span> $ocha-blue: #026CB6;
     </li>
     <li class="sg-color">
-      <span class="sg-secondary-color-bg"></span> $secondary-color: #0d6084;
+      <span style="background: #002D80"></span> $dark-blue: #002D80;
     </li>
     <li class="sg-color">
-      <span class="sg-light-grey-bg"></span> $light-grey: #ecf1f4;
+      <span style="background: #F2F2F2"></span> $light-grey: #F2F2F2;
     </li>
     <li class="sg-color">
-      <span class="sg-mid-grey-bg"></span> $mid-grey: #ddd;
+      <span style="background: #CCCCCC"></span> $mid-light-grey: #CCCCCC;
     </li>
     <li class="sg-color">
-      <span class="sg-dark-grey-bg"></span> $dark-grey: #232323;
+      <span style="background: #595959"></span> $mid-grey: #595959;
     </li>
     <li class="sg-color">
-      <span class="sg-red-bg"></span> $red: #e85c41;
+      <span style="background: #BF0013"></span> $red: #BF0013;
     </li>
   </ul>
 </div>
@@ -44,13 +45,13 @@ page-title: Colours
   </div>
   <ul>
     <li class="sg-color">
-      <span class="sg-primary-color-bg"></span> $primary-bg-color;
+      <span style="background: #F2F2F2"></span> $light-bg-color: $light-grey;
     </li>
     <li class="sg-color">
-      <span class="sg-secondary-color-bg"></span> $secondary-bg-color;
+      <span style="background: #026CB6"></span> $primary-bg-color: $ocha-blue;
     </li>
     <li class="sg-color">
-      <span class="sg-light-grey-bg"></span> $light-bg-color;
+      <span style="background: #002D80"></span> $secondary-bg-color: $dark-blue;
     </li>
   </ul>
 </div>
@@ -60,9 +61,18 @@ page-title: Colours
     <h3>Border colours</h3>
   </div>
   <ul>
-    <li class="sg-border-color"><span class="sg-border-border-color"></span> $border-color</li>
-    <li class="sg-border-color"><span class="sg-border-highlight-border-color"></span> $highlight-border-color</li>
-    <li class="sg-border-color"><span class="sg-border-error-border-color"></span> $error-border-color</li>
+    <li class="sg-border-color">
+      <span style="border-color: #CCCCCC"></span> $border-color: $mid-light-grey;
+    </li>
+    <li class="sg-border-color">
+      <span style="border-color: #002D80"></span> $highlight-border-color: $dark-blue;
+    </li>
+    <li class="sg-border-color">
+      <span style="border-color: #BF0013"></span> $error-border-color: $red;
+    </li>
+    <li class="sg-border-color">
+      <span style="border-color: #F2F2F2"></span> $light-border-color: $light-grey;
+    </li>
   </ul>
 </div>
 
@@ -71,12 +81,12 @@ page-title: Colours
     <h3>Text colours</h3>
   </div>
   <ul>
-    <li class="sg-text-color sg-text-body-text-color">$body-text-color</li>
-    <li class="sg-text-color sg-text-heading-text-color">$heading-text-color</li>
-    <li class="sg-text-color sg-text-secondary-heading-text-color">$secondary-heading-text-color</li>
-    <li class="sg-text-color sg-text-light-text-color">$light-text-color</li>
-    <li class="sg-text-color sg-text-link-text-color">$link-text-color</li>
-    <li class="sg-text-color sg-text-active-link-text-color">$active-link-text-color</li>
-    <li class="sg-text-color sg-text-error-text-color">$error-text-color</li>
+    <li class="sg-text-color" style="color: #595959">$body-text-color: $mid-grey;</li>
+    <li class="sg-text-color" style="color: #026CB6">$heading-text-color: $ocha-blue;</li>
+    <li class="sg-text-color" style="color: #002D80">$secondary-heading-text-color: $dark-blue;</li>
+    <li class="sg-text-color" style="color: #fff; background: black;">$light-text-color: white;</li>
+    <li class="sg-text-color" style="color: #002D80">$link-text-color: $dark-blue;</li>
+    <li class="sg-text-color" style="color: #026CB6">$active-link-text-color: $ocha-blue;</li>
+    <li class="sg-text-color" style="color: #BF0013">$error-text-color: $red;</li>
   </ul>
 </div>

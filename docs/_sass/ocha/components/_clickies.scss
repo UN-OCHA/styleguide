@@ -15,6 +15,14 @@
  * to check if the input is checked and add a class to its label.
  */
 
+/** remove and use variables from your theme */
+$base-unit: 8px;
+$highlight-border-color: #002D80;
+$border-color: #CCCCCC;
+$body-text-color: #595959;
+$primary-bg-color: #026CB6;
+/** */
+
 input[type="radio"], input[type="checkbox"] {
   width: $base-unit*2.5;
   height: $base-unit*2.5;

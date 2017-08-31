@@ -3,12 +3,12 @@
   <div class="{{ include.namespace }}-global-header">
     <div class="{{ include.namespace }}-container {{ include.namespace }}-global-header__inner">
       <div class="{{ include.namespace }}-global-header__sites {{ include.namespace }}-dropdown">
-        <button type="button" class="{{ include.namespace }}-global-header__sites-btn" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-related-platforms" id="{{ include.namespace }}-related-platforms-toggle">
+        <button type="button" class="{{ include.namespace }}-global-header__sites-btn" data-toggle="dropdown" id="{{ include.namespace }}-related-platforms-toggle" aria-expanded="false">
           Related platforms
           <i class="icon-arrow-down" aria-hidden="true"></i>
         </button>
-        <ul class="{{ include.namespace }}-dropdown-menu" role="menu" id="{{ include.namespace }}-related-platforms" aria-hidden="true" aria-labelledby="{{ include.namespace }}-related-platforms-toggle">
-          <li><a href="https://fts.unocha.org/">Financial Tracking Services</a></li>
+        <ul class="{{ include.namespace }}-dropdown-menu dropdown-menu" role="menu" id="{{ include.namespace }}-related-platforms" aria-labelledby="{{ include.namespace }}-related-platforms-toggle">
+          <li><a href="https://fts.unocha.org/">Financial Tracking Service</a></li>
           <li><a href="https://humdata.org/">Humanitarian Data Exchange</a></li>
           <li><a href="https://humanitarian.id/">Humanitarian ID</a></li>
           <li><a href="https://humanitarianresponse.info/">HumanitarianResponse.info</a></li>
@@ -32,25 +32,25 @@
           </li>
 
           <li class="{{ include.namespace }}-nav__item">
-            <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-lang-dropdown" id="{{ include.namespace }}-lang-toggle">
+            <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-toggle="dropdown" id="{{ include.namespace }}-lang-toggle">
               <span class="{{ include.namespace }}-nav__label {{ include.namespace }}-nav__label--mobile">Eng</span>
               <i class="icon-arrow-down"></i>
             </button>
 
-            <ul class="{{ include.namespace }}-dropdown-menu {{ include.namespace }}-dropdown-menu--small" id="{{ include.namespace }}-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-lang-toggle">
+            <ul class="{{ include.namespace }}-dropdown-menu dropdown-menu {{ include.namespace }}-dropdown-menu--small" id="{{ include.namespace }}-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-lang-toggle">
               <li><a href="#">EN</a></li>
               <li><a href="#">FR</a></li>
             </ul>
           </li>
 
           <li class="{{ include.namespace }}-nav__item {{ include.namespace }}-dropdown">
-            <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-global-nav-dropdown" id="{{ include.namespace }}-global-nav-toggle">
+            <button type="button" class="{{ include.namespace }}-nav__link {{ include.namespace }}-nav__link-button" data-toggle="dropdown" id="{{ include.namespace }}-global-nav-toggle">
               <i class="icon-user" aria-hidden="true"></i>
               <span class="{{ include.namespace }}-nav__label">Dropdown {{ include.namespace }}-nav</span>
               <i class="icon-arrow-down"></i>
             </button>
 
-            <ul class="{{ include.namespace }}-dropdown-menu" id="{{ include.namespace }}-global-nav-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-global-nav-toggle">
+            <ul class="{{ include.namespace }}-dropdown-menu dropdown-menu" id="{{ include.namespace }}-global-nav-dropdown" role="menu" aria-hidden="true" aria-labelledby="{{ include.namespace }}-global-nav-toggle">
               <li><a href="/dashboard">Dashboard</a></li>
               <li><a href="/users/{{currentUser.id}}">Profile</a></li>
               <li><a href="/settings">Preferences</a></li>
@@ -79,43 +79,33 @@
             </svg>
             <span class="{{ include.namespace }}-sr-only">Search</span>
           </button>
-          <span class="{{ include.namespace }}-header-search__active"></span>
         </form>
       </div>
 
-      <div class="{{ include.namespace }}-dropdown">
+      {% if include.namespace != 'cd-fixed' %}
+        <button type="button" id="{{ include.namespace }}-nav-toggle" class="{{ include.namespace }}-site-header__nav-toggle" data-toggle="dropdown" >
+          <span class="cd-sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+      {% endif %}
 
-        <nav role="navigation" id="{{ include.namespace }}-nav" class="{{ include.namespace }}-site-header__nav {{ include.namespace }}-dropdown-menu" aria-labelledby="{{ include.namespace }}-nav-toggle" >
-          <ul class="{{ include.namespace }}-nav {{ include.namespace }}-nav--primary">
-            <li class="{{ include.namespace }}-nav__item {{ include.namespace }}-active"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 1</a></li>
-            <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 2</a></li>
-            <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 3</a></li>
-            <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 4</a></li>
-          </ul>
-        </nav>
+      <nav role="navigation" id="{{ include.namespace }}-nav" class="{{ include.namespace }}-site-header__nav {{ include.namespace }}-dropdown-menu dropdown-menu" aria-labelledby="{{ include.namespace }}-nav-toggle" >
+        <ul class="{{ include.namespace }}-nav {{ include.namespace }}-nav--primary">
+          <li class="{{ include.namespace }}-nav__item {{ include.namespace }}-active"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 1</a></li>
+          <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 2</a></li>
+          <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 3</a></li>
+          <li class="{{ include.namespace }}-nav__item"><a href="#" class="{{ include.namespace }}-nav__link">Navigation 4</a></li>
+        </ul>
+      </nav>
 
-        {% if include.namespace != 'cd-fixed' %}
-          <button type="button" id="{{ include.namespace }}-nav-toggle" class="{{ include.namespace }}-site-header__nav-toggle" data-{{ include.namespace }}-toggle="#{{ include.namespace }}-nav" >
-            <span class="{{ include.namespace }}-site-header__nav-toggle-inner" aria-hidden="true">
-            </span>
-            <span class="{{ include.namespace }}-sr-only">Main menu</span>
-          </button>
-        {% endif %}
-
-      </div>
     </div>
   </div>
 </header>
 
-<script>
-$(document).ready(function () {
-
-  $('[data-{{ include.namespace }}-toggle]').on('click', function (e) {
-    e.preventDefault();
-    var target = $(this).data('{{ include.namespace }}-toggle');
-    var targetHidden = $(target).attr('aria-hidden') === 'true' ? true : false;
-    $(target).attr('aria-hidden', !targetHidden);
-  });
-
-});
-</script>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/UN-OCHA/ocha_basic/master/js/bootstrap-dropdown.js"></script>

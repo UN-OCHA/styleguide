@@ -1,0 +1,75 @@
+---
+layout: default
+custom_css: cd-footer
+namespace: cd
+title: Common Design
+---
+
+{% include common-design/footer.html namespace=page.namespace %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Common Design footer</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Files:</h3>
+
+      <h4>HTML:</h4>
+      <ul>
+        <li><a href="#code">Copy &amp; pastable generated HTML</a></li>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_includes/common-design/footer.html">footer.html</a> (Jekyll template)</li>
+      </ul>
+
+      <h4>Sass:</h4>
+      <ul>
+        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/_cd-footer.scss">_cd-footer.scss</a></li>
+      </ul>
+
+      <h4>CSS:</h4>
+      <ul>
+        <li><a href="https://un-ocha.github.io/styleguide/css/cd-footer.css">cd-footer.css</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="col-sm-6">
+      <h3>Drupal version:</h3>
+      <p>A Drupal version of the footer is part of the <a href="https://github.com/UN-OCHA/ocha_basic">OCHA Basic theme</a></p>
+      <p><strong>Sass file:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/components/_footer.scss">/sass/components/_footer.scss</a></p>
+      <p><strong>Drupal template:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/templates/footer.inc">/templates/footer.inc</a></p>
+    </div>
+   </div>
+</div>
+
+
+<div id="code" class="html-block">
+  <pre>
+    <code id="code">
+    </code>
+  </pre>
+</div>
+
+<script>
+$(document).ready(function () {
+
+  var container = $('.footer');
+  var target =$('#code');
+  if (target.length > 0) {
+    var sample_html = container[0].outerHTML;
+    var white_space = "☺";
+    try {
+      white_space = sample_html.match(/\n+\s+\S/)[0].slice(0,(sample_html.match(/\n+\s+\S/)[0].length-3));
+    } catch(err) {}
+    var re = new RegExp(white_space,"g");
+    sample_html = sample_html.replace(re,"\n").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    sample_html = $.trim(sample_html);
+    target.html(sample_html);
+  }
+
+});
+</script>

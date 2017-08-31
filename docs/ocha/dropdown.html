@@ -1,0 +1,45 @@
+---
+layout: ocha
+title: OCHA Basic theme
+page-title: Dropdown
+---
+<div class="styleguide-header">
+  <h2 class="styleguide-heading">Dropdown</h2>
+  <p>Bootstrap dropdown. Requires jQuery and the dropdown JS, see <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/js/bootstrap-dropdown.js">https://github.com/UN-OCHA/ocha_basic/blob/master/js/bootstrap-dropdown.js</a></p>
+  <p>Sass: <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/components/_dropdown.scss">components/_dropdown.scss</a></p>
+</div>
+<div class="sg-section">
+
+  <div class="row sg-section__item">
+    <div class="col-sm-6">
+      <div>
+        <button type="button" class="btn-primary" data-toggle="dropdown" id="dropdown-toggle" aria-expanded="false">
+          Click me
+        </button>
+        <ul class="dropdown-menu" role="menu"  aria-labelledby="dropdown-toggle">
+          <li><a href="#">This is the link 1</a></li>
+          <li><a href="#">This is the link 2</a></li>
+          <li><a href="#">This is the link 3</a></li>
+          <li><a href="#">This is the link 4</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      {% highlight html %}
+        <div>
+          <button type="button" class="btn-primary" data-toggle="dropdown" id="dropdown-toggle" aria-expanded="false">
+            Click me
+          </button>
+          <ul class="dropdown-menu" role="menu"  aria-labelledby="dropdown-toggle">
+            <li><a href="#">This is the link 1</a></li>
+            <li><a href="#">This is the link 2</a></li>
+            <li><a href="#">This is the link 3</a></li>
+            <li><a href="#">This is the link 4</a></li>
+          </ul>
+        </div>
+      {% endhighlight %}
+    </div>
+  </div>
+
+</div>

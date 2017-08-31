@@ -2,92 +2,126 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import
+  "layout",
+  "syntax-highlighting";
+
+.sg-section--index {
+	h3 {
+		border-top: 1px dotted #ccc;
+		padding-top: 16px;
+		margin-bottom: 8px;
+
+		&:first-of-type {
+			border-top: none;
+			padding-top: 0;
+		}
+	}
+}
+
+.sg-file-link {
+	font-size: 14px;
+	display: block;
+	margin-top: 4px;
+}
+
+.sg-section__header {
+  border-color: #007faa;
+  h2 {
+  	font-size: 30px;
+  	margin-bottom: 8px;
+  }
+  p {
+  	margin-bottom: 8px;
+  }
+}
+
 // TODO.. delete files not used
 
-@import
-	"ocha/variables/fonts",
-	"ocha/variables/font-sizes",
-	"ocha/variables/colours",
-	"ocha/variables/measurements",
-	"ocha/variables/breakpoints",
-	"ocha/mixins/font-size",
-	"ocha/mixins/media-queries",
-	"ocha/mixins/clearfix",
-	"ocha/base/a-reset",
-	"ocha/base/base",
-	"ocha/components/buttons",
-	"ocha/components/block",
-	"ocha/components/forms",
-	"ocha/components/clickies",
-	"ocha/components/chosen";
+// @import
+// 	"ocha/variables/fonts",
+// 	"ocha/variables/font-sizes",
+// 	"ocha/variables/colours",
+// 	"ocha/variables/measurements",
+// 	"ocha/variables/breakpoints",
+// 	"ocha/mixins/font-size",
+// 	"ocha/mixins/media-queries",
+// 	"ocha/mixins/clearfix",
+// 	"ocha/base/a-reset",
+// 	"ocha/base/base",
+// 	"ocha/components/buttons",
+// 	"ocha/components/block",
+// 	"ocha/components/forms",
+// 	"ocha/components/clickies",
+// 	"ocha/components/chosen";
 
-.styleguide body {
-	 color: $body-text-color;
-}
+// .styleguide body {
+// 	 color: $body-text-color;
+// }
 
-.sg-small-font-size {
-	font-size: $small-font-size + px;
-}
-.sg-base-font-size {
-	font-size: $base-font-size + px;
-}
-.sg-medium-font-size {
-	font-size: $medium-font-size + px;
-}
-.sg-large-font-size {
-	font-size: $large-font-size + px;
-}
+// .sg-small-font-size {
+// 	font-size: $small-font-size + px;
+// }
+// .sg-base-font-size {
+// 	font-size: $base-font-size + px;
+// }
+// .sg-medium-font-size {
+// 	font-size: $medium-font-size + px;
+// }
+// .sg-large-font-size {
+// 	font-size: $large-font-size + px;
+// }
 
 
-.sg-primary-color-bg {
-	background: $primary-color;
-}
-.sg-secondary-color-bg {
-	background: $secondary-color;
-}
-.sg-light-grey-bg {
-	background: $light-grey;
-}
-.sg-mid-grey-bg {
-	background: $mid-grey;
-}
-.sg-dark-grey-bg {
-	background: $dark-grey;
-}
-.sg-red-bg {
-	background: $red;
-}
+// .sg-primary-color-bg {
+// 	background: $primary-color;
+// }
+// .sg-secondary-color-bg {
+// 	background: $secondary-color;
+// }
+// .sg-light-grey-bg {
+// 	background: $light-grey;
+// }
+// .sg-mid-grey-bg {
+// 	background: $mid-grey;
+// }
+// .sg-dark-grey-bg {
+// 	background: $dark-grey;
+// }
+// .sg-red-bg {
+// 	background: $red;
+// }
 
-.sg-text-body-text-color {
-	color: $body-text-color;
-}
-.sg-text-heading-text-color {
-	color: $heading-text-color;
-}
-.sg-text-secondary-heading-text-color {
-	color: $secondary-heading-text-color;
-}
-.sg-text-light-text-color {
-	color: $light-text-color;
-}
-.sg-text-link-text-color {
-	color: $link-text-color;
-}
-.sg-text-active-link-text-color {
-	color: $active-link-text-color;
-}
-.sg-text-error-text-color {
-	color: $error-text-color;
-}
+// .sg-text-body-text-color {
+// 	color: $body-text-color;
+// }
+// .sg-text-heading-text-color {
+// 	color: $heading-text-color;
+// }
+// .sg-text-secondary-heading-text-color {
+// 	color: $secondary-heading-text-color;
+// }
+// .sg-text-light-text-color {
+// 	color: $light-text-color;
+// }
+// .sg-text-link-text-color {
+// 	color: $link-text-color;
+// }
+// .sg-text-active-link-text-color {
+// 	color: $active-link-text-color;
+// }
+// .sg-text-error-text-color {
+// 	color: $error-text-color;
+// }
 
-.sg-border-color {
-	.sg-border-border-color {
-		border-color: $border-color;
-	}
-	.sg-border-highlight-border-color {
-		border-color: $highlight-border-color;
-	}
-	.sg-border-error-border-color {
-		border-color: $error-border-color;
-	}
-}
+// .sg-border-color {
+// 	.sg-border-border-color {
+// 		border-color: $border-color;
+// 	}
+// 	.sg-border-highlight-border-color {
+// 		border-color: $highlight-border-color;
+// 	}
+// 	.sg-border-error-border-color {
+// 		border-color: $error-border-color;
+// 	}
+// }

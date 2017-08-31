@@ -1,3 +1,15 @@
+/** remove and use variables from your theme */
+$base-unit: 8px;
+$border-color: #CCCCCC;
+$medium-font-size: 20px;
+$base-font-size: 16px;
+$small-font-size: 14px;
+$primary-bg-color: #026CB6;
+$light-bg-color: #F2F2F2;
+$highlight-border-color: #002D80;
+$secondary-heading-text-color: #002D80;
+/** */
+
 .blocks-holder {
 	margin: $base-unit*4 0;
 }
@@ -17,7 +29,7 @@
 .block__heading {
 	text-transform: uppercase;
 	color: $secondary-heading-text-color;
-	@include font-size($medium-font-size);
+	font-size: $medium-font-size;
 	margin-bottom: $base-unit/2;
 }
 
@@ -36,7 +48,7 @@
 }
 
 
-@include media-query(sm) {
+@media (min-width: 576px) {
 
 	.blocks-holder {
 		display: flex;

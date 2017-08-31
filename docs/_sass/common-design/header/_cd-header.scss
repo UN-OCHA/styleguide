@@ -5,16 +5,16 @@ $cd-base-unit: 8px !default;
 $cd-global-header-height: $cd-base-unit*5 !default;
 $cd-site-header-height-xs: $cd-base-unit*6 !default;
 $cd-site-header-height-md: $cd-base-unit*7.5 !default;
-$cd-max-width: 1400px !default;
-$cd-logo-width: $cd-base-unit*30 !default;
+$cd-max-width: 1200px !default;
+$cd-logo-width: 135px !default;
 
-$cd-primary-color: #5C6FA6 !default;
+$cd-primary-color: #026CB6 !default;
 $cd-highlight-color: lighten($cd-primary-color,15%) !default;
 $cd-light-color: #f8fcfd !default;
 $cd-text-dark: #767676 !default;
 $cd-text-light: white !default;
 $cd-border-color: #CFD1D2 !default;
-$cd-nav-focus-bg: #F6F6F6 !default;
+$cd-nav-focus-bg: #f2f2f2 !default;
 
 $cd-font: helvetica, arial, sans-serif !default;
 
@@ -99,7 +99,7 @@ $grid-breakpoints: (
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.25);
   display: none;
 
-  &[aria-hidden="false"] {
+  .open & {
     display: block;
   }
 
@@ -110,6 +110,7 @@ $grid-breakpoints: (
     text-decoration: none;
     color: $cd-text-dark;
     word-break: break-word;
+    transition: background .3s ease;
 
     &:hover, &:focus {
       background: $cd-primary-color;
@@ -147,6 +148,6 @@ $grid-breakpoints: (
 
 }
 
-@import "header/cd-global-header",
-        "header/cd-site-header",
-        "header/cd-nav";
+@import "cd-global-header",
+        "cd-site-header",
+        "cd-nav";
