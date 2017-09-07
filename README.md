@@ -12,5 +12,5 @@ See [https://jekyllrb.com](https://jekyllrb.com) for Jekyll docs.
 
 ```
 cd docs
-jekyll serve
+jekyll serve --baseurl=""
 ```
