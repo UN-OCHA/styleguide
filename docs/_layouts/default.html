@@ -3,10 +3,15 @@
   {% include head.html %}
 
   <body>
-  	{% include header.html %}
+    {% if page.hide_header_footer != true %}
+  	 {% include header.html %}
+    {% endif %}
 
     {{ content }}
 
+    {% if page.hide_header_footer != true %}
+      {% include footer.html %}
+    {% endif %}
   </body>
 
 </html>

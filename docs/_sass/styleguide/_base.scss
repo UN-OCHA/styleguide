@@ -1,28 +1,49 @@
-.styleguide {
-  * {
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  &:before, &:after {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    &:before, &:after {
-      box-sizing: border-box;
-    }
   }
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: helvetica, arial, sans-serif;
-    color: #666;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #595959;
+  line-height: 1.5;
+}
 
-  ul, ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+h1, h2, h3, h4, h5 {
+  color: #026cb6;
+  font-family: "Open Sans",helvetica,arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+}
 
-  a {
-    color: #007faa;
-  }
+a {
+  color: #002d80;
+}
+
+strong {
+  font-weight: 400;
+}
+
+header {
+  margin-bottom: 24px!important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Needed for HID */

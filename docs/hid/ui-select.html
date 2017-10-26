@@ -1,93 +1,95 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">UI Select</h2>
-  <p>AngularJS version of Select2 and Selectize. See <a href="https://github.com/angular-ui/ui-select/">https://github.com/angular-ui/ui-select/</a> for full details and examples.</p>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/forms/_ui-select.scss">common/forms/_ui-select.scss</a></p>
-</div>
-
-<div class="sg-section">
-
-  <div class="sg-section__header">
-    <h3>Default</h3>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / UI Select</h1>
+    <p>AngularJS version of Select2 and Selectize. See <a href="https://github.com/angular-ui/ui-select/">https://github.com/angular-ui/ui-select/</a> for full details and examples.</p>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/forms/_ui-select.scss">common/forms/_ui-select.scss</a></p>
   </div>
-  <div class="row">
-    <div class="col-sm-6">
 
-      <div class="ui-select-container ui-select-bootstrap dropdown ng-empty ng-valid ng-touched" style="min-width: 300px;">
-        <div class="ui-select-match ng-scope" placeholder="Organization">
-          <span tabindex="-1" class="btn btn-default form-control ui-select-toggle" style="outline: 0;">
-            <span class="ui-select-placeholder text-muted ng-binding">Search for something</span>
-            <span class="ui-select-match-text pull-left ng-hide">
-              <span class="ng-binding ng-scope"></span>
-            </span>
-            <i class="caret pull-right"></i>
-            <a style="margin-right: 10px" class="btn btn-xs btn-link pull-right ng-hide">
-              <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
-            </a>
-          </span>
-        </div>
-      </div>
+  <div class="sg-section">
 
+    <div class="sg-section__header">
+      <h3>Default</h3>
     </div>
+    <div class="row">
+      <div class="col-sm-6">
 
-    <div class="col-sm-6">
-
-      {% highlight html %}
-      <ui-select ng-model="myModel">
-        <ui-select-match placeholder="{{'Search for something'|translate}}">
-          <!--$select.selected.name-->
-        </ui-select-match>
-        <ui-select-choices refresh="getOrganizations($select.search)" repeat="thing in things | filter: $select.search track by $index">
-          <span ng-bind="thing.name"></span>
-        </ui-select-choices>
-      </ui-select>
-      {% endhighlight %}
-    </div>
-  </div>
-</div>
-<div class="sg-section">
-
-  <div class="sg-section__header">
-    <h3>ui-select--has-border</h3>
-    <p>Add class 'ui-select--has-border' to the ui-select element</p>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-
-      <div class="ui-select--has-border ui-select-container ui-select-bootstrap dropdown ng-not-empty ng-touched ng-dirty ng-invalid ng-invalid-parse">
-        <div class="ui-select-match ng-scope" placeholder="Type the list you want to check in to">
-          <span class="btn btn-default form-control ui-select-toggle" style="outline: 0;">
-            <span class="ui-select-placeholder text-muted ng-binding ng-hide">Search for something</span>
-            <span class="ui-select-match-text pull-left">
-              <span class="ng-scope">
-                <span class="ng-scope">Search for something</span>
+        <div class="ui-select-container ui-select-bootstrap dropdown ng-empty ng-valid ng-touched" style="min-width: 300px;">
+          <div class="ui-select-match ng-scope" placeholder="Organization">
+            <span tabindex="-1" class="btn btn-default form-control ui-select-toggle" style="outline: 0;">
+              <span class="ui-select-placeholder text-muted ng-binding">Search for something</span>
+              <span class="ui-select-match-text pull-left ng-hide">
+                <span class="ng-binding ng-scope"></span>
               </span>
+              <i class="caret pull-right"></i>
+              <a style="margin-right: 10px" class="btn btn-xs btn-link pull-right ng-hide">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+              </a>
             </span>
-            <i class="caret pull-right"></i>
-            <a style="margin-right: 10px" class="btn btn-xs btn-link pull-right ng-hide">
-              <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
-            </a>
-          </span>
+          </div>
         </div>
+
+      </div>
+
+      <div class="col-sm-6">
+
+        {% highlight html %}
+        <ui-select ng-model="myModel">
+          <ui-select-match placeholder="{{'Search for something'|translate}}">
+            <!--$select.selected.name-->
+          </ui-select-match>
+          <ui-select-choices refresh="getOrganizations($select.search)" repeat="thing in things | filter: $select.search track by $index">
+            <span ng-bind="thing.name"></span>
+          </ui-select-choices>
+        </ui-select>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+  <div class="sg-section">
+
+    <div class="sg-section__header">
+      <h3>ui-select--has-border</h3>
+      <p>Add class 'ui-select--has-border' to the ui-select element</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+
+        <div class="ui-select--has-border ui-select-container ui-select-bootstrap dropdown ng-not-empty ng-touched ng-dirty ng-invalid ng-invalid-parse">
+          <div class="ui-select-match ng-scope" placeholder="Type the list you want to check in to">
+            <span class="btn btn-default form-control ui-select-toggle" style="outline: 0;">
+              <span class="ui-select-placeholder text-muted ng-binding ng-hide">Search for something</span>
+              <span class="ui-select-match-text pull-left">
+                <span class="ng-scope">
+                  <span class="ng-scope">Search for something</span>
+                </span>
+              </span>
+              <i class="caret pull-right"></i>
+              <a style="margin-right: 10px" class="btn btn-xs btn-link pull-right ng-hide">
+                <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+
+        {% highlight html %}
+        <ui-select ng-model="myModel" class="ui-select--has-border">
+          <ui-select-match placeholder="{{'Search for something' | translate}}"><span translate>Search for something</span></ui-select-match>
+          <ui-select-choices repeat="thing.id as thing in myThings | filter: $select.search">
+            <span ng-bind="thing.name"></span>
+          </ui-select-choices>
+        </ui-select>
+        {% endhighlight %}
       </div>
 
     </div>
 
-    <div class="col-sm-6">
-
-      {% highlight html %}
-      <ui-select ng-model="myModel" class="ui-select--has-border">
-        <ui-select-match placeholder="{{'Search for something' | translate}}"><span translate>Search for something</span></ui-select-match>
-        <ui-select-choices repeat="thing.id as thing in myThings | filter: $select.search">
-          <span ng-bind="thing.name"></span>
-        </ui-select-choices>
-      </ui-select>
-      {% endhighlight %}
-    </div>
-
   </div>
-
-</div>

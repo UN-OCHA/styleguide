@@ -1,14 +1,17 @@
 ---
-layout: ocha
+layout: default
 title: OCHA Basic theme
 page-title: Chosen
 custom_css: extras
+include_ocha_basic: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Chosen</h2>
+<div class="container">
+<div class="sg-page-header">
+  <h1 class="sg-page-header__heading"><a href="./">OCHA Basic</a> / Chosen</h1>
   <p>Chosen is a jQuery plugin for searchable selects that is used on several OCHA sites, see <a href="https://harvesthq.github.io/chosen/">https://harvesthq.github.io/chosen/</a></p>
   <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/ocha/components/_chosen.scss">components/_chosen.scss</a> (the standard Chosen plugin styles also need to be included)</p>
 </div>
+
 <div class="sg-section">
   <div class="row sg-section__item">
     <div class="col-sm-6">
@@ -287,7 +290,7 @@ custom_css: extras
   </div>
 
 </div>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="../assets/js/chosen/chosen.min.js"></script>
 <script>
@@ -295,3 +298,4 @@ custom_css: extras
     $('.chosen-select').chosen();
   });
 </script>
+

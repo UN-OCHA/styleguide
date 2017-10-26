@@ -1,0 +1,141 @@
+.sg-page-header {
+  padding-bottom: $base-unit;
+  border-bottom: 2px solid #007faa;
+  margin-bottom: 24px;
+  font-family: sans-serif;
+  font-weight: 300;
+
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.sg-page-header__heading {
+  color: #007faa;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+
+  a {
+    color: #595959;
+    text-decoration: none;
+    border-bottom: 1px dotted #595959;
+  }
+}
+
+.sg-list + .sg-list {
+  margin-top: 24px;
+}
+
+.sg-list__header {
+  color: #007faa;
+  border-bottom: 1px solid #007faa;
+  padding-bottom: $base-unit;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: $base-unit/2;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.sg-list__item {
+  border-bottom: 1px dotted #ccc;
+  padding: 16px 0;
+
+  p {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sg-list__sub-heading {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sg-file-link {
+  font-size: 14px;
+  display: block;
+  margin-top: 4px;
+}
+
+.sg-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    width: $base-unit*5;
+    height: $base-unit*5;
+    margin-right: $base-unit;
+  }
+}
+
+.sg-text-color {
+  font-size: 16px;
+}
+
+.sg-border-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    width: $base-unit*10;
+    height: 1px;
+    margin-right: $base-unit;
+    border-top: 1px solid black;
+  }
+}
+
+.sg-section, .sg-section__item {
+  padding-top: $base-unit*1.5;
+  padding-bottom: $base-unit*1.5;
+}
+
+.sg-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sg-section__header {
+  color: #007faa;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: $base-unit;
+  margin-bottom: $base-unit*2;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: $base-unit/2;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.sg-icon-list .icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+  line-height: 1;
+}
+
+.sg-hidden {
+  display: none;
+}

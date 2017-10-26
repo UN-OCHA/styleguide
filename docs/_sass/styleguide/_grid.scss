@@ -4,6 +4,7 @@
 //
 // Adapted from Bootstrap v4 https://github.com/twbs/bootstrap/tree/v4-dev/scss
 $max-width: 1200px;
+$base-unit: 8px;
 $grid-columns: 12 !default;
 
 @mixin make-container() {

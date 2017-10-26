@@ -1,126 +1,130 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Loader</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/components/loader/_loader.scss">components/loader/_loader.scss</a></p>
-</div>
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Default</h3>
-    <p>By default the loader will be centered in an overlay covering the content below the header</p>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / Loader</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/components/loader/_loader.scss">components/loader/_loader.scss</a></p>
   </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
 
-      <button type="button" id="showLoader" class="btn-primary" style="position: relative; z-index:99999999">Click to show / hide full screen loader</button>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Default</h3>
+      <p>By default the loader will be centered in an overlay covering the content below the header</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
 
-      <div id="loaderDiv" class="sg-hidden">
-        <div class="loader-container">
-          <div class="loader">
-            <span class="loader__icon"></span>
-            Loading
+        <button type="button" id="showLoader" class="btn-primary" style="position: relative; z-index:99999999">Click to show / hide full screen loader</button>
+
+        <div id="loaderDiv" class="sg-hidden">
+          <div class="loader-container">
+            <div class="loader">
+              <span class="loader__icon"></span>
+              Loading
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
         <loader></loader>
-      {% endhighlight %}
-    </div>
-  </div>
-
-  <script>
-    var button = document.getElementById('showLoader');
-    button.addEventListener('click', function () {
-      loaderDiv.classList.toggle('sg-hidden');
-    });
-  </script>
-</div>
-
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Inline</h3>
-    <p>Set the type to <em>inline</em> to use the loader inline in a page without the overlay</p>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-
-      <div class="loader">
-        <span class="loader__icon"></span>
-        Loading
+        {% endhighlight %}
       </div>
-
     </div>
-    <div class="col-sm-6">
-      {% highlight html %}
+
+    <script>
+      var button = document.getElementById('showLoader');
+      button.addEventListener('click', function () {
+        loaderDiv.classList.toggle('sg-hidden');
+      });
+    </script>
+  </div>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Inline</h3>
+      <p>Set the type to <em>inline</em> to use the loader inline in a page without the overlay</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+
+        <div class="loader">
+          <span class="loader__icon"></span>
+          Loading
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
         <loader type="inline"></loader>
-      {% endhighlight %}
-    </div>
-  </div>
-</div>
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Text</h3>
-    <p>You can override the loader text by passing a string to the text param. Or pass an empty string to just show the icon.</p>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-
-      <div class="loader">
-        <span class="loader__icon"></span>
-        My loading text
+        {% endhighlight %}
       </div>
-
     </div>
-    <div class="col-sm-6">
-      {% highlight html %}
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Text</h3>
+      <p>You can override the loader text by passing a string to the text param. Or pass an empty string to just show the icon.</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+
+        <div class="loader">
+          <span class="loader__icon"></span>
+          My loading text
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
         <loader text="My loading text"></loader>
-      {% endhighlight %}
-    </div>
-  </div>
-
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-
-      <div class="loader">
-        <span class="loader__icon"></span>
+        {% endhighlight %}
       </div>
-
     </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-        <loader text=""></loader>
-      {% endhighlight %}
-    </div>
-  </div>
-</div>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Buttons</h3>
-    <p>Loaders can be added to buttons to give visual feedback, e.g. when a form is saving</p>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
 
-      <button type="button" class="btn-primary btn-block" style="width: 200px;">
         <div class="loader">
           <span class="loader__icon"></span>
         </div>
-      </button>
 
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <loader text=""></loader>
+        {% endhighlight %}
+      </div>
     </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <button type="submit" class="btn-primary btn-block" ng-class="{'saving' : saving}">
-        <loader type="inline" text="" ng-if="saving"></loader>
-        <span ng-if="!saving" translate>Save</span>
-      </button>
-      {% endhighlight %}
+  </div>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Buttons</h3>
+      <p>Loaders can be added to buttons to give visual feedback, e.g. when a form is saving</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+
+        <button type="button" class="btn-primary btn-block" style="width: 200px;">
+          <div class="loader">
+            <span class="loader__icon"></span>
+          </div>
+        </button>
+
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <button type="submit" class="btn-primary btn-block" ng-class="{'saving' : saving}">
+          <loader type="inline" text="" ng-if="saving"></loader>
+          <span ng-if="!saving" translate>Save</span>
+        </button>
+        {% endhighlight %}
+      </div>
     </div>
   </div>
 </div>

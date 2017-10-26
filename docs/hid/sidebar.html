@@ -1,31 +1,34 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Side bar</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/components/sidebar/_sidebar.scss">components/sidebar/_sidebar.scss</a></p>
-</div>
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Layout</h3>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / Side bar</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/components/sidebar/_sidebar.scss">components/sidebar/_sidebar.scss</a></p>
   </div>
 
-  <div class="row toggled">
-    <div class="col-sm-6">
-      <div class="page" style="position: relative; height: 200px;">
-        <div class="sidebar collapse in">
-          <div class="sidebar__inner">
-            <h2 class="sidebar__heading">Heading</h2>
-            <button type="button" class="btn-transparent sidebar__close">
-              <span class="iconholder"><i class="icon icon-cancel" aria-hidden="true"></i><span class="sr-only">close</span></span>
-            </button>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Layout</h3>
+    </div>
+
+    <div class="row toggled">
+      <div class="col-sm-6">
+        <div class="page" style="position: relative; height: 200px;">
+          <div class="sidebar collapse in">
+            <div class="sidebar__inner">
+              <h2 class="sidebar__heading">Heading</h2>
+              <button type="button" class="btn-transparent sidebar__close">
+                <span class="iconholder"><i class="icon icon-cancel" aria-hidden="true"></i><span class="sr-only">close</span></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
+      <div class="col-sm-6">
+        {% highlight html %}
         <div class="sidebar collapse">
           <div class="sidebar__inner">
             <h2 class="sidebar__heading">Heading</h2>
@@ -34,39 +37,39 @@ title: Humanitarian ID pattern library
             </button>
           </div>
         </div>
-      {% endhighlight %}
+        {% endhighlight %}
+      </div>
     </div>
+
   </div>
 
-</div>
-
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Button groups</h3>
-  </div>
-  <div class="row toggled">
-    <div class="col-sm-6 toggled">
-      <div class="page" style="position: relative; height: 300px;">
-        <div class="sidebar collapse in">
-          <div class="sidebar__inner">
-            <div class="sidebar-section">
-              <h3 class="sidebar-section__heading">Sub heading</h3>
-              <button type="button" class="btn-transparent sidebar-section__button">
-                <span class="iconholder"><i class="icon icon-copy" aria-hidden="true"></i></span>
-                <span>Button text</span>
-              </button>
-              <button type="button" class="btn-transparent sidebar-section__button">
-                <span class="iconholder"><i class="icon icon-document-file-pdf" aria-hidden="true"></i></span>
-                <span>Button text Button text Button text</span>
-              </button>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Button groups</h3>
+    </div>
+    <div class="row toggled">
+      <div class="col-sm-6 toggled">
+        <div class="page" style="position: relative; height: 300px;">
+          <div class="sidebar collapse in">
+            <div class="sidebar__inner">
+              <div class="sidebar-section">
+                <h3 class="sidebar-section__heading">Sub heading</h3>
+                <button type="button" class="btn-transparent sidebar-section__button">
+                  <span class="iconholder"><i class="icon icon-copy" aria-hidden="true"></i></span>
+                  <span>Button text</span>
+                </button>
+                <button type="button" class="btn-transparent sidebar-section__button">
+                  <span class="iconholder"><i class="icon icon-document-file-pdf" aria-hidden="true"></i></span>
+                  <span>Button text Button text Button text</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-sm-6">
-      {% highlight html %}
+      <div class="col-sm-6">
+        {% highlight html %}
         <div class="sidebar-section">
           <h3 class="sidebar-section__heading">Sub heading</h3>
           <button type="button" class="btn-transparent sidebar-section__button">
@@ -78,50 +81,50 @@ title: Humanitarian ID pattern library
             <span>Button text Button text Button text</span>
           </button>
         </div>
-      {% endhighlight %}
+        {% endhighlight %}
+      </div>
     </div>
+
   </div>
 
-</div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Forms</h3>
+    </div>
+    <div class="row toggled">
+      <div class="col-sm-6 toggled">
+        <div class="page" style="position: relative; height: 300px;">
+          <div class="sidebar collapse in">
+            <div class="sidebar__inner">
+              <div class="sidebar-section">
+                <h3 class="sidebar-section__heading">Sub heading</h3>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Forms</h3>
-  </div>
-  <div class="row toggled">
-    <div class="col-sm-6 toggled">
-      <div class="page" style="position: relative; height: 300px;">
-        <div class="sidebar collapse in">
-          <div class="sidebar__inner">
-            <div class="sidebar-section">
-              <h3 class="sidebar-section__heading">Sub heading</h3>
-
-              <form>
-                <div class="sidebar-section__form-field">
-                  <label class="sidebar-section__form-label" for="checkoutDate">Form label</label>
-                  <div class="form-inline-fields">
-                    <input type="text" class="form-inline-fields__item" id="checkoutDate" placeholder="dd/mm/yyyy" />
-                    <button type="button" class="btn-transparent" ng-click="showDatePicker()">
-                      <span class="iconholder"><i class="icon icon-calendar" aria-hidden="true"></i></span>
-                    </button>
+                <form>
+                  <div class="sidebar-section__form-field">
+                    <label class="sidebar-section__form-label" for="checkoutDate">Form label</label>
+                    <div class="form-inline-fields">
+                      <input type="text" class="form-inline-fields__item" id="checkoutDate" placeholder="dd/mm/yyyy" />
+                      <button type="button" class="btn-transparent" ng-click="showDatePicker()">
+                        <span class="iconholder"><i class="icon icon-calendar" aria-hidden="true"></i></span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <p class="sidebar-section__text">Some words go here about some things</p>
+                  <p class="sidebar-section__text">Some words go here about some things</p>
 
-                <button type="submit" class="btn-primary btn-block">
-                  <span class="iconholder"><i class="icon icon-check" aria-hidden="true"></i></span>
-                  <span>Do stuff</span>
-                </button>
-              </form>
+                  <button type="submit" class="btn-primary btn-block">
+                    <span class="iconholder"><i class="icon icon-check" aria-hidden="true"></i></span>
+                    <span>Do stuff</span>
+                  </button>
+                </form>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-sm-6">
-      {% highlight html %}
+      <div class="col-sm-6">
+        {% highlight html %}
         <div class="sidebar-section">
           <h3 class="sidebar-section__heading">Sub heading</h3>
           <form>
@@ -142,54 +145,55 @@ title: Humanitarian ID pattern library
             </button>
           </form>
         </div>
-      {% endhighlight %}
+        {% endhighlight %}
+      </div>
     </div>
-  </div>
 
-  <div class="row toggled">
-    <div class="col-sm-6 toggled">
-      <div class="page" style="position: relative; height: 300px;">
-        <div class="sidebar collapse in">
-          <div class="sidebar__inner">
-            <div class="sidebar-section">
-              <h3 class="sidebar-section__heading">Sub heading</h3>
-              <form class="sidebar-section">
-                <div class="sidebar-section__form-field">
-                <label for="member" class="sidebar-section__form-label" >Add new Member</label>
-                  <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control">
-                    <div>
-                      <span class="ui-select-match ng-scope" placeholder="Select some people"></span>
-                      <input type="search" class="ui-select-search input-xs" placeholder="Select some people">
+    <div class="row toggled">
+      <div class="col-sm-6 toggled">
+        <div class="page" style="position: relative; height: 300px;">
+          <div class="sidebar collapse in">
+            <div class="sidebar__inner">
+              <div class="sidebar-section">
+                <h3 class="sidebar-section__heading">Sub heading</h3>
+                <form class="sidebar-section">
+                  <div class="sidebar-section__form-field">
+                    <label for="member" class="sidebar-section__form-label" >Add new Member</label>
+                    <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control">
+                      <div>
+                        <span class="ui-select-match ng-scope" placeholder="Select some people"></span>
+                        <input type="search" class="ui-select-search input-xs" placeholder="Select some people">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <button type="submit" class="btn-primary btn-block">Add Member</button>
-              </form>
+                  <button type="submit" class="btn-primary btn-block">Add Member</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-sm-6">
-      {% highlight html %}
-      <div class="sidebar-section">
-        <h3 class="sidebar-section__heading">Sub heading</h3>
-        <form class="sidebar-section">
-          <div class="sidebar-section__form-field">
-            <label for="member" class="sidebar-section__form-label" >Add new Member</label>
-            <ui-select ng-model=" multiple name="">
-              <ui-select-match placeholder="Select some people">{{item.name}}</ui-select-match>
-              <ui-select-choices refresh="" repeat="">
-                {{person.name}}
-              </ui-select-choices>
-            </ui-select>
-          </div>
-          <button type="submit" class="btn-primary btn-block">Add Member</button>
-        </form>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__heading">Sub heading</h3>
+          <form class="sidebar-section">
+            <div class="sidebar-section__form-field">
+              <label for="member" class="sidebar-section__form-label" >Add new Member</label>
+              <ui-select ng-model=" multiple name="">
+                <ui-select-match placeholder="Select some people">{{item.name}}</ui-select-match>
+                <ui-select-choices refresh="" repeat="">
+                  {{person.name}}
+                </ui-select-choices>
+              </ui-select>
+            </div>
+            <button type="submit" class="btn-primary btn-block">Add Member</button>
+          </form>
+        </div>
+        {% endhighlight %}
       </div>
-      {% endhighlight %}
     </div>
-  </div>
 
+  </div>
 </div>

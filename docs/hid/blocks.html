@@ -1,83 +1,83 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Blocks</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_blocks.scss">common/_blocks.scss</a></p>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / Blocks</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_blocks.scss">common/_blocks.scss</a></p>
+  </div>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Standard blocks</h3>
+      <p>Provides some spacing and a block heading, any content can go in the block.</p>
+    </div>
+
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <div class="block">
+          <h2 class="block-heading">Heading</h2>
+          <p>Some content</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <div class="block">
+          <h2 class="block-heading">Heading</h2>
+          <p>Some content</p>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+  </p>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Secondary blocks</h3>
+      <p>Generally used in a smaller sidebar column.</p>
+    </div>
+
+    <div class="row sg-section__item">
+
+      <div class="col-sm-6">
+
+        <div class="secondary-block">
+          <h2 class="secondary-block__heading">
+            Heading
+            <a href="#" class="btn-primary btn-small" translate="">View all</a>
+          </h2>
+          <ul class="secondary-block__list">
+            <li class="secondary-block__item">
+              <span class="iconholder" name="arrow-right"><i class="icon icon-arrow-right" aria-hidden="true"></i></span>
+              These are the words
+            </li>
+            <li class="secondary-block__item">
+              <span class="iconholder" name="arrow-right"><i class="icon icon-arrow-right" aria-hidden="true"></i></span>
+              These are the words These are the words These are the words
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <div class="secondary-block">
+          <h2 class="secondary-block__heading">
+            Heading
+            <a href="#" class="btn-primary btn-small" translate="">View all</a>
+          </h2>
+          <ul class="secondary-block__list">
+            <li class="secondary-block__item">
+              <icon name="arrow-right"></icon>
+              These are the words
+            </li>
+          </ul>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+
+  </div>
+
 </div>
-
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Standard blocks</h3>
-    <p>Provides some spacing and a block heading, any content can go in the block.</p>
-  </div>
-
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <div class="block">
-        <h2 class="block-heading">Heading</h2>
-        <p>Some content</p>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <div class="block">
-        <h2 class="block-heading">Heading</h2>
-        <p>Some content</p>
-      </div>
-      {% endhighlight %}
-    </div>
-  </div>
-</p>
-
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Secondary blocks</h3>
-    <p>Generally used in a smaller sidebar column.</p>
-  </div>
-
-  <div class="row sg-section__item">
-
-    <div class="col-sm-6">
-
-      <div class="secondary-block">
-        <h2 class="secondary-block__heading">
-          Heading
-          <a href="#" class="btn-primary btn-small" translate="">View all</a>
-        </h2>
-        <ul class="secondary-block__list">
-          <li class="secondary-block__item">
-            <span class="iconholder" name="arrow-right"><i class="icon icon-arrow-right" aria-hidden="true"></i></span>
-            These are the words
-          </li>
-          <li class="secondary-block__item">
-            <span class="iconholder" name="arrow-right"><i class="icon icon-arrow-right" aria-hidden="true"></i></span>
-            These are the words These are the words These are the words
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <div class="secondary-block">
-        <h2 class="secondary-block__heading">
-          Heading
-          <a href="#" class="btn-primary btn-small" translate="">View all</a>
-        </h2>
-        <ul class="secondary-block__list">
-          <li class="secondary-block__item">
-            <icon name="arrow-right"></icon>
-            These are the words
-          </li>
-        </ul>
-      </div>
-      {% endhighlight %}
-    </div>
-  </div>
-
-</div>
-
-
-
-

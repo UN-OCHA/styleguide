@@ -1,48 +1,40 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Page headers</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_page.scss">common/_page.scss</a></p>
-</div>
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Standard page header</h3>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / Page headers</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_page.scss">common/_page.scss</a></p>
+
   </div>
 
-  <div class="page-header">
-    <h1 class="page-header__heading">This is the heading</h1>
-  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Standard page header</h3>
+    </div>
 
-
-  {% highlight html %}
     <div class="page-header">
       <h1 class="page-header__heading">This is the heading</h1>
     </div>
-  {% endhighlight %}
 
-</div>
 
-<div class="sg-section">
+    {% highlight html %}
+    <div class="page-header">
+      <h1 class="page-header__heading">This is the heading</h1>
+    </div>
+    {% endhighlight %}
 
-  <div class="sg-section__header">
-    <h3>Page header with section for actions</h3>
-    <p>Note: Filter and admin buttons are generally outside the page header as these are absolutely positioned.</p>
   </div>
 
-  <div class="page-header row">
-    <div class="col-sm-8">
-      <h1 class="page-header__heading" translate>
-        This is the heading
-      </h1>
-    </div>
-    <div class="col-sm-4 page-header__actions">
-      <button type="button" class="btn-primary" translate>Action</button>
-    </div>
-  </div>
+  <div class="sg-section">
 
-  {% highlight html %}
+    <div class="sg-section__header">
+      <h3>Page header with section for actions</h3>
+      <p>Note: Filter and admin buttons are generally outside the page header as these are absolutely positioned.</p>
+    </div>
+
     <div class="page-header row">
       <div class="col-sm-8">
         <h1 class="page-header__heading" translate>
@@ -53,5 +45,18 @@ title: Humanitarian ID pattern library
         <button type="button" class="btn-primary" translate>Action</button>
       </div>
     </div>
-  {% endhighlight %}
+
+    {% highlight html %}
+    <div class="page-header row">
+      <div class="col-sm-8">
+        <h1 class="page-header__heading" translate>
+          This is the heading
+        </h1>
+      </div>
+      <div class="col-sm-4 page-header__actions">
+        <button type="button" class="btn-primary" translate>Action</button>
+      </div>
+    </div>
+    {% endhighlight %}
+  </div>
 </div>

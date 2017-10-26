@@ -1,387 +1,392 @@
 ---
-layout: hid
+layout: default
 title: Humanitarian ID pattern library
+include_hid: true
 ---
-<div class="styleguide-header">
-  <h2 class="styleguide-heading">Lists</h2>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_lists.scss">common/_lists.scss</a></p>
-  <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_block-lists.scss">common/_block-lists.scss</a></p>
-</div>
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>List</h3>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <ul class="list">
-        <li class="list__item">
-          This is a list item
-        </li>
-        <li class="list__item">
-          <a href="#">List items can include links</a>
-        </li>
-        <li class="list__item">
-          Use list__meta for showing secondary information in the list item
-          <span class="list__meta">Secondary info here</span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <ul class="list">
-        <li class="list__item">
-          This is a list item
-        </li>
-        <li class="list__item">
-          <a href="#">List items can include links</a>
-        </li>
-        <li class="list__item">
-          Use list__meta for showing secondary information in the list item
-          <span class="list__meta">Secondary info here</span>
-        </li>
-      </ul>
-      {% endhighlight %}
-    </div>
-  </div>
-</div>
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">HID</a> / Lists</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_lists.scss">common/_lists.scss</a></p>
+    <p>Sass: <a href="https://github.com/UN-OCHA/hid_app2/blob/dev/src/app/common/_block-lists.scss">common/_block-lists.scss</a></p>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>List with buttons</h3>
-    <p>Add the <em>list--has-buttons</em> modifier class to the list if it includes button.</p>
   </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <ul class="list list--has-buttons">
-        <li class="list__item">
-          List item with a button
-          <button type="button" class="btn-transparent list__button">
-            <span class="iconholder"><i class="icon icon-cancel"></i></span>
-          </button>
-        </li>
-        <li class="list__item">
-          List item with a button and meta
-          <span class="list__meta">Meta info here</span>
-          <button type="button" class="btn-transparent list__button">
-            <span class="iconholder"><i class="icon icon-cancel"></i></span>
-          </button>
-        </li>
-      </ul>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <ul class="list list--has-buttons">
-        <li class="list__item">
-          List item with a button
-          <button type="button" class="btn-transparent list__button">
-            <icon name="cancel" text="Remove"></icon>
-          </button>
-        </li>
-        <li class="list__item">
-          List item with a button and meta
-          <span class="list__meta">Meta info here</span>
-          <button type="button" class="btn-transparent list__button">
-            <icon name="cancel" text="Remove"></icon>
-          </button>
-        </li>
-      </ul>
-      {% endhighlight %}
-    </div>
-  </div>
-</div>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>List with radio buttons</h3>
-    <p>Lists can be used in forms for group of checkboxes and radio buttons</p>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <fieldset class="form-section">
-        <legend class="form-section__heading">This is the legend</legend>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>List</h3>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
         <ul class="list">
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here with a radio button and meta and action button
-              <span class="list__meta">The meta</span>
-            </label>
+            This is a list item
           </li>
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here
-            </label>
+            <a href="#">List items can include links</a>
+          </li>
+          <li class="list__item">
+            Use list__meta for showing secondary information in the list item
+            <span class="list__meta">Secondary info here</span>
           </li>
         </ul>
-      </fieldset>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <fieldset class="form-section">
-        <legend class="form-section__heading">This is the legend</legend>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
         <ul class="list">
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here with a radio button and meta and action button
-              <span class="list__meta">The meta</span>
-            </label>
+            This is a list item
           </li>
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here
-            </label>
+            <a href="#">List items can include links</a>
+          </li>
+          <li class="list__item">
+            Use list__meta for showing secondary information in the list item
+            <span class="list__meta">Secondary info here</span>
           </li>
         </ul>
-      </fieldset>
-      {% endhighlight %}
+        {% endhighlight %}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>List with radio buttons and buttons</h3>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <fieldset class="form-section">
-        <legend class="form-section__heading">This is the legend</legend>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>List with buttons</h3>
+      <p>Add the <em>list--has-buttons</em> modifier class to the list if it includes button.</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
         <ul class="list list--has-buttons">
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here with a radio button and meta and action button
-              <span class="list__meta">The meta</span>
-            </label>
+            List item with a button
             <button type="button" class="btn-transparent list__button">
               <span class="iconholder"><i class="icon icon-cancel"></i></span>
             </button>
           </li>
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here
-            </label>
+            List item with a button and meta
+            <span class="list__meta">Meta info here</span>
             <button type="button" class="btn-transparent list__button">
               <span class="iconholder"><i class="icon icon-cancel"></i></span>
             </button>
           </li>
         </ul>
-      </fieldset>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <fieldset class="form-section">
-        <legend class="form-section__heading">This is the legend</legend>
-        <ul class="list">
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <ul class="list list--has-buttons">
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here with a radio button and meta and action button
-              <span class="list__meta">The meta</span>
-            </label>
+            List item with a button
             <button type="button" class="btn-transparent list__button">
               <icon name="cancel" text="Remove"></icon>
             </button>
           </li>
           <li class="list__item">
-            <input type="radio"
-              id="phone-1"
-              name="phoneNumbers"
-              />
-              <label class="clickie-label" for="phone-1">
-              The words here
-            </label>
+            List item with a button and meta
+            <span class="list__meta">Meta info here</span>
             <button type="button" class="btn-transparent list__button">
               <icon name="cancel" text="Remove"></icon>
             </button>
           </li>
         </ul>
-      </fieldset>
-      {% endhighlight %}
+        {% endhighlight %}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>List with dividers</h3>
-    <p>Add the modifier class <em>list--has-dividers</em> to add a border to the bottom of list items.</p>
-  </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <ul class="list list--has-dividers">
-        <li class="list__item">
-          This is a list item
-        </li>
-        <li class="list__item">
-          <a href="#">List items can include links</a>
-        </li>
-        <li class="list__item">
-          Use list__meta for showing secondary information in the list item
-          <span class="list__meta">Secondary info here</span>
-        </li>
-      </ul>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>List with radio buttons</h3>
+      <p>Lists can be used in forms for group of checkboxes and radio buttons</p>
     </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <ul class="list list--has-dividers">
-        <li class="list__item">
-          This is a list item
-        </li>
-        <li class="list__item">
-          <a href="#">List items can include links</a>
-        </li>
-        <li class="list__item">
-          Use list__meta for showing secondary information in the list item
-          <span class="list__meta">Secondary info here</span>
-        </li>
-      </ul>
-      {% endhighlight %}
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <fieldset class="form-section">
+          <legend class="form-section__heading">This is the legend</legend>
+          <ul class="list">
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here with a radio button and meta and action button
+                <span class="list__meta">The meta</span>
+              </label>
+            </li>
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <fieldset class="form-section">
+          <legend class="form-section__heading">This is the legend</legend>
+          <ul class="list">
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here with a radio button and meta and action button
+                <span class="list__meta">The meta</span>
+              </label>
+            </li>
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        {% endhighlight %}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="sg-section">
-  <div class="sg-section__header">
-    <h3>Block list</h3>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>List with radio buttons and buttons</h3>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <fieldset class="form-section">
+          <legend class="form-section__heading">This is the legend</legend>
+          <ul class="list list--has-buttons">
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here with a radio button and meta and action button
+                <span class="list__meta">The meta</span>
+              </label>
+              <button type="button" class="btn-transparent list__button">
+                <span class="iconholder"><i class="icon icon-cancel"></i></span>
+              </button>
+            </li>
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here
+              </label>
+              <button type="button" class="btn-transparent list__button">
+                <span class="iconholder"><i class="icon icon-cancel"></i></span>
+              </button>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <fieldset class="form-section">
+          <legend class="form-section__heading">This is the legend</legend>
+          <ul class="list">
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here with a radio button and meta and action button
+                <span class="list__meta">The meta</span>
+              </label>
+              <button type="button" class="btn-transparent list__button">
+                <icon name="cancel" text="Remove"></icon>
+              </button>
+            </li>
+            <li class="list__item">
+              <input type="radio"
+              id="phone-1"
+              name="phoneNumbers"
+              />
+              <label class="clickie-label" for="phone-1">
+                The words here
+              </label>
+              <button type="button" class="btn-transparent list__button">
+                <icon name="cancel" text="Remove"></icon>
+              </button>
+            </li>
+          </ul>
+        </fieldset>
+        {% endhighlight %}
+      </div>
+    </div>
   </div>
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <ul class="block-list">
-        <li class="block-list__item">
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>List with dividers</h3>
+      <p>Add the modifier class <em>list--has-dividers</em> to add a border to the bottom of list items.</p>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <ul class="list list--has-dividers">
+          <li class="list__item">
+            This is a list item
+          </li>
+          <li class="list__item">
+            <a href="#">List items can include links</a>
+          </li>
+          <li class="list__item">
+            Use list__meta for showing secondary information in the list item
+            <span class="list__meta">Secondary info here</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <ul class="list list--has-dividers">
+          <li class="list__item">
+            This is a list item
+          </li>
+          <li class="list__item">
+            <a href="#">List items can include links</a>
+          </li>
+          <li class="list__item">
+            Use list__meta for showing secondary information in the list item
+            <span class="list__meta">Secondary info here</span>
+          </li>
+        </ul>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Block list</h3>
+    </div>
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <ul class="block-list">
+          <li class="block-list__item">
             This is the list item content
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-        <li class="block-list__item">
+          </li>
+          <li class="block-list__item">
             This is the list item content This is the list item content This is the list item content This is the list item content
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-        <li class="block-list__item block-list__item--highlight">
+          </li>
+          <li class="block-list__item block-list__item--highlight">
             A highlighted list item<br>
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <ul class="block-list">
-        <li class="block-list__item">
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <ul class="block-list">
+          <li class="block-list__item">
             This is the list item content
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-        <li class="block-list__item">
+          </li>
+          <li class="block-list__item">
             This is the list item content This is the list item content This is the list item content This is the list item content
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-        <li class="block-list__item block-list__item--highlight">
+          </li>
+          <li class="block-list__item block-list__item--highlight">
             A highlighted list item<br>
             <span class="block-list__item-meta">
               List item meta for secondary information such as dates
             </span>
-        </li>
-      </ul>
-      {% endhighlight %}
+          </li>
+        </ul>
+        {% endhighlight %}
+      </div>
+    </div>
+
+    <div class="sg-section__header">
+      <p>If the entire list item should be a link, apply the <em>list-item</em> class to the link instead of the li.</p>
+    </div>
+
+    <div class="row sg-section__item">
+      <div class="col-sm-6">
+        <ul class="block-list">
+          <li>
+            <a href="#" class="block-list__item">
+              This is the list item content
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block-list__item block-list__item--highlight">
+              A highlighted list item
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block-list__item">
+              This is the list item content
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        {% highlight html %}
+        <ul class="block-list">
+          <li>
+            <a href="#" class="block-list__item">
+              This is the list item content
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block-list__item block-list__item--highlight">
+              A highlighted list item
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block-list__item">
+              This is the list item content
+              <span class="block-list__item-meta">
+                List item meta for secondary information such as dates
+              </span>
+            </a>
+          </li>
+        </ul>
+        {% endhighlight %}
+      </div>
     </div>
   </div>
 
-  <div class="sg-section__header">
-    <p>If the entire list item should be a link, apply the <em>list-item</em> class to the link instead of the li.</p>
-  </div>
-
-  <div class="row sg-section__item">
-    <div class="col-sm-6">
-      <ul class="block-list">
-        <li>
-          <a href="#" class="block-list__item">
-            This is the list item content
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block-list__item block-list__item--highlight">
-            A highlighted list item
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block-list__item">
-            This is the list item content
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-sm-6">
-      {% highlight html %}
-      <ul class="block-list">
-        <li>
-          <a href="#" class="block-list__item">
-            This is the list item content
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block-list__item block-list__item--highlight">
-            A highlighted list item
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block-list__item">
-            This is the list item content
-            <span class="block-list__item-meta">
-              List item meta for secondary information such as dates
-            </span>
-          </a>
-        </li>
-      </ul>
-      {% endhighlight %}
-    </div>
-  </div>
 </div>
-
