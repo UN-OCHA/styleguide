@@ -105,15 +105,6 @@ $grid-columns: 12 !default;
 }
 
 .styleguide {
-  .container {
-    @include make-container();
-    @include make-gutters();
-
-    @include media-query(xl) {
-      padding-left: $base-unit*5;
-      padding-right: $base-unit*5;
-    }
-  }
 
   .row {
     @include clearfix();
