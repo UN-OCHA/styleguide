@@ -5,7 +5,7 @@
 .cd-site-header__inner {
   align-items: center;
   position: relative;
-  height: $cd-site-header-height-xs;
+  height: $cd-site-header-height-md;
   display: flex;
 
   .no-flexbox & {
@@ -17,14 +17,16 @@
 
 .cd-site-header__logo {
   display: block;
-  width:  $base-unit*6;
-  height: $base-unit*6;
   position: relative;
-  background: url('../assets/images/ocha-logo-mobile.svg') left center no-repeat;
+  background: url('../assets/images/ocha-logo.svg') left center no-repeat;
   background-size: 100% auto;
+  width: 167px;
+  height: $cd-site-header-height-md;
+  margin-right: $base-unit*2;
+  margin-top: 0;
 
   .no-svg & {
-    background-image: url('../assets/images/ocha-logo-mobile.png');
+    background-image: url('../assets/images/ocha-logo.png');
 
     span {
       position: absolute;
@@ -56,10 +58,6 @@
     outline-style: dotted;
     outline-width: 1px;
     outline-color: $border-color;
-  }
-
-  .no-mediaqueries & {
-    width: $base-unit*30;
   }
 }
 
@@ -147,7 +145,6 @@
     svg {
       display: none;
     }
-
   }
 }
 
@@ -156,113 +153,17 @@
 }
 
 .cd-site-header__nav-toggle {
-  width: $base-unit*5;
-  height: $base-unit*4;
-  padding: $base-unit/2;
-  position: relative;
-
-  &:focus {
-    outline: none;
-    background: $primary-bg-color;
-
-    .icon-bar {
-      background: white;
-    }
-  }
-
-  .icon-bar {
-    display: block;
-    width: $base-unit*3;
-    height: 2px;
-    background: $primary-bg-color;
-    margin: 0 auto;
-
-    &+.icon-bar {
-      margin-top: $base-unit/2;
-    }
-  }
-
-  .no-mediaqueries & {
-    display: none;
-  }
+  display: none;
 }
 
 .cd-dropdown-menu.cd-site-header__nav {
-  top: 48px;
-  width: 100%;
-  left: 0;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,.15);
-  padding: $base-unit;
+  display: block;
+  width: auto;
+  max-width: none;
+  position: static;
+  box-shadow: none;
 
   .no-flexbox {
     float: right;
   }
-}
-
-@media (min-width: 576px) {
-
-  .cd-site-header__logo {
-    width: $cd-logo-width;
-    margin-right: $base-unit*3;
-    background: url('../assets/images/ocha-logo.svg') left center no-repeat;
-    background-size: auto 100%;
-
-    .no-svg & {
-      background: url('../assets/images/ocha-logo.png') left center no-repeat;
-       background-size: auto 100%;
-    }
-
-  }
-
-}
-
-@media (min-width: 768px) {
-
-  .cd-site-header__inner {
-    height: $cd-site-header-height-md;
-  }
-
-  .cd-dropdown-menu.cd-site-header__nav {
-    top: $base-unit*6;
-  }
-
-  .cd-header-search__input {
-    height: $cd-site-header-height-md + 2;
-  }
-
-  .cd-site-header__logo {
-    height: $cd-site-header-height-md;
-    width: 167px;
-  }
-}
-
-@media (min-width: 992px) {
-
-  .cd-site-header__inner {
-    .no-flexbox & {
-      padding-top: $base-unit*1.5;
-      padding-bottom: $base-unit*1.5;
-    }
-  }
-
-  .cd-site-header__nav-toggle {
-    display: none;
-  }
-
-  .cd-dropdown-menu.cd-site-header__nav {
-    display: block;
-    position: relative;
-    box-shadow: none;
-    top: auto;
-    right: auto;
-    width: auto;
-    max-width: none;
-    background: none;
-    z-index: auto;
-
-    .no-flexbox & {
-      float: right;
-    }
-  }
-
 }

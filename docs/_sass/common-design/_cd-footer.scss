@@ -6,21 +6,6 @@
  * Adjust the heights in variables/_measurements.scss to fit your footer content.
  */
 
-/** remove and use variables etc from your theme */
-$primary-bg-color: #026CB6;
-$light-text-color: white;
-$base-unit: 8px;
-$heading-font: 'Open Sans', sans-serif;
-$base-font-size: 16px;
-$small-font-size: 14px;
-$tiny-font-size: 12px;
-$footer-height-xs: 280px;
-$footer-height-md: 280px;
-img {
-  max-width: 100%;
-}
-/* */
-
 .footer {
   background: $primary-bg-color;
   padding: $base-unit*2 0;

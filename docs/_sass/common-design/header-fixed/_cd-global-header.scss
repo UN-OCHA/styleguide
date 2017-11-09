@@ -49,7 +49,8 @@
   text-align: left;
   padding: 0 0 0 $base-unit;
   height: $cd-global-header-height;
-  font-size: $tiny-font-size;
+  padding-left: $base-unit*1.5;
+  padding-right: $base-unit*1.5;
 
   &:hover, &:focus {
     background: darken($primary-bg-color, 10%);
@@ -62,28 +63,5 @@
 
   .no-flexbox & {
     float: right;
-  }
-}
-
-@media (min-width: 576px) {
-
-  .cd-global-header__sites {
-    margin-left: 0;
-  }
-
-  .cd-global-header__sites-btn {
-    font-size: $small-font-size;
-  }
-
-  .cd-global-header__nav {
-    margin-right: 0;
-  }
-
-}
-
-@media (min-width: 1200px) {
-  .cd-global-header__sites-btn {
-    padding-left: $base-unit*1.5;
-    padding-right: $base-unit*1.5;
   }
 }

@@ -1,0 +1,64 @@
+/** remove and use variables etc from your theme */
+
+
+// Colour palette
+$ocha-blue: #026CB6; // OCHA Blue
+$dark-blue: #002D80; // Dark Blue
+$light-grey: #F2F2F2;
+$mid-light-grey: #CCCCCC;
+$mid-grey: #595959;
+$red: #BF0013;
+
+// Background colors
+$light-bg-color: $light-grey;
+$primary-bg-color: $ocha-blue;
+$secondary-bg-color: $dark-blue;
+
+// Border colours
+$border-color: $mid-light-grey;
+$highlight-border-color: $dark-blue;
+$error-border-color: $red;
+$light-border-color: $light-grey;
+
+// Text colours
+$body-text-color: $mid-grey;
+$heading-text-color: $ocha-blue;
+$secondary-heading-text-color: $dark-blue;
+$light-text-color: white;
+$link-text-color: $dark-blue;
+$active-link-text-color: $ocha-blue;
+$error-text-color: $red;
+
+// Header
+$cd-highlight-color: lighten($primary-bg-color,15%);
+$cd-nav-focus-bg: $light-grey;
+
+
+
+$base-unit: 8px;
+
+$body-font: sans-serif;
+$heading-font: 'Open Sans', sans-serif;
+
+$tiny-font-size: 12px;
+$small-font-size: 14px;
+$base-font-size: 16px;
+
+$cd-global-header-height: $base-unit*5 !default;
+$cd-site-header-height-xs: $base-unit*6 !default;
+$cd-site-header-height-md: $base-unit*7.5 !default;
+
+$cd-max-width: 1200px !default;
+$cd-logo-width: 135px !default;
+
+$footer-height-xs: 280px;
+$footer-height-md: 280px;
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// ) !default;

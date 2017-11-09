@@ -3,8 +3,11 @@
 @charset "utf-8";
 
 @import
-  "common-design/header/cd-settings-responsive",
+  "common-design/cd-variables",
   "common-design/header/cd-header",
+  "common-design/header/cd-global-header",
+  "common-design/header/cd-site-header",
+  "common-design/header/cd-nav",
   "common-design/cd-footer",
   "common-design/cd-layout",
   "common-design/cd-layout-demo";

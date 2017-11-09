@@ -1,69 +1,31 @@
 ---
 layout: default
 custom_css: cd-header-fixed
-namespace: cd-fixed
 title: Common Design
+hide_header_footer: true
 ---
-{% include common-design/header.html namespace=page.namespace %}
+<div class="container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">Common Design</a> / Header</h1>
+    <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header-fixed/">common-design/header-fixed</a></p>
+  </div>
+</div>
+
+{% include common-design/header.html %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h2>Common Design header - standalone, fixed width, no modernizr</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <h3>Files:</h3>
-
-      <h4>HTML:</h4>
-      <ul>
-        <li><a href="#code">Copy &amp; pastable generated HTML</a></li>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_includes/common-design/header.html">header.html</a></li>
-      </ul>
-
-      <h4>Sass:</h4>
-      <ul>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/_cd-settings-fixed.scss">_cd-settings-fixed.scss</a></li>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/_cd-header.scss">_cd-header.scss</a></li>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/_cd-global-header.scss">_cd-global-header.scss</a></li>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/_cd-site-header.scss">_cd-site-header.scss</a></li>
-        <li><a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/_cd-nav.scss">_cd-nav.scss</a></li>
-      </ul>
-
-      <h4>CSS:</h4>
-      <ul>
-        <li><a href="https://un-ocha.github.io/styleguide/css/cd-header-fixed.css">cd-header-fixed.css</a></li>
-      </ul>
-    </div>
-
-    <div class="col-sm-6">
-      <h3>Information:</h3>
-
-      <h4>Modernizr detects required:</h4>
-      <p>None</p>
-
-      <h4>Browser support:</h4>
-      <p>IE8+</p>
-
-      <h4>Javascript:</h4>
-      <p>Uses a few lines of jQuery to handle the dropdown menus, suggest switching this for dropdown JS already included
-      in your project (e.g. bootstrap dropdown)</p>
-    </div>
-  </div>
-</div>
-
 <div id="code" class="html-block">
   <pre>
-  <code id="code">
-  </code>
+    <code id="code">
+    </code>
   </pre>
 </div>
+</div>
+
 <script>
 $(document).ready(function () {
 
-  var container = $('.cd-fixed-header');
+  var container = $('.cd-header');
   var target =$('#code');
   if (target.length > 0) {
     var sample_html = container[0].outerHTML;
@@ -79,3 +41,19 @@ $(document).ready(function () {
 
 });
 </script>
+<style>
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+body { margin: 0; }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.container:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>

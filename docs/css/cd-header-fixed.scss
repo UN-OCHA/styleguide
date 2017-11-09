@@ -2,6 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@import "common-design/header/cd-settings-fixed";
-@import "common-design/header/cd-header";
-@import "styleguide/icons";
+@import "common-design/cd-variables",
+"common-design/header-fixed/cd-header",
+"common-design/header-fixed/cd-global-header",
+"common-design/header-fixed/cd-site-header",
+"common-design/header-fixed/cd-nav",
+"styleguide/icons";
