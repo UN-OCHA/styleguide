@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html class="layout-demo">
+<html class="layout-demo-2">
   {% include head.html %}
 
   <body>
-
-    {{ content }}
-
+    <div class="page-wrapper">
+      <header>
+        <div class="container"></div>
+      </header>
+      {{ content }}
+    </div>
+    <footer>
+      <div class="container"></div>
+    </footer>
   </body>
 
 </html>

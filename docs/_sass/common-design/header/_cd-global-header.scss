@@ -32,7 +32,7 @@
 
 .cd-global-header__sites {
   position: relative;
-  margin-left: -$base-unit;
+  margin-left: -$cd-base-unit;
 
   .no-flexbox & {
     float: left;
@@ -47,7 +47,7 @@
   color: $light-text-color;
   text-transform: uppercase;
   text-align: left;
-  padding: 0 0 0 $base-unit;
+  padding: 0 0 0 $cd-base-unit;
   height: $cd-global-header-height;
   font-size: $tiny-font-size;
 
@@ -58,7 +58,7 @@
 }
 
 .cd-global-header__nav {
-  margin-right: -$base-unit;
+  margin-right: -$cd-base-unit;
 
   .no-flexbox & {
     float: right;
@@ -83,7 +83,7 @@
 
 @media (min-width: 1200px) {
   .cd-global-header__sites-btn {
-    padding-left: $base-unit*1.5;
-    padding-right: $base-unit*1.5;
+    padding-left: $cd-base-unit*1.5;
+    padding-right: $cd-base-unit*1.5;
   }
 }

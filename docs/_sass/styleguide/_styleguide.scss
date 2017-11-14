@@ -1,3 +1,10 @@
+html.styleguide, html.styleguide body {
+  height: auto;
+}
+.sg-container--hid {
+  max-width: 1220px!important;
+}
+
 .sg-page-header {
   padding-bottom: $base-unit;
   border-bottom: 2px solid #007faa;

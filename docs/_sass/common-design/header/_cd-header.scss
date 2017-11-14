@@ -3,7 +3,7 @@
  */
 
 .cd-header {
-  margin-bottom: $base-unit*2;
+  margin-bottom: $cd-base-unit*2;
 
   button {
     -webkit-appearance: none;
@@ -64,7 +64,7 @@
 
   a {
     display: block;
-    padding: $base-unit*1.5;
+    padding: $cd-base-unit*1.5;
     border-bottom: 1px solid $border-color;
     text-decoration: none;
     color: $body-text-color;
@@ -99,8 +99,8 @@
   }
 
   .container {
-    padding-left: $base-unit;
-    padding-right: $base-unit;
+    padding-left: $cd-base-unit;
+    padding-right: $cd-base-unit;
     width: 100%;
     max-width: $cd-max-width;
     margin: 0 auto;
@@ -108,15 +108,15 @@
 
   @media (min-width: 576px) {
     .container {
-      padding-left: $base-unit*2;
-      padding-right: $base-unit*2;
+      padding-left: $cd-base-unit*2;
+      padding-right: $cd-base-unit*2;
     }
   }
 
   @media (min-width: 1200px) {
     .container {
-      padding-left: $base-unit*5;
-      padding-right: $base-unit*5;
+      padding-left: $cd-base-unit*5;
+      padding-right: $cd-base-unit*5;
     }
   }
 

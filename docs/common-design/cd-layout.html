@@ -8,22 +8,54 @@ title: Common Design Layout
     <h1 class="sg-page-header__heading"><a href="./">Common Design</a> / Layout</h1>
   </div>
   <div>
+     <div class="row">
+      <div class="col-sm-12">
     <h2>A minimal layout</h2>
     <p>The Common Design doesn't affect the internal layout of pages or a grid, however to ensure consistency across sites it does recommend these two rules are followed:</p>
-
+  </div>
+</div>
+    <div class="row">
+      <div class="col-sm-6">
     <h3>Maximum page width &amp; padding</h3>
-    <p>In the Common Design the <strong>maximum page width is 1400px</strong> and the <strong>maxiumum content width is 1200px</strong>, see below for details.</p>
+    <p>In the Common Design the <strong>maximum page width is 1400px</strong> and the <strong>maxiumum content width is 1220px</strong>, see below for details.</p>
     <p>A maximum page width is necessary on responsive sites to prevent the layout breaking down and lines of text becoming to long to comfortably read on large screens. Although there is no industry standard page width, from reviewing several well-known websites the trend is to set it between 1000px and 1400px. Most OCHA sites also come within this range.</p>
     <p>Setting page width and padding ensures that the design retains consistency across different sites.</p>
+  </div>
+    <div class="col-sm-6">
 
     <h3>Mobile first, fluid responsive layout</h3>
     <p>A fluid, as opposed to adaptive, responsive layout is favoured as this allows us to utilise a maximum of screen real estate (up to the maximum width). It also helps to reinforce the design consistency if this is applied on all common design sites.</p>
     <p>The Common Design doesn't dictate a grid system, however, it’s recommended to use the <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/base/_grid.scss">grid</a> and <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/sass/variables/_breakpoints.scss">breakpoints</a> (adapted from Bootstrap v4) from the <a href="../ocha/">OCHA Basic theme</a>. That said, if your site is simple, consider whether a grid system is necessary before adding one.</p>
-
-    <h2>Layout example</h2>
+  </div>
+</div>
+<div class="sg-section__item">
+<div class="sg-section__header">
+    <h2>Layout markup and demo</h2>
+  </div>
+    <div class="row">
+      <div class="col-sm-6">
     <p>The images below explain how the layout works at different screen widths, an <a href="cd-layout-demo.html">example you can test in the browser is here</a>.</p>
-
-
+  </div>
+  <div class="col-sm-6">
+    {% highlight html %}
+      <!DOCTYPE html>
+      <html>
+        <head></head>
+        <body>
+          <div class="page-wrapper">
+            <header></header>
+            <div class="container">
+              ...
+            </div>
+          </div>
+          <footer></footer>
+        </body>
+      </html>
+    {% endhighlight %}
+  </div>
+</div>
+  <div class="row">
+      <div class="col-sm-12">
     <div class="sg-section__item">
 
       <div class="sg-section__header">
@@ -73,11 +105,11 @@ title: Common Design Layout
       </div>
       <div class="col-sm-6">
         <p>Page takes up 100% of screen width up to a maximum of 1400px.</p>
-        <p>Content has a max-width of 1200px and has 40px padding at the sides.</p>
+        <p>Content has a max-width of 1220px and has 40px padding at the sides.</p>
         <p>Minimum 8px margin between the sides of the page and the screen.</p>
       </div>
     </div>
   </div>
-
+</div></div>
 </div>
 
