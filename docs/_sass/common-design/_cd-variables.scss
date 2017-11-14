@@ -1,9 +1,11 @@
-/** remove and use variables etc from your theme */
-
+/**
+ * Colours
+ * Colours can be substituted for your theme colors
+ */
 
 // Colour palette
-$ocha-blue: #026CB6; // OCHA Blue
-$dark-blue: #002D80; // Dark Blue
+$ocha-blue: #026CB6;
+$dark-blue: #002D80;
 $light-grey: #F2F2F2;
 $mid-light-grey: #CCCCCC;
 $mid-grey: #595959;
@@ -13,6 +15,8 @@ $red: #BF0013;
 $light-bg-color: $light-grey;
 $primary-bg-color: $ocha-blue;
 $secondary-bg-color: $dark-blue;
+$site-bg-color: $light-grey;
+$body-bg-color: white;
 
 // Border colours
 $border-color: $mid-light-grey;
@@ -29,36 +33,33 @@ $link-text-color: $dark-blue;
 $active-link-text-color: $ocha-blue;
 $error-text-color: $red;
 
-// Header
+// Header colors
 $cd-highlight-color: lighten($primary-bg-color,15%);
 $cd-nav-focus-bg: $light-grey;
 
 
+/**
+ * Measurements
+ */
+$cd-base-unit: 8px;
+$cd-max-width: 1220px;
+$cd-max-body-width: 1400px;
+$cd-global-header-height: $cd-base-unit*5;
+$cd-site-header-height-xs: $cd-base-unit*6;
+$cd-site-header-height-md: $cd-base-unit*7.5;
+$cd-footer-height-xs: 280px;
+$cd-footer-height-md: 280px;
+$cd-logo-width-xs: $cd-base-unit*6;
+$cd-logo-width-sm: 135px;
+$cd-logo-width-md: 167px;
 
-$base-unit: 8px;
-
-$body-font: sans-serif;
-$heading-font: 'Open Sans', sans-serif;
-
+/**
+ * Fonts and Font sizes
+ * Fonts in used in the header and footer should not be changed
+ * Font sizes can be changed if necessary, for instance if need to fit more navigation items
+ */
 $tiny-font-size: 12px;
 $small-font-size: 14px;
 $base-font-size: 16px;
-
-$cd-global-header-height: $base-unit*5 !default;
-$cd-site-header-height-xs: $base-unit*6 !default;
-$cd-site-header-height-md: $base-unit*7.5 !default;
-
-$cd-max-width: 1200px !default;
-$cd-logo-width: 135px !default;
-
-$footer-height-xs: 280px;
-$footer-height-md: 280px;
-
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// ) !default;
+$cd-body-font: sans-serif;
+$cd-heading-font: 'Open Sans', sans-serif;

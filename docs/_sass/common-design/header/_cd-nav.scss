@@ -44,7 +44,7 @@
 .cd-nav__link {
   display: block;
   line-height: 1;
-  padding: 0 $base-unit;
+  padding: 0 $cd-base-unit;
   text-decoration: none;
   position: relative;
   font-size: $base-font-size;
@@ -56,7 +56,7 @@
     position: absolute;
     right: -1px;
     top: 2px;
-    height: $base-unit*1.5;
+    height: $cd-base-unit*1.5;
     z-index: 1;
   }
 
@@ -67,7 +67,7 @@
 
   .cd-nav--primary & {
     color: $heading-text-color;
-    height: $base-unit*6;
+    height: $cd-base-unit*6;
     align-items: center;
     border-bottom: none;
     display: flex;
@@ -98,8 +98,8 @@
 
     .no-mediaqueries & {
       height: $cd-site-header-height-md;
-      padding-top: $base-unit*2;
-      padding-bottom: $base-unit*2;
+      padding-top: $cd-base-unit*2;
+      padding-bottom: $cd-base-unit*2;
     }
 
   }
@@ -115,7 +115,7 @@
   .cd-nav--secondary & {
     color: $light-text-color;
     height: $cd-global-header-height;
-    padding: $base-unit*1.5 $base-unit*.75;
+    padding: $cd-base-unit*1.5 $cd-base-unit*.75;
 
     &:before {
       background: $light-text-color;
@@ -164,7 +164,7 @@
     height: auto;
     width: auto;
     clip: auto;
-    margin: 0 0 0 $base-unit;
+    margin: 0 0 0 $cd-base-unit;
   }
 
 }
@@ -198,15 +198,15 @@
       &:before {
         content: "";
         top: 50%;
-        margin-top: -$base-unit*.75;
+        margin-top: -$cd-base-unit*.75;
         background: $primary-bg-color;
       }
 
       .no-flexbox & {
         height: auto;
         display: block;
-        padding-top: $base-unit*2;
-        padding-bottom: $base-unit*2;
+        padding-top: $cd-base-unit*2;
+        padding-bottom: $cd-base-unit*2;
       }
     }
   }
@@ -216,15 +216,15 @@
 @media (min-width: 1200px) {
 
   .cd-nav__link {
-    padding: 0 $base-unit*2;
+    padding: 0 $cd-base-unit*2;
     font-size: $base-font-size;
 
     .cd-nav--primary & {
-      padding: 0 $base-unit*2;
+      padding: 0 $cd-base-unit*2;
     }
 
     .cd-nav--secondary & {
-      padding: $base-unit*1.5 $base-unit*2;
+      padding: $cd-base-unit*1.5 $cd-base-unit*2;
     }
   }
 

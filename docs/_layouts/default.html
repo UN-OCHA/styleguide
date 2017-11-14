@@ -3,11 +3,14 @@
   {% include head.html %}
 
   <body>
-    {% if page.hide_header_footer != true %}
-  	 {% include header.html %}
-    {% endif %}
 
-    {{ content }}
+    <div class="page-wrapper">
+      {% if page.hide_header_footer != true %}
+       {% include header.html %}
+      {% endif %}
+
+      {{ content }}
+    </div>
 
     {% if page.hide_header_footer != true %}
       {% include footer.html %}

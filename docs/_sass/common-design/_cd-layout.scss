@@ -1,5 +1,5 @@
 html {
-  background: #CFD1D2;
+  background: $site-bg-color;
   margin: 0;
   margin-left: calc(100vw - 100%); //prevents scrollbar changing page width in IE
   padding: 0;
@@ -8,24 +8,32 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  background: white;
-  max-width: 1400px;
+  background: $body-bg-color;
+  max-width: $cd-max-body-width;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - #{$cd-footer-height-xs});
 }
 
 .container {
-  padding: 0 8px;
+  padding: 0 $cd-base-unit;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $cd-max-width;
 }
 
 @media (min-width: 768px) {
 
   html {
-    padding: 0 8px;
+    padding: 0 $cd-base-unit;
+  }
+
+  .page-wrapper {
+    min-height: calc(100vh - #{$cd-footer-height-md});
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 $cd-base-unit*2;
   }
 
 }
@@ -34,7 +42,7 @@ body {
 @media (min-width: 1200px) {
 
   .container {
-    padding: 0 40px;
+    padding: 0 $cd-base-unit*5;
   }
 
 }

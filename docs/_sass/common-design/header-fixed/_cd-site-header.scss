@@ -10,8 +10,8 @@
 
   .no-flexbox & {
     height: $cd-site-header-height-md;
-    padding-top: $base-unit;
-    padding-bottom: $base-unit;
+    padding-top: $cd-base-unit;
+    padding-bottom: $cd-base-unit;
   }
 }
 
@@ -22,7 +22,7 @@
   background-size: 100% auto;
   width: 167px;
   height: $cd-site-header-height-md;
-  margin-right: $base-unit*2;
+  margin-right: $cd-base-unit*2;
   margin-top: 0;
 
   .no-svg & {
@@ -86,9 +86,9 @@
   box-shadow: none;
   -webkit-appearance: none;
   background: transparent;
-  font-family: $body-font;
+  font-family: $cd-body-font;
   font-size: $base-font-size;
-  padding: $base-unit*1.5 $base-unit*1.5 $base-unit*1.5 $base-unit*3.5;
+  padding: $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*1.5 $cd-base-unit*3.5;
   width: 96%;
   height: $cd-site-header-height-xs + 2;
   border-bottom: 2px solid transparent;
@@ -107,11 +107,11 @@
 
 .cd-header-search__button {
   position: absolute;
-  left: $base-unit/2;
+  left: $cd-base-unit/2;
   top: 50%;
-  margin-top: -$base-unit*1.25;
-  width: $base-unit*2.5;
-  height: $base-unit*2.5;
+  margin-top: -$cd-base-unit*1.25;
+  width: $cd-base-unit*2.5;
+  height: $cd-base-unit*2.5;
 
   &:focus {
     outline: none;
@@ -137,7 +137,7 @@
     width: auto;
     background: $primary-bg-color;
     color: $light-text-color;
-    padding: $base-unit;
+    padding: $cd-base-unit;
 
     .sr-only {
       position: static;

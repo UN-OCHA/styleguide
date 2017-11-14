@@ -4,7 +4,7 @@
 
 .cd-header {
   min-width: $cd-max-width;
-  margin-bottom: $base-unit*2;
+  margin-bottom: $cd-base-unit*2;
 
   button {
     -webkit-appearance: none;
@@ -61,7 +61,7 @@
 
   a {
     display: block;
-    padding: $base-unit*1.5;
+    padding: $cd-base-unit*1.5;
     border-bottom: 1px solid $border-color;
     text-decoration: none;
     color: $body-text-color;
@@ -96,8 +96,8 @@
   }
 
   .container {
-    padding-left: $base-unit;
-    padding-right: $base-unit;
+    padding-left: $cd-base-unit;
+    padding-right: $cd-base-unit;
     width: 100%;
     max-width: $cd-max-width;
     margin: 0 auto;
