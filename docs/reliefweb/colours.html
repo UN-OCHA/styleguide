@@ -1,0 +1,119 @@
+---
+layout: default
+title: ReliefWeb Colours
+include_rw: true
+---
+<div class="sg-container">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">ReliefWeb</a> / Colours</h1>
+    <p>Use the contextual colours (text, background, border) rather than the palette colours directly.</p>
+    <p>Use a colour contrast checker to confirm that your colour combinations are accessible - <a href="http://webaim.org/resources/contrastchecker/">http://webaim.org/resources/contrastchecker/</a>.</p>
+
+    <p>Sass file: <a href="{{ site.rw_theme_url }}/sass/variables/_colours.scss">variables/_colors.scss</a></p>
+  </div>
+
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Colour palette</h3>
+    </div>
+    <ul>
+      <li class="sg-color">
+        <span style="background: #F15A46"></span> $red: ##F15A46; (Note: this red is not accessible with light or dark text, use dark red alternative with text.)
+      </li>
+      <li class="sg-color">
+        <span style="background: #cb250f"></span> $dark-red: #cb250f;
+      </li>
+      <li class="sg-color">
+        <span style="background: #07719B"></span> $blue: #07719B;
+      </li>
+      <li class="sg-color">
+        <span style="background: #5C6FA6"></span> $purple: #5C6FA6;
+      </li>
+      <li class="sg-color">
+        <span style="background: #333"></span> $dark-grey: #333;
+      </li>
+      <li class="sg-color">
+        <span style="background: #555"></span> $mid-grey: #555;
+      </li>
+      <li class="sg-color">
+        <span style="background: #d4d4d4"></span> $mid-light-grey: #d4d4d4;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f4f4f0"></span> $light-grey: #f4f4f0;
+      </li>
+      <li class="sg-color">
+        <span style="background: #fcfcfc"></span> $lighter-grey: #fcfcfc;
+      </li>
+    </ul>
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Text colours</h3>
+    </div>
+    <ul>
+      <li class="sg-color" style="color: #555">
+        <span style="background: #555"></span> $text-dark: $mid-grey;
+      </li>
+      <li class="sg-color" style="color: #333">
+        <span style="background: #333"></span> $heading-text-color: $dark-grey;
+      </li>
+      <li class="sg-color" style="color: #07719B">
+        <span style="background: #07719B"></span> $link-text-color: $blue;
+      </li>
+      <li class="sg-color" style="color: #044660">
+        <span style="background: #044660"></span> $link-text-active-color: darken($link-text-color, 12%);
+      </li>
+    </ul>
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Background colours</h3>
+    </div>
+    <ul>
+      <li class="sg-color">
+        <span style="background: #fcfcfc"></span> $light-bg: $lighter-grey;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f4f4f0"></span> $block-bg: $light-grey;
+      </li>
+      <li class="sg-color">
+        <span style="background: #cb250f"></span> $highlight-bg: $dark-red;
+      </li>
+    </ul>
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Border colours</h3>
+    </div>
+    <ul>
+      <li class="sg-border-color">
+        <span style="border-color: #f4f4f0"></span> $light-border: $light-grey;
+      </li>
+      <li class="sg-border-color">
+        <span style="border-color: #d4d4d4"></span> $mid-border: $mid-light-grey;
+      </li>
+    </ul>
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Header colours</h3>
+    </div>
+    <ul>
+      <li class="sg-color">
+        <span style="background: #5C6FA6"></span> $mobile-header-color: $purple;
+      </li>
+      <li class="sg-color">
+        <span style="background: #e9e9e5"></span> $header-tab-focus: #e9e9e5;
+      </li>
+      <li class="sg-color">
+        <span style="background: #a3a3a3"></span> $header-box-shadow-color: #a3a3a3;
+      </li>
+      <li class="sg-color">
+        <span style="background: #e4e4e2"></span> $header-search-border: #e4e4e2;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f9f9f8"></span> $header-search-bg: #f9f9f8;
+      </li>
+    </ul>
+  </div>
+</div>

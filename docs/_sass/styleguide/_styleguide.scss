@@ -1,8 +1,13 @@
 html.styleguide, html.styleguide body {
   height: auto;
 }
-.sg-container--hid {
+.sg-container, .sg-container--hid {
   max-width: 1220px!important;
+  padding: 0 40px !important;
+}
+
+.sg-footer {
+  background: #026CB6!important;
 }
 
 .sg-page-header {
