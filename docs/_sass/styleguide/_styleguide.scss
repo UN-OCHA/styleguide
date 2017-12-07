@@ -3,7 +3,12 @@ html.styleguide, html.styleguide body {
 }
 .sg-container, .sg-container--hid {
   max-width: 1220px!important;
-  padding: 0 40px !important;
+  padding: 0 8px!important;
+}
+@include media-query(sm) {
+  .sg-container {
+    padding: 0 40px !important;
+  }
 }
 
 .sg-footer {
