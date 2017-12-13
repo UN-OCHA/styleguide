@@ -78,5 +78,6 @@ rwResponsive.dropdowns = (function () {
  * Initialise on content loaded
  */
 document.addEventListener('DOMContentLoaded', function() {
+
   rwResponsive.dropdowns.init();
 });
