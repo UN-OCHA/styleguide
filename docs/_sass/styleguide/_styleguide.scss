@@ -31,6 +31,7 @@ html.styleguide, html.styleguide body {
   color: #007faa;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 30px;
 
   a {
     color: #595959;
@@ -151,6 +152,16 @@ html.styleguide, html.styleguide body {
   height: 24px;
   vertical-align: text-top;
   line-height: 1;
+}
+
+.sg-icon-list--rw {
+  .icon {
+    vertical-align: bottom;
+  }
+
+  .highlight {
+    margin-top: 0;
+  }
 }
 
 .sg-hidden {

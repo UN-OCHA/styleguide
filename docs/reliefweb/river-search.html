@@ -1,0 +1,98 @@
+---
+layout: default
+title: ReliefWeb River Search
+include_rw: true
+---
+<div class="container sg-container js">
+  <div class="sg-page-header">
+    <h1 class="sg-page-header__heading"><a href="./">ReliefWeb</a> / River Search</h1>
+    <p>Reduce screen width to see mobile version.</p>
+    <p>Requires <a href="https://github.com/reliefweb/site/blob/responsive/site/profiles/reliefweb/modules/features/reliefweb_rivers/js/responsive-search.js">responsive-search.js</a> and <a href="https://github.com/reliefweb/site/blob/responsive/site/sites/all/libraries/SimpleDatePicker.js/simpledatepicker.js">simpledatepicker.js</a></p>
+    <p>Sass file: <a href="{{ site.rw_features_url }}reliefweb_rivers/sass/_search.scss">modules/reliefweb_rivers/sass/_search.scss</a></p>
+  </div>
+
+  <div class="sg-section">
+    <div class="row">
+      <div class="col-sm-8">
+
+        <div class="river-search" id="river-search">
+          <form accept-charset="UTF-8" action="#river" data-river-search-form>
+            <div class="river-search__main-form">
+              <label for="river-search" class="element-invisible">Search content with keywords?></label>
+              <input type="text" class="river-search__input" name="river-search" id="river-search" placeholder="Search content with keywords" value="" data-river-search-input autocomplete="off"/>
+              <button type="submit" class="river-search__submit">
+                <span class="icon icon-search"></span>
+                <span class="element-invisible">Search</span>
+              </button>
+            </div>
+
+            <a href="/search-help" class="river-search__how-to desktop-only" target="_blank">How to search</a>
+
+            <div class="river-search-options desktop-only">
+              <button type="button" class="river-search-options__toggle toggle-btn btn " id="river-search-options-btn" data-toggle="content" aria-haspopup="true" aria-expanded="false">
+              Search Options</button>
+              <div class="river-search-options__content toggle-content  hidden" aria-labelledby="river-search-options-btn">
+                <h3 class="river-search-options__heading">Refine the results by adding specific criteria.</h3>
+
+                <button type="button" class="river-search-options__toggle-help toggle-btn" id="river-search-help-btn" data-toggle="content" aria-haspopup="true" aria-expanded="false">
+                  <span class="icon icon-info"></span>
+                  <span class="element-invisible">Search help</span>
+                </button>
+
+                <ul class="river-search-options__help toggle-content" aria-labelledby="river-search-help-btn">
+                  <li><strong>Select an operator</strong>. Use "<em>WITH</em>" and "<em>WITHOUT</em>" operators to create a new group.</li>
+                  <li><strong>Select a category</strong>, then start typing a word to see the suggestions.</li>
+                  <li><strong>Click or press enter to select the suggestion.</strong></li>
+                  <li class="search-options-help-apply">Once finished, click <strong>"Apply options"</strong> to launch the search.</li>
+                  <li><em>Optional</em>: click on an operator to choose a different one.</li>
+                  <li><em>Optional</em>: drag and drop criteria to reorganize the selection.</li>
+                  <li><em>Optional</em>: press "backspace" to remove the last criterion.</li>
+                  <li><em>Optional</em>: double click on a criterion to remove it.</li>
+                </ul>
+
+                <div class="river-search-filters" data-river-search-filters>
+
+                  <div class="river-search-filters__new" data-river-search-filters-new>
+
+                    <label for="river-search-filter-operator" class="element-invisible">Select operator</label>
+                    <select name="river-search-filter-operator" id="river-search-filter-operator" class="river-search-filters__select-operator" data-river-search-filter-operator>
+                      <option value="WITH">with</option>
+                      <option value="WITHOUT">without</option>
+                    </select>
+
+                    <label for="river-search-filter-category" class="element-invisible">Select category</label>
+                    <select name="river-search-filter-category" id="river-search-filter-category" data-river-search-filter-category>
+                      <option value="PC" data-type="country" data-autoexpand="0">Primary Country</option>
+                      <option value="C" data-type="country" data-autoexpand="0">Country</option>
+                      <option value="S" data-type="source" data-autoexpand="0">Organization</option>
+                      <option value="ST" data-type="organization_type" data-autoexpand="1">Organization type</option>
+                      <option value="T" data-type="theme" data-autoexpand="1">Theme</option>
+                      <option value="F" data-type="content_format" data-autoexpand="1">Format</option>
+                      <option value="D" data-type="disaster" data-autoexpand="0">Disaster</option>
+                      <option value="DT" data-type="disaster_type" data-autoexpand="1">Disaster Type</option>
+                      <option value="VG" data-type="vulnerable_groups" data-autoexpand="1">Vulnerable Group</option>
+                      <option value="L" data-type="language" data-autoexpand="1">Language</option>
+                      <option value="DO" data-type="date" data-autoexpand="0">Original publication Date</option>
+                      <option value="DA" data-type="date" data-autoexpand="0">Posting Date</option>
+                    </select>
+
+                    <div class="river-search-filters__autocomplete-container simpleautocomplete-container">
+                      <label for="river-search-filter-search" class="element-invisible">Type and select a term then press enter</label>
+                      <input type="text" placeholder="type and select a term then press enter" name="river-search-filter-search" id="river-search-filter-search" data-river-search-filter-autocomplete autocomplete="off"/>
+                      <button type="button" class="river-search-filters__list" data-river-search-filter-list>
+                        <span class="icon icon-arrow-down"></span>
+                        <span class="element-invisible">Show options</span>
+                      </button>
+                    </div>
+
+                    <input type="submit" class="river-search-filters__apply btn btn-primary" value="Apply"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,13 +3,13 @@ layout: default
 title: ReliefWeb Colours
 include_rw: true
 ---
-<div class="sg-container">
+<div class="container sg-container">
   <div class="sg-page-header">
     <h1 class="sg-page-header__heading"><a href="./">ReliefWeb</a> / Colours</h1>
     <p>Use the contextual colours (text, background, border) rather than the palette colours directly.</p>
     <p>Use a colour contrast checker to confirm that your colour combinations are accessible - <a href="http://webaim.org/resources/contrastchecker/">http://webaim.org/resources/contrastchecker/</a>.</p>
 
-    <p>Sass file: <a href="{{ site.rw_theme_url }}/sass/variables/_colours.scss">variables/_colors.scss</a></p>
+    <p>Sass file: <a href="{{ site.rw_theme_url }}/sass/variables/_colours.scss">variables/_colours.scss</a></p>
   </div>
 
   <div class="sg-section">
@@ -24,10 +24,25 @@ include_rw: true
         <span style="background: #cb250f"></span> $dark-red: #cb250f;
       </li>
       <li class="sg-color">
+        <span style="background: #fff7f6;"></span> $light-red: #fff7f6;;
+      </li>
+      <li class="sg-color">
         <span style="background: #07719B"></span> $blue: #07719B;
       </li>
       <li class="sg-color">
+        <span style="background: #e8f4f4"></span> $light-blue: #e8f4f4;
+      </li>
+      <li class="sg-color">
         <span style="background: #5C6FA6"></span> $purple: #5C6FA6;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f9f5fb"></span> $light-purple: #f9f5fb;
+      </li>
+      <li class="sg-color">
+        <span style="background: #bfdfa6"></span> $green: #bfdfa6;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f4f8f0"></span> $light-green: #f4f8f0;
       </li>
       <li class="sg-color">
         <span style="background: #333"></span> $dark-grey: #333;
@@ -44,6 +59,9 @@ include_rw: true
       <li class="sg-color">
         <span style="background: #fcfcfc"></span> $lighter-grey: #fcfcfc;
       </li>
+      <li class="sg-color">
+        <span style="background: #fff"></span> $white: #fff;
+      </li>
     </ul>
   </div>
   <div class="sg-section">
@@ -52,16 +70,22 @@ include_rw: true
     </div>
     <ul>
       <li class="sg-color" style="color: #555">
-        <span style="background: #555"></span> $text-dark: $mid-grey;
+        <span style="background: #555"></span> $body-text-color: $mid-grey;
       </li>
       <li class="sg-color" style="color: #333">
-        <span style="background: #333"></span> $heading-text-color: $dark-grey;
+        <span style="background: #333"></span> $heading-text-colour: $dark-grey;
       </li>
       <li class="sg-color" style="color: #07719B">
         <span style="background: #07719B"></span> $link-text-color: $blue;
       </li>
       <li class="sg-color" style="color: #044660">
         <span style="background: #044660"></span> $link-text-active-color: darken($link-text-color, 12%);
+      </li>
+      <li class="sg-color" style="color: #fff; background: #333">
+        <span style="background: #fff"></span> $white-text-color: $white;
+      </li>
+      <li class="sg-color" style="color: #cb250f">
+        <span style="background: #cb250f"></span> $red-text-color: $dark-red;
       </li>
     </ul>
   </div>
@@ -71,13 +95,34 @@ include_rw: true
     </div>
     <ul>
       <li class="sg-color">
-        <span style="background: #fcfcfc"></span> $light-bg: $lighter-grey;
-      </li>
-      <li class="sg-color">
         <span style="background: #f4f4f0"></span> $block-bg: $light-grey;
       </li>
       <li class="sg-color">
-        <span style="background: #cb250f"></span> $highlight-bg: $dark-red;
+        <span style="background: #fff"></span> $white-bg: $white;
+      </li>
+      <li class="sg-color">
+        <span style="background: #fcfcfc"></span> $light-bg: $lighter-grey;
+      </li>
+      <li class="sg-color">
+        <span style="background: #e8f4f4"></span> $light-blue-bg: $light-blue;
+      </li>
+      <li class="sg-color">
+        <span style="background: #07719B"></span> $blue-bg: $blue;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f9f5fb"></span> $light-purple-bg: $light-purple;
+      </li>
+       <li class="sg-color">
+        <span style="background: #5c6fa6"></span> $purple-bg: $purple;
+      </li>
+      <li class="sg-color">
+        <span style="background: #f4f8f0"></span> $green-bg: $light-green;
+      </li>
+      <li class="sg-color">
+        <span style="background: #fff7f6"></span> $light-red-bg: $light-red;
+      </li>
+      <li class="sg-color">
+        <span style="background: #cb250f"></span> $red-bg: $dark-red;
       </li>
     </ul>
   </div>
@@ -92,27 +137,43 @@ include_rw: true
       <li class="sg-border-color">
         <span style="border-color: #d4d4d4"></span> $mid-border: $mid-light-grey;
       </li>
+      <li class="sg-border-color">
+        <span style="border-color: #07719B"></span> $blue-border: $blue;
+      </li>
+      <li class="sg-border-color">
+        <span style="border-color: #5C6FA6"></span> $purple-border: $purple;
+      </li>
+      <li class="sg-border-color">
+        <span style="border-color: #bfdfa6"></span> $green-border: $green;
+      </li>
+      <li class="sg-border-color">
+        <span style="border-color: #cb250f"></span> $red-border: $dark-red;
+      </li>
     </ul>
   </div>
   <div class="sg-section">
     <div class="sg-section__header">
-      <h3>Header colours</h3>
+      <h3>Disaster colours</h3>
     </div>
     <ul>
       <li class="sg-color">
-        <span style="background: #5C6FA6"></span> $mobile-header-color: $purple;
+        <span style="background: #f15a46"></span> $disaster-red: #f15a46;
       </li>
       <li class="sg-color">
-        <span style="background: #e9e9e5"></span> $header-tab-focus: #e9e9e5;
+        <span style="background: #f49f49"></span> $disaster-orange: #f49f49;
       </li>
       <li class="sg-color">
-        <span style="background: #a3a3a3"></span> $header-box-shadow-color: #a3a3a3;
+        <span style="background: #b7bdcc"></span> $disaster-grey: #b7bdcc;
       </li>
+    </ul>
+  </div>
+  <div class="sg-section">
+    <div class="sg-section__header">
+      <h3>Box shadow colours</h3>
+    </div>
+    <ul>
       <li class="sg-color">
-        <span style="background: #e4e4e2"></span> $header-search-border: #e4e4e2;
-      </li>
-      <li class="sg-color">
-        <span style="background: #f9f9f8"></span> $header-search-bg: #f9f9f8;
+        <span style="box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);"></span> $dark-shadow-color: rgba(0, 0, 0, 0.35);
       </li>
     </ul>
   </div>
