@@ -1,0 +1,35 @@
+/**
+ * Resets to defaults required for Common Design
+ * These may already be included in your theme, in which case can be removed.
+ */
+
+.cd-header,
+.cd-footer {
+  // Setup font
+  -webkit-font-smoothing: antialiased;
+  font-family: $cd-font;
+  font-size: map-get($cd-font-sizes, default);
+
+  // Set box-sizing
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+
+  // Reset button styles.
+  button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: $cd-font;
+  }
+}
+
+// Screen reader only text.
+.cd-sr-only {
+  @include hide;
+}

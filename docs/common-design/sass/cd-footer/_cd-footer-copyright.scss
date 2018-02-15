@@ -1,0 +1,68 @@
+/**
+ * Common Design Footer copyright section.
+ */
+
+.cd-footer-copyright__text {
+  a {
+    border-color: $cd-purple-border;
+
+    &:hover,
+    &:focus {
+      border-color: $cd-white-border;
+    }
+  }
+}
+
+.cd-footer-copyright__icon {
+  display: block;
+  font-size: 38px;
+  margin: 16px auto 0 auto;
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-footer-copyright {
+    -ms-grid-column: 3;
+    -ms-grid-row: 5;
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .cd-footer-copyright__message {
+    align-items: center;
+    display: flex;
+    max-width: 350px;
+
+    .no-cssgridlegacy.no-cssgrid & {
+      max-width: none;
+      padding-top: 48px;
+      text-align: left;
+    }
+  }
+
+  .cd-footer-copyright__text {
+    // Force the text to wrap in IE10.
+    display: inline-block;
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  .cd-footer-copyright__icon {
+    margin: 0 0 0 20px;
+
+    .no-cssgridlegacy.no-cssgrid & {
+      margin: 10px 0 0 0;
+    }
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-footer-copyright {
+    -ms-grid-row: 3;
+  }
+
+}

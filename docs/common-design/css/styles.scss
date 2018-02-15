@@ -1,0 +1,24 @@
+@import
+  "../sass/cd-variables",
+  "../sass/cd-mixins",
+  "../sass/cd-reset",
+  "../sass/cd-icons",
+
+  // Layout
+  "../sass/cd-layout/cd-layout",
+
+  // Header
+  "../sass/cd-header/cd-header",
+  "../sass/cd-header/cd-dropdowns",
+  "../sass/cd-header/cd-logo",
+  "../sass/cd-header/cd-nav",
+  "../sass/cd-header/cd-search",
+  "../sass/cd-header/cd-sites-menu",
+  "../sass/cd-header/cd-user-menu",
+
+  // Footer
+  "../sass/cd-footer/cd-footer",
+  "../sass/cd-footer/cd-footer-copyright",
+  "../sass/cd-footer/cd-footer-menu",
+  "../sass/cd-footer/cd-footer-provided-by",
+  "../sass/cd-footer/cd-footer-social";

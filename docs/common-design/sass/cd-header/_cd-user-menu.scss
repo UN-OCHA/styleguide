@@ -1,0 +1,204 @@
+/**
+ * Common Design Header User Menu
+ * Includes user centered settings and/or actions.
+ *
+ * Notes:
+ * - menu items can be links or buttons with dropdowns
+ * - dropdown menu items can be given the class .cd-user-menu__item--small to restrict their width and centre the dropdown
+ * - add class .cd-user-menu__item--mobile-icon to menu items to only show the iconon mobile.
+ */
+
+.cd-user-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    float: left;
+    position: relative;
+
+    &:last-child {
+      .cd-user-menu__item {
+        padding-right: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.cd-user-menu__item {
+  background: transparent;
+  color: $cd-white-text-color;
+  display: block;
+  height: $cd-global-header-height;
+  line-height: $cd-global-header-height;
+  max-width: 90px;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+
+  &:after {
+    content: '|';
+    opacity: 0.6;
+    position: absolute;
+    right: -1px;
+    top: 0;
+  }
+
+  &:hover,
+  &:focus {
+    .cd-user-menu__label {
+      border-color: $cd-purple-border;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    background: $cd-dark-primary-bg-color;
+  }
+}
+
+.cd-user-menu__label {
+
+  .cd-user-menu__item--small & {
+    max-width: 60px;
+  }
+}
+
+// button menu items have extra padding to allow space for the arrow icon.
+button.cd-user-menu__item {
+  padding-right: 26px;
+
+  .icon-arrow-down {
+    position: absolute;
+    margin-top: -6px;
+    right: 12px;
+    top: 50%;
+  }
+}
+
+// Only icon shows on mobile
+.cd-user-menu__item--mobile-icon {
+
+  .cd-user-menu__label {
+    @include hide;
+  }
+
+  .cd-user-menu__icon {
+    border-bottom: 1px solid transparent;
+  }
+
+  &:hover,
+  &:focus {
+    .cd-user-menu__icon {
+      border-color: $cd-purple-border;
+    }
+  }
+}
+
+.cd-user-menu__label {
+  border-bottom: 1px solid transparent;
+}
+
+.cd-user-menu__icon {
+  font-size: 14px;
+  vertical-align: text-top;
+}
+
+
+.cd-user-menu__dropdown  {
+  left: auto;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  width: 125px;
+  padding: 12px 24px;
+
+  li {
+    display: block;
+    float: none;
+  }
+
+  .cd-user-menu__item--small + & {
+    left: -35px;
+    right: auto;
+
+    &:before {
+      left: 55px;
+    }
+  }
+}
+
+.cd-user-menu__dropdown-link {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+
+  &.active {
+    font-weight: bold;
+    padding-right: 12px;
+    position: relative;
+
+    &:after {
+      color: $cd-bright-blue-text-color;
+      content: "\e944";
+      font-family: 'unocha-icons';
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .cd-user-menu__dropdown-link-label {
+      border-color: $cd-purple-border;
+    }
+  }
+}
+
+.cd-user-menu__dropdown-link-label {
+  border-bottom: 1px solid transparent;
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-user-menu__item {
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  button.cd-user-menu__item {
+    padding-right: 30px;
+
+    .icon-arrow-down {
+      right: 16px;
+    }
+  }
+
+  .cd-user-menu__item--small {
+    max-width: 70px;
+
+    .cd-user-menu__dropdown {
+      left: 30px;
+    }
+  }
+
+  .cd-user-menu__item--mobile-icon {
+
+    .cd-user-menu__icon {
+      border-bottom: 0;
+    }
+    .cd-user-menu__label {
+      @include unhide;
+    }
+  }
+
+}

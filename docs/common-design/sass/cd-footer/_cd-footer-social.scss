@@ -1,0 +1,53 @@
+/**
+ * Common Design Footer social links.
+ */
+
+a.cd-footer-social__link {
+  background: transparent;
+  border: 1px solid $cd-white-border;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 25px;
+  height: 26px;
+  line-height: 0;
+  margin: 0 10px;
+  position: relative;
+  transition: background 0.3s ease;
+  width: 26px;
+
+  &:hover,
+  &:focus {
+    background: $cd-white-bg-color;
+    border-color: $cd-white-border;
+    color: $cd-blue-text-color;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-footer-social {
+    grid-column: 1/3;
+    -ms-grid-row: 3;
+    -ms-grid-column-span: 3;
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-footer-social {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    grid-column: auto;
+    text-align: right;
+  }
+
+  a.cd-footer-social__link {
+    margin: 0 0 0 20px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+}

@@ -1,0 +1,1052 @@
+/**
+ * Variable used in the Common Design.
+ */
+/**
+ * Breakpoints
+ * Usage: @media (min-width: map-get($cd-breakpoints, tablet)) {}
+ */
+/**
+ * Measurements
+ */
+/**
+ * Colours
+ * Colours can be substituted for your theme colors
+ */
+/* Colour palette */
+/* Background colours */
+/* Border colours */
+/* Text colours */
+/**
+ * Fonts
+ */
+/**
+ * Font sizes
+ * Usage: font-size: map-get($cd-font-sizes, default);
+ */
+/**
+ * Mixins used by the Common Design.
+ * Can be replaced by equivalents in your theme if appropriate.
+ */
+/**
+ * Standard clearfix.
+ */
+/**
+ * Hide content offscreen accessibly.
+ */
+/**
+ * Un-hide content.
+ */
+/**
+ * Resets to defaults required for Common Design
+ * These may already be included in your theme, in which case can be removed.
+ */
+.cd-header,
+.cd-footer {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  font-size: 12px;
+  box-sizing: border-box; }
+  .cd-header *,
+  .cd-footer * {
+    box-sizing: border-box; }
+  .cd-header:before, .cd-header:after,
+  .cd-footer:before,
+  .cd-footer:after {
+    box-sizing: border-box; }
+  .cd-header button,
+  .cd-footer button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: sans-serif; }
+
+.cd-sr-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/**
+ * Common Design Icons.
+ * Uses an icon font generated using icomoon, see /icons for font files and selection.json.
+ */
+@font-face {
+  font-family: 'unocha-icons';
+  src: url("../icons/unocha-icons.eot?y6ystf");
+  src: url("../icons/unocha-icons.eot?y6ystf#iefix") format("embedded-opentype"), url("../icons/unocha-icons.ttf?y6ystf") format("truetype"), url("../icons/unocha-icons.woff?y6ystf") format("woff"), url("../icons/unocha-icons.svg?y6ystf#unocha-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'unocha-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-creative-commons:before {
+  content: "\e903"; }
+
+.icon-twitter:before {
+  content: "\e900"; }
+
+.icon-youtube:before {
+  content: "\e901"; }
+
+.icon-facebook:before {
+  content: "\e902"; }
+
+.icon-arrow-up:before {
+  content: "\e957"; }
+
+.icon-arrow-down:before {
+  content: "\e958"; }
+
+.icon-arrow-right:before {
+  content: "\e94f"; }
+
+.icon-user:before {
+  content: "\e955"; }
+
+.icon-check:before {
+  content: "\e944"; }
+
+.icon-cancel:before {
+  content: "\e94a"; }
+
+.icon-search:before {
+  content: "\e919"; }
+
+/**
+ * Common Design Layout styles.
+ */
+html {
+  background: #F2F2F2;
+  height: 100%;
+  margin: 0;
+  margin-left: calc(100vw - 100%);
+  padding: 0 8px; }
+
+body {
+  background: #FFF;
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr auto; }
+
+.cd-container {
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 0 auto;
+  max-width: 1220px; }
+  .cd-container:after {
+    clear: both;
+    content: '';
+    display: table; }
+
+@media (min-width: 768px) {
+  .cd-container {
+    padding: 0 24px; } }
+
+@media (min-width: 1200px) {
+  .cd-container {
+    padding: 0 40px; } }
+
+/**
+ * Common Design Header Layout and generic styles.
+ */
+/**
+ * Global Header.
+ * Top header bar, contains Sites Menu ('OCHA Services') and User Menu.
+ */
+.cd-global-header {
+  background: #026CB6;
+  background-image: linear-gradient(-180deg, #026CB6 67%, #025995 97%);
+  color: #FFF;
+  height: 35px;
+  position: relative; }
+  .cd-global-header button {
+    border: 0; }
+
+/**
+ * Site Header.
+ * Bottom header bar, contains Logo, Search and Navigation.
+ */
+.cd-site-header {
+  border-bottom: 2px solid #E6ECF1;
+  color: #4A4A4A; }
+
+.cd-site-header__inner {
+  height: 60px; }
+
+.cd-site-header__actions {
+  float: right;
+  margin-right: -12px; }
+
+@media (min-width: 768px) {
+  .cd-site-header__actions {
+    margin-right: 0; } }
+
+/**
+ * Common Design Header Dropdowns generic styles.
+ */
+.cd-dropdown {
+  display: none; }
+  .open > .cd-dropdown {
+    display: block; }
+
+.open > [data-toggle="dropdown"] > .icon-arrow-down:before {
+  content: "\e957"; }
+
+/**
+ * Global header specific dropdown styles.
+ */
+.cd-global-header__dropdown {
+  background: #026CB6;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  left: 0;
+  position: absolute;
+  z-index: 1; }
+  .cd-global-header__dropdown a {
+    color: #FFF; }
+
+.open .cd-global-header__dropdown-btn:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #026CB6 transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px; }
+
+/**
+ * Common Design Logo in header.
+ * Replace images with your site logo.
+ */
+.cd-site-header h1 {
+  margin: 0; }
+
+.cd-site-logo {
+  background: url("../logos/ocha-logo-mobile.svg") center no-repeat;
+  display: block;
+  float: left;
+  height: 60px;
+  width: 52px; }
+  .no-svg .cd-site-logo {
+    background: url("../logos/ocha-logo-mobile.png") center no-repeat; }
+
+@media (min-width: 768px) {
+  .cd-site-logo {
+    background: url("../logos/ocha-logo.svg") center no-repeat;
+    width: 186px; }
+    .no-svg .cd-site-logo {
+      background: url("../logos/ocha-logo-mobile.png") center no-repeat; } }
+
+/**
+ * Common Design Navigation in header.
+ */
+.cd-site-header__nav-holder {
+  float: left; }
+
+.cd-site-header__nav-toggle {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #E6ECF1;
+  font-size: 14px;
+  font-weight: bold;
+  height: 60px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  transition: background 0.3s ease; }
+  .open .cd-site-header__nav-toggle {
+    border: none;
+    height: 20px;
+    margin: 15px 12px 0 0;
+    padding: 0;
+    position: relative;
+    z-index: 101; }
+  .cd-site-header__nav-toggle:hover, .cd-site-header__nav-toggle:focus {
+    background: #E6ECF1;
+    outline: none; }
+
+.open .cd-site-header__nav-label--closed {
+  display: none; }
+
+.cd-site-header__nav-label--open {
+  display: none; }
+  .open .cd-site-header__nav-label--open {
+    display: block;
+    font-size: 20px; }
+
+.cd-nav {
+  background: #E6ECF1;
+  height: calc(100vh - 35px);
+  max-width: 350px;
+  padding: 40px 0 36px 0;
+  position: absolute;
+  right: 8px;
+  top: 35px;
+  width: 90%;
+  z-index: 100; }
+  .cd-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .cd-nav a,
+  .cd-nav button {
+    color: #4A4A4A;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none; }
+    .cd-nav a:hover, .cd-nav a:focus,
+    .cd-nav button:hover,
+    .cd-nav button:focus {
+      background: #D3DDE5;
+      color: #000;
+      outline: none; }
+  .cd-nav button {
+    background: none;
+    border: 0;
+    font-size: 12px;
+    text-align: left;
+    width: 100%; }
+
+.cd-nav__item > a,
+.cd-nav__item > button {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.cd-nav__item .icon-arrow-down {
+  margin-left: 2px; }
+
+ul.cd-nav__child-nav {
+  background: #D3DDE5; }
+  ul.cd-nav__child-nav a,
+  ul.cd-nav__child-nav button {
+    color: #000; }
+    ul.cd-nav__child-nav a:hover, ul.cd-nav__child-nav a:focus,
+    ul.cd-nav__child-nav button:hover,
+    ul.cd-nav__child-nav button:focus {
+      background: #c3d1dc; }
+
+ul.cd-nav__grandchild-nav {
+  padding-bottom: 5px; }
+
+.cd-nav__grandchild-item a,
+.cd-nav__grandchild-item button {
+  padding: 10px 30px; }
+
+.no-mediaqueries .cd-site-header__nav-holder {
+  position: relative; }
+
+.no-mediaqueries .cd-nav {
+  right: 0;
+  top: 60px;
+  width: 300px; }
+
+@media (min-width: 768px) {
+  .cd-site-header__nav-toggle {
+    border-right: 1px solid #E6ECF1; }
+    .open .cd-site-header__nav-toggle {
+      margin-right: 0; } }
+
+@media (min-width: 1024px) {
+  .cd-site-header__nav-toggle {
+    display: none; }
+  .cd-nav {
+    background: none;
+    display: block;
+    height: 60px;
+    max-width: none;
+    padding: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: 0; }
+  .cd-nav__item {
+    border-right: 1px solid #E6ECF1;
+    float: left;
+    margin: 0; }
+    .cd-nav__item:first-child {
+      border-left: 1px solid #E6ECF1; }
+    .cd-nav__item:last-child ul.cd-nav__child-nav {
+      left: auto;
+      right: 0; }
+    .cd-nav__item.open {
+      position: relative; }
+      .cd-nav__item.open > button:focus:after {
+        background: transparent; }
+    .cd-nav__item.active > a:after,
+    .cd-nav__item.active > button:after {
+      background: #EB5C6D; }
+    .cd-nav__item > a,
+    .cd-nav__item > button {
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background: transparent;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 14px;
+      position: relative;
+      transition: background 0.3s ease; }
+      .cd-nav__item > a:after,
+      .cd-nav__item > button:after {
+        bottom: -2px;
+        content: '';
+        background: transparent;
+        height: 4px;
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        transition: background 0.3s ease;
+        width: calc(100% + 2px); }
+      .cd-nav__item > a:hover, .cd-nav__item > a:focus,
+      .cd-nav__item > button:hover,
+      .cd-nav__item > button:focus {
+        background: #F2F5F8; }
+      .active .cd-nav__item > a:after, .cd-nav__item > a:focus:after, .active
+      .cd-nav__item > button:after,
+      .cd-nav__item > button:focus:after {
+        background: #EB5C6D; }
+  ul.cd-nav__child-nav {
+    background: #E6ECF1;
+    left: 0;
+    margin: 0;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px 0;
+    top: 60px;
+    position: absolute; } }
+
+/**
+ * Common Design Search form in header.
+ */
+.cd-search {
+  float: left; }
+
+.cd-search_btn {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #E6ECF1;
+  color: #026CB6;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  padding: 0 20px;
+  transition: background 0.3s ease; }
+  .open .cd-search_btn {
+    color: #EB5C6D;
+    position: relative; }
+    .open .cd-search_btn:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #E6ECF1 transparent;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -6px; }
+  .cd-search_btn:hover, .cd-search_btn:focus {
+    background: #E6ECF1;
+    outline: none; }
+
+.cd-search__form {
+  background: #E6ECF1;
+  display: none;
+  height: 60px;
+  left: 8px;
+  position: absolute;
+  right: 8px; }
+  .open .cd-search__form {
+    display: block; }
+
+.cd-search__form-inner {
+  padding: 0 12px; }
+
+.cd-search__icon {
+  color: #026CB6;
+  font-size: 18px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  margin-top: -9px; }
+
+.cd-search__input {
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #026CB6;
+  font-size: 16px;
+  font-style: italic;
+  height: 60px;
+  padding: 0 45px 0 25px;
+  width: 100%; }
+
+.cd-search__input::-webkit-input-placeholder {
+  color: #026CB6; }
+
+.cd-search__input::-moz-placeholder {
+  color: #026CB6; }
+
+.cd-search__input:-ms-input-placeholder {
+  color: #026CB6; }
+
+.cd-search__input:-moz-placeholder {
+  color: #026CB6; }
+
+.cd-search__submit {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: 0;
+  color: #026CB6;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  margin: -14px 0 0 0;
+  padding: 0;
+  position: absolute;
+  right: 12px;
+  text-transform: uppercase;
+  top: 50%; }
+
+@media (min-width: 768px) {
+  .cd-search__form-inner {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 24px;
+    position: relative; }
+  .cd-search__icon {
+    left: 24px; }
+  .cd-search__input {
+    padding: 0 60px 0 30px; }
+  .cd-search__submit {
+    right: 24px; } }
+
+@media (min-width: 1200px) {
+  .cd-search__form-inner {
+    padding: 0 40px; }
+  .cd-search__icon {
+    left: 40px; }
+  .cd-search__submit {
+    right: 40px; } }
+
+/**
+ * Common Design Sites Menu ('OCHA Services')
+ * Button and dropdown with links to OCHA services.
+ */
+.cd-sites {
+  float: left; }
+
+.cd-sites-btn {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  color: #FFF;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  height: 35px;
+  position: relative;
+  transition: background 0.3s ease; }
+  .cd-sites-btn:focus {
+    outline: 0;
+    background: #025995; }
+
+.cd-sites-btn__logo {
+  background: url("../logos/logos-sprite.svg") 0 -144px no-repeat;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 18px;
+  margin-right: 4px;
+  width: 21px; }
+  .no-svg .cd-sites-btn__logo {
+    background: url("../logos/logos-sprite.png") 0 -144px no-repeat; }
+
+.cd-sites-btn__label {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  border-bottom: 1px solid transparent; }
+
+.cd-sites-dropdown {
+  padding: 22px 14px;
+  width: 100%; }
+  .cd-sites-dropdown ul {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0; }
+    .cd-sites-dropdown ul:last-child {
+      margin-bottom: 0; }
+  .cd-sites-dropdown li {
+    display: block;
+    margin-bottom: 12px; }
+    .cd-sites-dropdown li:last-child {
+      margin-bottom: 0; }
+
+.cd-sites-dropdown__section {
+  margin-bottom: 40px; }
+  .cd-sites-dropdown__section:last-of-type {
+    margin-bottom: 0; }
+
+.cd-sites-dropdown__heading {
+  border-bottom: 1px solid #80CBFF;
+  margin: 0 0 10px 0;
+  padding-bottom: 2px; }
+
+.cd-sites-dropdown__link {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none; }
+  .cd-sites-dropdown__link:hover .cd-sites-dropdown__link-label, .cd-sites-dropdown__link:focus .cd-sites-dropdown__link-label {
+    border-color: #919EC3; }
+
+.cd-sites-dropdown__link-label {
+  border-bottom: 1px solid transparent; }
+
+.cd-sites-dropdown__logo {
+  background: url("../logos/logos-sprite.svg") 0 0 no-repeat;
+  display: inline-block;
+  height: 18px;
+  margin-left: 24px;
+  position: relative;
+  width: 82px; }
+  .no-svg .cd-sites-dropdown__logo {
+    background: url("../logos/logos-sprite.png") 0 0 no-repeat; }
+  .cd-sites-dropdown__logo:before {
+    color: #919EC3;
+    content: '|';
+    left: -12px;
+    position: absolute;
+    top: 2px; }
+
+.cd-sites-dropdown__logo--cerf {
+  background-position: 0 -18px; }
+
+.cd-sites-dropdown__logo--fts {
+  background-position: 0 -36px; }
+
+.cd-sites-dropdown__logo--events {
+  background-position: 0 -54px; }
+
+.cd-sites-dropdown__logo--hid {
+  background-position: 0 -72px; }
+
+.cd-sites-dropdown__logo--hrinfo {
+  background-position: 0 -90px; }
+
+.cd-sites-dropdown__logo--vosocc {
+  background-position: 0 -108px; }
+
+.cd-sites-dropdown__logo--iasc {
+  background-position: 0 -126px; }
+
+.cd-sites-dropdown__logo--ocha {
+  background-position: 0 -144px; }
+
+.cd-sites-dropdown__logo--rw {
+  background-position: 0 -162px; }
+
+@media (min-width: 768px) {
+  .cd-sites-btn {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto; }
+    .cd-sites-btn:hover .cd-sites-btn__label, .cd-sites-btn:focus .cd-sites-btn__label {
+      border-bottom: 1px solid #919EC3; }
+  .cd-sites-btn__label {
+    height: auto;
+    margin: 0;
+    position: static;
+    width: auto;
+    margin-right: 4px; }
+  .cd-sites-btn__logo {
+    margin-right: 8px; }
+  .cd-sites-dropdown {
+    padding: 26px 0; }
+    .cd-sites-dropdown:before {
+      left: 80px; }
+    .cd-sites-dropdown ul {
+      margin: 0 0 26px 0; }
+  .cd-sites-dropdown__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 12px 1fr 12px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0 24px; }
+  .cd-sites-dropdown__section {
+    margin: 0; }
+    .cd-sites-dropdown__section:nth-child(2) {
+      -ms-grid-column: 3; }
+    .cd-sites-dropdown__section:nth-child(3) {
+      -ms-grid-column: 5; } }
+
+@media (min-width: 1200px) {
+  .cd-sites-dropdown__inner {
+    -ms-grid-columns: 1fr 120px 1fr 120px 1fr;
+    grid-gap: 120px;
+    padding: 0 40px; } }
+
+/**
+ * Common Design Header User Menu
+ * Includes user centered settings and/or actions.
+ *
+ * Notes:
+ * - menu items can be links or buttons with dropdowns
+ * - dropdown menu items can be given the class .cd-user-menu__item--small to restrict their width and centre the dropdown
+ * - add class .cd-user-menu__item--mobile-icon to menu items to only show the iconon mobile.
+ */
+.cd-user-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .cd-user-menu li {
+    float: left;
+    position: relative; }
+    .cd-user-menu li:last-child .cd-user-menu__item {
+      padding-right: 0; }
+      .cd-user-menu li:last-child .cd-user-menu__item:after {
+        content: none; }
+
+.cd-user-menu__item {
+  background: transparent;
+  color: #FFF;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  max-width: 90px;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: background 0.3s ease;
+  white-space: nowrap; }
+  .cd-user-menu__item:after {
+    content: '|';
+    opacity: 0.6;
+    position: absolute;
+    right: -1px;
+    top: 0; }
+  .cd-user-menu__item:hover .cd-user-menu__label, .cd-user-menu__item:focus .cd-user-menu__label {
+    border-color: #919EC3; }
+  .cd-user-menu__item:focus {
+    outline: 0;
+    background: #025995; }
+
+.cd-user-menu__item--small .cd-user-menu__label {
+  max-width: 60px; }
+
+button.cd-user-menu__item {
+  padding-right: 26px; }
+  button.cd-user-menu__item .icon-arrow-down {
+    position: absolute;
+    margin-top: -6px;
+    right: 12px;
+    top: 50%; }
+
+.cd-user-menu__item--mobile-icon .cd-user-menu__label {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.cd-user-menu__item--mobile-icon .cd-user-menu__icon {
+  border-bottom: 1px solid transparent; }
+
+.cd-user-menu__item--mobile-icon:hover .cd-user-menu__icon, .cd-user-menu__item--mobile-icon:focus .cd-user-menu__icon {
+  border-color: #919EC3; }
+
+.cd-user-menu__label {
+  border-bottom: 1px solid transparent; }
+
+.cd-user-menu__icon {
+  font-size: 14px;
+  vertical-align: text-top; }
+
+.cd-user-menu__dropdown {
+  left: auto;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  width: 125px;
+  padding: 12px 24px; }
+  .cd-user-menu__dropdown li {
+    display: block;
+    float: none; }
+  .cd-user-menu__item--small + .cd-user-menu__dropdown {
+    left: -35px;
+    right: auto; }
+    .cd-user-menu__item--small + .cd-user-menu__dropdown:before {
+      left: 55px; }
+
+.cd-user-menu__dropdown-link {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none; }
+  .cd-user-menu__dropdown-link.active {
+    font-weight: bold;
+    padding-right: 12px;
+    position: relative; }
+    .cd-user-menu__dropdown-link.active:after {
+      color: #80CBFF;
+      content: "\e944";
+      font-family: 'unocha-icons';
+      position: absolute;
+      right: 0; }
+  .cd-user-menu__dropdown-link:hover .cd-user-menu__dropdown-link-label, .cd-user-menu__dropdown-link:focus .cd-user-menu__dropdown-link-label {
+    border-color: #919EC3; }
+
+.cd-user-menu__dropdown-link-label {
+  border-bottom: 1px solid transparent; }
+
+@media (min-width: 768px) {
+  .cd-user-menu__item {
+    max-width: none;
+    padding: 0 16px; }
+  button.cd-user-menu__item {
+    padding-right: 30px; }
+    button.cd-user-menu__item .icon-arrow-down {
+      right: 16px; }
+  .cd-user-menu__item--small {
+    max-width: 70px; }
+    .cd-user-menu__item--small .cd-user-menu__dropdown {
+      left: 30px; }
+  .cd-user-menu__item--mobile-icon .cd-user-menu__icon {
+    border-bottom: 0; }
+  .cd-user-menu__item--mobile-icon .cd-user-menu__label {
+    height: auto;
+    margin: 0;
+    position: static;
+    width: auto; } }
+
+/**
+ * Common Design Footer.
+ */
+.cd-footer {
+  grid-row: 2/3;
+  background: #026CB6;
+  color: #FFF;
+  padding: 48px 0 0 0;
+  text-align: center; }
+  .cd-footer a {
+    border-bottom: 1px solid transparent;
+    color: #FFF;
+    text-decoration: none; }
+    .cd-footer a:hover, .cd-footer a:focus {
+      border-color: #919EC3; }
+
+.cd-footer__section {
+  padding-bottom: 48px; }
+
+@media (min-width: 768px) {
+  .nocssgrid.no-cssgridlegacy .cd-footer {
+    padding-bottom: 48px; }
+  .cd-footer__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 12px 1fr;
+    -ms-grid-rows: auto 48px auto 48px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    grid-row-gap: 48px; }
+  .cd-footer__section {
+    padding-bottom: 0; } }
+
+/**
+ * Common Design Footer copyright section.
+ */
+.cd-footer-copyright__text a {
+  border-color: #919EC3; }
+  .cd-footer-copyright__text a:hover, .cd-footer-copyright__text a:focus {
+    border-color: #FFF; }
+
+.cd-footer-copyright__icon {
+  display: block;
+  font-size: 38px;
+  margin: 16px auto 0 auto; }
+
+@media (min-width: 768px) {
+  .cd-footer-copyright {
+    -ms-grid-column: 3;
+    -ms-grid-row: 5;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: right; }
+  .cd-footer-copyright__message {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 350px; }
+    .no-cssgridlegacy.no-cssgrid .cd-footer-copyright__message {
+      max-width: none;
+      padding-top: 48px;
+      text-align: left; }
+  .cd-footer-copyright__text {
+    display: inline-block;
+    max-width: 100%;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1; }
+  .cd-footer-copyright__icon {
+    margin: 0 0 0 20px; }
+    .no-cssgridlegacy.no-cssgrid .cd-footer-copyright__icon {
+      margin: 10px 0 0 0; } }
+
+@media (min-width: 1024px) {
+  .cd-footer-copyright {
+    -ms-grid-row: 3; } }
+
+/**
+ * Common Design Footer menu.
+ * Used for team and project specific links plus links to legalese.
+ */
+.cd-footer-menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  text-transform: uppercase; }
+
+.cd-footer-menu__item {
+  margin-bottom: 20px; }
+  .cd-footer-menu__item:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .cd-footer-menu {
+    grid-column: 1/3;
+    -ms-grid-column-span: 3; }
+  .cd-footer-menu__item {
+    display: inline-block;
+    margin: 0 16px; } }
+
+@media (min-width: 1024px) {
+  .cd-footer-menu {
+    grid-column: auto;
+    text-align: left; }
+  .cd-footer-menu__item {
+    margin: 0 35px 0 0; }
+    .cd-footer-menu__item:last-child {
+      margin: 0; } }
+
+/**
+ * Common Design Footer provided by OCHA section.
+ */
+.cd-footer-provided-by__logo {
+  background: url("../logos/ocha-logo-white.svg") center no-repeat;
+  display: block;
+  height: 33px;
+  margin: 16px auto 0 auto;
+  width: 135px; }
+  .no-svg .cd-footer-provided-by__logo {
+    background: url("../logos/ocha-logo-white.png") center no-repeat; }
+
+@media (min-width: 768px) {
+  .cd-footer-provided-by {
+    -ms-grid-row: 5;
+    text-align: left; }
+  .cd-footer-provided-by__logo {
+    margin: 16px 0 0 0; } }
+
+@media (min-width: 1024px) {
+  .cd-footer-provided-by {
+    -ms-grid-row: 3; } }
+
+/**
+ * Common Design Footer social links.
+ */
+a.cd-footer-social__link {
+  background: transparent;
+  border: 1px solid #FFF;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 25px;
+  height: 26px;
+  line-height: 0;
+  margin: 0 10px;
+  position: relative;
+  transition: background 0.3s ease;
+  width: 26px; }
+  a.cd-footer-social__link:hover, a.cd-footer-social__link:focus {
+    background: #FFF;
+    border-color: #FFF;
+    color: #026CB6; }
+
+@media (min-width: 768px) {
+  .cd-footer-social {
+    grid-column: 1/3;
+    -ms-grid-row: 3;
+    -ms-grid-column-span: 3; } }
+
+@media (min-width: 1024px) {
+  .cd-footer-social {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    grid-column: auto;
+    text-align: right; }
+  a.cd-footer-social__link {
+    margin: 0 0 0 20px; }
+    a.cd-footer-social__link:first-child {
+      margin: 0; } }

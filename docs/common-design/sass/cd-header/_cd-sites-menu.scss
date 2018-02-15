@@ -1,0 +1,224 @@
+/**
+ * Common Design Sites Menu ('OCHA Services')
+ * Button and dropdown with links to OCHA services.
+ */
+
+.cd-sites {
+  float: left;
+}
+
+.cd-sites-btn {
+  align-items: center;
+  background: transparent;
+  color: $cd-white-text-color;
+  display: flex;
+  font-size: map-get($cd-font-sizes, default);
+  height: $cd-global-header-height;
+  position: relative;
+  transition: background 0.3s ease;
+
+  &:focus {
+    outline: 0;
+    background: $cd-dark-primary-bg-color;
+  }
+}
+
+.cd-sites-btn__logo {
+  background: url('../logos/logos-sprite.svg') 0 -144px no-repeat;
+  display: inline-block;
+  flex-shrink: 0;
+  height: 18px;
+  margin-right: 4px;
+  width: 21px;
+
+  .no-svg & {
+    background: url('../logos/logos-sprite.png') 0 -144px no-repeat;
+  }
+}
+
+.cd-sites-btn__label {
+  @include hide;
+  border-bottom: 1px solid transparent;
+}
+
+.cd-sites-dropdown {
+  padding: 22px 14px;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    display: block;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cd-sites-dropdown__section {
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.cd-sites-dropdown__heading {
+  border-bottom: 1px solid $cd-bright-border-color;
+  margin: 0 0 10px 0;
+  padding-bottom: 2px;
+}
+
+.cd-sites-dropdown__link {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .cd-sites-dropdown__link-label {
+      border-color: $cd-purple-border;
+    }
+  }
+}
+
+.cd-sites-dropdown__link-label {
+  border-bottom: 1px solid transparent;
+}
+
+.cd-sites-dropdown__logo {
+  background: url('../logos/logos-sprite.svg') 0 0 no-repeat;
+  display: inline-block;
+  height: 18px;
+  margin-left: 24px;
+  position: relative;
+  width: 82px;
+
+  .no-svg & {
+    background: url('../logos/logos-sprite.png') 0 0 no-repeat;
+  }
+
+  &:before {
+    color: $cd-purple-border;
+    content: '|';
+    left: -12px;
+    position: absolute;
+    top: 2px;
+  }
+}
+
+.cd-sites-dropdown__logo--cerf {
+  background-position: 0 -18px;
+}
+
+.cd-sites-dropdown__logo--fts {
+  background-position: 0 -36px;
+}
+
+.cd-sites-dropdown__logo--events {
+  background-position: 0 -54px;
+}
+
+.cd-sites-dropdown__logo--hid {
+  background-position: 0 -72px;
+}
+
+.cd-sites-dropdown__logo--hrinfo {
+  background-position: 0 -90px;
+}
+
+.cd-sites-dropdown__logo--vosocc {
+  background-position: 0 -108px;
+}
+
+.cd-sites-dropdown__logo--iasc {
+  background-position: 0 -126px;
+}
+
+.cd-sites-dropdown__logo--ocha {
+  background-position: 0 -144px;
+}
+
+.cd-sites-dropdown__logo--rw {
+  background-position: 0 -162px;
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-sites-btn {
+    display: flex;
+    width: auto;
+
+    &:hover,
+    &:focus {
+      .cd-sites-btn__label {
+        border-bottom: 1px solid $cd-purple-border;
+      }
+    }
+  }
+
+  .cd-sites-btn__label {
+    @include unhide;
+    margin-right: 4px;
+  }
+
+  .cd-sites-btn__logo {
+    margin-right: 8px;
+  }
+
+  .cd-sites-dropdown {
+    padding: 26px 0;
+
+    &:before {
+      left: 80px;
+    }
+
+    ul {
+      margin: 0 0 26px 0;
+    }
+  }
+
+  .cd-sites-dropdown__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 12px 1fr 12px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    margin: 0 auto;
+    max-width: $cd-max-width;
+    padding: 0 $cd-container-padding-tablet;
+  }
+
+  .cd-sites-dropdown__section {
+    margin: 0;
+
+    &:nth-child(2) {
+      -ms-grid-column: 3;
+    }
+
+    &:nth-child(3) {
+      -ms-grid-column: 5;
+    }
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, largescreen)) {
+
+  .cd-sites-dropdown__inner {
+    -ms-grid-columns: 1fr 120px 1fr 120px 1fr;
+    grid-gap: 120px;
+    padding: 0 $cd-container-padding-largescreen;
+  }
+
+}

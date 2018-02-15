@@ -1,0 +1,36 @@
+/**
+ * Common Design Footer provided by OCHA section.
+ */
+
+.cd-footer-provided-by__logo {
+  background: url('../logos/ocha-logo-white.svg') center no-repeat;
+  display: block;
+  height: 33px;
+  margin: 16px auto 0 auto;
+  width: 135px;
+
+  .no-svg & {
+    background: url('../logos/ocha-logo-white.png') center no-repeat;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-footer-provided-by {
+    -ms-grid-row: 5;
+    text-align: left;
+  }
+
+  .cd-footer-provided-by__logo {
+    margin: 16px 0 0 0;
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-footer-provided-by {
+    -ms-grid-row: 3;
+  }
+
+}

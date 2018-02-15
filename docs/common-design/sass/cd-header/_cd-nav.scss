@@ -1,0 +1,259 @@
+/**
+ * Common Design Navigation in header.
+ */
+
+.cd-site-header__nav-holder {
+  float: left;
+}
+
+.cd-site-header__nav-toggle {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid $cd-border-color;
+  font-size: map-get($cd-font-sizes, medium);
+  font-weight: bold;
+  height: $cd-site-header-height;
+  padding: 0 20px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+
+  .open & {
+    border: none;
+    height: 20px;
+    margin: 15px 12px 0 0;
+    padding: 0;
+    position: relative;
+    z-index: 101;
+  }
+
+  &:hover,
+  &:focus {
+    background: $cd-mid-bg-color;
+    outline: none; // default browser outline is replaced by background colour change.
+  }
+}
+
+.cd-site-header__nav-label--closed {
+  .open & {
+    display: none;
+  }
+}
+
+.cd-site-header__nav-label--open {
+  display: none;
+
+  .open & {
+    display: block;
+    font-size: 20px;
+  }
+}
+
+.cd-nav {
+  background: $cd-mid-bg-color;
+  height: calc(100vh - 35px);
+  max-width: 350px;
+  padding: 40px 0 36px 0;
+  position: absolute;
+  right: $cd-site-padding;
+  top: $cd-global-header-height;
+  width: 90%;
+  z-index: 100; // arbitrary high zindex, may need adjusting depending on other site content.
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a,
+  button {
+    color: $cd-default-text-color;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: $cd-dark-bg-color;
+      color: $cd-dark-text-color;
+      outline: none; // default browser outline is replaced by background colour change.
+    }
+  }
+
+  button {
+    background: none;
+    border: 0;
+    font-size: map-get($cd-font-sizes, default);
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.cd-nav__item {
+
+  & > a,
+  & > button {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .icon-arrow-down {
+    margin-left: 2px;
+  }
+}
+
+ul.cd-nav__child-nav {
+  background: $cd-dark-bg-color;
+
+  a,
+  button {
+    color: $cd-dark-text-color;
+
+    &:hover,
+    &:focus {
+      background: darken($cd-dark-bg-color, 5%);
+    }
+  }
+}
+
+ul.cd-nav__grandchild-nav {
+  padding-bottom: 5px;
+}
+
+.cd-nav__grandchild-item {
+  a,
+  button {
+    padding: 10px 30px;
+  }
+}
+
+// Fix nav position in IE 8.
+.no-mediaqueries {
+  .cd-site-header__nav-holder {
+    position: relative;
+  }
+
+  .cd-nav {
+    right: 0;
+    top: $cd-site-header-height;
+    width: 300px;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-site-header__nav-toggle {
+    border-right: 1px solid $cd-border-color;
+
+    .open & {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-site-header__nav-toggle {
+    display: none;
+  }
+
+  .cd-nav {
+    background: none;
+    display: block;
+    height: $cd-site-header-height;
+    max-width: none;
+    padding: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: 0;
+  }
+
+  .cd-nav__item {
+    border-right: 1px solid $cd-border-color;
+    float: left;
+    margin: 0;
+
+    &:first-child {
+      border-left: 1px solid $cd-border-color;
+    }
+
+    &:last-child {
+      ul.cd-nav__child-nav {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &.open {
+      position: relative;
+
+      & > button {
+        &:focus {
+          &:after {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    &.active {
+      & > a,
+      & > button {
+        &:after {
+          background: $cd-highlight-red;
+        }
+      }
+    }
+
+    & > a,
+    & > button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      height: $cd-site-header-height;
+      line-height: $cd-site-header-height;
+      padding: 0 14px;
+      position: relative;
+      transition: background 0.3s ease;
+
+      &:after {
+        bottom: -2px;
+        content: '';
+        background: transparent;
+        height: 4px;
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        transition: background 0.3s ease;
+        width: calc(100% + 2px);
+      }
+
+      &:hover,
+      &:focus {
+        background: $cd-light-bg-color;
+      }
+
+      .active &,
+      &:focus {
+        &:after {
+          background: $cd-highlight-red;
+        }
+      }
+
+
+    }
+  }
+
+  ul.cd-nav__child-nav {
+    background: $cd-mid-bg-color;
+    left: 0;
+    margin: 0;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px 0;
+    top: $cd-site-header-height;
+    position: absolute;
+  }
+}

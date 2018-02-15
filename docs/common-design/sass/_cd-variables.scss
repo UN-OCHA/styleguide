@@ -1,0 +1,79 @@
+/**
+ * Variable used in the Common Design.
+ */
+
+/**
+ * Breakpoints
+ * Usage: @media (min-width: map-get($cd-breakpoints, tablet)) {}
+ */
+$cd-breakpoints: (
+  tablet: 768px,
+  desktop: 1024px,
+  largescreen: 1200px
+);
+
+/**
+ * Measurements
+ */
+$cd-max-body-width: 1400px;
+$cd-max-width: 1220px;
+$cd-site-padding: 8px;
+$cd-container-padding: 12px;
+$cd-container-padding-tablet: 24px;
+$cd-container-padding-largescreen: 40px;
+
+$cd-global-header-height: 35px;
+$cd-site-header-height: 60px;
+
+/**
+ * Colours
+ * Colours can be substituted for your theme colors
+ */
+ /* Colour palette */
+$cd-ocha-blue: #026CB6;
+$cd-dark-blue: #025995;
+$cd-bright-blue: #80CBFF;
+$cd-light-grey: #F2F2F2;
+$cd-dark-grey: #4A4A4A;
+$cd-dark-bluey-grey: #D3DDE5;
+$cd-mid-bluey-grey: #E6ECF1;
+$cd-light-bluey-grey: #F2F5F8;
+$cd-highlight-red: #EB5C6D;
+$cd-purple: #919EC3;
+
+ /* Background colours */
+$cd-site-bg-color: $cd-light-grey;
+$cd-white-bg-color: #FFF;
+$cd-primary-bg-color: $cd-ocha-blue;
+$cd-dark-primary-bg-color: $cd-dark-blue;
+$cd-dark-bg-color: $cd-dark-bluey-grey;
+$cd-mid-bg-color: $cd-mid-bluey-grey;
+$cd-light-bg-color: $cd-light-bluey-grey;
+
+ /* Border colours */
+$cd-border-color: $cd-mid-bluey-grey;
+$cd-bright-border-color: $cd-bright-blue;
+$cd-purple-border: $cd-purple;
+$cd-white-border: #FFF;
+
+/* Text colours */
+$cd-white-text-color: #FFF;
+$cd-default-text-color: $cd-dark-grey;
+$cd-dark-text-color: #000;
+$cd-blue-text-color: $cd-ocha-blue;
+$cd-bright-blue-text-color: $cd-bright-blue;
+
+/**
+ * Fonts
+ */
+$cd-font: sans-serif; //Same as helvetica, arial, sans-serif;
+
+/**
+ * Font sizes
+ * Usage: font-size: map-get($cd-font-sizes, default);
+ */
+$cd-font-sizes: (
+  default: 12px,
+  medium: 14px,
+  large: 16px
+);

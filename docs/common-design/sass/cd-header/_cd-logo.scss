@@ -1,0 +1,32 @@
+/**
+ * Common Design Logo in header.
+ * Replace images with your site logo.
+ */
+
+// Wrap the logo in a h1 if it's the main heading for the page (e.g. on homepage).
+.cd-site-header h1 {
+  margin: 0;
+}
+
+.cd-site-logo {
+  background: url('../logos/ocha-logo-mobile.svg') center no-repeat;
+  display: block;
+  float: left;
+  height: $cd-site-header-height;
+  width: 52px;
+
+  .no-svg & {
+    background: url('../logos/ocha-logo-mobile.png') center no-repeat;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+  .cd-site-logo {
+    background: url('../logos/ocha-logo.svg') center no-repeat;
+    width: 186px; // width may need to be adjusted depending on logo width.
+
+    .no-svg & {
+      background: url('../logos/ocha-logo-mobile.png') center no-repeat;
+    }
+  }
+}
