@@ -2,8 +2,7 @@
 layout: default
 title: Common Design
 ---
-
-<div class="container">
+<div class="cd-container sg-container">
   <div class="sg-page-header">
     <h1>Common Design</h1>
     <p>The Common Design project aims to provide a visual framework that will help:</p>
@@ -17,39 +16,86 @@ title: Common Design
 
   <div class="sg-list">
     <div class="sg-list__header">
-      <h2>Structural elements</h2>
+      <h2>Demo</h2>
+    </div>
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">Common Design Layout, Header and Footer demo</h3>
+      <p><a href="demo.html">Common Design demo</a></p>
+    </div>
+  </div>
+
+  <div class="sg-list">
+    <div class="sg-list__header">
+      <h2>Files</h2>
     </div>
 
     <div class="sg-list__item">
-      <h2 class="sg-list__sub-heading">Header</h2>
-      <p class="sg-file-link"><strong>Sass files:</strong> <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/header/">common-design/header</a></p>
-      <p class="sg-file-link"><strong>Example:</strong> <a href="cd-header.html">Header demo and markup</a></p>
+      <h3 class="sg-list__sub-heading">General styles</h3>
+      <p>General styles required for the Common Design, including variables, icons and mixins, are in <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/sass/">common-design/sass/</a>.</p>
     </div>
 
     <div class="sg-list__item">
-      <h2 class="sg-list__sub-heading">Header - Drupal version</h2>
-      <p>The header is included in the <a href="https://github.com/UN-OCHA/ocha_basic">OCHA Basic Drupal theme</a>.</p>
-      <p class="sg-file-link"><strong>Sass file:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/tree/master/sass/components/cd-header">/sass/components/cd-header</a></p>
-      <p class="sg-file-link"><strong>Drupal template:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/templates/header.inc">/templates/header.inc</a></p>
+      <h3 class="sg-list__sub-heading">Layout</h3>
+      <p>HTML: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/demo.html">See page structure in the Common Design demo</a></p>
+      <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/sass/cd-layout/">common-design/sass/cd-layout/</a></p>
+      <p><a href="layout-info.html">Further information about the layout.</a></p>
     </div>
 
     <div class="sg-list__item">
-      <h2 class="sg-list__sub-heading">Footer</h2>
-      <p class="sg-file-link"><strong>Sass file:</strong> <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/_cd-footer.scss">common-design/_cd-footer.scss</a></p>
-      <p class="sg-file-link"><strong>Example:</strong> <a href="cd-footer.html">Footer demo and markup</a></p>
+      <h3 class="sg-list__sub-heading">Header</h3>
+      <p>HTML: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/templates/cd-header.html">common-design/templates/cd-header.html</a></p>
+      <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/sass/cd-header/">common-design/sass/cd-header/</a></p>
     </div>
 
     <div class="sg-list__item">
-      <h2 class="sg-list__sub-heading">Footer - Drupal version</h2>
-      <p>The footer is included in the <a href="https://github.com/UN-OCHA/ocha_basic">OCHA Basic Drupal theme</a>.</p>
-      <p class="sg-file-link"><strong>Sass file:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/tree/master/sass/components/_footer.scss">/sass/components/_footer.scss</a></p>
-      <p class="sg-file-link"><strong>Drupal template:</strong> <a href="https://github.com/UN-OCHA/ocha_basic/blob/master/templates/footer.inc">/templates/footer.inc</a></p>
+      <h3 class="sg-list__sub-heading">Footer</h3>
+      <p>HTML: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/templates/cd-footer.html">common-design/templates/cd-footer.html</a></p>
+      <p>Sass: <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/sass/cd-footer/">common-design/sass/cd-footer/</a></p>
+    </div>
+  </div>
+
+  <div class="sg-list">
+    <div class="sg-list__header">
+      <h2>Drupal version</h2>
+    </div>
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">OCHA Basic theme</h3>
+      <p>The <a href="https://github.com/UN-OCHA/ocha_basic">OCHA Basic Drupal theme</a> includes the Common Design layout, header and footer.</p>
+    </div>
+  </div>
+
+  <div class="sg-list">
+    <div class="sg-list__header">
+      <h2>Implementation notes</h2>
     </div>
 
     <div class="sg-list__item">
-      <h2 class="sg-list__sub-heading">Layout</h2>
-      <p class="sg-file-link"><strong>Sass file:</strong> <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/_sass/common-design/_cd-layout.scss">common-design/_cd-layout.scss</a></p>
-      <p class="sg-file-link"><strong>Example:</strong> <a href="cd-layout.html">Layout info and demo</a></p>
+      <h3 class="sg-list__sub-heading">Browser support:</h3>
+      <p>Full support: Chrome (Windows, Mac, iOS, Android), Firefox (Windows, Mac, iOS, Android), Safari (Mac, iOS), IE11, Opera (Windows, Mac), Samsung Internet v6+ (Android)</p>
+      <p>Functional support: IE10, IE9, IE8, Opera Mini (Android), Android Browser, Samsung Internet v5.</p>
+      <p>The following <a href="https://modernizr.com/">Modernizr</a> detects are required for full browser support: mediaqueries, svg, cssgrid &amp; cssgridlegacy.</p>
+      <p><a href="https://github.com/postcss/autoprefixer/">Autoprefixer</a> is also required for full browser support.</p>
+    </div>
+
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">Dropdowns</h3>
+      <p>The demo uses Bootstrap dropdown, if your theme already has dropdown functionality adapt the header to use that instead.</p>
+    </div>
+
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">Icons</h3>
+      <p>An icon font generated with Icomoon is used in the demo. These icons can be included with your theme's existing icon system instead of being included seperately. The icons are in <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/icons/">common-design/icons/</a>.</p>
+    </div>
+
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">Namespacing</h3>
+      <p>All the classes are prefixed 'cd-' to prevent clashes with existing theme styles.</p>
+    </div>
+
+    <div class="sg-list__item">
+      <h3 class="sg-list__sub-heading">Sass &amp; CSS</h3>
+      <p>Sass is used for the Common Design, the Sass files from <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/sass/">/common-design/sass/</a> can be added directly to your theme. See <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/css/styles.scss">/common-design/css/styles.scss</a> for the order the files should be included in and notes in the individual files on their usage.</p>
+      <p>If you are not using Sass, the generated CSS can be downloaded from <a href="https://github.com/UN-OCHA/styleguide/blob/master/docs/common-design/css/styles.css">/common-design/css/styles.css</a></p>
     </div>
   </div>
 

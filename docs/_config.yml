@@ -6,3 +6,11 @@ rw_features_url: "https://github.com/reliefweb/site/blob/responsive/site/profile
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - Gruntfile.js
+  - css/*.*

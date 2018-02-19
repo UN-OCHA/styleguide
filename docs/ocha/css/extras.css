@@ -1,0 +1,170 @@
+/** remove and use variables from your theme */
+/** */
+.blocks-holder {
+  margin: 32px 0; }
+
+.block {
+  background: #F2F2F2;
+  border-top: 4px solid #002D80;
+  padding: 16px;
+  margin-bottom: 16px; }
+  .block p:last-child {
+    margin-bottom: 0; }
+
+.block__heading {
+  text-transform: uppercase;
+  color: #002D80;
+  font-size: 20px;
+  margin-bottom: 4px; }
+
+.block__status {
+  color: #002D80;
+  font-weight: bold; }
+
+.block__download {
+  font-style: italic;
+  display: block;
+  height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+@media (min-width: 576px) {
+  .blocks-holder {
+    display: flex;
+    flex-wrap: wrap; }
+    .no-flexbox .blocks-holder {
+      overflow: auto; }
+  .block {
+    margin-bottom: 32px;
+    padding: 24px 32px; }
+    .blocks-holder .block {
+      width: 48%;
+      margin-left: 4%; }
+      .blocks-holder .block:nth-child(odd) {
+        margin-left: 0; }
+      .no-flexbox .blocks-holder .block {
+        float: left;
+        height: 300px;
+        overflow: scroll; } }
+
+/**
+ * Overrides for Chosen plugin styles, see https://harvesthq.github.io/chosen/
+ */
+/** remove and use variables from your theme */
+/** */
+.chosen-container {
+  width: 100% !important;
+  max-width: 300px;
+  font-size: 16px;
+  background: white; }
+  .chosen-container .chosen-drop {
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ddd;
+    font-size: 14px; }
+  .chosen-container .chosen-results li.active-result.highlighted {
+    background: #026CB6; }
+
+.chosen-container-single.chosen-container-active .chosen-single {
+  border-color: #002D80; }
+
+.chosen-container-active.chosen-with-drop {
+  border-color: #CCCCCC; }
+  .chosen-container-active.chosen-with-drop .chosen-single {
+    border-color: #CCCCCC;
+    background: none; }
+    .chosen-container-active.chosen-with-drop .chosen-single div b {
+      transform: rotate(180deg); }
+
+.chosen-container-single .chosen-single {
+  background: none;
+  box-shadow: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 0;
+  height: auto;
+  padding: 4px 8px; }
+  .chosen-container-single .chosen-single div {
+    width: 24px; }
+    .chosen-container-single .chosen-single div b {
+      background: url(../assets/images/arrow-down.svg) center no-repeat !important;
+      background-size: 10px 10px !important; }
+
+/**
+ * Accessible styled checkboxes and radio buttons ('clickies')
+ *
+ * Usage:
+ * Requires the label to come immediately after the input, e.g.
+ * <input type="checkbox" id="clickie-example" />
+ * <label class="clickie-label" for="clickie-example">I am the label</label>
+ *
+ *
+ * Browser support: IE9+
+ *
+ * Notes:
+ * IE8 doesn't support the :checked pseudo-element, if need to support this either use Modernizr to detect this
+ * (https://modernizr.com/download?setclasses&q=checked) and use default browser styles instead, or use javascript
+ * to check if the input is checked and add a class to its label.
+ */
+/** remove and use variables from your theme */
+/** */
+input[type="radio"], input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 0 0;
+  float: left;
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: -1000em; }
+  input[type="radio"]:focus + label:before, input[type="checkbox"]:focus + label:before {
+    border-color: #002D80; }
+  input[type="radio"] + label, input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding: 8px 8px 8px 28px;
+    font-weight: normal;
+    color: #595959;
+    line-height: 1; }
+    input[type="radio"] + label:before, input[type="checkbox"] + label:before {
+      content: '';
+      background: white;
+      width: 20px;
+      height: 20px;
+      display: block;
+      border: 1px solid #CCCCCC;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -10px;
+      text-align: center; }
+
+input[type="radio"] + label:before {
+  border-radius: 50%; }
+
+input:checked + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #026CB6;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 4px; }
+
+input[type="checkbox"]:checked + label:after {
+  border-radius: 0; }
+
+input:disabled + label {
+  opacity: 0.8; }
+  input:disabled + label:before {
+    background: #CCCCCC; }
+
+label > input[type="radio"], label > input[type="checkbox"] {
+  position: static;
+  left: auto;
+  float: none;
+  margin: 0;
+  width: auto;
+  height: auto; }

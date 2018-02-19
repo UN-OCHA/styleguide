@@ -4,8 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{%if page.page-title %} {{page.page-title}} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{ "/css/styleguide.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/chosen/chosen.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/styleguide.css" type="text/css">
+    <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/chosen/chosen.min.css" type="text/css">
 
     {% if page.include_ocha_basic %}
     <link rel="stylesheet" href="https://cdn.rawgit.com/UN-OCHA/ocha_basic/254ff16fe919f95cb262d94172b2fdad54304e7b/css/styles.css">
@@ -26,12 +26,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
     {% if page.hide_header_footer != true %}
-    <link rel="stylesheet" href="{{ "/css/header-footer.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/common-design/css/styles.css" | prepend: site.baseurl }}">
     {% endif %}
 
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
-      <link rel="stylesheet" href="{{site.baseurl}}/css/{{ stylesheet }}.css" media="screen" type="text/css">
+      <link rel="stylesheet" href="{{site.baseurl}}/{{ stylesheet }}.css" media="screen" type="text/css">
       {% endfor %}
     {% endif %}
 

@@ -1,18 +1,15 @@
 html.styleguide, html.styleguide body {
   height: auto;
 }
-.sg-container, .sg-container--hid {
-  max-width: 1220px!important;
-  padding: 0 8px!important;
-}
-@include media-query(sm) {
-  .sg-container {
-    padding: 0 40px !important;
-  }
+
+.sg-container.cd-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.sg-footer {
-  background: #026CB6!important;
+.sg-container--hid {
+  max-width: 1220px!important;
+  padding: 0 8px!important;
 }
 
 .sg-page-header {
