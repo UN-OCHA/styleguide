@@ -9,11 +9,10 @@
     "update-rw-assets": "npm run get-rw-css && npm run get-rw-js && npm run get-rw-icons"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.2",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-modernizr": "^1.0.2",
     "grunt-sass": "^2.0.0",
     "load-grunt-tasks": "^0.6.0"
   }
