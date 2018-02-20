@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['docs/common-design/sass/**/*.scss', 'docs/styleguide/sass/**/*.scss', 'docs/ocha/sass/**/*.scss'],
-        tasks: ['sass:commondesign', 'autoprefixer:commondesign', 'sass:ochaextras', 'sass:styleguide'],
+        tasks: ['sass:commondesign', 'postcss:commondesign', 'sass:ochaextras', 'sass:styleguide'],
         options: {
           spawn: false,
         }
