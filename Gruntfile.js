@@ -29,13 +29,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    autoprefixer: {
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions', 'iOS 8']})
+        ]
+      },
       commondesign: {
         files: {
           'docs/common-design/css/styles.css': 'docs/common-design/css/styles.css'
-        },
-        options: {
-          browsers: ['last 2 versions', 'iOS 8']
         }
       }
     }
@@ -43,6 +46,6 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default', ['sass:commondesign', 'autoprefixer:commondesign', 'sass:ochaextras', 'sass:styleguide']);
+  grunt.registerTask('default', ['sass:commondesign', 'postcss:commondesign', 'sass:ochaextras', 'sass:styleguide']);
 
 };
