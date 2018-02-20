@@ -34,7 +34,7 @@ title: Common Design Layout
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <p>The images below explain how the layout works at different screen widths, an <a href="cd-layout-demo.html" target="_blank">example you can test in the browser is here</a>.</p>
+        <p>The images below explain how the layout works at different screen widths, an <a href="demo.html">example you can test in the browser is here</a>.</p>
       </div>
       <div class="col-sm-6">
         {% highlight html %}
@@ -64,11 +64,11 @@ title: Common Design Layout
 
           <div class="row">
             <div class="col-sm-6">
-              <img src="/assets/images/cd-small-layout.png" alt="Illustration of small screen layout">
+              <img src="{{ "/styleguide/assets/images/cd-small-layout.png "| prepend: site.baseurl }}" alt="Illustration of small screen layout">
             </div>
             <div class="col-sm-6">
               <p>Page takes up 100% of screen width.</p>
-              <p>8px padding at the sides.</p>
+              <p>12px padding at the sides. Plus a 8px margin between the sides of the page and the screen.</p>
             </div>
           </div>
         </div>
@@ -81,11 +81,11 @@ title: Common Design Layout
 
           <div class="row">
             <div class="col-sm-6">
-              <img src="/assets/images/cd-medium-layout.png" alt="Illustration of medium screen layout">
+              <img src="{{ "/styleguide/assets/images/cd-medium-layout.png" | prepend: site.baseurl}}" alt="Illustration of medium screen layout">
             </div>
             <div class="col-sm-6">
               <p>Page takes up 100% of screen width.</p>
-              <p>16px padding at the sides. Plus a 8px margin between the sides of the page and the screen.</p>
+              <p>24px padding at the sides. Plus a 8px margin between the sides of the page and the screen.</p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ title: Common Design Layout
 
           <div class="row">
             <div class="col-sm-6">
-              <img src="/assets/images/cd-large-layout.png" alt="Illustration of large screen layout">
+              <img src="{{ "/styleguide/assets/images/cd-large-layout.png" | prepend: site.baseurl }}" alt="Illustration of large screen layout">
             </div>
             <div class="col-sm-6">
               <p>Page takes up 100% of screen width up to a maximum of 1400px.</p>
