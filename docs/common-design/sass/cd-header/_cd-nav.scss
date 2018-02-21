@@ -91,6 +91,17 @@
 
 .cd-nav__item {
 
+  &.open {
+    background: $cd-dark-bg-color;
+
+    & > button {
+      &:hover,
+      &:focus {
+        background: darken($cd-dark-bg-color, 5%);
+      }
+    }
+  }
+
   & > a,
   & > button {
     font-weight: bold;
@@ -182,7 +193,7 @@ ul.cd-nav__grandchild-nav {
     &:last-child {
       ul.cd-nav__child-nav {
         left: auto;
-        right: 0;
+        right: -1px;
       }
     }
 
@@ -190,7 +201,11 @@ ul.cd-nav__grandchild-nav {
       position: relative;
 
       & > button {
+        background: $cd-mid-bg-color;
+
         &:focus {
+          background: $cd-mid-bg-color;
+
           &:after {
             background: transparent;
           }
@@ -232,7 +247,7 @@ ul.cd-nav__grandchild-nav {
 
       &:hover,
       &:focus {
-        background: $cd-light-bg-color;
+        background: $cd-mid-bg-color;
       }
 
       .active &,
@@ -241,19 +256,42 @@ ul.cd-nav__grandchild-nav {
           background: $cd-highlight-red;
         }
       }
-
-
     }
   }
 
   ul.cd-nav__child-nav {
     background: $cd-mid-bg-color;
-    left: 0;
+    left: -1px;
     margin: 0;
     max-width: 300px;
     min-width: 200px;
     padding: 20px 0;
     top: $cd-site-header-height;
     position: absolute;
+
+    a,
+    button {
+      &:hover,
+      &:focus {
+        background: $cd-dark-bg-color;
+      }
+    }
+  }
+
+  .cd-nav__child-item {
+    &.open {
+      background: $cd-dark-bg-color;
+    }
+  }
+
+  ul.cd-nav__grandchild-nav {
+    padding-bottom: 0;
+
+    a {
+      &:hover,
+      &:focus {
+        background: darken($cd-dark-bg-color, 5%);
+      }
+    }
   }
 }
