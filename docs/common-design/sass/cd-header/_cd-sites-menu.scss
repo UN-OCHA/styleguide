@@ -18,8 +18,7 @@
   transition: background 0.3s ease;
 
   &:focus {
-    outline: 0;
-    background: $cd-dark-primary-bg-color;
+    outline: 0; // outline is replaced by bright underline.
   }
 }
 
@@ -74,7 +73,7 @@
 }
 
 .cd-sites-dropdown__heading {
-  border-bottom: 1px solid $cd-bright-border-color;
+  border-bottom: 1px solid $cd-light-blue-border-color;
   margin: 0 0 10px 0;
   padding-bottom: 2px;
 }
@@ -87,7 +86,7 @@
   &:hover,
   &:focus {
     .cd-sites-dropdown__link-label {
-      border-color: $cd-purple-border;
+      border-color: $cd-bright-border-color;
     }
   }
 }
@@ -109,7 +108,7 @@
   }
 
   &:before {
-    color: $cd-purple-border;
+    color: $cd-light-blue-border-color;
     content: '|';
     left: -12px;
     position: absolute;
@@ -162,7 +161,7 @@
     &:hover,
     &:focus {
       .cd-sites-btn__label {
-        border-bottom: 1px solid $cd-purple-border;
+        border-bottom: 1px solid $cd-bright-border-color;
       }
     }
   }

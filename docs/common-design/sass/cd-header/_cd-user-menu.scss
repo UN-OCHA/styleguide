@@ -46,8 +46,8 @@
   white-space: nowrap;
 
   &:after {
+    color: $cd-light-blue-border-color;
     content: '|';
-    opacity: 0.6;
     position: absolute;
     right: -1px;
     top: 0;
@@ -56,13 +56,12 @@
   &:hover,
   &:focus {
     .cd-user-menu__label {
-      border-color: $cd-purple-border;
+      border-color: $cd-bright-border-color;
     }
   }
 
   &:focus {
-    outline: 0;
-    background: $cd-dark-primary-bg-color;
+    outline: 0; // outline is replaced by bright underline.
   }
 }
 
@@ -99,7 +98,7 @@ button.cd-user-menu__item {
   &:hover,
   &:focus {
     .cd-user-menu__icon {
-      border-color: $cd-purple-border;
+      border-color: $cd-bright-border-color;
     }
   }
 }
@@ -159,7 +158,7 @@ button.cd-user-menu__item {
   &:hover,
   &:focus {
     .cd-user-menu__dropdown-link-label {
-      border-color: $cd-purple-border;
+      border-color: $cd-bright-border-color;
     }
   }
 }
