@@ -75,9 +75,9 @@
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  color: $cd-blue-text-color;
+  color: $cd-default-text-color;
   font-size: map-get($cd-font-sizes, large);
-  font-style: italic;
+  // font-style: italic;
   height: $cd-site-header-height;
   padding: 0 45px 0 25px;
   width: 100%;
@@ -85,15 +85,19 @@
 
 .cd-search__input::-webkit-input-placeholder {
   color: $cd-blue-text-color;
+  font-style: italic;
 }
 .cd-search__input::-moz-placeholder {
   color: $cd-blue-text-color;
+  font-style: italic;
 }
 .cd-search__input:-ms-input-placeholder {
   color: $cd-blue-text-color;
+  font-style: italic;
 }
 .cd-search__input:-moz-placeholder {
   color: $cd-blue-text-color;
+  font-style: italic;
 }
 
 .cd-search__submit {
