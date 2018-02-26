@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
+    "brace-expansion": "^1.1.11",
     "grunt": "^1.0.2",
     "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
