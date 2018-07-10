@@ -68,8 +68,7 @@ npm install
 To run the Jekyll site:
 
 ```
-cd docs
-jekyll serve --baseurl=""
+npm run jekyll
 ```
 
 Visit http://localhost:4000/
