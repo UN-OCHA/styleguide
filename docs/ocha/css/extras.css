@@ -31,12 +31,9 @@
 
 @media (min-width: 576px) {
   .blocks-holder {
-    display: -webkit-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .no-flexbox .blocks-holder {
       overflow: auto; }
@@ -64,7 +61,6 @@
   font-size: 16px;
   background: white; }
   .chosen-container .chosen-drop {
-    -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
     border-color: #ddd;
@@ -86,7 +82,6 @@
 
 .chosen-container-single .chosen-single {
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #CCCCCC;
   border-radius: 0;

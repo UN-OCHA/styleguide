@@ -1,9 +1,7 @@
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
   *:before, *:after {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
 
 body {
@@ -1121,12 +1119,9 @@ img {
   content: "\e95e"; }
 
 .icomoon-demo {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .icomoon-demo [class^="icon-"] {
     font-size: 48px; }
@@ -1283,13 +1278,9 @@ html.styleguide, html.styleguide body {
   margin-top: 4px; }
 
 .sg-color {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center; }
   .sg-color span {
     display: inline-block;
@@ -1301,13 +1292,9 @@ html.styleguide, html.styleguide body {
   font-size: 16px; }
 
 .sg-border-color {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center; }
   .sg-border-color span {
     display: inline-block;

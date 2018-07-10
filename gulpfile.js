@@ -94,7 +94,7 @@ function sassTask(source) {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       prefix({
-        browsers: ['last 2 versions', 'iOS 8'],
+        browsers: ['>0.333%', 'iOS 8'],
         cascade: false,
       }),
       // cssnano(),
