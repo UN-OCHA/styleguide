@@ -6,7 +6,8 @@
     "get-rw-css": "copyfiles -f /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/styles.css /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/styles-ie8.css docs/assets/rw/",
     "get-rw-js": "copyfiles -f /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/js/responsive.js /srv/rwint/data/code/site/site/profiles/reliefweb/modules/features/reliefweb_rivers/js/responsive-river.js /srv/rwint/data/code/site/site/profiles/reliefweb/modules/features/reliefweb_rivers/js/responsive-search.js /srv/rwint/data/code/site/site/sites/all/libraries/SimpleAutocomplete.js/simpleautocomplete.js /srv/rwint/data/code/site/site/sites/all/libraries/SimpleDatePicker.js/simpledatepicker.js docs/assets/rw/",
     "get-rw-icons": "copyfiles -f /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/images/icon-sprite.svg /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/images/icon-sprite.png docs/assets/rw/images/",
-    "update-rw-assets": "npm run get-rw-css && npm run get-rw-js && npm run get-rw-icons"
+    "update-rw-assets": "npm run get-rw-css && npm run get-rw-js && npm run get-rw-icons",
+    "jekyll": "jekyll serve --source='docs' --baseurl=''"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
