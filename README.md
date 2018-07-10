@@ -53,13 +53,16 @@ git clone git@github.com:UN-OCHA/styleguide.git
 ### Install the required gems
 
 ```
-cd styleguide
-bundle
+rvm use
+bundle install
 ```
+
+If you run into issues installing `nokogiri` try following the package installation/upgrade commands for your system in this [nokogiri GitHub issue](https://github.com/sparklemotion/nokogiri/issues/1099).
 
 ### Install the front end dependencies
 
 ```
+nvm use
 npm install
 ```
 

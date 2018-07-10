@@ -1,3 +1,10 @@
+# ignore OS stuff
 **/.DS_Store
+
+# ignore dev deps
 **/node_modules/
+.vendor
+
+# ignore generated files
 **/_site
+**/.sass-cache
