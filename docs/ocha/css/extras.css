@@ -31,7 +31,12 @@
 
 @media (min-width: 576px) {
   .blocks-holder {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .no-flexbox .blocks-holder {
       overflow: auto; }
@@ -59,6 +64,7 @@
   font-size: 16px;
   background: white; }
   .chosen-container .chosen-drop {
+    -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
     border-color: #ddd;
@@ -75,10 +81,12 @@
     border-color: #CCCCCC;
     background: none; }
     .chosen-container-active.chosen-with-drop .chosen-single div b {
+      -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
 
 .chosen-container-single .chosen-single {
   background: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #CCCCCC;
   border-radius: 0;
