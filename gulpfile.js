@@ -54,7 +54,7 @@ gulp.task('dev:bs', () => {
 gulp.task('dev:jekyll', () => {
   bs.notify('Jekyll building...');
 
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=docs/_config.yml,docs/_config.dev.yml'], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--source=docs', '--config=docs/_config.yml,docs/_config.dev.yml'], {stdio: 'inherit'})
     .on('close', reload);
 });
 
@@ -62,26 +62,42 @@ gulp.task('dev:jekyll', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Sass
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev:sass', () => {
-  bs.notify('Sass compiling...');
+gulp.task('dev:sass', ['dev:sass:commondesign', 'dev:sass:ochaextras', 'dev:sass:styleguide']);
 
-  return gulp.src('_sass/*.scss')
+gulp.task('dev:sass:commondesign', () => {
+  return sassTask('docs/common-design/css/styles.scss');
+});
+
+gulp.task('dev:sass:ochaextras', () => {
+  return sassTask('docs/ocha/css/extras.scss');
+});
+
+gulp.task('dev:sass:styleguide', () => {
+  return sassTask('docs/styleguide/css/styleguide.scss');
+});
+
+//——————————————————————————————————————————————————————————————————————————————
+// Reusable Sass task. Takes source parameter and outputs to same directory.
+//——————————————————————————————————————————————————————————————————————————————
+function sassTask(source) {
+  bs.notify(`Sass: ${source}`);
+
+  return gulp.src(source)
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       prefix({
-        browsers: ['last 2 versions'],
+        browsers: ['last 2 versions', 'iOS 8'],
         cascade: false,
       }),
-      cssnano(),
+      // cssnano(),
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
-    .pipe(gulp.dest('css'))
-    .pipe(gulp.dest('_site/css'))
+    .pipe(gulp.dest('docs/styleguide/css'))
+    .pipe(gulp.dest('_site/styleguide/css'))
     .pipe(reload({stream: true}));
-});
-
+};
 
 //——————————————————————————————————————————————————————————————————————————————
 // JS Linting
@@ -124,8 +140,8 @@ gulp.task('dev', ['dev:sass', /*'dev:js',*/ 'dev:bs', 'dev:jekyll', 'watch']);
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('watch', () => {
   // gulp.watch('_js/**/*.js', ['dev:js']);
-  gulp.watch('_sass/**/*.scss', ['dev:sass']);
-  gulp.watch(['_config*', '**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
+  gulp.watch(['docs/**/*.scss'], ['dev:sass']);
+  gulp.watch(['docs/_config*', 'docs/**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
 });
 
 

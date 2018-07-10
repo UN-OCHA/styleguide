@@ -76,17 +76,26 @@ npm run jekyll
 
 Visit http://localhost:4000/
 
+There's a local config file `docs/_config.dev.yml` which upon completing `npm install` should be ignored by version control. You can add any local-specific Jekyll config there for testing, and leave `_config.yml` for production values.
+
+If we ever want to set defaults in the dev config run the following command to allow git to "notice" the changes, commit them, then just run `npm i` to reset the working tree so that the file will continue being ignored.
+
+```
+# https://stackoverflow.com/a/43535767/175551
+git update-index --no-skip-worktree docs/_config.dev.yml
+```
+
 ### CSS & Sass
 
 Grunt is used to generate CSS used in the styleguide from Sass.
 
-Run `grunt` to generate:
+Run `gulp sass` to generate:
 
 * styleguide styles
 * OCHA Basic extras styles
 * Common Design styles
 
-`grunt watch` can be used to watch for changes to the above.
+`gulp watch` can be used to watch for changes to the above.
 
 ### Individual project CSS
 

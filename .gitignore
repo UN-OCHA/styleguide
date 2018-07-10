@@ -8,3 +8,4 @@
 # ignore generated files
 **/_site
 **/.sass-cache
+**/*.css.map
