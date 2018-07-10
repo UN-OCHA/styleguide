@@ -1,6 +1,8 @@
 {
   "name": "UNOCHA-Styleguide",
   "version": "1.0.0",
+  "repository": "git@github.com:UN-OCHA/styleguide.git",
+  "license": "Apache-2.0",
   "author": "UNOCHA",
   "scripts": {
     "get-rw-css": "copyfiles -f /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/styles.css /srv/rwint/data/code/site/site/profiles/reliefweb/themes/kobe/styles-ie8.css docs/assets/rw/",
