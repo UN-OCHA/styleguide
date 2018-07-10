@@ -82,6 +82,12 @@ gulp.task('dev:sass:styleguide', () => {
 function sassTask(source) {
   bs.notify(`Sass: ${source}`);
 
+  // There are many different Sass directories but we should always compile the
+  // CSS so it's next to the original Sass.
+  let path = source.split('/');
+  let file = path.pop();
+  let dest = path.join('/');
+
   return gulp.src(source)
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
@@ -94,8 +100,8 @@ function sassTask(source) {
       // cssnano(),
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
-    .pipe(gulp.dest('docs/styleguide/css'))
-    .pipe(gulp.dest('_site/styleguide/css'))
+    .pipe(gulp.dest(dest))
+    .pipe(gulp.dest('_site/' + dest))
     .pipe(reload({stream: true}));
 };
 
