@@ -53,13 +53,14 @@ git clone git@github.com:UN-OCHA/styleguide.git
 ### Install the required gems
 
 ```
-cd styleguide
-bundle
+rvm use
+bundle install
 ```
 
 ### Install the front end dependencies
 
 ```
+nvm use
 npm install
 ```
 
