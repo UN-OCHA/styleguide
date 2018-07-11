@@ -42,7 +42,7 @@ This site uses Jekyll. See [https://jekyllrb.com](https://jekyllrb.com) for Jeky
 * [Bundler](http://bundler.io/)
 * [Node](https://nodejs.org/)
 * [Jekyll](https://jekyllrb.com)
-* [Grunt CLI](https://gruntjs.com/getting-started)
+* [Gulp](https://gulpjs.com)
 
 ### Clone the repo
 
