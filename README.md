@@ -42,7 +42,7 @@ This site uses Jekyll. See [https://jekyllrb.com](https://jekyllrb.com) for Jeky
 * [Bundler](http://bundler.io/)
 * [Node](https://nodejs.org/)
 * [Jekyll](https://jekyllrb.com)
-* [Grunt CLI](https://gruntjs.com/getting-started)
+* [Gulp](https://gulpjs.com)
 
 ### Clone the repo
 
@@ -66,27 +66,50 @@ nvm use
 npm install
 ```
 
-### Running
+### Local development
 
-To run the Jekyll site:
+Get a full command listing:
 
 ```
-npm run jekyll
+gulp help
 ```
 
-Visit http://localhost:4000/
+Run the site in development mode. It will compile everything (including Jekyll), launch [browser-sync](https://browsersync.io) for multi-device testing, and watch the filesystem for new changes:
+
+```
+gulp dev
+```
+
+Default URL is http://localhost:4000/
+
+### Jekyll
+
+There's a local config file `docs/_config.dev.yml` which upon completing `npm install` should be ignored by version control. You can add any local-specific Jekyll config there for testing, and leave `_config.yml` for production values.
+
+If we ever want to set defaults in the dev config run the following command to allow git to "notice" the changes, commit them, then just run `npm i` to reset the working tree so that the file will continue being ignored.
+
+```
+# https://stackoverflow.com/a/43535767/175551
+git update-index --no-skip-worktree docs/_config.dev.yml
+```
 
 ### CSS & Sass
 
-Grunt is used to generate CSS used in the styleguide from Sass.
+Gulp is used to generate CSS from Sass. You should use `gulp dev` as an all-in-one command, but here are a few single commands you might also find useful:
 
-Run `grunt` to generate:
+`gulp dev:sass` will generate:
 
-* styleguide styles
-* OCHA Basic extras styles
-* Common Design styles
+* OCHA Basic extras styles (`gulp dev:sass:ochaextras`)
+* Common Design styles (`gulp dev:sass:commondesign`)
+* Styleguide styles (`gulp dev:sass:styleguide`)
 
-`grunt watch` can be used to watch for changes to the above.
+### Deployment
+
+There are sourcemaps included for developer convenience, but they should be excluded when finalizing changes. There is an npm task that allows a "production" compile to run, which then presents the changes for review:
+
+```
+npm run deploy
+```
 
 ### Individual project CSS
 

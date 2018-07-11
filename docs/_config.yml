@@ -14,3 +14,4 @@ exclude:
   - package.json
   - Gruntfile.js
   - css/*.*
+  - '*.scss'
