@@ -82,11 +82,15 @@ gulp.task('dev:sass:styleguide', () => {
 function sassTask(source) {
   bs.notify(`Sass: ${source}`);
 
-  // There are many different Sass directories but we should always compile the
-  // CSS so it's next to the original Sass.
+  // Take source directory and rework to allow compiled CSS to be placed next to
+  // original Sass file.
   let path = source.split('/');
   let file = path.pop();
   let dest = path.join('/');
+
+  // Remove 'docs/' prefix so we can drop the files into Jekyll for development.
+  path.shift();
+  let jekyll_dest = path.join('/');
 
   return gulp.src(source)
     .pipe(plumber())
@@ -101,7 +105,7 @@ function sassTask(source) {
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
     .pipe(gulp.dest(dest))
-    .pipe(gulp.dest('_site/' + dest))
+    .pipe(gulp.dest('_site/' + jekyll_dest))
     .pipe(reload({stream: true}));
 };
 
@@ -146,7 +150,9 @@ gulp.task('dev', ['dev:sass', /*'dev:js',*/ 'dev:bs', 'dev:jekyll', 'watch']);
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('watch', () => {
   // gulp.watch('_js/**/*.js', ['dev:js']);
-  gulp.watch(['docs/**/*.scss'], ['dev:sass']);
+  gulp.watch(['docs/common-design/**/*.scss'], ['dev:sass:commondesign']);
+  gulp.watch(['docs/ocha/**/*.scss'], ['dev:sass:ochaextras']);
+  gulp.watch(['docs/styleguide/**/*.scss'], ['dev:sass:styleguide']);
   gulp.watch(['docs/_config*', 'docs/**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
 });
 
