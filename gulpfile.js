@@ -24,7 +24,7 @@ var concat = require('gulp-concat');
 
 
 //——————————————————————————————————————————————————————————————————————————————
-// Local debug info
+// Debug info
 //——————————————————————————————————————————————————————————————————————————————
 if (process.env.NODE_ENV === 'production') {
   log(c.bgYellow.black('Production'), c.yellow('environment detected'));
