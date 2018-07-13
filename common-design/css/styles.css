@@ -133,8 +133,7 @@ html {
   background: #F2F2F2;
   height: 100%;
   margin: 0;
-  margin-left: calc(100vw - 100%);
-  padding: 0 8px; }
+  margin-left: calc(100vw - 100%); }
 
 body {
   background: #FFF;
@@ -158,6 +157,10 @@ body {
 @media (min-width: 768px) {
   .cd-container {
     padding: 0 24px; } }
+
+@media (min-width: 1024px) {
+  html {
+    padding: 0 8px; } }
 
 @media (min-width: 1200px) {
   .cd-container {
@@ -184,7 +187,7 @@ body {
  * Bottom header bar, contains Logo, Search and Navigation.
  */
 .cd-site-header {
-  border-bottom: 2px solid #E6ECF1;
+  border-bottom: 3px solid #F2F2F2;
   color: #4A4A4A; }
 
 .cd-site-header__inner {
@@ -265,7 +268,7 @@ body {
 .cd-site-header__nav-toggle {
   background: transparent;
   border: 0;
-  border-left: 1px solid #E6ECF1;
+  border-left: 1px solid #F2F2F2;
   font-size: 14px;
   font-weight: bold;
   height: 60px;
@@ -334,9 +337,13 @@ body {
 .cd-nav__item > button {
   font-weight: bold;
   text-transform: uppercase; }
+  .cd-nav__item > a:after,
+  .cd-nav__item > button:after {
+    background: #EB5C6D; }
 
 .cd-nav__item .icon-arrow-down {
-  margin-left: 2px; }
+  margin-left: 2px;
+  color: #EB5C6D; }
 
 ul.cd-nav__child-nav {
   background: #D3DDE5; }
@@ -365,7 +372,7 @@ ul.cd-nav__grandchild-nav {
 
 @media (min-width: 768px) {
   .cd-site-header__nav-toggle {
-    border-right: 1px solid #E6ECF1; }
+    border-right: 1px solid #F2F2F2; }
     .open .cd-site-header__nav-toggle {
       margin-right: 0; } }
 
@@ -384,22 +391,24 @@ ul.cd-nav__grandchild-nav {
     width: auto;
     z-index: 0; }
   .cd-nav__item {
-    border-right: 1px solid #E6ECF1;
+    border-right: 1px solid #F2F2F2;
     float: left;
     margin: 0; }
     .cd-nav__item:first-child {
-      border-left: 1px solid #E6ECF1; }
+      border-left: 1px solid #F2F2F2; }
     .cd-nav__item:last-child ul.cd-nav__child-nav {
       left: auto;
       right: -1px; }
     .cd-nav__item.open {
       position: relative; }
       .cd-nav__item.open > button {
-        background: #E6ECF1; }
+        background: #FFF; }
+        .cd-nav__item.open > button:after {
+          background: #EB5C6D; }
         .cd-nav__item.open > button:focus {
-          background: #E6ECF1; }
+          background: #FFF; }
           .cd-nav__item.open > button:focus:after {
-            background: transparent; }
+            background: #EB5C6D; }
     .cd-nav__item.active > a:after,
     .cd-nav__item.active > button:after {
       background: #EB5C6D; }
@@ -417,42 +426,45 @@ ul.cd-nav__grandchild-nav {
       transition: background 0.3s ease; }
       .cd-nav__item > a:after,
       .cd-nav__item > button:after {
-        bottom: -2px;
+        bottom: -3px;
         content: '';
         background: transparent;
-        height: 4px;
+        height: 3px;
         left: -1px;
         position: absolute;
         right: -1px;
         transition: background 0.3s ease;
         width: calc(100% + 2px); }
-      .cd-nav__item > a:hover, .cd-nav__item > a:focus,
-      .cd-nav__item > button:hover,
+      .cd-nav__item > a:hover,
+      .cd-nav__item > button:hover {
+        background: #F2F2F2; }
+      .cd-nav__item > a:focus,
       .cd-nav__item > button:focus {
-        background: #E6ECF1; }
+        background: #FFF; }
       .active .cd-nav__item > a:after, .cd-nav__item > a:focus:after, .active
       .cd-nav__item > button:after,
       .cd-nav__item > button:focus:after {
         background: #EB5C6D; }
   ul.cd-nav__child-nav {
-    background: #E6ECF1;
+    background: #FFF;
+    box-shadow: 0 1px 8px rgba(211, 221, 229, 0.8);
     left: -1px;
     margin: 0;
     max-width: 300px;
     min-width: 200px;
     padding: 20px 0;
-    top: 60px;
+    top: calc(60px + 3px);
     position: absolute; }
     ul.cd-nav__child-nav a:hover, ul.cd-nav__child-nav a:focus,
     ul.cd-nav__child-nav button:hover,
     ul.cd-nav__child-nav button:focus {
-      background: #D3DDE5; }
+      background: #F2F2F2; }
   .cd-nav__child-item.open {
-    background: #D3DDE5; }
+    background: #F2F2F2; }
   ul.cd-nav__grandchild-nav {
     padding-bottom: 0; }
     ul.cd-nav__grandchild-nav a:hover, ul.cd-nav__grandchild-nav a:focus {
-      background: #c3d1dc; } }
+      background: #e5e5e5; } }
 
 /**
  * Common Design Search form in header.
@@ -465,7 +477,7 @@ ul.cd-nav__grandchild-nav {
   align-items: center;
   background: transparent;
   border: 0;
-  border-left: 1px solid #E6ECF1;
+  border-left: 1px solid #F2F2F2;
   color: #026CB6;
   display: -webkit-flex;
   display: flex;
