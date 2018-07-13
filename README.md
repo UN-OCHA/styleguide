@@ -20,8 +20,6 @@ The individual component libraries are intended to document the front end for th
 
 [Humanitarian ID component library & guidelines](https://un-ocha.github.io/styleguide/hid)
 
-[ReliefWeb component library & guidelines](https://un-ocha.github.io/styleguide/reliefweb)
-
 ### Shared libraries
 
 [Icon library](https://un-ocha.github.io/styleguide/icons)
@@ -112,12 +110,6 @@ npm run deploy
 ```
 
 ### Individual project CSS
-
-#### ReliefWeb
-
-The ReliefWeb section uses styles copied from the ReliefWeb repository.
-
-Run `npm run update-rw-assets` to update the ReliefWeb assets (assumes you have the ReliefWeb code at /srv/rwint/data/code/).
 
 #### HID assets
 
