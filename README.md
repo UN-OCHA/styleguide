@@ -34,15 +34,15 @@ The individual component libraries are intended to document the front end for th
 
 ## Running locally
 
-This site uses Jekyll. See [https://jekyllrb.com](https://jekyllrb.com) for Jekyll docs.
-
-### Requirements
+The styleguide uses the following tools:
 
 * [Ruby](https://www.ruby-lang.org/en/)
 * [Bundler](http://bundler.io/)
-* [Node](https://nodejs.org/)
 * [Jekyll](https://jekyllrb.com)
+* [Node](https://nodejs.org/)
 * [Gulp](https://gulpjs.com)
+
+Additionally, using [RVM](https://rvm.io/) and [NVM](https://github.com/creationix/nvm) (Ruby/Node Version Manager) makes it easy to stay on the right version of Ruby and Node without disrupting your other projects.
 
 ### Clone the repo
 
@@ -95,7 +95,7 @@ git update-index --no-skip-worktree docs/_config.dev.yml
 
 ### CSS & Sass
 
-Gulp is used to generate CSS from Sass. You should use `gulp dev` as an all-in-one command, but here are a few single commands you might also find useful:
+Gulp is used to generate CSS from Sass. You can use `gulp dev` as an all-in-one command for regular development, but here are a few single commands you might find useful:
 
 `gulp dev:sass` will generate:
 
@@ -105,7 +105,7 @@ Gulp is used to generate CSS from Sass. You should use `gulp dev` as an all-in-o
 
 ### Deployment
 
-There are sourcemaps included for developer convenience, but they should be excluded when finalizing changes. There is an npm task that allows a "production" compile to run, which then presents the changes for review:
+There are Sass sourcemaps included for developer convenience, but they should be excluded when finalizing changes. There is an npm task that allows a "production" compile to run, which then presents the changes for review:
 
 ```
 npm run deploy
