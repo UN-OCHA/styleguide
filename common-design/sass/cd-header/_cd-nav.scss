@@ -106,10 +106,14 @@
   & > button {
     font-weight: bold;
     text-transform: uppercase;
+    &:after {
+      background: $cd-highlight-red;
+    }
   }
 
   .icon-arrow-down {
     margin-left: 2px;
+    color: $cd-highlight-red;
   }
 }
 
@@ -201,13 +205,17 @@ ul.cd-nav__grandchild-nav {
       position: relative;
 
       & > button {
-        background: $cd-mid-bg-color;
+        background: $cd-white-bg-color;
+
+        &:after {
+          background: $cd-highlight-red;
+        }
 
         &:focus {
-          background: $cd-mid-bg-color;
+          background: $cd-white-bg-color;
 
           &:after {
-            background: transparent;
+            background: $cd-highlight-red;
           }
         }
       }
@@ -234,10 +242,10 @@ ul.cd-nav__grandchild-nav {
       transition: background 0.3s ease;
 
       &:after {
-        bottom: -2px;
+        bottom: -3px;
         content: '';
         background: transparent;
-        height: 4px;
+        height: 3px;
         left: -1px;
         position: absolute;
         right: -1px;
@@ -245,9 +253,12 @@ ul.cd-nav__grandchild-nav {
         width: calc(100% + 2px);
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         background: $cd-mid-bg-color;
+      }
+
+      &:focus {
+        background: $cd-white-bg-color;
       }
 
       .active &,
@@ -260,27 +271,28 @@ ul.cd-nav__grandchild-nav {
   }
 
   ul.cd-nav__child-nav {
-    background: $cd-mid-bg-color;
+    background: $cd-white-bg-color;
+    box-shadow: 0 1px 5px rgba($cd-dark-bluey-grey, 0.8);
     left: -1px;
     margin: 0;
     max-width: 300px;
     min-width: 200px;
     padding: 20px 0;
-    top: $cd-site-header-height;
+    top: calc(#{$cd-site-header-height} + 3px); // border-bottom height
     position: absolute;
 
     a,
     button {
       &:hover,
       &:focus {
-        background: $cd-dark-bg-color;
+        background: $cd-mid-bg-color;
       }
     }
   }
 
   .cd-nav__child-item {
     &.open {
-      background: $cd-dark-bg-color;
+      background: $cd-mid-bg-color;
     }
   }
 
