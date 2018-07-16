@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    background: $cd-mid-bg-color;
+    background: $cd-light-grey;
     outline: none; // default browser outline is replaced by background colour change.
   }
 }
@@ -49,12 +49,12 @@
 }
 
 .cd-nav {
-  background: $cd-mid-bg-color;
+  background: $cd-light-grey;
   height: calc(100vh - 35px);
   max-width: 350px;
   padding: 40px 0 36px 0;
   position: absolute;
-  right: $cd-site-padding;
+  right: 0;
   top: $cd-global-header-height;
   width: 90%;
   z-index: 100; // arbitrary high zindex, may need adjusting depending on other site content.
