@@ -130,7 +130,7 @@
  * Common Design Layout styles.
  */
 html {
-  background: #F2F2F2;
+  background: #E6ECF1;
   height: 100%;
   margin: 0;
   margin-left: calc(100vw - 100%); }
@@ -187,7 +187,7 @@ body {
  * Bottom header bar, contains Logo, Search and Navigation.
  */
 .cd-site-header {
-  border-bottom: 3px solid #F2F2F2;
+  border-bottom: 3px solid #E6ECF1;
   color: #4A4A4A; }
 
 .cd-site-header__inner {
@@ -268,7 +268,7 @@ body {
 .cd-site-header__nav-toggle {
   background: transparent;
   border: 0;
-  border-left: 1px solid #F2F2F2;
+  border-left: 1px solid #E6ECF1;
   font-size: 14px;
   font-weight: bold;
   height: 60px;
@@ -283,7 +283,7 @@ body {
     position: relative;
     z-index: 101; }
   .cd-site-header__nav-toggle:hover, .cd-site-header__nav-toggle:focus {
-    background: #F2F2F2;
+    background: #E6ECF1;
     outline: none; }
 
 .open .cd-site-header__nav-label--closed {
@@ -296,7 +296,7 @@ body {
     font-size: 20px; }
 
 .cd-nav {
-  background: #F2F2F2;
+  background: #E6ECF1;
   height: calc(100vh - 35px);
   max-width: 350px;
   padding: 40px 0 36px 0;
@@ -329,9 +329,9 @@ body {
     width: 100%; }
 
 .cd-nav__item.open {
-  background: #D3DDE5; }
+  background: #E6ECF1; }
   .cd-nav__item.open > button:hover, .cd-nav__item.open > button:focus {
-    background: #c3d1dc; }
+    background: #E6ECF1; }
 
 .cd-nav__item > a,
 .cd-nav__item > button {
@@ -372,7 +372,7 @@ ul.cd-nav__grandchild-nav {
 
 @media (min-width: 768px) {
   .cd-site-header__nav-toggle {
-    border-right: 1px solid #F2F2F2; }
+    border-right: 1px solid #E6ECF1; }
     .open .cd-site-header__nav-toggle {
       margin-right: 0; } }
 
@@ -391,11 +391,11 @@ ul.cd-nav__grandchild-nav {
     width: auto;
     z-index: 0; }
   .cd-nav__item {
-    border-right: 1px solid #F2F2F2;
+    border-right: 1px solid #E6ECF1;
     float: left;
     margin: 0; }
     .cd-nav__item:first-child {
-      border-left: 1px solid #F2F2F2; }
+      border-left: 1px solid #E6ECF1; }
     .cd-nav__item:last-child ul.cd-nav__child-nav {
       left: auto;
       right: -1px; }
@@ -437,7 +437,7 @@ ul.cd-nav__grandchild-nav {
         width: calc(100% + 2px); }
       .cd-nav__item > a:hover,
       .cd-nav__item > button:hover {
-        background: #F2F2F2; }
+        background: #E6ECF1; }
       .cd-nav__item > a:focus,
       .cd-nav__item > button:focus {
         background: #FFF; }
@@ -455,16 +455,18 @@ ul.cd-nav__grandchild-nav {
     padding: 20px 0;
     top: calc(60px + 3px);
     position: absolute; }
-    ul.cd-nav__child-nav a:hover, ul.cd-nav__child-nav a:focus,
-    ul.cd-nav__child-nav button:hover,
+    ul.cd-nav__child-nav a:hover,
+    ul.cd-nav__child-nav button:hover {
+      background: #E6ECF1; }
+    ul.cd-nav__child-nav a:focus,
     ul.cd-nav__child-nav button:focus {
-      background: #F2F2F2; }
+      background: #FFF; }
   .cd-nav__child-item.open {
-    background: #F2F2F2; }
+    background: #FFF; }
   ul.cd-nav__grandchild-nav {
     padding-bottom: 0; }
     ul.cd-nav__grandchild-nav a:hover, ul.cd-nav__grandchild-nav a:focus {
-      background: #e5e5e5; } }
+      background: #E6ECF1; } }
 
 /**
  * Common Design Search form in header.
@@ -477,7 +479,7 @@ ul.cd-nav__grandchild-nav {
   align-items: center;
   background: transparent;
   border: 0;
-  border-left: 1px solid #F2F2F2;
+  border-left: 1px solid #E6ECF1;
   color: #026CB6;
   display: -webkit-flex;
   display: flex;
@@ -494,16 +496,16 @@ ul.cd-nav__grandchild-nav {
       height: 0;
       border-style: solid;
       border-width: 0 6px 6px 6px;
-      border-color: transparent transparent #F2F2F2 transparent;
+      border-color: transparent transparent #E6ECF1 transparent;
       position: absolute;
       bottom: 0;
       left: 50%;
       margin-left: -6px; }
   .cd-search_btn:hover, .cd-search_btn:focus {
-    background: #F2F2F2;
-    outline: none; }
-  .cd-search_btn:focus {
     background: #FFF;
+    outline: none;
+    color: #80CBFF; }
+  .cd-search_btn:focus {
     color: #EB5C6D; }
 
 .cd-search_btn .icon-search {
@@ -514,13 +516,12 @@ ul.cd-nav__grandchild-nav {
 .cd-search_btn-text {
   font-size: 12px;
   font-weight: bold;
-  color: #025995;
   text-transform: uppercase; }
   .open .cd-search_btn-text {
     color: #EB5C6D; }
 
 .cd-search__form {
-  background: #F2F2F2;
+  background: #E6ECF1;
   display: none;
   height: 60px;
   left: 0;
