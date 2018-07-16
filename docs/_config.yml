@@ -1,8 +1,6 @@
 # Site settings
 title: UN OCHA Style guide
-baseurl: "/styleguide" # the subpath of your site, e.g. /blog/
-rw_theme_url: "https://github.com/reliefweb/site/blob/responsive/site/profiles/reliefweb/themes/kobe/"
-rw_features_url: "https://github.com/reliefweb/site/blob/responsive/site/profiles/reliefweb/modules/features/"
+baseurl: /styleguide
 
 # Build settings
 markdown: kramdown
