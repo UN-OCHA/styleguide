@@ -28,7 +28,7 @@
       height: 0;
       border-style: solid;
       border-width: 0 6px 6px 6px;
-      border-color: transparent transparent $cd-light-grey transparent;
+      border-color: transparent transparent $cd-border-color transparent;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -38,12 +38,12 @@
 
   &:hover,
   &:focus {
-    background: $cd-light-grey;
+    background: $cd-white-bg-color;
     outline: none;
+    color: $cd-bright-blue-text-color;
   }
 
   &:focus {
-    background: $cd-white-bg-color;
     color: $cd-highlight-red;
   }
 }
@@ -57,7 +57,6 @@
 .cd-search_btn-text {
   font-size: 12px;
   font-weight: bold;
-  color: $cd-dark-blue;
   text-transform: uppercase;
 
   .open & {
@@ -66,7 +65,7 @@
 }
 
 .cd-search__form {
-  background: $cd-light-grey;
+  background: $cd-mid-bluey-grey;
   display: none;
   height: $cd-site-header-height;
   left: 0;
