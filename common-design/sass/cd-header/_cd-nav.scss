@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    background: $cd-light-grey;
+    background: $cd-mid-bluey-grey;
     outline: none; // default browser outline is replaced by background colour change.
   }
 }
@@ -49,7 +49,7 @@
 }
 
 .cd-nav {
-  background: $cd-light-grey;
+  background: $cd-mid-bluey-grey;
   height: calc(100vh - 35px);
   max-width: 350px;
   padding: 40px 0 36px 0;
@@ -92,12 +92,12 @@
 .cd-nav__item {
 
   &.open {
-    background: $cd-dark-bg-color;
+    background: $cd-mid-bg-color;
 
     & > button {
       &:hover,
       &:focus {
-        background: darken($cd-dark-bg-color, 5%);
+        background: $cd-mid-bg-color;
       }
     }
   }
@@ -254,7 +254,7 @@ ul.cd-nav__grandchild-nav {
       }
 
       &:hover {
-        background: $cd-light-grey;
+        background: $cd-mid-bluey-grey;
       }
 
       &:focus {
@@ -283,16 +283,18 @@ ul.cd-nav__grandchild-nav {
 
     a,
     button {
-      &:hover,
+      &:hover {
+        background: $cd-mid-bluey-grey;
+      }
       &:focus {
-        background: $cd-light-grey;
+        background: $cd-white-bg-color;
       }
     }
   }
 
   .cd-nav__child-item {
     &.open {
-      background: $cd-light-grey;
+      background: $cd-white-bg-color;
     }
   }
 
@@ -302,7 +304,7 @@ ul.cd-nav__grandchild-nav {
     a {
       &:hover,
       &:focus {
-        background: darken($cd-light-grey, 5%);
+        background: $cd-mid-bluey-grey;
       }
     }
   }
