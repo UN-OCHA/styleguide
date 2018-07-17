@@ -108,6 +108,7 @@ Since this repo is public, each user on GitHub is permitted to fork the reposito
 2. Once the repo appears, copy the fork's URL using the **Clone or Download** widget.
   * If you already have a local copy of the styleguide you need to add this URL as a `remote` using the following command: `git remote add YOURNAME YOUR-REPO-URL`.
   * If you never cloned the styleguide before now, it will automatically name the remote `origin` and for now you don't have to worry about where your code ends up when pushing.
+3. Create a copy of the `master` branch and call it `gh-pages` — then push this to your personal fork in order to allow PRs to be staged: `git co master; git co -b gh-pages; git push -u YOURNAME gh-pages`
 
 :link: [GitHub provides up-to-date docs for deploying GitHub Pages websites](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#default-source-settings-for-repositories-without-the-username-naming-scheme).
 
