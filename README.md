@@ -104,8 +104,8 @@ Since this repo is public, each user on GitHub is permitted to fork the reposito
 
 ### First-time: setting up your fork
 
-1. Navigate to https://github.com/un-ocha/styleguide and use the "Fork" button. in the upper-right. Fork it to your personal account.
-2. Once the repo appears, copy the fork's URL.
+1. Navigate to https://github.com/un-ocha/styleguide and use the "Fork" button in the upper-right. Fork it to your personal account.
+2. Once the repo appears, copy the fork's URL using the **Clone or Download** widget.
   * If you already have a local copy of the styleguide you need to add this URL as a `remote` using the following command: `git remote add YOURNAME YOUR-REPO-URL`.
   * If you never cloned the styleguide before now, it will automatically name the remote `origin` and for now you don't have to worry about where your code ends up when pushing.
 
@@ -117,8 +117,13 @@ Using the link as a guide, we recommend you configure your repository to build o
 
 In the personal fork, you may create PRs against one of two base branches:
 
-* **Deploying:** Create a PR against `UN-OCHA/styleguide`-`master` that will be sent immediately to production upon merging.
-* **Staging for review:** Create a PR against `YOU/styleguide`-`gh-pages` to provide others with a staging URL for review or QA. See your repo's **Settings** to find out where the staging URL is located.
+**Deploying:** Create a PR against `UN-OCHA/styleguide`:`master` that will be sent immediately to production upon merging.
+
+![Example of a cross-fork PR](_readme/github-pr-deploy.png)
+
+**Staging for review:** Create a PR against `YOU/styleguide`:`gh-pages` to provide others with a staging URL for review or QA. See your repo's **Settings** to find out where the staging URL is located.
+
+![Example of an internal PR to a personal gh-pages branch](_readme/github-pr-stage.png)
 
 
 ## Individual project CSS
