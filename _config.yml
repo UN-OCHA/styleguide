@@ -1,5 +1,6 @@
 # Site settings
 title: UN OCHA Styleguide
+url: https://un-ocha.github.io
 baseurl: /styleguide
 
 # Build settings
