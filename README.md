@@ -1,26 +1,24 @@
-# UNOCHA Front end style guide
+# UNOCHA Frontend styleguide
 
 This site is an evolving list of components and resources for OCHA websites.
 
-The guide is a living document created to meet the needs of OCHA's developers and designers. If you have any feedback, questions or comment please contact digitalservices@humanitarianresponse.info.
+The guide is a living document created to meet the needs of OCHA's developers and designers. If you have any feedback, questions or comment please contact digitalservices@humanitarianresponse.info
 
-## Contents
-
-### Common Design
+## Common Design
 
 The [Common Design](https://un-ocha.github.io/styleguide/common-design) is a unified design system for OCHA platforms.
 
-### OCHA Basic Drupal Theme
+## OCHA Basic Drupal Theme
 
 [OCHA Basic](https://un-ocha.github.io/styleguide/ocha) is a minimal starter theme for Drupal incorporating the Common Design header and footer.
 
-### Individual website component libraries
+## Individual website component libraries
 
 The individual component libraries are intended to document the front end for the project.
 
 [Humanitarian ID component library & guidelines](https://un-ocha.github.io/styleguide/hid)
 
-### Shared libraries
+## Shared libraries
 
 [Icon library](https://un-ocha.github.io/styleguide/icons)
 
@@ -66,29 +64,20 @@ npm install
 
 ### Local development
 
-Get a full command listing:
-
-```
-gulp help
-```
-
-Run the site in development mode. It will compile everything (including Jekyll), launch [browser-sync](https://browsersync.io) for multi-device testing, and watch the filesystem for new changes:
-
-```
-gulp dev
-```
+* `gulp help`: Get a full command listing
+* `gulp dev`: Run the site in development mode. It will compile everything (including Jekyll), launch [browser-sync](https://browsersync.io) for multi-device testing, and watch the filesystem for new changes:
 
 Default URL is http://localhost:4000/
 
 ### Jekyll
 
-There's a local config file `docs/_config.dev.yml` which upon completing `npm install` should be ignored by version control. You can add any local-specific Jekyll config there for testing, and leave `_config.yml` for production values.
+There's a local config file `_config.dev.yml` which upon completing `npm install` should be ignored by version control. You can add any local-specific Jekyll config there for testing, and leave `_config.yml` for production values.
 
-If we ever want to set defaults in the dev config run the following command to allow git to "notice" the changes, commit them, then just run `npm i` to reset the working tree so that the file will continue being ignored.
+If we ever want to set defaults in the dev config run the following command to allow git to "notice" the changes, commit them, then run `npm postinstall` to reset the working tree so that the file will continue being ignored.
 
 ```
 # https://stackoverflow.com/a/43535767/175551
-git update-index --no-skip-worktree docs/_config.dev.yml
+git update-index --no-skip-worktree _config.dev.yml
 ```
 
 ### CSS & Sass
@@ -109,12 +98,35 @@ There are Sass sourcemaps included for developer convenience, but they should be
 npm run deploy
 ```
 
-### Individual project CSS
+## Staging changes for review
 
-#### HID assets
+Since this repo is public, each user on GitHub is permitted to fork the repository to their personal account. When you want to stage something for review, there is a different procedure than when submitting changes for inclusion in the official styleguide.
+
+### First-time: setting up your fork
+
+1. Navigate to https://github.com/un-ocha/styleguide and use the "Fork" button. in the upper-right. Fork it to your personal account.
+2. Once the repo appears, copy the fork's URL.
+  * If you already have a local copy of the styleguide you need to add this URL as a `remote` using the following command: `git remote add YOURNAME YOUR-REPO-URL`.
+  * If you never cloned the styleguide before now, it will automatically name the remote `origin` and for now you don't have to worry about where your code ends up when pushing.
+
+:link: [GitHub provides up-to-date docs for deploying GitHub Pages websites](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#default-source-settings-for-repositories-without-the-username-naming-scheme).
+
+Using the link as a guide, we recommend you configure your repository to build off of `gh-pages` so that you aren't merging to master when staging changes. Doing so would require force pushing or other git gymnastics later on once the work has been merged to `UN-OCHA/styleguide` and you pull those changes into your master.
+
+### Each time: deploying to your fork and creating PRs
+
+In the personal fork, you may create PRs against one of two base branches:
+
+* **Deploying:** Create a PR against `UN-OCHA/styleguide`-`master` that will be sent immediately to production upon merging.
+* **Staging for review:** Create a PR against `YOU/styleguide`-`gh-pages` to provide others with a staging URL for review or QA. See your repo's **Settings** to find out where the staging URL is located.
+
+
+## Individual project CSS
+
+### HID assets
 
 The HID section uses styles from the HID staging site.
 
-#### OCHA Basic assets
+### OCHA Basic assets
 
-The OCHA Basic section uses styles from the OCHA Basic github repo.
+The OCHA Basic section uses styles from the [OCHA Basic](https://github.com/un-ocha/ocha_basic) repository.
