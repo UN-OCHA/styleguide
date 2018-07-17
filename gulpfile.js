@@ -48,13 +48,13 @@ gulp.task('dev:bs', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Jekyll for development
 //
-// Note: since this site runs on GitHub Pages, the production build of Jekyll is
-// not driven by Gulp. Only GitHub infrastructure can run it.
+// Note: since this site deploys to GitHub Pages, the production build of Jekyll
+// is not driven by Gulp. Only GitHub infrastructure can run it.
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('dev:jekyll', () => {
   bs.notify('Jekyll building...');
 
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--source=docs', '--config=docs/_config.yml,docs/_config.dev.yml'], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml'], {stdio: 'inherit'})
     .on('close', reload);
 });
 
@@ -65,15 +65,15 @@ gulp.task('dev:jekyll', () => {
 gulp.task('dev:sass', ['dev:sass:commondesign', 'dev:sass:ochaextras', 'dev:sass:styleguide']);
 
 gulp.task('dev:sass:commondesign', () => {
-  return sassTask('docs/common-design/css/styles.scss');
+  return sassTask('common-design/css/styles.scss');
 });
 
 gulp.task('dev:sass:ochaextras', () => {
-  return sassTask('docs/ocha/css/extras.scss');
+  return sassTask('ocha/css/extras.scss');
 });
 
 gulp.task('dev:sass:styleguide', () => {
-  return sassTask('docs/styleguide/css/styleguide.scss');
+  return sassTask('styleguide/css/styleguide.scss');
 });
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -88,10 +88,6 @@ function sassTask(source) {
   let file = path.pop();
   let dest = path.join('/');
 
-  // Remove 'docs/' prefix so we can drop the files into Jekyll for development.
-  path.shift();
-  let jekyll_dest = path.join('/');
-
   return gulp.src(source)
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
@@ -105,7 +101,7 @@ function sassTask(source) {
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
     .pipe(gulp.dest(dest))
-    .pipe(gulp.dest('_site/' + jekyll_dest))
+    .pipe(gulp.dest('_site/' + dest))
     .pipe(reload({stream: true}));
 };
 
@@ -124,7 +120,7 @@ function sassTask(source) {
 //——————————————————————————————————————————————————————————————————————————————
 // gulp.task('dev:js-bundle', () => {
 //   return gulp.src([
-//       './docs/**/*.js',
+//       './**/*.js',
 //     ])
 //     .pipe(concat('main.js'))
 //     .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
@@ -150,10 +146,10 @@ gulp.task('dev', ['dev:sass', /*'dev:js',*/ 'dev:bs', 'dev:jekyll', 'watch']);
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('watch', () => {
   // gulp.watch('_js/**/*.js', ['dev:js']);
-  gulp.watch(['docs/common-design/**/*.scss'], ['dev:sass:commondesign']);
-  gulp.watch(['docs/ocha/**/*.scss'], ['dev:sass:ochaextras']);
-  gulp.watch(['docs/styleguide/**/*.scss'], ['dev:sass:styleguide']);
-  gulp.watch(['docs/_config*', 'docs/**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
+  gulp.watch(['common-design/**/*.scss'], ['dev:sass:commondesign']);
+  gulp.watch(['ocha/**/*.scss'], ['dev:sass:ochaextras']);
+  gulp.watch(['styleguide/**/*.scss'], ['dev:sass:styleguide']);
+  gulp.watch(['_config*', '**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
 });
 
 

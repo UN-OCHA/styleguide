@@ -1,12 +1,11 @@
 {
   "name": "UNOCHA-Styleguide",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": "git@github.com:UN-OCHA/styleguide.git",
   "license": "Apache-2.0",
   "author": "UNOCHA",
   "scripts": {
-    "jekyll": "bundle exec jekyll serve --source='docs' --baseurl=''",
-    "postinstall": "git update-index --skip-worktree docs/_config.dev.yml",
+    "postinstall": "git update-index --skip-worktree _config.dev.yml",
     "deploy": ".bin/deploy.sh"
   },
   "devDependencies": {
