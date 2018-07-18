@@ -732,9 +732,6 @@ ul.cd-nav__grandchild-nav {
 .cd-sites-dropdown__logo--ocha {
   background-position: 0 -144px; }
 
-.cd-sites-dropdown__logo--rw {
-  background-position: 0 -162px; }
-
 @media (min-width: 768px) {
   .cd-sites-btn {
     display: -webkit-flex;
@@ -1086,5 +1083,3 @@ a.cd-footer-social__link {
     margin: 0 0 0 20px; }
     a.cd-footer-social__link:first-child {
       margin: 0; } }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html class="styleguide">
+<html class="no-js">
   {% include head.html %}
 
-  <body>
-
+  <body class="styleguide">
     <div class="page-wrapper">
       {% if page.hide_header_footer != true %}
-       {% include header.html %}
+        {% include header.html %}
       {% endif %}
 
       {{ content }}
@@ -16,5 +15,4 @@
       {% include footer.html %}
     {% endif %}
   </body>
-
 </html>

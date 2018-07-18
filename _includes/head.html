@@ -1,8 +1,8 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{%if page.page-title %} {{page.page-title}} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/styleguide.css" type="text/css">
     <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/chosen/chosen.min.css" type="text/css">
@@ -13,20 +13,13 @@
     {% if page.include_hid %}
     <link rel="stylesheet" href="https://app2.dev.humanitarian.id/css/app.min.css">
     {% endif %}
-    {% if page.include_rw %}
-    <!--[if IE 8]>
-    <link rel="stylesheet" href="{{ "/assets/rw/styles-ie8.css" | prepend: site.baseurl }}">
-    <![endif]-->
-    <!--[if !IE]><!-->
-    <link rel="stylesheet" href="{{ "/assets/rw/styles.css" | prepend: site.baseurl }}">
-    <!--<![endif]-->
-    {% endif %}
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="{{ "/assets/js/modernizr.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/js/modernizr.js' | prepend: site.baseurl }}"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
     {% if page.hide_header_footer != true %}
-    <link rel="stylesheet" href="{{ "/common-design/css/styles.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/common-design/css/styles.css' | prepend: site.baseurl }}">
     {% endif %}
 
     {% if page.custom_css %}
@@ -35,12 +28,12 @@
       {% endfor %}
     {% endif %}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16">
-    <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
-    <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | prepend: site.baseurl }}" color="#5bbad5">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" href="{{ '/favicon-32x32.png' | prepend: site.baseurl }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ '/favicon-16x16.png' | prepend: site.baseurl }}" sizes="16x16">
+    <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
+    <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | prepend: site.baseurl }}" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
 
     <style>html.hidden {display: block}</style>
     <script
@@ -51,10 +44,10 @@
     <script src="https://cdn.rawgit.com/UN-OCHA/ocha_basic/master/js/bootstrap-dropdown.js"></script>
     {% endif %}
     {% if page.include_rw %}
-    <script src="{{ "/assets/rw/simpleautocomplete.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/rw/simpledatepicker.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/rw/responsive.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/rw/responsive-river.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/rw/responsive-search.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/rw/simpleautocomplete.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/rw/simpledatepicker.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/rw/responsive.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/rw/responsive-river.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/rw/responsive-search.js' | prepend: site.baseurl }}"></script>
     {% endif %}
 </head>

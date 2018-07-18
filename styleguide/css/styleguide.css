@@ -1328,12 +1328,6 @@ html.styleguide, html.styleguide body {
   vertical-align: text-top;
   line-height: 1; }
 
-.sg-icon-list--rw .icon {
-  vertical-align: bottom; }
-
-.sg-icon-list--rw .highlight {
-  margin-top: 0; }
-
 .sg-hidden {
   display: none; }
 
@@ -1489,5 +1483,3 @@ html.styleguide, html.styleguide body {
   margin: 20px;
   font-family: monospace;
   white-space: pre; }
-
-/*# sourceMappingURL=styleguide.css.map */

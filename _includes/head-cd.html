@@ -1,27 +1,25 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{%if page.page-title %} {{page.page-title}} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.page-title %} {{ page.page-title }} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ site.description }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="{{ "/assets/js/modernizr.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ '/assets/js/modernizr.js' | prepend: site.baseurl }}"></script>
 
-    <link rel="stylesheet" href="{{ "/common-design/css/styles.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/common-design/css/styles.css' | prepend: site.baseurl }}">
 
-
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16">
-    <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
-    <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | prepend: site.baseurl }}" color="#5bbad5">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" href="{{ '/favicon-32x32.png' | prepend: site.baseurl }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ '/favicon-16x16.png' | prepend: site.baseurl }}" sizes="16x16">
+    <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
+    <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | prepend: site.baseurl }}" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
 
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/UN-OCHA/ocha_basic/master/js/bootstrap-dropdown.js"></script>
-
 </head>
