@@ -291,6 +291,8 @@ body {
       right: -1px;
       transition: background 0.3s ease;
       width: calc(100% + 1px); }
+    .open .cd-site-header__nav-toggle:focus {
+      background: #FFF; }
   .cd-site-header__nav-toggle:hover, .cd-site-header__nav-toggle:focus {
     background: #E6ECF1;
     outline: none; }
