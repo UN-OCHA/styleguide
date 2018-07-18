@@ -37,6 +37,10 @@
       transition: background 0.3s ease;
       width: calc(100% + 1px);
     }
+
+    &:focus {
+      background: $cd-white-bg-color;
+    }
   }
 
   &:hover,
