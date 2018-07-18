@@ -40,14 +40,5 @@
       src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
-    {% if page.include_rw != true %}
     <script src="https://cdn.rawgit.com/UN-OCHA/ocha_basic/master/js/bootstrap-dropdown.js"></script>
-    {% endif %}
-    {% if page.include_rw %}
-    <script src="{{ '/assets/rw/simpleautocomplete.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/assets/rw/simpledatepicker.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/assets/rw/responsive.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/assets/rw/responsive-river.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/assets/rw/responsive-search.js' | prepend: site.baseurl }}"></script>
-    {% endif %}
 </head>
