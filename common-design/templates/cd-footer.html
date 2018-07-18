@@ -1,61 +1,13 @@
 <footer class="cd-footer" role="contentinfo">
   <div class="cd-container cd-footer__inner">
 
-    <!-- Menu -->
-    <ul class="cd-footer-menu cd-footer__section">
-      <li class="cd-footer-menu__item">
-        <a href="#">Link</a>
-      </li>
-      <li class="cd-footer-menu__item">
-        <a href="/">Link</a>
-      </li>
-      <li class="cd-footer-menu__item">
-        <a href="/">Link</a>
-      </li>
-      <li class="cd-footer-menu__item">
-        <a href="/">Link</a>
-      </li>
-      <li class="cd-footer-menu__item">
-        <a href="/">Link</a>
-      </li>
-    </ul>
-    <!-- end Menu -->
+    {% include_relative /components/cd-footer-menu.html %}
 
-    <!-- Social -->
-    <div class="cd-footer-social cd-footer__section">
-      <a href="#" class="cd-footer-social__link">
-        <span class="cd-sr-only">Facebook</span>
-        <span class="icon-facebook" aria-hidden="true"></span>
-      </a>
-      <a href="#" class="cd-footer-social__link">
-        <span class="cd-sr-only">Twitter</span>
-        <span class="icon-twitter" aria-hidden="true"></span>
-      </a>
-      <a href="#" class="cd-footer-social__link">
-        <span class="cd-sr-only">YouTube</span>
-        <span class="icon-youtube" aria-hidden="true"></span>
-      </a>
-    </div>
-    <!-- end Social -->
+    {% include_relative /components/cd-social-menu.html %}
 
-    <!-- Provided by -->
-    <div class="cd-footer-provided-by cd-footer__section">
-      <span>Service provided by</span>
-      <span class="cd-footer-provided-by__logo">
-        <span class="cd-sr-only">UN-OCHA</span>
-      </span>
-    </div>
-    <!-- end Provided by -->
+    {% include_relative /components/cd-provided-by.html %}
 
-    <!-- Copyright -->
-    <div class="cd-footer-copyright cd-footer__section">
-      <div class="cd-footer-copyright__message">
-        <span class="cd-footer-copyright__text">This area will be entirely dedicated to Copyright disclaimer, if any </span>
-        <span class="cd-footer-copyright__icon icon-creative-commons" aria-hidden="true"></span>
-      </div>
-    </div>
-    <!-- end Copyright -->
+    {% include_relative /components/cd-copyright.html %}
 
   </div>
 </footer>
-
