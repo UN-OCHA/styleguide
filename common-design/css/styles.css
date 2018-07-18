@@ -505,14 +505,15 @@ ul.cd-nav__grandchild-nav {
     color: #EB5C6D; }
 
 .cd-search_btn .icon-search {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   padding: 0 4px 0 0; }
 
 .cd-search_btn-text {
   font-size: 12px;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: none; }
   .open .cd-search_btn-text {
     color: #EB5C6D; }
 
@@ -596,6 +597,12 @@ ul.cd-nav__grandchild-nav {
     padding: 0 44px 0 30px; }
   .cd-search__submit {
     right: 24px; } }
+
+@media (min-width: 1024px) {
+  .cd-search_btn-text {
+    display: block; }
+  .cd-search_btn .icon-search {
+    font-size: 20px; } }
 
 @media (min-width: 1200px) {
   .cd-search__form {
