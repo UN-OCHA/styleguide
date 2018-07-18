@@ -9,7 +9,7 @@ export NODE_ENV='production'
 
 # build assets
 gulp deploy
-git add css js
+git add assets common-design ocha styleguide
 
 # instruct developer to review/commit/push
 echo ""
