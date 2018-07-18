@@ -35,7 +35,9 @@
     <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | prepend: site.baseurl }}" color="#5bbad5">
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
 
-    <style>html.hidden {display: block}</style>
+    <!-- inline CSS is for bootstrap-dropdown.js -->
+    <style type="text/css">html.hidden {display: block}</style>
+
     <script src="{{ '/common-design/js/jquery-1.10.2.min.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/common-design/js/bootstrap-dropdown.js' | prepend: site.baseurl }}"></script>
 </head>
