@@ -17,11 +17,12 @@
   text-transform: uppercase;
   transition: background 0.3s ease;
 
+  .icon-arrow-down {
+    margin-left: 2px;
+    color: $cd-highlight-red;
+  }
+
   .open & {
-    border: none;
-    height: 20px;
-    margin: 15px 12px 0 0;
-    padding: 0;
     position: relative;
     z-index: 101;
 
@@ -34,9 +35,8 @@
       position: absolute;
       right: -1px;
       transition: background 0.3s ease;
-      width: calc(100% + 2px);
+      width: calc(100% + 1px);
     }
-
   }
 
   &:hover,
@@ -46,26 +46,10 @@
   }
 }
 
-.cd-site-header__nav-label--closed {
-  .open & {
-    display: none;
-  }
-}
-
-.cd-site-header__nav-label--open {
-  display: none;
-
-  .open & {
-    display: block;
-    font-size: 20px;
-  }
-}
-
 .cd-nav {
   background: $cd-white-bg-color;
   height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
-  //max-width: 350px;
-  padding: 40px 0 36px 0;
+  padding: 20px 0 36px 0;
   position: absolute;
   right: 0;
   left: 0;
@@ -92,10 +76,6 @@
       color: $cd-dark-text-color;
       outline: none; // default browser outline is replaced by background colour change.
     }
-
-    &:focus {
-      background: $cd-white-bg-color;
-    }
   }
 
   button {
@@ -108,16 +88,13 @@
 }
 
 .cd-nav__item {
-
   &.open {
     background: $cd-white-bg-color;
 
     & > button {
-      &:hover {
-        background: $cd-mid-bg-color;
-      }
+      &:hover,
       &:focus {
-        background: $cd-white-bg-color;
+        background: $cd-mid-bg-color;
       }
     }
   }
@@ -146,10 +123,6 @@ ul.cd-nav__child-nav {
 
     &:hover {
       background: $cd-mid-bg-color;
-    }
-
-    &:focus {
-      background: $cd-white-bg-color;
     }
   }
 }
@@ -228,15 +201,16 @@ ul.cd-nav__grandchild-nav {
       position: relative;
 
       & > button {
-        background: $cd-white-bg-color;
 
         &:after {
           background: $cd-highlight-red;
         }
 
-        &:focus {
-          background: $cd-white-bg-color;
+        &:hover {
+          background: $cd-mid-bg-color;
+        }
 
+        &:focus {
           &:after {
             background: $cd-highlight-red;
           }
@@ -308,9 +282,6 @@ ul.cd-nav__grandchild-nav {
     button {
       &:hover {
         background: $cd-mid-bg-color;
-      }
-      &:focus {
-        background: $cd-white-bg-color;
       }
     }
   }
