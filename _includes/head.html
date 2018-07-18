@@ -4,11 +4,11 @@
     <title>{%if page.page-title %} {{page.page-title}} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/styleguide.css" type="text/css">
-    <link rel="stylesheet" href="{{site.baseurl}}/styleguide/css/chosen/chosen.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styleguide/css/styleguide.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styleguide/css/chosen/chosen.min.css" type="text/css">
 
     {% if page.include_ocha_basic %}
-    <link rel="stylesheet" href="https://cdn.rawgit.com/UN-OCHA/ocha_basic/254ff16fe919f95cb262d94172b2fdad54304e7b/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/ocha/css/styles.css">
     {% endif %}
     {% if page.include_hid %}
     <link rel="stylesheet" href="https://app2.dev.humanitarian.id/css/app.min.css">
@@ -24,7 +24,7 @@
 
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
-      <link rel="stylesheet" href="{{site.baseurl}}/{{ stylesheet }}.css" media="screen" type="text/css">
+      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}.css" media="screen" type="text/css">
       {% endfor %}
     {% endif %}
 
