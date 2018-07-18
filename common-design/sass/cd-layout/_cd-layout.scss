@@ -7,7 +7,6 @@ html {
   height: 100%;
   margin: 0;
   margin-left: calc(100vw - 100%); //prevents scrollbar changing page width in IE.
-  padding: 0 $cd-site-padding;
 }
 
 body {
@@ -35,6 +34,14 @@ body {
 
   .cd-container {
     padding: 0 $cd-container-padding-tablet;
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  html {
+    padding: 0 $cd-site-padding;
   }
 
 }

@@ -28,7 +28,7 @@
       height: 0;
       border-style: solid;
       border-width: 0 6px 6px 6px;
-      border-color: transparent transparent $cd-mid-bg-color transparent;
+      border-color: transparent transparent $cd-border-color transparent;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -38,18 +38,40 @@
 
   &:hover,
   &:focus {
-    background: $cd-mid-bg-color;
+    background: $cd-white-bg-color;
     outline: none;
+    color: $cd-bright-blue-text-color;
+  }
+
+  &:focus {
+    color: $cd-highlight-red;
+  }
+}
+
+.cd-search_btn .icon-search {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+.cd-search_btn-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: none;
+
+  .open & {
+    color: $cd-highlight-red;
   }
 }
 
 .cd-search__form {
-  background: $cd-mid-bg-color;
+  background: $cd-mid-bluey-grey;
   display: none;
   height: $cd-site-header-height;
-  left: 8px;
+  left: 0;
   position: absolute;
-  right: 8px;
+  right: 0;
 
   .open & {
     display: block;
@@ -57,63 +79,71 @@
 }
 
 .cd-search__form-inner {
-  padding: 0 $cd-container-padding;
-}
-
-.cd-search__icon {
-  color: $cd-blue-text-color;
-  font-size: 18px;
-  position: absolute;
-  left: $cd-container-padding;
-  top: 50%;
-  margin-top: -9px;
+  padding: 8px $cd-container-padding;
 }
 
 .cd-search__input {
   -webkit-appearance: none;
-  background: none;
+  background: $cd-white-bg-color;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   color: $cd-default-text-color;
   font-size: map-get($cd-font-sizes, large);
   height: $cd-site-header-height;
+  height: calc(#{$cd-site-header-height} - 16px); //padding
   padding: 0 45px 0 25px;
   width: 100%;
 }
 
 .cd-search__input::-webkit-input-placeholder {
-  color: $cd-blue-text-color;
+  color: $cd-dark-grey;
   font-style: italic;
 }
 .cd-search__input::-moz-placeholder {
-  color: $cd-blue-text-color;
+  color: $cd-dark-grey;
   font-style: italic;
 }
 .cd-search__input:-ms-input-placeholder {
-  color: $cd-blue-text-color;
+  color: $cd-dark-grey;
   font-style: italic;
 }
 .cd-search__input:-moz-placeholder {
-  color: $cd-blue-text-color;
+  color: $cd-dark-grey;
   font-style: italic;
+}
+
+.cd-search__input::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px;
 }
 
 .cd-search__submit {
   align-items: center;
-  background: none;
+  background: $cd-dark-grey;
   border: 0;
-  color: $cd-blue-text-color;
+  color: $cd-white-text-color;
   display: flex;
   font-size: map-get($cd-font-sizes, large);
   font-weight: bold;
-  height: 30px;
-  margin: -14px 0 0 0;
+  height: calc(#{$cd-site-header-height} - 16px); //padding
+  margin: 0;
   padding: 0;
   position: absolute;
   right: $cd-container-padding;
   text-transform: uppercase;
-  top: 50%;
+  top: 8px;
+
+  .icon-search {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  &.js-has-focus {
+    background-color: $cd-highlight-red;
+  }
+
 }
 
 @media (min-width: map-get($cd-breakpoints, tablet)) {
@@ -121,16 +151,12 @@
   .cd-search__form-inner {
     margin: 0 auto;
     max-width: $cd-max-width;
-    padding: 0 $cd-container-padding-tablet;
+    padding: 8px $cd-container-padding-tablet;
     position: relative;
   }
 
-  .cd-search__icon {
-    left: $cd-container-padding-tablet;
-  }
-
   .cd-search__input {
-    padding: 0 60px 0 30px;
+    padding: 0 44px 0 30px;
   }
 
   .cd-search__submit {
@@ -138,18 +164,29 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, largescreen)) {
+@media (min-width: map-get($cd-breakpoints, desktop)) {
 
-  .cd-search__form-inner {
-    padding: 0 $cd-container-padding-largescreen;
+  .cd-search_btn-text {
+    display: block;
   }
 
-  .cd-search__icon {
-    left: $cd-container-padding-largescreen;
+  .cd-search_btn .icon-search {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, largescreen)) {
+
+  .cd-search__form {
+    left: 8px;
+    right: 8px;
+  }
+
+  .cd-search__form-inner {
+    padding: 8px $cd-container-padding-largescreen;
   }
 
   .cd-search__submit {
     right: $cd-container-padding-largescreen;
   }
-
 }
