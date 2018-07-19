@@ -12,6 +12,7 @@
   border-left: 1px solid $cd-border-color;
   font-size: map-get($cd-font-sizes, medium);
   font-weight: bold;
+  color: $cd-default-text-color;
   height: $cd-site-header-height;
   padding: 0 20px;
   text-transform: uppercase;
@@ -25,6 +26,7 @@
   .open & {
     position: relative;
     z-index: 101;
+    color: $cd-dark-text-color;
 
     &:after {
       bottom: -3px;
@@ -45,6 +47,7 @@
 
   &:hover,
   &:focus {
+    color: $cd-dark-text-color;
     background: $cd-mid-bg-color;
     outline: none; // default browser outline is replaced by background colour change.
   }
@@ -96,6 +99,8 @@
     background: $cd-white-bg-color;
 
     & > button {
+      color: $cd-dark-text-color;
+
       &:hover,
       &:focus {
         background: $cd-mid-bg-color;
@@ -124,6 +129,7 @@ ul.cd-nav__child-nav {
   a,
   button {
     color: $cd-dark-text-color;
+    font-weight: 600;
 
     &:hover {
       background: $cd-mid-bg-color;
@@ -133,6 +139,10 @@ ul.cd-nav__child-nav {
 
 ul.cd-nav__grandchild-nav {
   padding-bottom: 5px;
+  a,
+  button {
+    font-weight: 200;
+  }
 }
 
 .cd-nav__grandchild-item {
