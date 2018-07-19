@@ -194,12 +194,7 @@ body {
   height: 60px; }
 
 .cd-site-header__actions {
-  float: right;
-  margin-right: -12px; }
-
-@media (min-width: 768px) {
-  .cd-site-header__actions {
-    margin-right: 0; } }
+  float: right; }
 
 /**
  * Common Design Header Dropdowns generic styles.
@@ -269,6 +264,7 @@ body {
   background: transparent;
   border: 0;
   border-left: 1px solid #E6ECF1;
+  border-right: 1px solid #E6ECF1;
   font-size: 14px;
   font-weight: bold;
   color: #4A4A4A;
