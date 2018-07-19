@@ -1,0 +1,119 @@
+/**
+ * Common Design Search form in header.
+ */
+
+.cd-search--inline {
+  float: left;
+  border-left: 1px solid $cd-border-color;
+  border-right: 1px solid $cd-border-color;
+
+  .cd-search__form {
+    background: $cd-white-bg-color;
+    display: block;
+    left: unset;
+    position: relative;
+    right: unset;
+  }
+
+  .cd-search__form-inner {
+    padding: 0;
+  }
+
+  .cd-search__input {
+    -webkit-appearance: none;
+    background: $cd-white-bg-color;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: $cd-default-text-color;
+    font-size: map-get($cd-font-sizes, large);
+    height: $cd-site-header-height;
+    height: calc(#{$cd-site-header-height} - 16px); //padding
+    padding: 0 45px 0 25px;
+    width: auto;
+  }
+
+  .cd-search__submit {
+    align-items: center;
+    background: $cd-white-bg-color;
+    border: 0;
+    border-left: 1px solid $cd-border-color;
+    color: $cd-dark-text-color;
+    display: flex;
+    font-size: map-get($cd-font-sizes, large);
+    font-weight: bold;
+    height: calc(#{$cd-site-header-height} - 16px); //padding
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: $cd-container-padding;
+    text-transform: uppercase;
+    top: 0;
+
+    .icon-search {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    &.js-has-focus {
+      background-color: $cd-highlight-red;
+    }
+
+  }
+
+  @media (min-width: map-get($cd-breakpoints, tablet)) {
+
+    .cd-search__form-inner {
+      margin: 0 auto;
+      max-width: $cd-max-width;
+      padding: 0 $cd-container-padding-tablet;
+      position: relative;
+    }
+
+    .cd-search__input {
+      padding: 0 44px 0 30px;
+    }
+
+    .cd-search__submit {
+      right: 0;
+    }
+  }
+
+  @media (min-width: map-get($cd-breakpoints, desktop)) {
+
+    .cd-search_btn-text {
+      display: block;
+    }
+
+    .cd-search__form-inner {
+      margin: 0 auto;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .cd-search__input {
+      padding: 0 44px 0 8px;
+    }
+
+    .cd-search_btn .icon-search {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: map-get($cd-breakpoints, largescreen)) {
+
+    .cd-search__form {
+      left: 0;
+      right: 0;
+    }
+
+    .cd-search__form-inner {
+      padding: 0 $cd-container-padding-largescreen;
+    }
+
+    .cd-search__submit {
+      right: 0;
+    }
+  }
+}
