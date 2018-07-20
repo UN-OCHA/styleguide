@@ -33,13 +33,4 @@
 
 .cd-site-header__actions {
   float: right;
-  margin-right: -$cd-container-padding;
-}
-
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
-  .cd-site-header__actions {
-    margin-right: 0;
-  }
-
 }

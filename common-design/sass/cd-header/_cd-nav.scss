@@ -10,6 +10,7 @@
   background: transparent;
   border: 0;
   border-left: 1px solid $cd-border-color;
+  border-right: 1px solid $cd-border-color;
   font-size: map-get($cd-font-sizes, medium);
   font-weight: bold;
   color: $cd-default-text-color;
