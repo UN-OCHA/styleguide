@@ -1,12 +1,12 @@
 /**
- * Common Design Footer provided by OCHA section.
+ * Common Design Footer OCHA mandate section.
  */
 
- .cd-footer-provided-by {
+ .cd-mandate {
    text-align: left;
  }
 
-.cd-footer-provided-by__logo {
+.cd-mandate__logo {
   background: url('../logos/ocha-logo-white.svg') 0 center no-repeat;
   display: block;
   box-sizing: content-box;
@@ -22,19 +22,19 @@
   }
 }
 
-.cd-footer-provided-by__heading,
-.cd-footer-provided-by__text {
+.cd-mandate__heading,
+.cd-mandate__text {
   display: block;
 }
 
 @media (min-width: map-get($cd-breakpoints, tablet)) {
 
-  .cd-footer-provided-by {
+  .cd-mandate {
     max-width: 780px;
     flex: 1 1 50%;
   }
 
-  .cd-footer-provided-by__logo {
+  .cd-mandate__logo {
     margin: 16px $cd-container-padding 0 0;
   }
 
@@ -42,7 +42,7 @@
 
 @media (min-width: map-get($cd-breakpoints, desktop)) {
 
-  .cd-footer-provided-by__text {
+  .cd-mandate__text {
     padding-right: $cd-container-padding-largescreen;
   }
 }
