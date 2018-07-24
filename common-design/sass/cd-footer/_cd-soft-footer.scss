@@ -1,5 +1,5 @@
 /**
- * Common Design Footer.
+ * Common Design soft footer - optional space for call to actions, newsletter sign up etc
  */
 
 .cd-soft-footer {
@@ -30,10 +30,6 @@
   text-transform: uppercase;
   transition: background 0.3s ease;
 
-  &::after {
-    content: none;
-  }
-
   &:hover,
   &:focus {
     background: darken($cd-highlight-red, 5%);
@@ -42,10 +38,15 @@
 
 @media (min-width: map-get($cd-breakpoints, tablet)) {
 
+  // override container layout so flexbox justify-content works
+  .cd-soft-footer .cd-container:after {
+    content: none;
+  }
+
   .cd-soft-footer__inner {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
