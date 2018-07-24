@@ -30,8 +30,8 @@
 @media (min-width: map-get($cd-breakpoints, tablet)) {
 
   .cd-footer-provided-by {
-   flex: 1;
-   max-width: 780px;
+    max-width: 780px;
+    flex: 1 1 50%;
   }
 
   .cd-footer-provided-by__logo {
@@ -42,13 +42,7 @@
 
 @media (min-width: map-get($cd-breakpoints, desktop)) {
 
-  .cd-footer-provided-by {
-    flex: 1 0 780px;
-    max-width: 780px;
-  }
-
   .cd-footer-provided-by__text {
     padding-right: $cd-container-padding-largescreen;
   }
-
 }
