@@ -919,7 +919,7 @@ button.cd-user-menu__item {
  * Common Design Footer.
  */
 .cd-footer {
-  grid-row: 2/3;
+  grid-row: 3/3;
   background: #026CB6;
   color: #FFF;
   padding: 48px 0 0 0;
@@ -973,8 +973,8 @@ button.cd-user-menu__item {
 
 @media (min-width: 768px) {
   .cd-footer-copyright {
-    -webkit-flex: 1;
-    flex: 1;
+    -webkit-flex: 0 1 350px;
+    flex: 0 1 350px;
     -webkit-align-items: flex-start;
     align-items: flex-start;
     display: -webkit-flex;
@@ -1007,8 +1007,10 @@ button.cd-user-menu__item {
   padding-left: 0;
   text-transform: uppercase; }
 
+.cd-footer-menu > li,
 .cd-footer-menu__item {
   margin-bottom: 20px; }
+  .cd-footer-menu > li:last-child,
   .cd-footer-menu__item:last-child {
     margin-bottom: 0; }
 
@@ -1016,6 +1018,7 @@ button.cd-user-menu__item {
   .cd-footer-menu {
     -webkit-flex: 1 0 100%;
     flex: 1 0 100%; }
+  .cd-footer-menu > li,
   .cd-footer-menu__item {
     display: inline-block;
     margin: 0 16px 8px; } }
@@ -1025,8 +1028,10 @@ button.cd-user-menu__item {
     text-align: left;
     -webkit-flex: 1 0 70%;
     flex: 1 0 70%; }
+  .cd-footer-menu > li,
   .cd-footer-menu__item {
     margin: 0 35px 8px 0; }
+    .cd-footer-menu > li:last-child,
     .cd-footer-menu__item:last-child {
       margin: 0; } }
 
@@ -1055,17 +1060,13 @@ button.cd-user-menu__item {
 
 @media (min-width: 768px) {
   .cd-footer-provided-by {
-    -webkit-flex: 1;
-    flex: 1;
-    max-width: 780px; }
+    max-width: 780px;
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%; }
   .cd-footer-provided-by__logo {
     margin: 16px 12px 0 0; } }
 
 @media (min-width: 1024px) {
-  .cd-footer-provided-by {
-    -webkit-flex: 1 0 780px;
-    flex: 1 0 780px;
-    max-width: 780px; }
   .cd-footer-provided-by__text {
     padding-right: 40px; } }
 
@@ -1102,3 +1103,47 @@ a.cd-footer-social__link {
     margin: 0 0 0 20px; }
     a.cd-footer-social__link:first-child {
       margin: 0; } }
+
+/**
+ * Common Design soft footer - optional space for call to actions, newsletter sign up etc
+ */
+.cd-soft-footer {
+  background: #025995;
+  color: #FFF;
+  padding: 24px 0;
+  text-align: center;
+  font-family: sans-serif; }
+  .cd-soft-footer a {
+    color: #FFF;
+    text-decoration: none; }
+    .cd-soft-footer a:hover, .cd-soft-footer a:focus {
+      border-color: #80CBFF; }
+
+.cd-soft-footer__button {
+  display: inline-block;
+  background: #EB5C6D;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  transition: background 0.3s ease; }
+  .cd-soft-footer__button:hover, .cd-soft-footer__button:focus {
+    background: #e84559; }
+
+@media (min-width: 768px) {
+  .cd-soft-footer .cd-container:after {
+    content: none; }
+  .cd-soft-footer__inner {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; } }
+
+@media (min-width: 1024px) {
+  .cd-soft-footer {
+    padding: 32px 0; } }
+
+/*# sourceMappingURL=styles.css.map */
