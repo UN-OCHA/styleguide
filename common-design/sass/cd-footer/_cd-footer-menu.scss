@@ -10,6 +10,7 @@
   text-transform: uppercase;
 }
 
+.cd-footer-menu > li,
 .cd-footer-menu__item {
   margin-bottom: 20px;
 
@@ -23,6 +24,7 @@
     flex: 1 0 100%;
   }
 
+  .cd-footer-menu > li,
   .cd-footer-menu__item {
     display: inline-block;
     margin: 0 16px 8px;
@@ -37,6 +39,7 @@
     flex: 1 0 70%;
   }
 
+  .cd-footer-menu > li,
   .cd-footer-menu__item {
     margin: 0 35px 8px 0;
 
