@@ -1,43 +1,48 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{%if page.page-title %} {{page.page-title}} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/styleguide/css/styleguide.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/styleguide/css/chosen/chosen.min.css" type="text/css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{% if page.page-title %} {{ page.page-title }} | {% endif %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/png" href="{{ '/favicon-32x32.png' | prepend: site.baseurl }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ '/favicon-16x16.png' | prepend: site.baseurl }}" sizes="16x16">
+<link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
+<link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | prepend: site.baseurl }}" color="#5bbad5">
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
 
-    {% if page.include_ocha_basic %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/ocha/css/styles.css">
-    {% endif %}
-    {% if page.include_hid %}
-    <link rel="stylesheet" href="https://app2.dev.humanitarian.id/css/app.min.css">
-    {% endif %}
+<link rel="stylesheet" href="{{ '/styleguide/css/styleguide.css' | prepend: site.baseurl }}" type="text/css">
+<link rel="stylesheet" href="{{ '/styleguide/css/chosen/chosen.min.css' | prepend: site.baseurl }}" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="{{ '/assets/js/modernizr.js' | prepend: site.baseurl }}"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+<!-- if page.options contains 'include_cd' -->
+{% if page.options contains 'include_cd' %}
+  <link rel="stylesheet" href="{{ '/common-design/css/styles.css' | prepend: site.baseurl }}">
+{% endif %}
 
-    {% if page.hide_header_footer != true %}
-    <link rel="stylesheet" href="{{ '/common-design/css/styles.css' | prepend: site.baseurl }}">
-    {% endif %}
+<!-- if page.options contains 'include_ocha_basic' -->
+{% if page.options contains 'include_ocha_basic' %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/ocha/css/styles.css">
+{% endif %}
 
-    {% if page.custom_css %}
-      {% for stylesheet in page.custom_css %}
-      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}.css" media="screen" type="text/css">
-      {% endfor %}
-    {% endif %}
+<!-- if page.options contains 'include_hid' -->
+{% if page.options contains 'include_hid' %}
+  <link rel="stylesheet" href="https://app2.dev.humanitarian.id/css/app.min.css">
+{% endif %}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" href="{{ '/favicon-32x32.png' | prepend: site.baseurl }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ '/favicon-16x16.png' | prepend: site.baseurl }}" sizes="16x16">
-    <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
-    <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | prepend: site.baseurl }}" color="#5bbad5">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
+<!-- for stylesheet in page.custom_css -->
+{% for stylesheet in page.custom_css %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}.css" media="screen" type="text/css">
+{% endfor %}
 
-    <!-- inline CSS is for bootstrap-dropdown.js -->
-    <style type="text/css">html.hidden {display: block}</style>
+<!-- inline CSS is for bootstrap-dropdown.js -->
+<style type="text/css">html.hidden {display: block}</style>
+<script src="{{ '/assets/js/modernizr.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/common-design/js/jquery-1.10.2.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/common-design/js/bootstrap-dropdown.js' | prepend: site.baseurl }}"></script>
 
-    <script src="{{ '/common-design/js/jquery-1.10.2.min.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/common-design/js/bootstrap-dropdown.js' | prepend: site.baseurl }}"></script>
-</head>
+<!-- if page.options contains 'include_cd' -->
+{% if page.options contains 'include_cd' %}
+  <script src="{{ '/common-design/js/custom-dropdown.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/common-design/js/custom-search.js' | prepend: site.baseurl }}"></script>
+{% endif %}

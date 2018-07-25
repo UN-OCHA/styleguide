@@ -1,0 +1,48 @@
+/**
+ * Common Design Footer OCHA mandate section.
+ */
+
+ .cd-mandate {
+   text-align: left;
+ }
+
+.cd-mandate__logo {
+  background: url('../logos/ocha-logo-white.svg') 0 center no-repeat;
+  display: block;
+  box-sizing: content-box;
+  float: left;
+  height: 33px;
+  margin: 16px $cd-container-padding 0 auto;
+  width: 135px;
+  padding-right: $cd-container-padding;
+  border-right: 1px solid $cd-border-color;
+
+  .no-svg & {
+    background: url('../logos/ocha-logo-white.png') 0 center no-repeat;
+  }
+}
+
+.cd-mandate__heading,
+.cd-mandate__text {
+  display: block;
+}
+
+@media (min-width: map-get($cd-breakpoints, tablet)) {
+
+  .cd-mandate {
+    max-width: 780px;
+    flex: 1 1 50%;
+  }
+
+  .cd-mandate__logo {
+    margin: 16px $cd-container-padding 0 0;
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-mandate__text {
+    padding-right: $cd-container-padding-largescreen;
+  }
+}

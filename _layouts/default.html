@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html class="no-js">
-  {% include head.html %}
+  <head>
+    {% include head.html %}
+  </head>
 
   <body class="styleguide">
     <div class="page-wrapper">
-      {% if page.hide_header_footer != true %}
-        {% include header.html %}
+      {% if page.options contains 'include_cd_header' %}
+        {% include_relative templates/cd-header.html %}
       {% endif %}
+
+      {% unless page.options contains 'hide_header_footer' %}
+        {% include header.html %}
+      {% endunless %}
 
       {{ content }}
     </div>
 
-    {% if page.hide_header_footer != true %}
-      {% include footer.html %}
+    {% if page.options contains 'include_cd_footer' %}
+      {% include_relative components/cd-soft-footer.html %}
     {% endif %}
+
+    {% if page.options contains 'include_cd_footer' %}
+      {% include_relative templates/cd-footer.html %}
+    {% endif %}
+
+    {% unless page.options contains 'hide_header_footer' %}
+      {% include footer.html %}
+    {% endunless %}
   </body>
 </html>

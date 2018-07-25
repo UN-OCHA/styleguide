@@ -5,7 +5,6 @@ baseurl: /styleguide
 
 # Build settings
 markdown: kramdown
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -14,3 +13,12 @@ exclude:
   - Gruntfile.js
   - css/*.*
   - '*.scss'
+
+# site-wide defaults
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+      options:
+        - include_cd

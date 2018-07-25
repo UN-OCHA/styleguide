@@ -3,11 +3,12 @@
  */
 
 .cd-footer {
-  grid-row: 2/3; // position footer so visible on short pages.
+  grid-row: 3/3; // position footer so visible on short pages.
   background: $cd-primary-bg-color;
   color: $cd-white-text-color;
   padding: 48px 0 0 0;
   text-align: center;
+  line-height: 1.5;
 
   a {
     border-bottom: 1px solid transparent;
@@ -27,23 +28,20 @@
 
 @media (min-width: map-get($cd-breakpoints, tablet)) {
 
-  .cd-footer {
-    .nocssgrid.no-cssgridlegacy & {
-      padding-bottom: 48px;
-    }
-  }
-
   .cd-footer__inner {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 12px 1fr;
-    -ms-grid-rows: auto 48px auto 48px auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
-    grid-row-gap: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .cd-footer__section {
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  .cd-footer {
     padding-bottom: 0;
   }
 }

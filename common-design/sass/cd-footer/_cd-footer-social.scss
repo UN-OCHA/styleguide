@@ -24,22 +24,15 @@ a.cd-footer-social__link {
 }
 
 @media (min-width: map-get($cd-breakpoints, tablet)) {
-
   .cd-footer-social {
-    grid-column: 1/3;
-    -ms-grid-row: 3;
-    -ms-grid-column-span: 3;
+    flex: 1 0 100%;
   }
-
 }
 
 @media (min-width: map-get($cd-breakpoints, desktop)) {
 
   .cd-footer-social {
-    -ms-grid-column: 3;
-    -ms-grid-row: 1;
-    grid-column: auto;
-    text-align: right;
+    flex: 0 1 auto;
   }
 
   a.cd-footer-social__link {

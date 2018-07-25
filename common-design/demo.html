@@ -1,29 +1,18 @@
 ---
+options:
+- hide_header_footer
+- include_cd
+- include_cd_header
+- include_cd_footer_soft
+- include_cd_footer
 ---
-<!DOCTYPE html>
-<html class="styleguide">
-  {% include head-cd.html %}
+<div class="cd-container">
 
-  <body>
+  <!-- explanatory text, not part of common design layout -->
+  <div style="min-height: 200px; font-family: sans-serif; font-size: 16px; color: #4A4A4A; padding-top: 20px;">
+    <h1 style="font-size: 16px;">Common Design Layout, Header and Footer example</h1>
+    <p><a href="index.html">Back to Common Design docs</a></p>
+  </div>
+  <!-- explanatory text ends -->
 
-    <div class="cd-page-wrapper">
-      {% include_relative /templates/cd-header.html %}
-
-      <div class="cd-container">
-
-        <!-- explanatory text, not part of common design layout -->
-        <div style="min-height: 200px; font-family: sans-serif; font-size: 16px; color: #4A4A4A; padding-top: 20px;">
-          <h1 style="font-size: 16px;">Common Design Layout, Header and Footer example</h1>
-          <p><a href="index.html">Back to Common Design docs</a></p>
-        </div>
-        <!-- explanatory text ends -->
-
-      </div>
-
-    </div>
-
-    {% include_relative /templates/cd-footer.html %}
-  </body>
-
-</html>
-
+</div>
