@@ -29,7 +29,7 @@
     z-index: 101;
     color: $cd-dark-text-color;
 
-    &:after {
+    &:before {
       bottom: -3px;
       content: '';
       background: $cd-highlight-red;
@@ -113,7 +113,7 @@
   & > button {
     font-weight: bold;
     text-transform: uppercase;
-    &:after {
+    &:before {
       background: $cd-highlight-red;
     }
   }
@@ -215,9 +215,10 @@ ul.cd-nav__grandchild-nav {
     &.open {
       position: relative;
 
+      & > a,
       & > button {
 
-        &:after {
+        &:before {
           background: $cd-highlight-red;
         }
 
@@ -226,7 +227,7 @@ ul.cd-nav__grandchild-nav {
         }
 
         &:focus {
-          &:after {
+          &:before {
             background: $cd-highlight-red;
           }
         }
@@ -236,7 +237,7 @@ ul.cd-nav__grandchild-nav {
     &.active {
       & > a,
       & > button {
-        &:after {
+        &:before {
           background: $cd-highlight-red;
         }
       }
@@ -253,7 +254,7 @@ ul.cd-nav__grandchild-nav {
       position: relative;
       transition: background 0.3s ease;
 
-      &:after {
+      &:before {
         bottom: -3px;
         content: '';
         background: transparent;
@@ -275,7 +276,7 @@ ul.cd-nav__grandchild-nav {
 
       .active &,
       &:focus {
-        &:after {
+        &:before {
           background: $cd-highlight-red;
         }
       }
