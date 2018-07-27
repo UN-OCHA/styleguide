@@ -191,42 +191,54 @@ body {
   color: #4A4A4A; }
 
 .cd-site-header__inner {
-  height: 60px;
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  grid-template-rows: 60px; }
-  @media (min-width: 768px) {
-    .cd-site-header__inner {
-      grid-template-columns: 186px 1fr; } }
+  height: 60px; }
+  .cssgrid.flexbox .cd-site-header__inner {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    grid-template-rows: 60px; }
+    @media (min-width: 768px) {
+      .cssgrid.flexbox .cd-site-header__inner {
+        grid-template-columns: 186px 1fr; } }
 
-.cd-site-logo {
+.cssgrid.flexbox .cd-site-logo {
   grid-column: 1 / 1; }
 
 .cd-site-header__actions {
-  grid-column: 2 / 2;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end; }
-  .cd-site-header__actions .cd-search {
-    -webkit-flex: 1 0 14.286%;
-    flex: 1 0 14.286%; }
-  .cd-site-header__actions .cd-site-header__nav-holder {
-    -webkit-flex: 1 0 85.714%;
-    flex: 1 0 85.714%; }
+  float: right; }
+  .cssgrid.flexbox .cd-site-header__actions {
+    float: none;
+    grid-column: 2 / 2;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end; }
+    @media (min-width: 1024px) {
+      .cssgrid.flexbox .cd-site-header__actions .cd-search {
+        -webkit-flex: 1 0 14.28%;
+        flex: 1 0 14.28%; }
+      .cssgrid.flexbox .cd-site-header__actions .cd-site-header__nav-holder {
+        -webkit-flex: 1 0 85.71%;
+        flex: 1 0 85.71%; } }
 
-.cd-nav > ul {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end; }
-  .cd-nav > ul > .cd-nav__item {
-    -webkit-flex: 1 0 14.286%;
-    flex: 1 0 14.286%; }
+.cssgrid.flexbox .cd-nav > ul {
+  display: block; }
+  @media (min-width: 1024px) {
+    .cssgrid.flexbox .cd-nav > ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end; } }
+  .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
+    -webkit-flex: 1 0 100%;
+    flex: 1 0 100%; }
+    @media (min-width: 1024px) {
+      .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
+        -webkit-flex: 1 0 14.286%;
+        flex: 1 0 14.286%; } }
 
 /**
  * Common Design Header Dropdowns generic styles.
@@ -274,7 +286,10 @@ body {
   background: url("../logos/ocha-logo-mobile.svg") center no-repeat;
   display: block;
   width: 52px;
-  height: 60px; }
+  height: 60px;
+  float: left; }
+  .cssgrid.flexbox .cd-site-logo {
+    float: none; }
   .no-svg .cd-site-logo {
     background: url("../logos/ocha-logo-mobile.png") center no-repeat; }
 
@@ -288,6 +303,11 @@ body {
 /**
  * Common Design Navigation in header.
  */
+.cd-site-header__nav-holder {
+  float: left; }
+  .cssgrid.flexbox .cd-site-header__nav-holder {
+    float: none; }
+
 .cd-site-header__nav-toggle {
   background: transparent;
   border: 0;
@@ -502,6 +522,11 @@ ul.cd-nav__grandchild-nav {
 /**
  * Common Design Search form in header.
  */
+.cd-search {
+  float: left; }
+  .cssgrid.flexbox .cd-search {
+    float: none; }
+
 .cd-search_btn {
   -webkit-align-items: center;
   align-items: center;

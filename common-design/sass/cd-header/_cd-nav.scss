@@ -3,6 +3,11 @@
  */
 
 .cd-site-header__nav-holder {
+  float: left;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
 }
 
 .cd-site-header__nav-toggle {

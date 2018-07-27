@@ -3,6 +3,11 @@
  */
 
 .cd-search {
+  float: left;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
 }
 
 .cd-search_btn {
