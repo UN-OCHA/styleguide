@@ -191,10 +191,42 @@ body {
   color: #4A4A4A; }
 
 .cd-site-header__inner {
-  height: 60px; }
+  height: 60px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: 60px; }
+  @media (min-width: 768px) {
+    .cd-site-header__inner {
+      grid-template-columns: 186px 1fr; } }
+
+.cd-site-logo {
+  grid-column: 1 / 1; }
 
 .cd-site-header__actions {
-  float: right; }
+  grid-column: 2 / 2;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
+  .cd-site-header__actions .cd-search {
+    -webkit-flex: 1 0 14.286%;
+    flex: 1 0 14.286%; }
+  .cd-site-header__actions .cd-site-header__nav-holder {
+    -webkit-flex: 1 0 85.714%;
+    flex: 1 0 85.714%; }
+
+.cd-nav > ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
+  .cd-nav > ul > .cd-nav__item {
+    -webkit-flex: 1 0 14.286%;
+    flex: 1 0 14.286%; }
 
 /**
  * Common Design Header Dropdowns generic styles.
@@ -241,9 +273,8 @@ body {
 .cd-site-logo {
   background: url("../logos/ocha-logo-mobile.svg") center no-repeat;
   display: block;
-  float: left;
-  height: 60px;
-  width: 52px; }
+  width: 52px;
+  height: 60px; }
   .no-svg .cd-site-logo {
     background: url("../logos/ocha-logo-mobile.png") center no-repeat; }
 
@@ -257,9 +288,6 @@ body {
 /**
  * Common Design Navigation in header.
  */
-.cd-site-header__nav-holder {
-  float: left; }
-
 .cd-site-header__nav-toggle {
   background: transparent;
   border: 0;
@@ -427,7 +455,6 @@ ul.cd-nav__grandchild-nav {
       display: -webkit-flex;
       display: flex;
       height: 60px;
-      line-height: 60px;
       padding: 0 14px;
       position: relative;
       transition: background 0.3s ease; }
@@ -475,9 +502,6 @@ ul.cd-nav__grandchild-nav {
 /**
  * Common Design Search form in header.
  */
-.cd-search {
-  float: left; }
-
 .cd-search_btn {
   -webkit-align-items: center;
   align-items: center;

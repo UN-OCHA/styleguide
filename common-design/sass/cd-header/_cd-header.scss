@@ -29,8 +29,41 @@
 
 .cd-site-header__inner {
   height: $cd-site-header-height;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: $cd-site-header-height;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 186px 1fr;
+  }
+}
+
+.cd-site-logo {
+  grid-column: 1 / 1;
 }
 
 .cd-site-header__actions {
-  float: right;
+  grid-column: 2 / 2;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  .cd-search {
+    flex: 1 0 14.286%;
+  }
+
+  .cd-site-header__nav-holder {
+    flex: 1 0 85.714%;
+  }
+}
+
+.cd-nav > ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  & > .cd-nav__item {
+    flex: 1 0 14.286%;
+  }
 }
