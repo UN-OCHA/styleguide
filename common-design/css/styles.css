@@ -1086,7 +1086,8 @@ button.cd-user-menu__item {
   .cd-mandate {
     max-width: 780px;
     -webkit-flex: 1 1 50%;
-    flex: 1 1 50%; }
+    flex: 1 1 50%;
+    margin: 0; }
   .cd-mandate__logo {
     margin: 16px 12px 0 0; }
   .cd-mandate__text {
