@@ -75,7 +75,7 @@
 
     @media (min-width: map-get($cd-breakpoints, desktop)) {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: flex-end;
     }
 
@@ -83,7 +83,8 @@
       flex: 1 0 100%;
 
       @media (min-width: map-get($cd-breakpoints, desktop)) {
-        flex: 0 0 auto;
+        flex: 1 1 auto;
+        max-width: 120px;
       }
     }
   }
