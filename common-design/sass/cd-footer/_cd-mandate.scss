@@ -2,20 +2,17 @@
  * Common Design Footer OCHA mandate section.
  */
 
- .cd-mandate {
-   text-align: left;
- }
+.cd-mandate {
+ text-align: center;
+}
 
 .cd-mandate__logo {
   background: url('../logos/ocha-logo-white.svg') 0 center no-repeat;
   display: block;
-  box-sizing: content-box;
-  float: left;
   height: 33px;
-  margin: 16px $cd-container-padding 0 auto;
+  margin: 16px $cd-container-padding;
   width: 135px;
-  padding-right: $cd-container-padding;
-  border-right: 1px solid $cd-border-color;
+  margin: 0 auto;
 
   .no-svg & {
     background: url('../logos/ocha-logo-white.png') 0 center no-repeat;
@@ -27,7 +24,37 @@
   display: block;
 }
 
+.cd-mandate__heading {
+  padding: 16px $cd-container-padding;
+}
+
+.cd-mandate__text {
+  padding: 0 $cd-container-padding;
+}
+
 @media (min-width: map-get($cd-breakpoints, tablet)) {
+  .cd-mandate {
+    max-width: 690px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .cd-mandate__logo {
+    box-sizing: content-box;
+    float: left;
+    margin: 16px $cd-container-padding 0 auto;
+    padding-right: $cd-container-padding;
+    border-right: 1px solid $cd-border-color;
+  }
+
+  .cd-mandate__heading,
+  .cd-mandate__text {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media (min-width: map-get($cd-breakpoints, desktop)) {
 
   .cd-mandate {
     max-width: 780px;
@@ -37,10 +64,6 @@
   .cd-mandate__logo {
     margin: 16px $cd-container-padding 0 0;
   }
-
-}
-
-@media (min-width: map-get($cd-breakpoints, desktop)) {
 
   .cd-mandate__text {
     padding-right: $cd-container-padding-largescreen;
