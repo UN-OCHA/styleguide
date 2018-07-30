@@ -60,10 +60,10 @@
 
     @media (min-width: map-get($cd-breakpoints, desktop)) {
       .cd-search {
-        flex: 1 0 14.28%;
+        flex: 0 0 auto;
       }
       .cd-site-header__nav-holder {
-        flex: 1 0 85.71%;
+        flex: 0 0 auto;
       }
     }
   }
@@ -83,7 +83,7 @@
       flex: 1 0 100%;
 
       @media (min-width: map-get($cd-breakpoints, desktop)) {
-        flex: 1 0 14.286%;
+        flex: 0 0 auto;
       }
     }
   }

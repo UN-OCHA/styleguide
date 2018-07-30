@@ -216,11 +216,11 @@ body {
     justify-content: flex-end; }
     @media (min-width: 1024px) {
       .cssgrid.flexbox .cd-site-header__actions .cd-search {
-        -webkit-flex: 1 0 14.28%;
-        flex: 1 0 14.28%; }
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto; }
       .cssgrid.flexbox .cd-site-header__actions .cd-site-header__nav-holder {
-        -webkit-flex: 1 0 85.71%;
-        flex: 1 0 85.71%; } }
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto; } }
 
 .cssgrid.flexbox .cd-nav > ul {
   display: block; }
@@ -237,8 +237,8 @@ body {
     flex: 1 0 100%; }
     @media (min-width: 1024px) {
       .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
-        -webkit-flex: 1 0 14.286%;
-        flex: 1 0 14.286%; } }
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto; } }
 
 /**
  * Common Design Header Dropdowns generic styles.
