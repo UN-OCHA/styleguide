@@ -239,7 +239,7 @@ body {
       .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
-        max-width: 120px; } }
+        max-width: 112px; } }
 
 /**
  * Common Design Header Dropdowns generic styles.
