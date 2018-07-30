@@ -988,6 +988,7 @@ button.cd-user-menu__item {
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
     text-align: right;
+    margin: 0;
     margin-top: 30px; }
   .cd-footer-copyright__message {
     -webkit-align-items: center;
@@ -1045,7 +1046,7 @@ button.cd-user-menu__item {
  * Common Design Footer OCHA mandate section.
  */
 .cd-mandate {
-  text-align: center; }
+  width: 100%; }
 
 .cd-mandate__logo {
   background: url("../logos/ocha-logo-white.svg") 0 center no-repeat;
@@ -1064,13 +1065,16 @@ button.cd-user-menu__item {
   padding: 16px 12px; }
 
 .cd-mandate__text {
-  padding: 0 12px; }
+  padding: 0 12px;
+  max-width: 540px;
+  margin: 0 auto; }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cd-mandate {
-    max-width: 690px;
-    margin: 0 auto;
-    text-align: left; }
+    max-width: 780px;
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%;
+    margin: 0; }
   .cd-mandate__logo {
     box-sizing: content-box;
     float: left;
@@ -1080,18 +1084,11 @@ button.cd-user-menu__item {
   .cd-mandate__heading,
   .cd-mandate__text {
     text-align: left;
-    padding: 0; } }
-
-@media (min-width: 1024px) {
-  .cd-mandate {
-    max-width: 780px;
-    -webkit-flex: 1 1 50%;
-    flex: 1 1 50%;
-    margin: 0; }
-  .cd-mandate__logo {
-    margin: 16px 12px 0 0; }
+    padding: 0; }
   .cd-mandate__text {
-    padding-right: 40px; } }
+    padding-right: 40px;
+    margin: 0;
+    max-width: 100%; } }
 
 /**
  * Common Design Footer social links.
