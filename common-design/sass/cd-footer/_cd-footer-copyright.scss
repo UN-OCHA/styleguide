@@ -2,6 +2,10 @@
  * Common Design Footer copyright section.
  */
 
+.cd-footer-copyright {
+  margin: 0 auto;
+}
+
 .cd-footer-copyright__text {
   a {
     border-color: $cd-bright-border-color;
@@ -16,7 +20,7 @@
 .cd-footer-copyright__icon {
   display: block;
   font-size: 38px;
-  margin: 16px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .cd-footer-copyright__message {
@@ -26,7 +30,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+@media (min-width: map-get($cd-breakpoints, desktop)) {
 
   .cd-footer-copyright {
     flex: 0 1 350px;
@@ -34,6 +38,7 @@
     display: flex;
     justify-content: flex-end;
     text-align: right;
+    margin: 0;
     margin-top: 30px; // align with provide-by main text
   }
 

@@ -2,20 +2,16 @@
  * Common Design Footer OCHA mandate section.
  */
 
- .cd-mandate {
-   text-align: left;
- }
+.cd-mandate {
+ width: 100%;
+}
 
 .cd-mandate__logo {
   background: url('../logos/ocha-logo-white.svg') 0 center no-repeat;
   display: block;
-  box-sizing: content-box;
-  float: left;
   height: 33px;
-  margin: 16px $cd-container-padding 0 auto;
   width: 135px;
-  padding-right: $cd-container-padding;
-  border-right: 1px solid $cd-border-color;
+  margin: 0 auto;
 
   .no-svg & {
     background: url('../logos/ocha-logo-white.png') 0 center no-repeat;
@@ -27,22 +23,41 @@
   display: block;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+.cd-mandate__heading {
+  padding: 16px $cd-container-padding;
+}
 
-  .cd-mandate {
-    max-width: 780px;
-    flex: 1 1 50%;
-  }
-
-  .cd-mandate__logo {
-    margin: 16px $cd-container-padding 0 0;
-  }
-
+.cd-mandate__text {
+  padding: 0 $cd-container-padding;
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 @media (min-width: map-get($cd-breakpoints, desktop)) {
 
+  .cd-mandate {
+    max-width: 780px;
+    flex: 1 1 50%;
+    margin: 0;
+  }
+
+  .cd-mandate__logo {
+    box-sizing: content-box;
+    float: left;
+    margin: 16px $cd-container-padding 0 auto;
+    padding-right: $cd-container-padding;
+    border-right: 1px solid $cd-border-color;
+  }
+
+  .cd-mandate__heading,
+  .cd-mandate__text {
+    text-align: left;
+    padding: 0;
+  }
+
   .cd-mandate__text {
     padding-right: $cd-container-padding-largescreen;
+    margin: 0;
+    max-width: 100%;
   }
 }

@@ -999,9 +999,7 @@ button.cd-user-menu__item {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between; }
+    flex-wrap: wrap; }
   .cd-footer__section {
     padding-bottom: 48px; } }
 
@@ -1012,6 +1010,9 @@ button.cd-user-menu__item {
 /**
  * Common Design Footer copyright section.
  */
+.cd-footer-copyright {
+  margin: 0 auto; }
+
 .cd-footer-copyright__text a {
   border-color: #80CBFF; }
   .cd-footer-copyright__text a:hover, .cd-footer-copyright__text a:focus {
@@ -1020,7 +1021,7 @@ button.cd-user-menu__item {
 .cd-footer-copyright__icon {
   display: block;
   font-size: 38px;
-  margin: 16px auto 0 auto; }
+  margin: 0 auto 0 auto; }
 
 .cd-footer-copyright__message {
   -webkit-align-items: center;
@@ -1030,7 +1031,7 @@ button.cd-user-menu__item {
   max-width: 350px;
   margin: 0 auto; }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cd-footer-copyright {
     -webkit-flex: 0 1 350px;
     flex: 0 1 350px;
@@ -1041,6 +1042,7 @@ button.cd-user-menu__item {
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
     text-align: right;
+    margin: 0;
     margin-top: 30px; }
   .cd-footer-copyright__message {
     -webkit-align-items: center;
@@ -1098,18 +1100,14 @@ button.cd-user-menu__item {
  * Common Design Footer OCHA mandate section.
  */
 .cd-mandate {
-  text-align: left; }
+  width: 100%; }
 
 .cd-mandate__logo {
   background: url("../logos/ocha-logo-white.svg") 0 center no-repeat;
   display: block;
-  box-sizing: content-box;
-  float: left;
   height: 33px;
-  margin: 16px 12px 0 auto;
   width: 135px;
-  padding-right: 12px;
-  border-right: 1px solid #E6ECF1; }
+  margin: 0 auto; }
   .no-svg .cd-mandate__logo {
     background: url("../logos/ocha-logo-white.png") 0 center no-repeat; }
 
@@ -1117,17 +1115,34 @@ button.cd-user-menu__item {
 .cd-mandate__text {
   display: block; }
 
-@media (min-width: 768px) {
+.cd-mandate__heading {
+  padding: 16px 12px; }
+
+.cd-mandate__text {
+  padding: 0 12px;
+  max-width: 540px;
+  margin: 0 auto; }
+
+@media (min-width: 1024px) {
   .cd-mandate {
     max-width: 780px;
     -webkit-flex: 1 1 50%;
-    flex: 1 1 50%; }
+    flex: 1 1 50%;
+    margin: 0; }
   .cd-mandate__logo {
-    margin: 16px 12px 0 0; } }
-
-@media (min-width: 1024px) {
+    box-sizing: content-box;
+    float: left;
+    margin: 16px 12px 0 auto;
+    padding-right: 12px;
+    border-right: 1px solid #E6ECF1; }
+  .cd-mandate__heading,
   .cd-mandate__text {
-    padding-right: 40px; } }
+    text-align: left;
+    padding: 0; }
+  .cd-mandate__text {
+    padding-right: 40px;
+    margin: 0;
+    max-width: 100%; } }
 
 /**
  * Common Design Footer social links.
