@@ -4,6 +4,10 @@
 
 .cd-site-header__nav-holder {
   float: left;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
 }
 
 .cd-site-header__nav-toggle {
@@ -249,7 +253,6 @@ ul.cd-nav__grandchild-nav {
       background: transparent;
       display: flex;
       height: $cd-site-header-height;
-      line-height: $cd-site-header-height;
       padding: 0 14px;
       position: relative;
       transition: background 0.3s ease;

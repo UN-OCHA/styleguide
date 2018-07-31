@@ -11,9 +11,13 @@
 .cd-site-logo {
   background: url('../logos/ocha-logo-mobile.svg') center no-repeat;
   display: block;
-  float: left;
-  height: $cd-site-header-height;
   width: 52px;
+  height: $cd-site-header-height;
+  float: left;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
 
   .no-svg & {
     background: url('../logos/ocha-logo-mobile.png') center no-repeat;
