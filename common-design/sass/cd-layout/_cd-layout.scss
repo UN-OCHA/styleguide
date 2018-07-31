@@ -30,26 +30,20 @@ body {
   max-width: $cd-max-width;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   .cd-container {
     padding: 0 $cd-container-padding-tablet;
   }
-
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   html {
     padding: 0 $cd-site-padding;
   }
-
 }
 
-@media (min-width: map-get($cd-breakpoints, largescreen)) {
-
+@include xlarge {
   .cd-container {
-    padding: 0 $cd-container-padding-largescreen;
+    padding: 0 $cd-container-padding-xlarge;
   }
-
 }

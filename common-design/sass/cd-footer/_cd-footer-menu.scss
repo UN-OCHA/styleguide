@@ -19,7 +19,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+@include tablet {
   .cd-footer-menu {
     flex: 1 0 100%;
   }
@@ -32,7 +32,7 @@
 
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
+@include desktop {
 
   .cd-footer-menu {
     text-align: left;
