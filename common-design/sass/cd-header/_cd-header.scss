@@ -34,6 +34,7 @@
     display: grid;
     grid-template-columns: 52px 1fr;
     grid-template-rows: $cd-site-header-height;
+    grid-column-gap: 1em;
 
     @media (min-width: map-get($cd-breakpoints, tablet)) {
       grid-template-columns: 186px 1fr;
@@ -85,6 +86,10 @@
       @media (min-width: map-get($cd-breakpoints, desktop)) {
         flex: 1 1 auto;
         max-width: 112px;
+      }
+      @media (min-width: map-get($cd-breakpoints, largescreen)) {
+        flex: 1 1 auto;
+        max-width: 160px;
       }
     }
   }

@@ -195,7 +195,8 @@ body {
   .cssgrid.flexbox .cd-site-header__inner {
     display: grid;
     grid-template-columns: 52px 1fr;
-    grid-template-rows: 60px; }
+    grid-template-rows: 60px;
+    grid-column-gap: 1em; }
     @media (min-width: 768px) {
       .cssgrid.flexbox .cd-site-header__inner {
         grid-template-columns: 186px 1fr; } }
@@ -240,6 +241,11 @@ body {
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
         max-width: 112px; } }
+    @media (min-width: 1200px) {
+      .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        max-width: 160px; } }
 
 /**
  * Common Design Header Dropdowns generic styles.
