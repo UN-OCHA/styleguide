@@ -170,8 +170,7 @@ ul.cd-nav__grandchild-nav {
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   .cd-site-header__nav-toggle {
     border-right: 1px solid $cd-border-color;
 
@@ -181,8 +180,7 @@ ul.cd-nav__grandchild-nav {
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-site-header__nav-toggle {
     display: none;
   }

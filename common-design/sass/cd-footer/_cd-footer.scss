@@ -26,8 +26,7 @@
   padding-bottom: 48px;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   .cd-footer__inner {
     display: flex;
     flex-wrap: wrap;
@@ -39,8 +38,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-footer {
     padding-bottom: 0;
   }

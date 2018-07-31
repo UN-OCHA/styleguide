@@ -148,8 +148,7 @@
   background-position: 0 -144px;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   .cd-sites-btn {
     display: flex;
     width: auto;
@@ -208,12 +207,10 @@
 
 }
 
-@media (min-width: map-get($cd-breakpoints, largescreen)) {
-
+@include xlarge {
   .cd-sites-dropdown__inner {
     -ms-grid-columns: 1fr 120px 1fr 120px 1fr;
     grid-gap: 120px;
-    padding: 0 $cd-container-padding-largescreen;
+    padding: 0 $cd-container-padding-xlarge;
   }
-
 }

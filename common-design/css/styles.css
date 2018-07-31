@@ -3,7 +3,7 @@
  */
 /**
  * Breakpoints
- * Usage: @media (min-width: map-get($cd-breakpoints, tablet)) {}
+ * Usage: @include tablet {}
  */
 /**
  * Measurements
@@ -22,19 +22,6 @@
 /**
  * Font sizes
  * Usage: font-size: map-get($cd-font-sizes, default);
- */
-/**
- * Mixins used by the Common Design.
- * Can be replaced by equivalents in your theme if appropriate.
- */
-/**
- * Standard clearfix.
- */
-/**
- * Hide content offscreen accessibly.
- */
-/**
- * Un-hide content.
  */
 /**
  * Resets to defaults required for Common Design

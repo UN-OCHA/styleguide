@@ -1,11 +1,11 @@
-/**
- * Mixins used by the Common Design.
- * Can be replaced by equivalents in your theme if appropriate.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Mixins used by the Common Design.
+// Can be replaced by equivalents in your theme if appropriate.
+//——————————————————————————————————————————————————————————————————————————————
 
-/**
- * Standard clearfix.
- */
+//
+// Standard clearfix.
+//
 @mixin clearfix {
   &:after {
     clear: both;
@@ -14,9 +14,9 @@
   }
 }
 
-/**
- * Hide content offscreen accessibly.
- */
+//
+// Hide content offscreen accessibly.
+//
 @mixin hide {
   clip: rect(0,0,0,0);
   height: 1px;
@@ -27,12 +27,58 @@
   width: 1px;
 }
 
-/**
- * Un-hide content.
- */
+//
+// Un-hide content.
+//
 @mixin unhide {
   height: auto;
   margin: 0;
   position: static;
   width: auto;
+}
+
+//——————————————————————————————————————————————————————————————————————————————
+// Breakpoints
+//——————————————————————————————————————————————————————————————————————————————
+@mixin min-width($breakpoint) {
+  @if map-has-key($cd-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($cd-breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$cd-breakpoints` map.";
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @if map-has-key($cd-breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($cd-breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$cd-breakpoints` map.";
+  }
+}
+
+
+@mixin tablet {
+  @include min-width('tablet') {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include min-width('desktop') {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @include min-width('xlarge') {
+    @content;
+  }
 }

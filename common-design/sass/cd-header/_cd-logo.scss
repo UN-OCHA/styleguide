@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+@include tablet {
   .cd-site-logo {
     background: url('../logos/ocha-logo.svg') center no-repeat;
     width: 186px; // width may need to be adjusted depending on logo width.

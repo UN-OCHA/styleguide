@@ -23,14 +23,13 @@ a.cd-footer-social__link {
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+@include tablet {
   .cd-footer-social {
     flex: 1 0 100%;
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-footer-social {
     flex: 0 1 auto;
   }
@@ -42,5 +41,4 @@ a.cd-footer-social__link {
       margin: 0;
     }
   }
-
 }

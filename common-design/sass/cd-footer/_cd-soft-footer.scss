@@ -36,8 +36,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   // override container layout so flexbox justify-content works
   .cd-soft-footer .cd-container:after {
     content: none;
@@ -50,8 +49,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-soft-footer {
     padding: 32px 0;
   }

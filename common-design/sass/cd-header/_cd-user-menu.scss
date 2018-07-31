@@ -167,7 +167,7 @@ button.cd-user-menu__item {
   border-bottom: 1px solid transparent;
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
+@include tablet {
 
   .cd-user-menu__item {
     max-width: none;
