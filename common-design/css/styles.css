@@ -668,81 +668,76 @@ ul.cd-nav__grandchild-nav {
  */
 .cd-search--inline {
   float: left;
-  border-left: 1px solid #E6ECF1;
-  border-right: 1px solid #E6ECF1; }
-  .cd-search--inline .cd-search__form {
+  border-left: 1px solid #E6ECF1; }
+  .cd-search--inline .cd-search--inline__form {
     background: #FFF;
     display: block;
-    left: unset;
-    position: relative;
-    right: unset; }
-  .cd-search--inline .cd-search__form-inner {
-    padding: 0; }
-  .cd-search--inline .cd-search__input {
+    position: relative; }
+  .cd-search--inline .cd-search--inline__form-inner::before {
+    bottom: -3px;
+    content: '';
+    background: transparent;
+    height: 3px;
+    left: -1px;
+    position: absolute;
+    right: -1px;
+    transition: background 0.3s ease;
+    width: calc(100% + 1px); }
+  .cd-search--inline .cd-search--inline__form-inner.js-has-focus::before {
+    background: #EB5C6D; }
+  .cd-search--inline .cd-search--inline__input {
     -webkit-appearance: none;
     background: #FFF;
     border: 0;
     border-radius: 0;
     box-shadow: none;
     color: #4A4A4A;
-    font-size: 16px;
+    font-size: 12px;
     height: 60px;
-    height: calc(60px - 16px);
-    padding: 0 45px 0 25px;
-    width: auto; }
-  .cd-search--inline .cd-search__submit {
+    padding: 0 56px 0 16px; }
+  .cd-search--inline .cd-search--inline__input::-webkit-input-placeholder {
+    color: #808080;
+    font-style: italic; }
+  .cd-search--inline .cd-search--inline__input::-moz-placeholder {
+    color: #808080;
+    font-style: italic; }
+  .cd-search--inline .cd-search--inline__input:-ms-input-placeholder {
+    color: #808080;
+    font-style: italic; }
+  .cd-search--inline .cd-search--inline__input:-moz-placeholder {
+    color: #808080;
+    font-style: italic; }
+  .cd-search--inline .cd-search--inline__submit {
     -webkit-align-items: center;
     align-items: center;
     background: #FFF;
     border: 0;
-    border-left: 1px solid #E6ECF1;
     color: #000;
     display: -webkit-flex;
     display: flex;
     font-size: 16px;
     font-weight: bold;
-    height: calc(60px - 16px);
-    margin: 0;
+    height: 60px;
     padding: 0;
     position: absolute;
-    right: 12px;
-    text-transform: uppercase;
-    top: 0; }
-    .cd-search--inline .cd-search__submit .icon-search {
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease; }
+    .cd-search--inline .cd-search--inline__submit::before {
+      content: '';
+      background: #E6ECF1;
+      width: 2px;
+      height: 24px;
+      position: absolute; }
+    .cd-search--inline .cd-search--inline__submit .icon-search {
       font-size: 24px;
       font-weight: bold;
-      padding: 0 10px; }
-    .cd-search--inline .cd-search__submit.js-has-focus {
-      background-color: #EB5C6D; }
-  @media (min-width: 768px) {
-    .cd-search--inline .cd-search__form-inner {
-      margin: 0 auto;
-      max-width: 1220px;
-      padding: 0 24px;
-      position: relative; }
-    .cd-search--inline .cd-search__input {
-      padding: 0 44px 0 30px; }
-    .cd-search--inline .cd-search__submit {
-      right: 0; } }
-  @media (min-width: 1024px) {
-    .cd-search--inline .cd-search_btn-text {
-      display: block; }
-    .cd-search--inline .cd-search__form-inner {
-      margin: 0 auto;
-      padding: 8px 0;
-      position: relative; }
-    .cd-search--inline .cd-search__input {
-      padding: 0 44px 0 8px; }
-    .cd-search--inline .cd-search_btn .icon-search {
-      font-size: 20px; } }
-  @media (min-width: 1200px) {
-    .cd-search--inline .cd-search__form {
-      left: 0;
-      right: 0; }
-    .cd-search--inline .cd-search__form-inner {
-      padding: 0 40px; }
-    .cd-search--inline .cd-search__submit {
-      right: 0; } }
+      padding: 0 16px;
+      color: #808080; }
+    .cd-search--inline .cd-search--inline__submit.js-has-focus, .cd-search--inline .cd-search--inline__submit:hover, .cd-search--inline .cd-search--inline__submit:focus {
+      background-color: #E6ECF1; }
+      .cd-search--inline .cd-search--inline__submit.js-has-focus .icon-search, .cd-search--inline .cd-search--inline__submit:hover .icon-search, .cd-search--inline .cd-search--inline__submit:focus .icon-search {
+        color: #EB5C6D; }
 
 /**
  * Common Design Sites Menu ('OCHA Services')
