@@ -99,6 +99,7 @@
   }
 }
 
+.cd-nav > ul > li,
 .cd-nav__item {
   &.open {
     background: $cd-white-bg-color;
@@ -128,6 +129,7 @@
   }
 }
 
+.cd-nav > ul > li > ul,
 ul.cd-nav__child-nav {
   background: $cd-white-bg-color;
 
@@ -142,6 +144,7 @@ ul.cd-nav__child-nav {
   }
 }
 
+.cd-nav > ul > li > ul > li > ul,
 ul.cd-nav__grandchild-nav {
   padding-bottom: 5px;
   a,
@@ -150,6 +153,7 @@ ul.cd-nav__grandchild-nav {
   }
 }
 
+.cd-nav > ul > li > ul > li > ul > li,
 .cd-nav__grandchild-item {
   a,
   button {
@@ -198,6 +202,7 @@ ul.cd-nav__grandchild-nav {
     z-index: 0;
   }
 
+  .cd-nav > ul > li,
   .cd-nav__item {
     border-right: 1px solid $cd-border-color;
     float: left;
@@ -284,6 +289,7 @@ ul.cd-nav__grandchild-nav {
     }
   }
 
+  .cd-nav > ul > li > ul,
   ul.cd-nav__child-nav {
     background: $cd-white-bg-color;
     box-shadow: 0 1px 8px rgba($cd-dark-bluey-grey, 0.8);
@@ -303,12 +309,14 @@ ul.cd-nav__grandchild-nav {
     }
   }
 
+  .cd-nav > ul > li > ul > li,
   .cd-nav__child-item {
     &.open {
       background: $cd-white-bg-color;
     }
   }
 
+  .cd-nav > ul > li > ul > li > ul,
   ul.cd-nav__grandchild-nav {
     padding-bottom: 0;
 
