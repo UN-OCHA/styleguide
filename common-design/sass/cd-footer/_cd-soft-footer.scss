@@ -3,8 +3,8 @@
  */
 
 .cd-soft-footer {
-  background: $cd-dark-blue;
-  color: $cd-white-text-color;
+  background: rgba($cd-primary-bg-color, .6);
+  color: $cd-default-text-color;
   padding: 24px 0;
   text-align: center;
   font-family: $cd-font;
