@@ -371,41 +371,60 @@ body {
     text-align: left;
     width: 100%; }
 
+.cd-nav > ul > li.open,
 .cd-nav__item.open {
   background: #FFF; }
+  .cd-nav > ul > li.open > button,
   .cd-nav__item.open > button {
     color: #000; }
-    .cd-nav__item.open > button:hover, .cd-nav__item.open > button:focus {
+    .cd-nav > ul > li.open > button:hover, .cd-nav > ul > li.open > button:focus,
+    .cd-nav__item.open > button:hover,
+    .cd-nav__item.open > button:focus {
       background: #E6ECF1; }
 
+.cd-nav > ul > li > a,
+.cd-nav > ul > li > button,
 .cd-nav__item > a,
 .cd-nav__item > button {
   font-weight: bold;
   text-transform: uppercase; }
+  .cd-nav > ul > li > a:before,
+  .cd-nav > ul > li > button:before,
   .cd-nav__item > a:before,
   .cd-nav__item > button:before {
     background: #EB5C6D; }
 
+.cd-nav > ul > li .icon-arrow-down,
 .cd-nav__item .icon-arrow-down {
   margin-left: 2px;
   color: #EB5C6D; }
 
+.cd-nav > ul > li > ul,
 ul.cd-nav__child-nav {
   background: #FFF; }
+  .cd-nav > ul > li > ul a,
+  .cd-nav > ul > li > ul button,
   ul.cd-nav__child-nav a,
   ul.cd-nav__child-nav button {
     color: #000;
     font-weight: 600; }
+    .cd-nav > ul > li > ul a:hover,
+    .cd-nav > ul > li > ul button:hover,
     ul.cd-nav__child-nav a:hover,
     ul.cd-nav__child-nav button:hover {
       background: #E6ECF1; }
 
+.cd-nav > ul > li > ul > li > ul,
 ul.cd-nav__grandchild-nav {
   padding-bottom: 5px; }
+  .cd-nav > ul > li > ul > li > ul a,
+  .cd-nav > ul > li > ul > li > ul button,
   ul.cd-nav__grandchild-nav a,
   ul.cd-nav__grandchild-nav button {
     font-weight: 200; }
 
+.cd-nav > ul > li > ul > li > ul > li a,
+.cd-nav > ul > li > ul > li > ul > li button,
 .cd-nav__grandchild-item a,
 .cd-nav__grandchild-item button {
   padding: 10px 30px; }
@@ -438,29 +457,43 @@ ul.cd-nav__grandchild-nav {
     top: auto;
     width: auto;
     z-index: 0; }
+  .cd-nav > ul > li,
   .cd-nav__item {
     border-right: 1px solid #E6ECF1;
     float: left;
     margin: 0; }
+    .cd-nav > ul > li:first-child,
     .cd-nav__item:first-child {
       border-left: 1px solid #E6ECF1; }
+    .cd-nav > ul > li:last-child ul.cd-nav__child-nav,
     .cd-nav__item:last-child ul.cd-nav__child-nav {
       left: auto;
       right: -1px; }
+    .cd-nav > ul > li.open,
     .cd-nav__item.open {
       position: relative; }
+      .cd-nav > ul > li.open > a:before,
+      .cd-nav > ul > li.open > button:before,
       .cd-nav__item.open > a:before,
       .cd-nav__item.open > button:before {
         background: #EB5C6D; }
+      .cd-nav > ul > li.open > a:hover,
+      .cd-nav > ul > li.open > button:hover,
       .cd-nav__item.open > a:hover,
       .cd-nav__item.open > button:hover {
         background: #E6ECF1; }
+      .cd-nav > ul > li.open > a:focus:before,
+      .cd-nav > ul > li.open > button:focus:before,
       .cd-nav__item.open > a:focus:before,
       .cd-nav__item.open > button:focus:before {
         background: #EB5C6D; }
+    .cd-nav > ul > li.active > a:before,
+    .cd-nav > ul > li.active > button:before,
     .cd-nav__item.active > a:before,
     .cd-nav__item.active > button:before {
       background: #EB5C6D; }
+    .cd-nav > ul > li > a,
+    .cd-nav > ul > li > button,
     .cd-nav__item > a,
     .cd-nav__item > button {
       -webkit-align-items: center;
@@ -472,6 +505,8 @@ ul.cd-nav__grandchild-nav {
       padding: 0 14px;
       position: relative;
       transition: background 0.3s ease; }
+      .cd-nav > ul > li > a:before,
+      .cd-nav > ul > li > button:before,
       .cd-nav__item > a:before,
       .cd-nav__item > button:before {
         bottom: -3px;
@@ -483,16 +518,25 @@ ul.cd-nav__grandchild-nav {
         right: -1px;
         transition: background 0.3s ease;
         width: calc(100% + 2px); }
+      .cd-nav > ul > li > a:hover,
+      .cd-nav > ul > li > button:hover,
       .cd-nav__item > a:hover,
       .cd-nav__item > button:hover {
         background: #E6ECF1; }
+      .cd-nav > ul > li > a:focus,
+      .cd-nav > ul > li > button:focus,
       .cd-nav__item > a:focus,
       .cd-nav__item > button:focus {
         background: #FFF; }
-      .active .cd-nav__item > a:before, .cd-nav__item > a:focus:before, .active
+      .active .cd-nav > ul > li > a:before, .cd-nav > ul > li > a:focus:before, .active
+      .cd-nav > ul > li > button:before,
+      .cd-nav > ul > li > button:focus:before, .active
+      .cd-nav__item > a:before,
+      .cd-nav__item > a:focus:before, .active
       .cd-nav__item > button:before,
       .cd-nav__item > button:focus:before {
         background: #EB5C6D; }
+  .cd-nav > ul > li > ul,
   ul.cd-nav__child-nav {
     background: #FFF;
     box-shadow: 0 1px 8px rgba(211, 221, 229, 0.8);
@@ -503,14 +547,20 @@ ul.cd-nav__grandchild-nav {
     padding: 20px 0;
     top: calc(60px + 3px);
     position: absolute; }
+    .cd-nav > ul > li > ul a:hover,
+    .cd-nav > ul > li > ul button:hover,
     ul.cd-nav__child-nav a:hover,
     ul.cd-nav__child-nav button:hover {
       background: #E6ECF1; }
+  .cd-nav > ul > li > ul > li.open,
   .cd-nav__child-item.open {
     background: #FFF; }
+  .cd-nav > ul > li > ul > li > ul,
   ul.cd-nav__grandchild-nav {
     padding-bottom: 0; }
-    ul.cd-nav__grandchild-nav a:hover, ul.cd-nav__grandchild-nav a:focus {
+    .cd-nav > ul > li > ul > li > ul a:hover, .cd-nav > ul > li > ul > li > ul a:focus,
+    ul.cd-nav__grandchild-nav a:hover,
+    ul.cd-nav__grandchild-nav a:focus {
       background: #E6ECF1; } }
 
 /**
