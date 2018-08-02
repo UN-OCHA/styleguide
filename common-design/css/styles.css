@@ -220,15 +220,18 @@ body {
       flex-flow: row wrap;
       -webkit-justify-content: flex-end;
       justify-content: flex-end; } }
+  .cssgrid.flexbox .cd-nav > ul > li,
   .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
     -webkit-flex: 1 0 100%;
     flex: 1 0 100%; }
     @media (min-width: 1024px) {
+      .cssgrid.flexbox .cd-nav > ul > li,
       .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
         max-width: 112px; } }
     @media (min-width: 1200px) {
+      .cssgrid.flexbox .cd-nav > ul > li,
       .cssgrid.flexbox .cd-nav > ul > .cd-nav__item {
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
