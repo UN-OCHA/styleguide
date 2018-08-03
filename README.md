@@ -136,3 +136,22 @@ The HID section uses styles from the HID staging site.
 ### OCHA Basic assets
 
 The OCHA Basic section uses styles from the [OCHA Basic](https://github.com/un-ocha/ocha_basic) repository.
+
+
+
+## Logo and favicon dimensions
+
+||Filename||File format||Dimensions||Reference||\
+|logo.png|PNG|60x60|see logo: https://pocam-sandbox.dev.unocha.org |\
+|favicon.ico|ICO|48x48|[https://raw.githubusercontent.com/UN-OCHA/ocha_basic/master/favicon.ico]|\
+|favicon-16x16.png|PNG|16x16|[https://github.com/UN-OCHA/ocha_basic/blob/master/favicon-16x16.png]|\
+|favicon-32x32.png|PNG|32x32|[https://github.com/UN-OCHA/ocha_basic/blob/master/favicon-32x32.png]|\
+|safari-pinned-tab.svg|SVG|see ref >|[https://github.com/UN-OCHA/ocha_basic/blob/master/safari-pinned-tab.svg]|\
+|apple-touch-icon.png|PNG|180x180|[https://github.com/UN-OCHA/ocha_basic/blob/master/apple-touch-icon.png]|\
+|android-chrome-192x192.png|PNG|192x192|[https://github.com/UN-OCHA/ocha_basic/blob/master/android-chrome-192x192.png]|\
+|android-chrome-512x512.png|PNG|512x512|[https://github.com/UN-OCHA/ocha_basic/blob/master/android-chrome-512x512.png]|\
+|mstile-70x70.png|PNG|70x70|[https://github.com/UN-OCHA/ocha_basic/blob/master/mstile-70x70.png]|\
+|mstile-144x144.png|PNG|144x144|[https://github.com/UN-OCHA/ocha_basic/blob/master/mstile-144x144.png]|\
+|mstile-150x150.png|PNG|150x150|[https://github.com/UN-OCHA/ocha_basic/blob/master/mstile-150x150.png]|\
+|mstile-310x150.png|PNG|310x150|[https://github.com/UN-OCHA/ocha_basic/blob/master/mstile-310x150.png]|\
+|mstile-310x310.png|PNG|310x310|[https://github.com/UN-OCHA/ocha_basic/blob/master/mstile-310x310.png]|\
