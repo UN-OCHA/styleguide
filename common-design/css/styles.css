@@ -1169,8 +1169,8 @@ a.cd-footer-social__link {
  * Common Design soft footer - optional space for call to actions, newsletter sign up etc
  */
 .cd-soft-footer {
-  background: rgba(2, 108, 182, 0.6);
-  color: #4A4A4A;
+  background: rgba(2, 108, 182, 0.9);
+  color: #FFF;
   padding: 24px 0;
   text-align: center;
   font-family: sans-serif; }
