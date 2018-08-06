@@ -1331,6 +1331,14 @@ html.styleguide, html.styleguide body {
 .sg-hidden {
   display: none; }
 
+.sg-button {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  background: #007faa;
+  padding: 0.5rem 16px;
+  margin-bottom: 16px; }
+
 /**
  * Syntax highlighting styles
  */
