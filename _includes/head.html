@@ -46,3 +46,7 @@
   <script src="{{ '/common-design/js/custom-dropdown.js' | prepend: site.baseurl }}"></script>
   <script src="{{ '/common-design/js/custom-search.js' | prepend: site.baseurl }}"></script>
 {% endif %}
+
+{% if page.options contains 'include_cd_header--inline-search' %}
+  <script src="{{ '/common-design/js/custom-search--inline.js' | prepend: site.baseurl }}"></script>
+{% endif %}

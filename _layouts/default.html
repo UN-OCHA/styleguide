@@ -6,6 +6,10 @@
 
   <body class="styleguide">
     <div class="page-wrapper">
+      {% if page.options contains 'include_cd_header--inline-search' %}
+      {% include_relative templates/cd-header--inline-search.html %}
+      {% endif %}
+
       {% if page.options contains 'include_cd_header' %}
         {% include_relative templates/cd-header.html %}
       {% endif %}
