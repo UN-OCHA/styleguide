@@ -145,7 +145,7 @@
 
 }
 
-// Start inline search
+// Start inline search for desktop only
 
 @include desktop {
 
@@ -157,7 +157,7 @@
     float: left;
     border-left: 1px solid $cd-border-color;
     flex: 1 0 auto;
-    margin-left: 0;
+    margin-left: 30px;
   }
 
   .cd-search--inline__form {
@@ -256,6 +256,5 @@
         color: $cd-highlight-red;
       }
     }
-
   }
 }
