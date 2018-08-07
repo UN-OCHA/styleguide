@@ -720,25 +720,152 @@ ul.cd-nav__grandchild-nav {
  * Common Design Search form in header.
  */
 .cd-search--inline {
-  float: left;
-  border-left: 1px solid #E6ECF1; }
-  .cd-search--inline .cd-search--inline__form {
+  float: left; }
+  .cssgrid.flexbox .cd-search--inline {
+    float: none; }
+
+.cd-search--inline_btn {
+  -webkit-align-items: center;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #026CB6;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  padding: 0 20px;
+  transition: background 0.3s ease; }
+  .open .cd-search--inline_btn {
+    color: #EB5C6D;
+    position: relative; }
+    .open .cd-search--inline_btn:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #E6ECF1 transparent;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -6px; }
+  .cd-search--inline_btn:hover, .cd-search--inline_btn:focus {
+    background: #FFF;
+    outline: none;
+    color: #80CBFF; }
+  .cd-search--inline_btn:focus {
+    color: #EB5C6D; }
+
+.cd-search--inline_btn .icon-search {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 4px 0 0; }
+
+.cd-search--inline_btn-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: none; }
+
+.cd-search--inline__form {
+  background: #E6ECF1;
+  display: none;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  right: 0; }
+  .open .cd-search--inline__form {
+    display: block; }
+
+.cd-search--inline__form-inner {
+  padding: 8px 12px; }
+
+.cd-search--inline__input {
+  -webkit-appearance: none;
+  background: #FFF;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #4A4A4A;
+  font-size: 16px;
+  height: 60px;
+  height: calc(60px - 16px);
+  padding: 0 45px 0 25px;
+  width: 100%; }
+
+.cd-search--inline__input::-webkit-input-placeholder {
+  color: #4A4A4A;
+  font-style: italic; }
+
+.cd-search--inline__input::-moz-placeholder {
+  color: #4A4A4A;
+  font-style: italic; }
+
+.cd-search--inline__input:-ms-input-placeholder {
+  color: #4A4A4A;
+  font-style: italic; }
+
+.cd-search--inline__input:-moz-placeholder {
+  color: #4A4A4A;
+  font-style: italic; }
+
+.cd-search--inline__input::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px; }
+
+.cd-search--inline__submit {
+  -webkit-align-items: center;
+  align-items: center;
+  background: #4A4A4A;
+  border: 0;
+  color: #FFF;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  height: calc(60px - 16px);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 12px;
+  text-transform: uppercase;
+  top: 8px; }
+  .cd-search--inline__submit .icon-search {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 10px; }
+  .cd-search--inline__submit.js-has-focus {
+    background-color: #EB5C6D; }
+
+@media (min-width: 1024px) {
+  .cd-search--inline_btn {
+    display: none; }
+  .cd-search--inline {
+    float: left;
+    border-left: 1px solid #E6ECF1;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin-left: 0; }
+  .cd-search--inline__form {
     background: #FFF;
     display: block;
     position: relative; }
-  .cd-search--inline .cd-search--inline__form-inner::before {
-    bottom: -3px;
-    content: '';
-    background: transparent;
-    height: 3px;
-    left: -1px;
-    position: absolute;
-    right: -1px;
-    transition: background 0.3s ease;
-    width: calc(100% + 1px); }
-  .cd-search--inline .cd-search--inline__form-inner.js-has-focus::before {
+  .cd-search--inline__form-inner {
+    padding: 0; }
+    .cd-search--inline__form-inner::before {
+      bottom: -3px;
+      content: '';
+      background: transparent;
+      height: 3px;
+      left: -1px;
+      position: absolute;
+      right: -1px;
+      transition: background 0.3s ease;
+      width: calc(100% + 1px); }
+  .cd-search--inline__form-inner.js-has-focus::before {
     background: #EB5C6D; }
-  .cd-search--inline .cd-search--inline__input {
+  .cd-search--inline__input {
     -webkit-appearance: none;
     background: #FFF;
     border: 0;
@@ -747,20 +874,21 @@ ul.cd-nav__grandchild-nav {
     color: #4A4A4A;
     font-size: 12px;
     height: 60px;
-    padding: 0 56px 0 16px; }
-  .cd-search--inline .cd-search--inline__input::-webkit-input-placeholder {
+    padding: 0 56px 0 16px;
+    width: 100%; }
+  .cd-search--inline__input::-webkit-input-placeholder {
     color: #808080;
     font-style: italic; }
-  .cd-search--inline .cd-search--inline__input::-moz-placeholder {
+  .cd-search--inline__input::-moz-placeholder {
     color: #808080;
     font-style: italic; }
-  .cd-search--inline .cd-search--inline__input:-ms-input-placeholder {
+  .cd-search--inline__input:-ms-input-placeholder {
     color: #808080;
     font-style: italic; }
-  .cd-search--inline .cd-search--inline__input:-moz-placeholder {
+  .cd-search--inline__input:-moz-placeholder {
     color: #808080;
     font-style: italic; }
-  .cd-search--inline .cd-search--inline__submit {
+  .cd-search--inline__submit {
     -webkit-align-items: center;
     align-items: center;
     background: #FFF;
@@ -776,21 +904,21 @@ ul.cd-nav__grandchild-nav {
     right: 0;
     top: 0;
     transition: all 0.3s ease; }
-    .cd-search--inline .cd-search--inline__submit::before {
+    .cd-search--inline__submit::before {
       content: '';
       background: #E6ECF1;
       width: 2px;
       height: 24px;
       position: absolute; }
-    .cd-search--inline .cd-search--inline__submit .icon-search {
+    .cd-search--inline__submit .icon-search {
       font-size: 24px;
       font-weight: bold;
       padding: 0 16px;
       color: #808080; }
-    .cd-search--inline .cd-search--inline__submit.js-has-focus, .cd-search--inline .cd-search--inline__submit:hover, .cd-search--inline .cd-search--inline__submit:focus {
+    .cd-search--inline__submit.js-has-focus, .cd-search--inline__submit:hover, .cd-search--inline__submit:focus {
       background-color: #E6ECF1; }
-      .cd-search--inline .cd-search--inline__submit.js-has-focus .icon-search, .cd-search--inline .cd-search--inline__submit:hover .icon-search, .cd-search--inline .cd-search--inline__submit:focus .icon-search {
-        color: #EB5C6D; }
+      .cd-search--inline__submit.js-has-focus .icon-search, .cd-search--inline__submit:hover .icon-search, .cd-search--inline__submit:focus .icon-search {
+        color: #EB5C6D; } }
 
 /**
  * Common Design Sites Menu ('OCHA Services')
