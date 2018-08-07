@@ -2,11 +2,163 @@
  * Common Design Search form in header.
  */
 
-
-
 .cd-search--inline {
   float: left;
-  border-left: 1px solid $cd-border-color;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
+}
+
+.cd-search--inline_btn {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: $cd-blue-text-color;
+  display: flex;
+  font-size: 24px;
+  height: $cd-site-header-height;
+  padding: 0 20px;
+  transition: background 0.3s ease;
+
+  .open & {
+    color: $cd-highlight-red;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent $cd-border-color transparent;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -6px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: $cd-white-bg-color;
+    outline: none;
+    color: $cd-bright-blue-text-color;
+  }
+
+  &:focus {
+    color: $cd-highlight-red;
+  }
+}
+
+.cd-search--inline_btn .icon-search {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+.cd-search--inline_btn-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: none;
+}
+
+.cd-search--inline__form {
+  background: $cd-mid-bluey-grey;
+  display: none;
+  height: $cd-site-header-height;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  .open & {
+    display: block;
+  }
+}
+
+.cd-search--inline__form-inner {
+  padding: 8px $cd-container-padding;
+}
+
+.cd-search--inline__input {
+  -webkit-appearance: none;
+  background: $cd-white-bg-color;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: $cd-default-text-color;
+  font-size: map-get($cd-font-sizes, large);
+  height: $cd-site-header-height;
+  height: calc(#{$cd-site-header-height} - 16px); //padding
+  padding: 0 45px 0 25px;
+  width: 100%;
+}
+
+.cd-search--inline__input::-webkit-input-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+.cd-search--inline__input::-moz-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+.cd-search--inline__input:-ms-input-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+.cd-search--inline__input:-moz-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+
+.cd-search--inline__input::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px;
+}
+
+.cd-search--inline__submit {
+  align-items: center;
+  background: $cd-dark-grey;
+  border: 0;
+  color: $cd-white-text-color;
+  display: flex;
+  font-size: map-get($cd-font-sizes, large);
+  font-weight: bold;
+  height: calc(#{$cd-site-header-height} - 16px); //padding
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: $cd-container-padding;
+  text-transform: uppercase;
+  top: 8px;
+
+  .icon-search {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  &.js-has-focus {
+    background-color: $cd-highlight-red;
+  }
+
+}
+
+// Start inline search
+
+@include desktop {
+
+  .cd-search--inline_btn {
+    display: none;
+  }
+
+  .cd-search--inline {
+    float: left;
+    border-left: 1px solid $cd-border-color;
+    flex: 1 0 auto;
+    margin-left: 0;
+  }
 
   .cd-search--inline__form {
     background: $cd-white-bg-color;
@@ -15,6 +167,7 @@
   }
 
   .cd-search--inline__form-inner {
+    padding: 0;
     &::before {
       bottom: -3px;
       content: '';
@@ -44,6 +197,7 @@
     font-size: map-get($cd-font-sizes, default);
     height: $cd-site-header-height;
     padding: 0 56px 0 16px;
+    width: 100%;
   }
 
   .cd-search--inline__input::-webkit-input-placeholder {
