@@ -16,7 +16,7 @@ The [Common Design](https://un-ocha.github.io/styleguide/common-design) is a uni
 
 The individual component libraries are intended to document the front end for the project.
 
-[Humanitarian ID component library & guidelines](https://un-ocha.github.io/styleguide/hid)
+* _None at the moment_
 
 ## Shared libraries
 
@@ -129,14 +129,9 @@ In the personal fork, you may create PRs against one of two base branches:
 
 ## Individual project CSS
 
-### HID assets
-
-The HID section uses styles from the HID staging site.
-
 ### OCHA Basic assets
 
 The OCHA Basic section uses styles from the [OCHA Basic](https://github.com/un-ocha/ocha_basic) repository.
-
 
 
 ## Logo and favicon dimensions
