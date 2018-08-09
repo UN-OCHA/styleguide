@@ -789,7 +789,6 @@ ul.cd-nav__grandchild-nav {
   box-shadow: none;
   color: #4A4A4A;
   font-size: 16px;
-  height: 60px;
   height: calc(60px - 16px);
   padding: 0 45px 0 25px;
   width: 100%; }
@@ -874,8 +873,12 @@ ul.cd-nav__grandchild-nav {
     color: #4A4A4A;
     font-size: 12px;
     height: 60px;
-    padding: 0 56px 0 16px;
-    width: 100%; }
+    padding: 0 72px 0 16px;
+    width: 100%;
+    min-width: 230px; }
+  .cd-search--inline__input::-webkit-search-cancel-button {
+    position: relative;
+    right: -10px; }
   .cd-search--inline__input::-webkit-input-placeholder {
     color: #808080;
     font-style: italic; }
@@ -889,13 +892,10 @@ ul.cd-nav__grandchild-nav {
     color: #808080;
     font-style: italic; }
   .cd-search--inline__submit {
-    -webkit-align-items: center;
-    align-items: center;
     background: #FFF;
     border: 0;
+    border-left: 1px solid #E6ECF1;
     color: #000;
-    display: -webkit-flex;
-    display: flex;
     font-size: 16px;
     font-weight: bold;
     height: 60px;
@@ -904,12 +904,6 @@ ul.cd-nav__grandchild-nav {
     right: 0;
     top: 0;
     transition: all 0.3s ease; }
-    .cd-search--inline__submit::before {
-      content: '';
-      background: #E6ECF1;
-      width: 2px;
-      height: 24px;
-      position: absolute; }
     .cd-search--inline__submit .icon-search {
       font-size: 24px;
       font-weight: bold;
@@ -918,7 +912,26 @@ ul.cd-nav__grandchild-nav {
     .cd-search--inline__submit.js-has-focus, .cd-search--inline__submit:hover, .cd-search--inline__submit:focus {
       background-color: #E6ECF1; }
       .cd-search--inline__submit.js-has-focus .icon-search, .cd-search--inline__submit:hover .icon-search, .cd-search--inline__submit:focus .icon-search {
-        color: #EB5C6D; } }
+        color: #EB5C6D; }
+  .cssgrid.flexbox .cd-search--inline__submit {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 0;
+    display: -webkit-flex;
+    display: flex; }
+    .cssgrid.flexbox .cd-search--inline__submit::before {
+      content: '';
+      background: #E6ECF1;
+      width: 2px;
+      height: 24px;
+      position: absolute; } }
+
+@media all and (min-width: 1024px) and (-ms-high-contrast: none) {
+  input[type=search]::-ms-clear,
+  input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0; } }
 
 /**
  * Common Design Sites Menu ('OCHA Services')
