@@ -89,8 +89,7 @@
   box-shadow: none;
   color: $cd-default-text-color;
   font-size: map-get($cd-font-sizes, large);
-  height: $cd-site-header-height;
-  height: calc(#{$cd-site-header-height} - 16px); //padding
+  height: calc(#{$cd-site-header-height} - 16px); //padding.
   padding: 0 45px 0 25px;
   width: 100%;
 }
@@ -125,7 +124,7 @@
   display: flex;
   font-size: map-get($cd-font-sizes, large);
   font-weight: bold;
-  height: calc(#{$cd-site-header-height} - 16px); //padding
+  height: calc(#{$cd-site-header-height} - 16px); //padding.
   margin: 0;
   padding: 0;
   position: absolute;
@@ -145,8 +144,7 @@
 
 }
 
-// Start inline search for desktop only
-
+// Start inline search for desktop only.
 @include desktop {
 
   .cd-search--inline_btn {
@@ -196,8 +194,14 @@
     color: $cd-default-text-color;
     font-size: map-get($cd-font-sizes, default);
     height: $cd-site-header-height;
-    padding: 0 56px 0 16px;
+    padding: 0 72px 0 16px;
     width: 100%;
+    min-width: 230px;
+  }
+
+  .cd-search--inline__input::-webkit-search-cancel-button {
+    position: relative;
+    right: -10px;
   }
 
   .cd-search--inline__input::-webkit-input-placeholder {
@@ -218,11 +222,10 @@
   }
 
   .cd-search--inline__submit {
-    align-items: center;
     background: $cd-white-bg-color;
     border: 0;
+    border-left: 1px solid $cd-mid-bluey-grey;
     color: $cd-dark-text-color;
-    display: flex;
     font-size: map-get($cd-font-sizes, large);
     font-weight: bold;
     height: $cd-site-header-height;
@@ -231,14 +234,6 @@
     right: 0;
     top: 0;
     transition: all 0.3s ease;
-
-    &::before {
-      content: '';
-      background: $cd-mid-bluey-grey;
-      width: 2px;
-      height: 24px;
-      position: absolute;
-    }
 
     .icon-search {
       font-size: 24px;
@@ -257,4 +252,33 @@
       }
     }
   }
+
+  // Submit button treatment for modern browsers.
+  .cssgrid.flexbox {
+
+    .cd-search--inline__submit {
+      align-items: center;
+      border: 0;
+      display: flex;
+
+      &::before {
+        content: '';
+        background: $cd-mid-bluey-grey;
+        width: 2px;
+        height: 24px;
+        position: absolute;
+      }
+    }
+  }
+
+  // Removes search cancel x on IE 11 only.
+  @media all and (-ms-high-contrast:none) {
+    input[type=search]::-ms-clear,
+    input[type=search]::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
 }
+
