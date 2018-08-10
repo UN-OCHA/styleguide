@@ -37,6 +37,11 @@
       left: 50%;
       margin-left: -6px;
     }
+
+    &:hover,
+    &:focus {
+      color: $cd-highlight-red;
+    }
   }
 
   &:hover,
@@ -154,7 +159,7 @@
   .cd-search--inline {
     float: left;
     border-left: 1px solid $cd-border-color;
-    flex: 1 0 auto;
+    flex: 0 1 400px;
     margin-left: 30px;
   }
 
