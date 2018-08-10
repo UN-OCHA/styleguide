@@ -37,6 +37,11 @@
       left: 50%;
       margin-left: -6px;
     }
+
+    &:hover,
+    &:focus {
+      color: $cd-highlight-red;
+    }
   }
 
   &:hover,
@@ -93,8 +98,7 @@
   box-shadow: none;
   color: $cd-default-text-color;
   font-size: map-get($cd-font-sizes, large);
-  height: $cd-site-header-height;
-  height: calc(#{$cd-site-header-height} - 16px); //padding
+  height: calc(#{$cd-site-header-height} - 16px); //padding.
   padding: 0 45px 0 25px;
   width: 100%;
 }
@@ -129,7 +133,7 @@
   display: flex;
   font-size: map-get($cd-font-sizes, large);
   font-weight: bold;
-  height: calc(#{$cd-site-header-height} - 16px); //padding
+  height: calc(#{$cd-site-header-height} - 16px); //padding.
   margin: 0;
   padding: 0;
   position: absolute;
