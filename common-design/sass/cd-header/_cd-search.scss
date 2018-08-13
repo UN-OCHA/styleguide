@@ -101,6 +101,11 @@
   height: calc(#{$cd-site-header-height} - 16px); //padding.
   padding: 0 45px 0 25px;
   width: 100%;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 4px rgba($cd-mid-grey,  0.7);
+  }
 }
 
 .cd-search__input::-webkit-input-placeholder {

@@ -97,6 +97,11 @@
   height: calc(#{$cd-site-header-height} - 16px); //padding.
   padding: 0 45px 0 25px;
   width: 100%;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 4px rgba($cd-mid-grey,  0.7);
+  }
 }
 
 .cd-search--inline__input::-webkit-input-placeholder {
@@ -202,6 +207,11 @@
     padding: 0 72px 0 16px;
     width: 100%;
     min-width: 230px;
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
   }
 
   .cd-search--inline__input::-webkit-search-cancel-button {
