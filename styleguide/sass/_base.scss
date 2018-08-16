@@ -1,9 +1,7 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  &:before, &:after {
-    box-sizing: border-box;
-  }
 }
 
 body {

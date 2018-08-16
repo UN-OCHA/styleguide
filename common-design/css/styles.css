@@ -29,23 +29,25 @@
  */
 .cd-header,
 .cd-footer {
-  -webkit-font-smoothing: antialiased;
   font-family: sans-serif;
   font-size: 12px;
+  font-weight: 300;
   box-sizing: border-box; }
   .cd-header *,
-  .cd-footer * {
-    box-sizing: border-box; }
-  .cd-header:before, .cd-header:after,
-  .cd-footer:before,
-  .cd-footer:after {
+  .cd-header *::before,
+  .cd-header *::after,
+  .cd-footer *,
+  .cd-footer *::before,
+  .cd-footer *::after {
     box-sizing: border-box; }
   .cd-header button,
   .cd-footer button {
     -webkit-appearance: none;
     border-radius: 0;
     box-shadow: none;
-    font-family: sans-serif; }
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 300; }
 
 .cd-sr-only {
   clip: rect(0, 0, 0, 0);

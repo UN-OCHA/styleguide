@@ -6,17 +6,16 @@
 .cd-header,
 .cd-footer {
   // Setup font
-  -webkit-font-smoothing: antialiased;
   font-family: $cd-font;
   font-size: map-get($cd-font-sizes, default);
+  font-weight: 300;
 
   // Set box-sizing
   box-sizing: border-box;
 
-  * {
-    box-sizing: border-box;
-  }
-  &:before, &:after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -26,6 +25,8 @@
     border-radius: 0;
     box-shadow: none;
     font-family: $cd-font;
+	  font-size: map-get($cd-font-sizes, default);
+	  font-weight: 300;
   }
 }
 
