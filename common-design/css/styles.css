@@ -1225,6 +1225,19 @@ button.cd-user-menu__item {
 .cd-user-menu__dropdown-link-label {
   border-bottom: 1px solid transparent; }
 
+#cd-lang-toggle .cd-user-menu__label {
+  text-transform: lowercase; }
+
+#cd-lang-dropdown .cd-user-menu__dropdown-link::after {
+  content: none; }
+
+#cd-lang-dropdown .cd-user-menu__dropdown-link.active::after {
+  color: #80CBFF;
+  content: '\e944';
+  font-family: 'unocha-icons';
+  position: absolute;
+  right: 0; }
+
 @media (min-width: 768px) {
   .cd-user-menu__item {
     max-width: none;

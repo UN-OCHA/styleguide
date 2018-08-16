@@ -167,6 +167,27 @@ button.cd-user-menu__item {
   border-bottom: 1px solid transparent;
 }
 
+// Language switcher button
+#cd-lang-toggle {
+  .cd-user-menu__label {
+    text-transform: lowercase;
+  }
+}
+#cd-lang-dropdown {
+  .cd-user-menu__dropdown-link {
+    &::after {
+      content: none;
+    }
+    &.active::after {
+      color: $cd-bright-blue-text-color;
+      content: '\e944';
+      font-family: 'unocha-icons';
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
 @include tablet {
 
   .cd-user-menu__item {
