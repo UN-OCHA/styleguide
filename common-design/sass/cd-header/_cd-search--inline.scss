@@ -202,7 +202,7 @@
     border-radius: 0;
     box-shadow: none;
     color: $cd-default-text-color;
-    font-size: map-get($cd-font-sizes, default);
+    font-size: map-get($cd-font-sizes, medium);
     height: $cd-site-header-height;
     padding: 0 72px 0 16px;
     width: 100%;
