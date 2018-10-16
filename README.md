@@ -4,9 +4,6 @@
 
 ### Refer to [OCHA Basic demo](https://ochabasic.demo.ahconu.org) or [OCHA Basic Drupal 7 theme repo](https://github.com/UN-OCHA/ocha_basic) for markup and styles.
 
-
-
-
 <hr>
 
 ## UNOCHA Frontend styleguide
