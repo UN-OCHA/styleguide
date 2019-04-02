@@ -7,8 +7,9 @@ var spawn = require('child_process').spawn;
 var gulpif = require('gulp-if');
 
 // Development Tools
-var bs = require('browser-sync');
-var reload = bs.reload;
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var notify = browserSync.notify;
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var cssnano = require('cssnano');
@@ -36,13 +37,14 @@ if (process.env.NODE_ENV === 'production') {
 //——————————————————————————————————————————————————————————————————————————————
 // BrowserSync
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev:bs', () => {
-  bs({
+function browserSyncTask() {
+  browserSync({
     server: './_site',
     open: false,
     port: '4000',
   });
-});
+};
+exports.bs = browserSyncTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -51,36 +53,23 @@ gulp.task('dev:bs', () => {
 // Note: since this site deploys to GitHub Pages, the production build of Jekyll
 // is not driven by Gulp. Only GitHub infrastructure can run it.
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev:jekyll', () => {
-  bs.notify('Jekyll building...');
+function jekyllTask() {
+  notify('Jekyll building...');
 
   return spawn('bundle', ['exec', 'jekyll', 'build', '--config=_config.yml,_config.dev.yml'], {stdio: 'inherit'})
     .on('close', reload);
-});
+};
+exports.jekyll = jekyllTask;
 
-
-//——————————————————————————————————————————————————————————————————————————————
-// Sass
-//——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev:sass', ['dev:sass:commondesign', 'dev:sass:ochaextras', 'dev:sass:styleguide']);
-
-gulp.task('dev:sass:commondesign', () => {
-  return sassTask('common-design/css/styles.scss');
-});
-
-gulp.task('dev:sass:ochaextras', () => {
-  return sassTask('ocha/css/extras.scss');
-});
-
-gulp.task('dev:sass:styleguide', () => {
-  return sassTask('styleguide/css/styleguide.scss');
-});
 
 //——————————————————————————————————————————————————————————————————————————————
 // Reusable Sass task. Takes source parameter and outputs to same directory.
+//
+// Note: we do NOT export this task because it requires a parameter. It's marked
+// internal-only with underscores.
 //——————————————————————————————————————————————————————————————————————————————
-function sassTask(source) {
-  bs.notify(`Sass: ${source}`);
+function __sassTask(source) {
+  notify(`Sass: ${source}`);
 
   // Take source directory and rework to allow compiled CSS to be placed next to
   // original Sass file.
@@ -105,10 +94,30 @@ function sassTask(source) {
     .pipe(reload({stream: true}));
 };
 
+
+//——————————————————————————————————————————————————————————————————————————————
+// Sass tasks
+//——————————————————————————————————————————————————————————————————————————————
+function sassCommonDesign() {
+  return __sassTask('common-design/css/styles.scss');
+};
+
+function sassOchaExtras() {
+  return __sassTask('ocha/css/extras.scss');
+};
+
+function sassStyleguide() {
+  return __sassTask('styleguide/css/styleguide.scss');
+};
+
+const sassAll = gulp.series(sassCommonDesign, sassOchaExtras, sassStyleguide);
+exports.sass = sassAll;
+
+
 //——————————————————————————————————————————————————————————————————————————————
 // JS Linting
 //——————————————————————————————————————————————————————————————————————————————
-// gulp.task('dev:js-lint', () => {
+// function 'dev:js-lint', () => {
 //   return gulp.src('_js/**/*.js')
 //     .pipe(jshint())
 //     .pipe(jshint.reporter(stylish));
@@ -118,7 +127,7 @@ function sassTask(source) {
 //——————————————————————————————————————————————————————————————————————————————
 // JS Bundling
 //——————————————————————————————————————————————————————————————————————————————
-// gulp.task('dev:js-bundle', () => {
+// function 'dev:js-bundle', () => {
 //   return gulp.src([
 //       './**/*.js',
 //     ])
@@ -132,40 +141,34 @@ function sassTask(source) {
 //——————————————————————————————————————————————————————————————————————————————
 // JS Lint + Bundle
 //——————————————————————————————————————————————————————————————————————————————
-// gulp.task('dev:js', ['dev:js-lint', 'dev:js-bundle']);
-
-
-//——————————————————————————————————————————————————————————————————————————————
-// Build assets and start development server
-//——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev', ['dev:sass', /*'dev:js',*/ 'dev:bs', 'dev:jekyll', 'watch']);
+// function 'dev:js', ['dev:js-lint', 'dev:js-bundle']);
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // Watch Files For Changes
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('watch', () => {
+function watchTask() {
   // gulp.watch('_js/**/*.js', ['dev:js']);
-  gulp.watch(['common-design/**/*.scss'], ['dev:sass:commondesign']);
-  gulp.watch(['ocha/**/*.scss'], ['dev:sass:ochaextras']);
-  gulp.watch(['styleguide/**/*.scss'], ['dev:sass:styleguide']);
-  gulp.watch(['_config*', '**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], ['dev:jekyll']);
-});
+  gulp.watch(['common-design/**/*.scss'], sassCommonDesign);
+  gulp.watch(['ocha/**/*.scss'], sassOchaExtras);
+  gulp.watch(['styleguide/**/*.scss'], sassStyleguide);
+  gulp.watch(['_config*', '**/*.{md,html,json}', '!_site/**/*.*', '!node_modules/**/*.*'], jekyllTask);
+};
+exports.watch = watchTask;
+
+
+//——————————————————————————————————————————————————————————————————————————————
+// DEFAULT
+// Build assets and start development server
+//——————————————————————————————————————————————————————————————————————————————
+const defaultTask = gulp.parallel(gulp.series(sassAll, jekyllTask, browserSyncTask), watchTask);
+exports.default = defaultTask;
+exports.dev = defaultTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // Build site for a deploy to production
+//
+// @see .bin/deploy.sh
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('deploy', ['dev:sass', /*'dev:js'*/]);
-
-
-//——————————————————————————————————————————————————————————————————————————————
-// Offer help on command line
-//——————————————————————————————————————————————————————————————————————————————
-gulp.task('help', taskListing);
-
-
-//——————————————————————————————————————————————————————————————————————————————
-// Help task is default
-//——————————————————————————————————————————————————————————————————————————————
-gulp.task('default', ['help']);
+exports.deploy = gulp.series(sassAll);

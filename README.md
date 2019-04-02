@@ -1,10 +1,10 @@
-# Deprecated
+# ⚠️ Deprecated ⚠️
 
 **This styleguide no longer accurately reflects the Common Design.**
 
 ### Refer to [OCHA Basic demo](https://ochabasic.demo.ahconu.org) or [OCHA Basic Drupal 7 theme repo](https://github.com/UN-OCHA/ocha_basic) for markup and styles.
 
-<hr>
+---
 
 ## UNOCHA Frontend styleguide
 
@@ -72,7 +72,7 @@ npm install
 
 ### Local development
 
-* `gulp help`: Get a full command listing
+* `gulp --tasks-simple`: Get a full command listing
 * `gulp dev`: Run the site in development mode. It will compile everything (including Jekyll), launch [browser-sync](https://browsersync.io) for multi-device testing, and watch the filesystem for new changes:
 
 Default URL is http://localhost:4000/
@@ -92,7 +92,7 @@ git update-index --no-skip-worktree _config.dev.yml
 
 Gulp is used to generate CSS from Sass. You can use `gulp dev` as an all-in-one command for regular development, but here are a few single commands you might find useful:
 
-`gulp dev:sass` will generate:
+`gulp sass` will generate:
 
 * OCHA Basic extras styles (`gulp dev:sass:ochaextras`)
 * Common Design styles (`gulp dev:sass:commondesign`)

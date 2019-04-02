@@ -1,6 +1,6 @@
 {
   "name": "UNOCHA-Styleguide",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "repository": "git@github.com:UN-OCHA/styleguide.git",
   "license": "Apache-2.0",
   "author": "UNOCHA",
@@ -16,7 +16,7 @@
     "child_process": "^1.0.2",
     "cssnano": "^4.1.10",
     "fancy-log": "^1.3.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
