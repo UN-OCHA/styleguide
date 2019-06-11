@@ -1,6 +1,6 @@
 {
   "name": "UNOCHA-Styleguide",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "repository": "git@github.com:UN-OCHA/styleguide.git",
   "license": "Apache-2.0",
   "author": "UNOCHA",
@@ -30,10 +30,11 @@
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
-    "lodash": ">=4.17.11"
+    "lodash": ">=4.17.11",
+    "tar": ">=2.2.2"
   },
   "engines": {
     "node": "^8.11.3",
-    "npm": "^6.1.0"
+    "npm": "^6.9.0"
   }
 }
