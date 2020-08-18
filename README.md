@@ -2,7 +2,7 @@
 
 **This styleguide no longer accurately reflects the Common Design.**
 
-### Refer to [OCHA Basic demo](https://ochabasic.demo.ahconu.org) or [OCHA Basic Drupal 7 theme repo](https://github.com/UN-OCHA/ocha_basic) for markup and styles.
+### Refer to [Common Design demo](https://demo.commondesign-unocha-org.ahconu.org/) for Drupal 8 and for generic Common Design styles and markup.
 
 ---
 
