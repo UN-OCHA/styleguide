@@ -30,7 +30,7 @@
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
-    "lodash": ">=4.17.11",
+    "lodash": ">=4.17.19",
     "tar": ">=2.2.2"
   },
   "engines": {
