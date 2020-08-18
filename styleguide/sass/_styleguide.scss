@@ -163,3 +163,19 @@ html.styleguide, html.styleguide body {
   padding: 0.5rem $base-unit*2;
   margin-bottom: $base-unit*2;
 }
+
+.is--deprecated {
+  background: #e56a54;
+  color: white;
+  padding: 2em;
+  border-bottom: 0;
+  border-radius: 5px;
+}
+
+.is--deprecated h3 {
+  margin: 0;
+}
+
+.is--deprecated a {
+  color: white;
+}

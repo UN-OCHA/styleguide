@@ -1339,6 +1339,19 @@ html.styleguide, html.styleguide body {
   padding: 0.5rem 16px;
   margin-bottom: 16px; }
 
+.is--deprecated {
+  background: #e56a54;
+  color: white;
+  padding: 2em;
+  border-bottom: 0;
+  border-radius: 5px; }
+
+.is--deprecated h3 {
+  margin: 0; }
+
+.is--deprecated a {
+  color: white; }
+
 /**
  * Syntax highlighting styles
  */
